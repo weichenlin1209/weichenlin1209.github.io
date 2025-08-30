@@ -1,0 +1,57 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-tw'
+title = "Windson's Personal Blog"
+theme = 'hugo-PaperMod'
+
+[params]
+defaltTheme = 'dark'
+disableThemeToggle = true
+  # Profile Mode 設定
+  [params.profileMode]
+    enabled = true
+    title = "Windson"
+    subtitle = "AppliedMath | ComputerScience | Guitar"
+    imageUrl = "/images/profile.jpg"
+    imageWidth = 120
+    imageHeight = 120
+
+    [[params.profileMode.buttons]]
+      name = "Posts"
+      url = "/archives/"
+
+    [[params.profileMode.buttons]]
+      name = "Tags"
+      url = "/tags/"
+
+    [[params.socialIcons]]
+      name = "github"
+      url = "https://github.com/weichenlin1209"
+
+    [[params.socialIcons]]
+      name = "instagram"
+      url = "https://instagram.com/windson.lin"
+
+# 導覽選單設定
+[menu]
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "Posts"
+    url = "/archives/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+    
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+
+
+ 
