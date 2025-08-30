@@ -1,0 +1,56 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]   # 你主要寫作分支
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true      # 若主題用 git submodule，要打開
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.149.0'
+          extended: true
+
+      # 若你使用 Hugo Modules，可選加上：
+      # - name: Hugo mod vendor
+      #   run: hugo mod vendor
+
+      - name: Build
+        env:
+          HUGO_ENV: production
+        run: hugo --gc --minify
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
