@@ -1,7 +1,8 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://windson.cc/'
 languageCode = 'zh-tw'
 title = "Windson's Personal Blog"
 theme = 'hugo-PaperMod'
+canonifyURLs = true
 
 [params]
 defaltTheme = 'dark'
