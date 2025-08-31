@@ -4,6 +4,9 @@ title = "Windson's Personal Blog"
 theme = 'hugo-PaperMod'
 canonifyURLs = true
 
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
 [params]
 defaltTheme = 'dark'
 disableThemeToggle = true
