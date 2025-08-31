@@ -1,6 +1,6 @@
 baseURL = 'https://windson.cc/'
 languageCode = 'zh-tw'
-title = "Windson's Personal Blog"
+title = "Whisky's Personal Blog"
 theme = 'hugo-PaperMod'
 canonifyURLs = true
 
@@ -11,7 +11,7 @@ disableThemeToggle = true
   # Profile Mode 設定
   [params.profileMode]
     enabled = true
-    title = "Windson"
+    title = "Whisky"
     subtitle = "AppliedMath | ComputerScience | Guitar"
     imageUrl = "/images/profile.jpg"
     imageWidth = 120
