@@ -1,7 +1,7 @@
 baseURL = 'https://windson.cc/'
 languageCode = 'zh-tw'
 title = "Windson's Personal Blog"
-theme = 'PaperMod'
+theme = 'hugo-PaperMod'
 canonifyURLs = true
 
 
