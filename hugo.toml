@@ -19,7 +19,7 @@ disableThemeToggle = true
 
     [[params.profileMode.buttons]]
       name = "Posts"
-      url = "/archives/"
+      url = "/posts/"
 
     [[params.profileMode.buttons]]
       name = "Tags"
