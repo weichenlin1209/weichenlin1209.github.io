@@ -33,6 +33,10 @@ disableThemeToggle = true
       name = "instagram"
       url = "https://instagram.com/windson.lin"
 
+    [[params.socialIcons]]
+      name = "discord"
+      url = "https://discord.gg/rjbnYyFS"
+
 # 導覽選單設定
 [menu]
 
