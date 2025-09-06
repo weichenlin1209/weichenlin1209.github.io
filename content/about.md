@@ -21,6 +21,6 @@ draft: false
 - [signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)
 
 
-- email: **windsonlin1209@gmail.com**
+- email: **whisky@windson.cc**
 
 
