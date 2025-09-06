@@ -14,7 +14,6 @@ draft: false
 - Minecraft Server on Raspberry pi 5
 - picoCTF
 - 扒譜、練吉他
-- 架這個網站
  
 ### 聯絡方式：
 首頁有我的聯絡方式，但我還是多放幾個在這。

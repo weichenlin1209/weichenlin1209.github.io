@@ -29,9 +29,9 @@ disableThemeToggle = true
       name = "github"
       url = "https://github.com/weichenlin1209"
 
-    [[params.socialIcons]]
-      name = "instagram"
-      url = "https://instagram.com/windson.lin"
+#    [[params.socialIcons]]
+#      name = "instagram"
+#      url = "https://instagram.com/windson.lin"
 
     [[params.socialIcons]]
       name = "discord"
