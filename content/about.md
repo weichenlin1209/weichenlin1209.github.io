@@ -13,7 +13,7 @@ draft: false
 - Flipper Zero  ~~我要打開全校的門~~
 - Minecraft Server on Raspberry pi 5
 - picoCTF
-- 扒譜、練吉他
+- 扒譜、練吉他、寫歌
  
 ### 聯絡方式：
 首頁有我的聯絡方式，但我還是多放幾個在這。
