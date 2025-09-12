@@ -4,6 +4,9 @@ title = "Whisky's Personal Blog"
 theme = 'hugo-PaperMod'
 canonifyURLs = true
 
+[outputs]
+home = ["HTML" ,"RSS"]
+
 
 [params]
 defaltTheme = 'dark'
@@ -29,13 +32,13 @@ disableThemeToggle = true
       name = "github"
       url = "https://github.com/weichenlin1209"
 
-#    [[params.socialIcons]]
-#      name = "instagram"
-#      url = "https://instagram.com/windson.lin"
+    [[params.socialIcons]]
+      name = "email"
+      url = "mailto:whisky@windson.cc"
 
     [[params.socialIcons]]
-      name = "discord"
-      url = "https://discord.gg/rjbnYyFS"
+      name = "RSS"
+      url = "/index.xml"
 
 # 導覽選單設定
 [menu]

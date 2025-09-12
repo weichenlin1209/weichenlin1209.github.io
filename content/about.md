@@ -14,12 +14,14 @@ draft: false
 - Minecraft Server on Raspberry pi 5
 - picoCTF
 - 扒譜、練吉他、寫歌
+- 在系上擔任可憐的工人
  
 ### 聯絡方式：
-首頁有我的聯絡方式，但我還是多放幾個在這。
+
 - [signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)
 
+這是個很棒的通訊軟體，他是完全開源的。而且端對端加密，這樣更安全。另外還可以自己自製貼圖，比Line要付費還好很多，而且也不會一天到晚傳垃圾訊息給你。  
+想知道更多的話：[https://www.iach.cc/dear-line/](https://www.iach.cc/dear-line/)
 
-- email: **whisky@windson.cc**
 
 
