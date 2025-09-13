@@ -2,7 +2,7 @@
 title = 'Hello World'
 date = 2025-08-31T23:33:01+08:00
 draft = false
-image = "images/coursegnagster/coursegangster-1.png"
+image = "images/complainDSA/complainDSA-1.JPG"
 relative = true # true表示是相對於文章目錄的路徑
 
 +++
