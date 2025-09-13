@@ -3,9 +3,9 @@ title = 'Hello World'
 date = 2025-08-31T23:33:01+08:00
 draft = false
 
-[cover]
-image = "https://windson.cc/images/complainDSA/complainDSA-1.JPG"
-relative = false # true表示是相對於文章目錄的路徑
+#[cover]
+#image = "https://windson.cc/images/complainDSA/complainDSA-1.JPG"
+#relative = false
 
 +++
 
