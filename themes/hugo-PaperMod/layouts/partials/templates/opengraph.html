@@ -41,10 +41,10 @@
   {{- else}}
     <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
   {{- end}}
-{{- else }}
+{{- else }} 
   {{- with partial "_funcs/get-page-images" . }}
     {{- range . | first 6 }}
-      <meta property="og:image" content="{{ "images/profile.jpg" }}">
+      <meta property="og:image" content="{{ "images/profile.jpg" | absURL}}">
     {{- end }}
   {{- end }}
 {{- end }}
