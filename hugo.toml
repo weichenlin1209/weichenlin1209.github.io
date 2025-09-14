@@ -38,7 +38,7 @@ disableThemeToggle = true
 
     [[params.socialIcons]]
       name = "email"
-      url = "mailto:whisky@windson.cc"
+      url = "mailto:info@windson.cc"
 
     [[params.socialIcons]]
       name = "RSS"
