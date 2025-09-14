@@ -26,7 +26,7 @@ disableThemeToggle = true
 
     [[params.profileMode.buttons]]
       name = "Posts"
-      url = "/archives/"
+      url = "/post/"
 
     [[params.profileMode.buttons]]
       name = "Tags"
@@ -52,23 +52,28 @@ disableThemeToggle = true
 [menu]
 
   [[menu.main]]
-    identifier = "archives"
+    identifier = "Posts"
     name = "Posts"
-    url = "/archives/"
+    url = "/post/"
     weight = 1
+
+  [[menu.main]]
+    identifier = "Archive"
+    name = "Archives"
+    url = "/archives/"
+    weight = 2
 
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 2
+    weight = 3
     
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 3
-
+    weight = 4
 
 
  
