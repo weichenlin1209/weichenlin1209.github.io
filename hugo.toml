@@ -39,6 +39,10 @@ disableThemeToggle = true
     [[params.socialIcons]]
       name = "RSS"
       url = "/index.xml"
+      
+    [[params.socialIcons]]
+      name = "signal"
+      url="https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf"
 
 # 導覽選單設定
 [menu]
