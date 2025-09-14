@@ -8,7 +8,7 @@ canonifyURLs = true
 home = ["HTML" ,"RSS"]
 
 [params.assets]
-  favicon = "favicon/favicon.ico"
+  favicon = "/static/favicon/favicon.ico"
 
 
 [params]
