@@ -7,6 +7,9 @@ canonifyURLs = true
 [outputs]
 home = ["HTML" ,"RSS"]
 
+[params.assets]
+  favicon = "favicon/favicon.ico"
+
 
 [params]
 defaltTheme = 'dark'
