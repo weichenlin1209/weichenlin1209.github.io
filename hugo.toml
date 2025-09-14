@@ -9,7 +9,8 @@ home = ["HTML" ,"RSS"]
 
 [params.assets]
   favicon = "/static/favicon/favicon.ico"
-
+  favicon16x16 = "/static/favicon/favicon-16x16.png"
+  favicon32x32 = "/static/favicon/favicon-32x32.png"
 
 [params]
 defaltTheme = 'dark'
