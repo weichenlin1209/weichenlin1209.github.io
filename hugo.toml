@@ -13,7 +13,7 @@ home = ["HTML" ,"RSS"]
   favicon32x32 = "/favicon/favicon-32x32.png"
 
 [params]
-defaltTheme = 'dark'
+defaultTheme = 'dark'
 disableThemeToggle = true
   # Profile Mode 設定
   [params.profileMode]
