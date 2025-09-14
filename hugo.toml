@@ -1,6 +1,6 @@
 baseURL = 'https://windson.cc/'
 languageCode = 'zh-tw'
-title = "Whisky's Blog"
+title = "whisky's blog"
 theme = 'hugo-PaperMod'
 canonifyURLs = true
 
@@ -18,14 +18,14 @@ disableThemeToggle = true
   # Profile Mode 設定
   [params.profileMode]
     enabled = true
-    title = "Whisky"
+    title = "whisky"
     subtitle = "AppliedMath | ComputerScience | Guitar"
     imageUrl = "/images/profile.jpg"
     imageWidth = 120
     imageHeight = 120
 
     [[params.profileMode.buttons]]
-      name = "Posts"
+      name = "Post"
       url = "/post/"
 
     [[params.profileMode.buttons]]
@@ -52,14 +52,14 @@ disableThemeToggle = true
 [menu]
 
   [[menu.main]]
-    identifier = "Posts"
-    name = "Posts"
+    identifier = "Post"
+    name = "Post"
     url = "/post/"
     weight = 1
 
   [[menu.main]]
-    identifier = "Archive"
-    name = "Archives"
+    identifier = "archive"
+    name = "Archive"
     url = "/archives/"
     weight = 2
 
