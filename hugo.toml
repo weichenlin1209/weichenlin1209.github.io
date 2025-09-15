@@ -13,6 +13,7 @@ home = ["HTML" ,"RSS"]
   favicon32x32 = "/favicon/favicon-32x32.png"
 
 [params]
+ShowFullTextinRSS = true
 defaultTheme = 'dark'
 disableThemeToggle = true
   # Profile Mode 設定
