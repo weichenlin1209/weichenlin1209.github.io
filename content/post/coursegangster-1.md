@@ -4,7 +4,7 @@ date = 2025-09-04T19:16:43+08:00
 draft = false
 tags = ["NCHU"]
 [cover]
-    image = "http://localhost:1313/images/coursegangster/cover.jpg"
+    image = "http://windson.cc/images/coursegangster/cover.jpg"
     relative = false
 +++
 
