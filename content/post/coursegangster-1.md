@@ -3,12 +3,15 @@ title = '中興大學搶課流氓-1'
 date = 2025-09-04T19:16:43+08:00
 draft = false
 tags = ["NCHU"]
+[cover]
+    image = "http://localhost:1313/images/coursegangster/cover.jpg"
+    relative = false
 +++
 
 
 最近大家都在選課吧。我就運氣特別不好，通識一節沒有，要加簽的一大堆...  
 所以跟[iach526](https://iach.cc)一起做了個小專案。~~其實就是暴力搶課~~ 
-
+<!--more-->
 ---
 ### 工具
 - kali Linux
@@ -56,12 +59,12 @@ p_stud_no=your_student_id&v_tick=1057847751891  #前面是你的學號，後面�
 
 ```
 接下來複製curl，就可以準備送進烤箱啦～
-![burpsuite圖片](/images/coursegnagster/copycurl.png) 
+![burpsuite圖片](/images/coursegangster/copycurl.png) 
 
 ---
 ### 烤餅乾  
 餅乾已經成功拿出來了，接下來要送進[烤箱](https://curlconverter.com/python/)裡烤。把剛剛複製的貼在curl，寫一隻python把剛剛的東西都送出去就完事了！
-![burpsuite圖片](/images/coursegnagster/curltopython.png)
+![burpsuite圖片](/images/coursegangster/curltopython.png)
 
 ---
 
