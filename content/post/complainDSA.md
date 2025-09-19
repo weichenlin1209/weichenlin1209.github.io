@@ -3,9 +3,9 @@ title = '碰 ！對系上開砲 ！'
 date = 2025-09-13T01:12:42+08:00
 draft = false
 tags = ["NCHU"]
-[cover]
-  image = "http://windson.cc/images/complainDSA/cover.jpg"
-  relative = false
+#[cover]
+#  image = "http://windson.cc/images/complainDSA/cover.jpg"
+#  relative = false
 +++
 
 自從加入系學會之後，發現學長姐一個比一個抽象，一個比一個奇怪。該怎麼說呢？是因為線代、微積分、數導這些課太抽象，所以把學長姐們都變得奇奇怪怪了嗎？  
