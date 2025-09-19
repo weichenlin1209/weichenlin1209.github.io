@@ -25,7 +25,7 @@ tags = ["NCHU"]
 ---
 ### 拿餅乾  
 打開burpsuite，攔截學校選課系統的POST  
-![burpsuite圖片](/images/coursegnagster/coursegangster-1.png)  
+![burpsuite圖片](/images/coursegangster/coursegangster-1.png)  
 
 經過我們的觀察，它每次執行重大行動（加退選）時，都會發一個新的餅乾。
 所以每次選完課都要重新烤一個新餅乾。另外，在選課的時候header是不會變的，就算裡面有content-length它好像也不太看。~~經實驗發現，直接刪掉它也選得到課~~。
