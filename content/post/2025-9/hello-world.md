@@ -1,6 +1,7 @@
 +++
 title = 'Hello World'
 date = 2025-08-31T23:33:01+08:00
+url = "post/helloworld"
 draft = false
 
 #[cover]

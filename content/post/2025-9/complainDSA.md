@@ -2,6 +2,7 @@
 title = '碰 ！對系上開砲 ！'
 date = 2025-09-13T01:12:42+08:00
 draft = false
+url = "/post/complainDSA/"
 tags = ["NCHU"]
 #[cover]
 #  image = "http://windson.cc/images/complainDSA/cover.jpg"

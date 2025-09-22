@@ -2,6 +2,7 @@
 title = '中興大學搶課流氓-1'
 date = 2025-09-04T19:16:43+08:00
 draft = false
+url = "/post/coursegangster"
 tags = ["NCHU"]
 #[cover]
 #   image = "http://windson.cc/images/coursegangster/cover.jpg"
