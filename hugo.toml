@@ -1,4 +1,4 @@
-baseURL = 'https://windson.cc/'
+baseURL = 'https://www.windson.cc/'
 languageCode = 'zh-tw'
 title = "whisky's blog"
 theme = 'hugo-PaperMod'
