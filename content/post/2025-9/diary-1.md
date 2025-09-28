@@ -1,5 +1,5 @@
 +++
-title = '日記 | 25/09/19'
+title = '週記 | 25/09/19'
 date = 2025-09-19T09:46:01+08:00
 url = "/post/diary-1"
 draft = false
