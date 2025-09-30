@@ -45,6 +45,10 @@
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
 {{- end }}
 
+{{- if .IsSection }}
+  {{- $pages = where $pages "Params.archiveOnly" "ne" true }}
+{{- end }}
+
 {{- $paginator := .Paginate $pages }}
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
