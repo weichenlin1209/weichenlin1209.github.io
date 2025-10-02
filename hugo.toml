@@ -12,6 +12,11 @@ home = ["HTML" ,"RSS"]
   favicon16x16 = "/favicon/favicon-16x16.png"
   favicon32x32 = "/favicon/favicon-32x32.png"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      footnote = true
+
 [params]
 ShowFullTextinRSS = true
 defaultTheme = 'dark'

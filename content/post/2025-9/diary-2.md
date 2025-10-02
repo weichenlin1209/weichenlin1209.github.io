@@ -2,7 +2,12 @@
 title = '週記 | 25/09/29'
 date = 2025-09-29T15:11:53+08:00
 draft = false
+url = "/post/diary-2"
 tags = ["Diary"]
+
+[cover]
+image = "/images/diary-cover.webp"
+relative = true
 +++
 *開學第四週，精神狀態跟期末考一樣...*
 <!--more-->
