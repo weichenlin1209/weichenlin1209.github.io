@@ -7,7 +7,6 @@ tags = ["Diary"]
 
 [cover]
 image = "/images/diary-cover.webp"
-relative = true
 
 +++
 *大二過得太充實了，要是再不寫下來...一定會忘記自己過得多精彩。*

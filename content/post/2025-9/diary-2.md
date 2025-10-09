@@ -7,7 +7,6 @@ tags = ["Diary"]
 
 [cover]
 image = "/images/diary-cover.webp"
-relative = true
 +++
 *開學第四週，精神狀態跟期末考一樣...*
 <!--more-->

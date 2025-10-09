@@ -7,7 +7,6 @@ tags = ["Guitar"]
 
 [cover]
 image = "/images/diary-25-09-19/guitar.webp"
-relative = true
 +++
 
 *這是我在吉他社的一個活動，結束了好有成就感*
