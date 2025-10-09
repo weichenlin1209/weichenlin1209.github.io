@@ -157,7 +157,7 @@
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ with .Params.images }}{{ index . 0 }}{{ else }}https://windson.cc/images/profile.jpg{{ end }}">
+<meta property="og:image" content="{{ with .Params.cover.image }}{{ . | absURL }}{{ else }}https://windson.cc/images/profile.jpg{{ end }}">
 {{- partial "templates/twitter_cards.html" . }}
 {{- partial "templates/schema_json.html" . }}
 {{- end -}}

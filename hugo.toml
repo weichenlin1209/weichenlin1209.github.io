@@ -17,6 +17,12 @@ home = ["HTML" ,"RSS"]
     [markup.goldmark.extensions]
       footnote = true
 
+[params.cover]
+  linkFullImages = true
+  hidden = false
+  hiddenInList = false
+  hiddenInSingle = false
+
 [params]
 ShowFullTextinRSS = true
 defaultTheme = 'dark'
