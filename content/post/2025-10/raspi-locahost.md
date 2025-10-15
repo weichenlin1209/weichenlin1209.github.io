@@ -35,7 +35,7 @@ image = "/images/raspi-localhost/raspi.webp"
 ![Affine](/images/raspi-localhost/affine.webp)
 
 ## Syncthing  
-Syncthing的功能如同其名，就是拿來同步檔案。因為設定跟安裝有點麻煩,自己用是比較好的。主要是有了這個就可以同步檔案到伺服器，不用把東西丟在大平台，還有限制檔案大小。但是如果沒有做好防護措施要暴露到外網是很危險的，因為它本身登入界面。要用的話就要用內網穿透軟體。
+Syncthing的功能如同其名，就是拿來同步檔案。因為設定跟安裝有點麻煩,自己用是比較好的。主要是有了這個就可以同步檔案到伺服器，不用把東西丟在大平台，還有限制檔案大小。但是如果沒有做好防護措施要暴露到外網是很危險的。他有登入界面，但是我不會用，所以我用內網穿透。
 ![Syncthing](/images/raspi-localhost/sync.webp)  
 
 ## Immich  
