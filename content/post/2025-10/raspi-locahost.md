@@ -1,6 +1,6 @@
 +++
 title = 'Raspberry pi 5 自架服務器'
-date = 2025-10-15T16:17:42+08:00
+date = 2025-10-15T17:51:42+08:00
 draft = true
 
 url = "/post/raspiLocalhost"
