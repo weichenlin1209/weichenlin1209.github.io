@@ -3,7 +3,7 @@ title = '新吉成不了大事'
 date = 2025-10-02T09:13:53+08:00
 draft = false
 url = "/post/longred_new"
-tags = ["Guitar"]
+tags = ["Guitar" ,"NCHU"]
 
 [cover]
 image = "/images/diary-25-09-19/guitar.webp"
