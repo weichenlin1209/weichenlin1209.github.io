@@ -13,20 +13,16 @@ draft: false
 ### 最近在做的事：  
 - Flipper Zero  ~~我要打開全校的門~~
 - Minecraft Server on Raspberry pi 5
-- picoCTF
-- 扒譜、練吉他、寫歌
-- 在系上擔任可憐的工人
-- 架考古題查詢系統
+- Reverse 小白
+- 扒譜、練吉他
  
 ### 聯絡方式：
 
 - [signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)  
-  
-這是個很棒的通訊軟體，他是完全開源的。而且端對端加密，這樣更安全。另外還可以自己自製貼圖，比Line要付費還好很多，而且也不會一天到晚傳垃圾訊息給你。  
-想知道更多的話：[https://www.iach.cc/dear-line/](https://www.iach.cc/dear-line/)
 
 - [email](mailto:info@windson.cc)
 
-如果你沒進垃圾郵件的話我都會回。
+這邊我不放instagram不是因為我沒有，只是沒在用。要看到Instagram裡面的內容就必須有建立帳號，其中要通過很多條款，
+而且它還會偷聽你在說什麼以及你的私訊內容來訓練他的模型。因為我不想被它監控所以我不用。
 
 
