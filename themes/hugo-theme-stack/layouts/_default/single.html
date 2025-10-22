@@ -1,0 +1,45 @@
+{{ define "body-class" }}
+article-page
+{{- $HasWidgetNotTOC := false -}}
+{{- $TOCWidgetEnabled := false -}}
+
+{{- $widgets := .Site.Params.widgets.page | default (slice) -}}
+{{- range $widgets -}}
+    {{- $type := "" -}}
+
+    {{- /* 只對 map 使用 index */ -}}
+    {{- if isset . "type" -}}
+        {{- $type = index . "type" -}}
+    {{- end -}}
+
+    {{- if eq $type "toc" -}}
+        {{- $TOCWidgetEnabled = true -}}
+    {{- else if ne $type "" -}}
+        {{- $HasWidgetNotTOC = true -}}
+    {{- end -}}
+{{- end -}}
+{{ end }}
+
+
+
+{{ define "main" }}
+    {{ partial "article/article.html" . }}
+
+    {{ if .Params.links }}
+        {{ partial "article/components/links" . }}
+    {{ end }}
+
+    {{ partial "article/components/related-content" . }}
+     
+    {{ if not (eq .Params.comments false) }}
+        {{ partial "comments/include" . }}
+    {{ end }}
+
+    {{ partialCached "footer/footer" . }}
+
+    {{ partialCached "article/components/photoswipe" . }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ end}}
+{{ end }}
