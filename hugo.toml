@@ -1,91 +1,159 @@
-baseURL = 'https://www.windson.cc/'
-languageCode = 'zh-tw'
-title = "whisky's blog"
-theme = 'hugo-PaperMod'
+baseURL = "https://www.windson.cc/"
+languageCode = "zh-tw"
+title = "Windson's blog"
+theme = "hugo-theme-stack"
 canonifyURLs = true
+copyright = "Windson"
 
 [outputs]
-home = ["HTML" ,"RSS"]
+home = ["HTML", "RSS"]
 
-[params.assets]
-  favicon = "/favicon/favicon.ico"
-  favicon16x16 = "/favicon/favicon-16x16.png"
-  favicon32x32 = "/favicon/favicon-32x32.png"
+[pagination]
+pagerSize = 5
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      footnote = true
-
-[params.cover]
-  linkFullImages = true
-  hidden = false
-  hiddenInList = false
-  hiddenInSingle = false
+[permalinks]
+post = "/p/:slug/"
+page = "/:slug/"
 
 [params]
-ShowFullTextinRSS = true
-defaultTheme = 'dark'
-disableThemeToggle = true
-  # Profile Mode 設定
-  [params.profileMode]
-    enabled = true
-    title = "whisky"
-    subtitle = "AppliedMath | ComputerScience | Guitar"
-    imageUrl = "/images/profile.jpg"
-    imageWidth = 120
-    imageHeight = 120
+mainSections = ["post"]
+rssFullContent = true
 
-    [[params.profileMode.buttons]]
-      name = "Post"
-      url = "/post/"
+# ===========================
+# Profile Mode & sidebar
+# ===========================
+[params.sidebar]
+emoji = "🎸"
+subtitle = "NCHU | AppliedMath | Guitar"
+showSocial = true
 
-    [[params.profileMode.buttons]]
-      name = "Tags"
-      url = "/tags/"
+[params.sidebar.avatar]
+enabled = true
+local = false
+src = "https://www.gravatar.com/avatar/0f43e608cf76853d830c6e40a5004956?s=200&d=identicon"
+alt = "Windson"
 
-    [[params.socialIcons]]
-      name = "github"
-      url = "https://github.com/weichenlin1209"
+# ===========================
+# Favicon
+# ===========================
+[params.assets]
+favicon = "/favicon/favicon.ico"
+favicon16x16 = "/favicon/favicon-16x16.png"
+favicon32x32 = "/favicon/favicon-32x32.png"
 
-    [[params.socialIcons]]
-      name = "email"
-      url = "mailto:info@windson.cc"
-
-    [[params.socialIcons]]
-      name = "RSS"
-      url = "/index.xml"
-      
-    [[params.socialIcons]]
-      name = "signal"
-      url="https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf"
-
-# 導覽選單設定
+# ===========================
+# Top Main Menu
+# ===========================
 [menu]
+[[menu.main]]
+name = "Home"
+url = "/"
+identifier = "home"
+weight = 1
+params.icon = "home"
 
-  [[menu.main]]
-    identifier = "Post"
-    name = "Post"
-    url = "/post/"
-    weight = 1
+[[menu.main]]
+name = "Archive"
+url = "/archives/"
+identifier = "archive"
+weight = 2
+params.icon = "archives"
 
-  [[menu.main]]
-    identifier = "archive"
-    name = "Archive"
-    url = "/archives/"
-    weight = 2
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+identifier = "tags"
+weight = 3
+params.icon = "tag"
 
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 3
-    
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 4
+[[menu.main]]
+name = "About"
+url = "/about/"
+identifier = "about"
+weight = 4
+params.icon = "user"
 
+# ===========================
+# Social Icons
+# ===========================
 
- 
+[[menu.social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/weichenlin1209"
+weight = 1
+params.Icon = "github"
+
+[[menu.social]]
+identifier = "email"
+name = "Email"
+url = "mailto:info@windson.cc"
+weight = 2
+params.Icon = "mail"
+
+[[menu.social]]
+identifier = "rss"
+name = "RSS"
+url = "/index.xml"
+weight = 3
+params.Icon = "rss"
+
+# ===========================
+# Color Scheme
+# ===========================
+[params.colorScheme]
+toggle = true
+default = "auto"
+
+# ===========================
+# Article Settings
+# ===========================
+[params.article]
+math = true
+toc = true
+readingTime = false
+
+[params.article.license]
+enabled = true
+default = "Licensed under CC BY-NC-SA 2.0"
+
+# ===========================
+# Widgets (Homepage)
+# ===========================
+
+#[[params.widgets.homepage]]
+#type = "search"
+
+[[params.widgets.homepage]]
+type = "archives"
+[params.widgets.homepage.params]
+limit = 5
+
+[[params.widgets.homepage]]
+type = "categories"
+[params.widgets.homepage.params]
+limit = 10
+
+[[params.widgets.homepage]]
+type = "tag-cloud"
+[params.widgets.homepage.params]
+limit = 10
+
+# ===========================
+# Widgets (Page)
+# ===========================
+[[params.widgets.page]]
+type = "toc"
+
+# 如果之後想加更多 page widgets，格式如下：
+# [[params.widgets.page]]
+# type = "archives"
+# limit = 5
+#
+# [[params.widgets.page]]
+# type = "categories"
+# limit = 10
+#
+# [[params.widgets.page]]
+# type = "tag-cloud"
+# limit = 10

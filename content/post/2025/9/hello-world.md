@@ -1,9 +1,10 @@
 +++
 title = 'Hello World'
 date = 2025-08-31T23:33:01+08:00
-url = "post/helloworld"
+url = "post/helloworld/"
 draft = false
 archiveOnly = true
+layout = "post"
 
 #[cover]
 #image = "https://windson.cc/images/complainDSA/complainDSA-1.JPG"

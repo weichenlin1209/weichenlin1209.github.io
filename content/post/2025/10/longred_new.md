@@ -2,11 +2,12 @@
 title = '新吉成不了大事'
 date = 2025-10-02T09:13:53+08:00
 draft = false
-url = "/post/longred_new"
+url = "/post/longred_new/"
 tags = ["Guitar" ,"NCHU"]
+categories = ["Guitar"]
+layout = "post"
 
-[cover]
-image = "/images/diary-25-09-19/guitar.webp"
+image = "/images/2025/10/longred_new/guitar.webp"
 +++
 
 *這是我在吉他社的一個活動，結束了好有成就感*

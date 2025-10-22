@@ -2,10 +2,12 @@
 title = '週記 | 25/09/29'
 date = 2025-09-29T15:11:53+08:00
 draft = false
-url = "/post/diary-2"
+url = "/post/diary-2/"
 tags = ["Diary"]
+categories = ["Life"]
+layout = "post"
 
-[cover]
+
 image = "/images/diary-cover.webp"
 +++
 *開學第四週，精神狀態跟期末考一樣...*
@@ -24,7 +26,7 @@ image = "/images/diary-cover.webp"
 
 - ### **工商時間**  
 其實正式的海報不是這張，但我比較喜歡這張。
-![guitar](/images/diary-25-09-29/guitarpost.webp)  
+![guitar](/images/2025/9/diary-25-09-29/guitarpost.webp)  
 
 ## 3D 列印微通識
 這是我差點忘記去上的一節課，要不是有人提醒我，我100％蹺課。這節只有三個禮拜，結束之後順利的話可以拿到3D列印證，CP值挺高的。目前是還沒有到印東西的階段，但是上課就有免費2.5小時的使用時間，只要模型印不超過2.5小時就可以免費帶走。有了證之後就可以印flipper殼，小pi的家，還是鍵盤滑鼠都行，自己的東西自己印。

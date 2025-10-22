@@ -2,19 +2,20 @@
 title: "About"
 date: 2025-08-30T10:00:00+08:00
 draft: false
+layout: "page"
 ---
 
-## 關於我
+# 關於我
 
 我叫**威忌**，我所有遊戲都叫這個名字，源自於我國小同學把我英文名字*Windson* 叫成 *Whiskey* 。目前是應用數學系二年級，只是很不像應數系。
 
-### 最近在做的事：  
+## 最近在做的事：  
 - Flipper Zero  ~~我要打開全校的門~~
 - Minecraft Server on Raspberry pi 5
 - Reverse 小白
 - 扒譜、練吉他
  
-### 聯絡方式：
+## 聯絡方式：
 
 - [signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)  
 
