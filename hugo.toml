@@ -102,8 +102,8 @@ params.Icon = "rss"
 # Color Scheme
 # ===========================
 [params.colorScheme]
-toggle = true
-default = "auto"
+toggle = false
+default = "dark"
 
 # ===========================
 # Article Settings
