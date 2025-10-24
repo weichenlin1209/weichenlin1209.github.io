@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2025-10-24T16:30:00+08:00
+date: 2025-08-30T10:00:00+08:00
 draft: false
 layout: "page"
 ---
