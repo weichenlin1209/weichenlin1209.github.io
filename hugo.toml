@@ -18,7 +18,7 @@ page = "/:slug/"
 [params]
 mainSections = ["post"]
 rssFullContent = true
-
+ShowToc = true
 # ===========================
 # Profile Mode & sidebar
 # ===========================

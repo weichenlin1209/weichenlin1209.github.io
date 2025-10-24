@@ -41,5 +41,6 @@ article-page
 {{ end }}
 
 {{ define "right-sidebar" }}
+    {{ .Scratch.Set "TOCEnabled" true }}
     {{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ end}}
 {{ end }}

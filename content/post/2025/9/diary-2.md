@@ -26,6 +26,7 @@ image = "/images/diary-cover.webp"
 
 - ### **工商時間**  
 其實正式的海報不是這張，但我比較喜歡這張。
+
 ![guitar](/images/2025/9/diary-25-09-29/guitarpost.webp)  
 
 ## 3D 列印微通識

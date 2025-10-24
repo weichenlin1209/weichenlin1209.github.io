@@ -119,7 +119,8 @@ params:
 
     widgets:
         homepage: []
-        page: []
+        page:
+            - type: "toc"
 
     opengraph:
         twitter:
