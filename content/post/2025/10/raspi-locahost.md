@@ -20,8 +20,10 @@ image = "/images/2025/10/raspi-localhost/raspi.webp"
 
 ### 小Pi的家  
 當初買到它的時候，我就在想要不要買個殼，結論就是：*「為什麼不自己裝一個呢？」*   
-所以我就把家裡所有的樂高拆出來，發現最有機會的就是我的第一組樂高----pizza店  
-![](/images/raspi-localhost/Lego-pizza.webp)  
+所以我就把家裡所有的樂高拆出來，發現最有機會的就是我的第一組樂高----pizza店 
+
+![](/images/2025/10/raspi-localhost/Lego-pizza.webp)  
+
 所有材料基本上來自於它，觀察一下就會發現他們的屋頂一模一樣。對pizza店進行大改造之後，就是現在你們看到的樣子了。但是這個殼的缺點就是散熱很差，就算有散熱片執行時的溫度也會到70度。
 
 ### 怎麼開始Rasbperry pi  
