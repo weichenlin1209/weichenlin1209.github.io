@@ -91,8 +91,9 @@ layout: "page"
 - 寵物：Flipper Zero
 ### 吉他
 - 皮克：小烏龜 (Dunlop Tortex)
-- 木吉他：忘了
-- 電吉他：也忘了
+- 木吉他：StarSun J5 楓木 面單板 41吋
+- 拾音器：X2 Double
+- 電吉他：忘了
 - 效果器：NUX MG-300 MK2
 - 音響：NUX MIGHTY8SE
   
