@@ -38,7 +38,7 @@ page = "/:slug/"
     [languages.zh.menu]
     [[languages.zh.menu.main]]
     name = "首頁"
-    url = "/"
+    url = "/zh/"
     identifier = "home"
     weight = 1
     params.icon = "home"
