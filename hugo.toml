@@ -188,7 +188,7 @@ default = "dark"
 [params.article]
 math = true
 toc = true
-readingTime = false
+readingTime = true
 
 [params.article.license]
 enabled = true
