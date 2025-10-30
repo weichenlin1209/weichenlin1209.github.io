@@ -1,9 +1,12 @@
 ---
 title: "About"
+slug: "about"
+layout: "page"
+translationKey: "about-page"
 date: 2025-08-30T10:00:00+08:00
 draft: false
-layout: "page"
 ---
+
 
 ## 關於我
 

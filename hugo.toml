@@ -5,6 +5,10 @@ theme = "hugo-theme-stack"
 canonifyURLs = true
 copyright = "Windson"
 
+# 預設語言與語系
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = true
+
 [outputs]
 home = ["HTML", "RSS"]
 
@@ -15,16 +19,146 @@ pagerSize = 5
 post = "/p/:slug/"
 page = "/:slug/"
 
+# ===========================
+# 多語系設定
+# ===========================
+[languages]
+
+  [languages.zh]
+    languageName = "中文"
+    weight = 1
+    title = "Windson 的部落格"
+    contentDir = "content/zh"
+    languageCode = "zh-tw"
+
+    [languages.zh.params.sidebar]
+      subtitle = "中興大學 | 應數系 | 吉他社"
+
+    # --- 中文選單 ---
+    [languages.zh.menu]
+    [[languages.zh.menu.main]]
+    name = "首頁"
+    url = "/"
+    identifier = "home"
+    weight = 1
+    params.icon = "home"
+
+    [[languages.zh.menu.main]]
+    name = "歸檔"
+    url = "/zh/archives/"
+    identifier = "archive"
+    weight = 2
+    params.icon = "archives"
+
+    [[languages.zh.menu.main]]
+    name = "標籤"
+    url = "/zh/tags/"
+    identifier = "tags"
+    weight = 3
+    params.icon = "tag"
+
+    [[languages.zh.menu.main]]
+    name = "關於"
+    url = "/zh/about/"
+    identifier = "about"
+    weight = 4
+    params.icon = "user"
+
+    # --- 中文社群連結 ---
+    [[languages.zh.menu.social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/weichenlin1209"
+    weight = 1
+    params.Icon = "github"
+
+    [[languages.zh.menu.social]]
+    identifier = "email"
+    name = "Email"
+    url = "mailto:info@windson.cc"
+    weight = 2
+    params.Icon = "mail"
+
+    [[languages.zh.menu.social]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/index.xml"
+    weight = 3
+    params.Icon = "rss"
+
+
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    title = "Windson's Blog"
+    contentDir = "content/en"
+    languageCode = "en"
+
+    [languages.en.params.sidebar]
+      subtitle = "NCHU | Applied Math | Guitar"
+
+    # --- English menu ---
+    [languages.en.menu]
+    [[languages.en.menu.main]]
+    name = "Home"
+    url = "/en/"
+    identifier = "home"
+    weight = 1
+    params.icon = "home"
+
+    [[languages.en.menu.main]]
+    name = "Archive"
+    url = "/en/archives/"
+    identifier = "archive"
+    weight = 2
+    params.icon = "archives"
+
+    [[languages.en.menu.main]]
+    name = "Tags"
+    url = "/en/tags/"
+    identifier = "tags"
+    weight = 3
+    params.icon = "tag"
+
+    [[languages.en.menu.main]]
+    name = "About"
+    url = "/en/about/"
+    identifier = "about"
+    weight = 4
+    params.icon = "user"
+
+    # --- English social links ---
+    [[languages.en.menu.social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/weichenlin1209"
+    weight = 1
+    params.Icon = "github"
+
+    [[languages.en.menu.social]]
+    identifier = "email"
+    name = "Email"
+    url = "mailto:info@windson.cc"
+    weight = 2
+    params.Icon = "mail"
+
+    [[languages.en.menu.social]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/en/index.xml"
+    weight = 3
+    params.Icon = "rss"
+
+# ===========================
+# Params (通用)
+# ===========================
 [params]
 mainSections = ["post"]
 rssFullContent = true
 ShowToc = true
-# ===========================
-# Profile Mode & sidebar
-# ===========================
+
 [params.sidebar]
 emoji = "🎸"
-subtitle = "NCHU | AppliedMath | Guitar"
 showSocial = true
 
 [params.sidebar.avatar]
@@ -42,63 +176,6 @@ favicon16x16 = "/favicon/favicon-16x16.png"
 favicon32x32 = "/favicon/favicon-32x32.png"
 
 # ===========================
-# Top Main Menu
-# ===========================
-[menu]
-[[menu.main]]
-name = "Home"
-url = "/"
-identifier = "home"
-weight = 1
-params.icon = "home"
-
-[[menu.main]]
-name = "Archive"
-url = "/archives/"
-identifier = "archive"
-weight = 2
-params.icon = "archives"
-
-[[menu.main]]
-name = "Tags"
-url = "/tags/"
-identifier = "tags"
-weight = 3
-params.icon = "tag"
-
-[[menu.main]]
-name = "About"
-url = "/about/"
-identifier = "about"
-weight = 4
-params.icon = "user"
-
-# ===========================
-# Social Icons
-# ===========================
-
-[[menu.social]]
-identifier = "github"
-name = "GitHub"
-url = "https://github.com/weichenlin1209"
-weight = 1
-params.Icon = "github"
-
-[[menu.social]]
-identifier = "email"
-name = "Email"
-url = "mailto:info@windson.cc"
-weight = 2
-params.Icon = "mail"
-
-[[menu.social]]
-identifier = "rss"
-name = "RSS"
-url = "/index.xml"
-weight = 3
-params.Icon = "rss"
-
-# ===========================
 # Color Scheme
 # ===========================
 [params.colorScheme]
@@ -113,7 +190,6 @@ math = true
 toc = true
 readingTime = false
 
-
 [params.article.license]
 enabled = true
 default = "Licensed under CC BY-NC-SA 4.0"
@@ -121,10 +197,6 @@ default = "Licensed under CC BY-NC-SA 4.0"
 # ===========================
 # Widgets (Homepage)
 # ===========================
-
-#[[params.widgets.homepage]]
-#type = "search"
-
 [[params.widgets.homepage]]
 type = "archives"
 [params.widgets.homepage.params]
@@ -145,16 +217,3 @@ limit = 10
 # ===========================
 [[params.widgets.page]]
 type = "toc"
-
-# 如果之後想加更多 page widgets，格式如下：
-# [[params.widgets.page]]
-# type = "archives"
-# limit = 5
-#
-# [[params.widgets.page]]
-# type = "categories"
-# limit = 10
-#
-# [[params.widgets.page]]
-# type = "tag-cloud"
-# limit = 10

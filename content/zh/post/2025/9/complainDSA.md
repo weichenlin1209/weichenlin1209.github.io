@@ -2,7 +2,7 @@
 title = '碰 ！對系上開砲 ！'
 date = 2025-09-13T01:12:42+08:00
 draft = false
-url = "/post/complainDSA/"
+url = "/zh/post/complainDSA/"
 tags = ["NCHU"]
 categories = ["Life"]
 archiveOnly = true

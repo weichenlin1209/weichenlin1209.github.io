@@ -1,7 +1,7 @@
 +++
 title = '週記 | 25/09/19'
 date = 2025-09-19T09:46:01+08:00
-url = "/post/diary-1/"
+url = "/zh/post/diary-1/"
 draft = false
 tags = ["Diary"]
 categories = ["Life"]
@@ -65,7 +65,7 @@ image = "/images/diary-cover.webp"
 ### LaTeX  
 玩歸玩還是有再做事的，這幾天學了[LaTeX](https://class.kh.edu.tw/19061/bulletin/msg_view/592)。把筆記電子化，放在AFFINE上面。這樣在哪都可以看了，而且還比較好看。但是最近的課都還不多，~~應該是我只有18學分沒什麼感覺。~~
 
-![LaTeX](/images/2025/9/diary|25-09-19/LaTeX.webp)  
+![LaTeX](/images/2025/9/diary-25-09-19/LaTeX.webp)  
 
 ### [搶課流氓](/post/coursegangster-1/)  
 目前還沒有要發2，因為cookie的問題還沒解決，學校的cookie是http-only，之後可能會退而求其次，手動開F12自己複製。再來是學校的課號字典，聽說學校有公開API，所以應該沒什麼大問題。等下學期測試完就會發了。  

@@ -2,7 +2,7 @@
 title = 'Transformation'
 date = 2025-10-29T16:36:00+08:00
 draft = false
-url = "/post/reverse-2/"
+url = "/zh/post/reverse-2/"
 tags = ["PicoCTF" ,"Reverse"]
 categories = ["CTF"]
 layout = "post"

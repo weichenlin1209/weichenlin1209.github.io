@@ -14,9 +14,9 @@ image = "/images/reverse/cover.webp"
 ---  
 
 ## Question
-[題目連結](https://play.picoctf.org/practice/challenge/7?category=3&page=1)  
+[Challenge Link](https://play.picoctf.org/practice/challenge/7?category=3&page=1)  
 
-他說要在原始碼裡找到flag。
+They say the flag is in the source code.
 
 ```
 import java.util.*;
@@ -48,8 +48,12 @@ class VaultDoorTraining {
 ```
 
 ## Solution
-嗯，看起來最下面那行很可疑，甚至跟你說那是密碼。那就試一下吧。  
+Yeah — that suspicious line at the bottom even says it's the password. Let's try it. 
 ```
 picoCTF{w4rm1ng_Up_w1tH_jAv4_3808d338b46}
 ```
-猜對了... 雖然這題是Easy... 但是也太easy了吧...。
+
+Got it... it's an easy level — maybe *too* easy for an "Easy" challenge.
+
+
+

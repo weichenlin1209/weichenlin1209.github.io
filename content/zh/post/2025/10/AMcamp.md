@@ -4,7 +4,7 @@ date = 2025-10-17T10:30:00+08:00
 draft = false
 tags = ["NCHU"]
 categories = ["Life"]
-url = "/post/amcamp/"
+url = "/zh/post/amcamp/"
 layout = "post"
 +++
 _當了宿營的工人之後，只想告訴你們，真的別被騙近來當工人，要加入請三思。_

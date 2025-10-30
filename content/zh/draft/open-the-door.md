@@ -1,0 +1,15 @@
++++
+title = '芝麻開門 ！！'
+date = 2025-09-16T16:10:40+08:00
+draft = true
+tags = ["flipper" ,"NFC"]
+
+[cover]
+    image = "http://windson.cc/images/openthedoor/cover.png"
+    relative = false
+    hidden = false
+
++++
+
+出門身上
+

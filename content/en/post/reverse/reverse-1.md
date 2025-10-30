@@ -13,16 +13,16 @@ image = "/images/reverse/cover.webp"
 <!--more-->
 ---
 ## Intro
-因為金盾獎一直考reverse，加上最近修了組語。所以我要發起一天一Reverse運動。***A Reverse a day keeps the zero-days away.*** 現在的目標是把pico先做完，做完要做什麼？等做完再說吧。
+Since the Golden Shield contest keeps testing reverse challenges, and I’m also taking Assembly this semester, I’ve decided to start a “One Reverse per Day” movement. ***A Reverse a day keeps the zero-days away.***  
+For now, my goal is to finish all the picoCTF reverse problems. What will I do after that? I’ll figure it out when I get there.
 
 ## Flag Hunter 
-[題目連結](https://play.picoctf.org/practice/challenge/472?category=3&page=1)
+[Challenge Link](https://play.picoctf.org/practice/challenge/472?category=3&page=1)
 
-這題一開始會給一個python檔
+The challenge gives you a Python file at the start:
 ```
 import re
 import time
-
 
 # Read in flag from file
 flag = open('flag.txt', 'r').read()
@@ -35,13 +35,16 @@ The ether’s ours to conquer, '''\
 + flag + '\n'
 ```
 
-從這邊就可以知道它把flag放在 ```secret_intro``` 裡面，這次的目標就是要把它印出來，就可以拿旗子了。
+From this, it’s clear that the flag is stored inside `secret_intro`.  
+Our goal is to print it out and retrieve the flag.
+
 ```
 reader(song_flag_hunters, '[VERSE1]')
-```  
-但是呢，從最後上面這行可以看到，他是從 ```'[VERSE1]'``` 這個地方開始讀檔的。所以根本不會印出flag。  
+```
 
-看完了之後呢，就連上去看看吧。~~它會唱歌給妳聽~~，其實就是印歌詞。
+But as we can see from the line above, it starts reading from `'[VERSE1]'`, so it never actually prints the flag at the top.  
+
+After understanding that, let’s connect and run it. ~~It’ll “sing” for you~~ — basically, it just prints out the lyrics:
 ```
 [REFRAIN]
 We’re flag hunters in the ether, lighting up the grid,
@@ -110,7 +113,7 @@ END;
 ```
 
 ## Analysis
-從下面的程式碼可以看到，它判斷沒有特殊的詞被加在歌詞裡面，如果有就執行相對的功能，沒有就繼續往下印。
+Looking at the code below, we can see that it checks for special keywords in the lyrics and executes certain actions when found. If not, it simply prints the line and moves on.
 ```
 # Print lyrics
 line_count = 0
@@ -124,7 +127,7 @@ while not finished and line_count < MAX_LINES:
       song_lines[refrain_return] = 'RETURN ' + str(lip + 1)
       lip = refrain
     elif re.match(r"CROWD.*", line):
-      crowd = input('Crowd: ')  # 這邊可以輸入
+      crowd = input('Crowd: ')  # we can input here
       song_lines[lip] = 'Crowd: ' + crowd
       lip += 1
     elif re.match(r"RETURN [0-9]+", line):
@@ -136,18 +139,24 @@ while not finished and line_count < MAX_LINES:
       time.sleep(0.5)
       lip += 1
 ```
-我們可以藉由改變 ```crowd``` 的值， 來測試一下這個猜想。比如說，我在輸入時打入```;REFRAIN```。分號是為了讓前面的前面的文字結束，否則整個文字都會被當成一般字串。
+
+We can take advantage of the `crowd` input to test this theory.   For example, if we input `;REFRAIN`, the semicolon will close the previous line so that what follows is treated as a new command rather than plain text.
 
 ![example](/images/reverse/flag-hunter/example-1.webp)
 
-這個測試非常成功，因為我打了 ```;REFRAIN``` ，所以導致每次到 ```crowd``` 的時候，它都會跳回去 ```REFRAIN``` 繼續印，其他的可以自己測試看看。知道這件事之後就可以來拿旗子了！  
+The test worked perfectly — by typing `;REFRAIN`, we forced it to loop back to the `REFRAIN` section every time it reached `crowd`.  
+You can experiment with other commands as well. 
+Now that we understand this, we can move on to extracting the flag!
 
 ## Solution  
-我們已經知道flag躲在最上面，而且reader不是從頭開始讀的。所以我們只要有辦法跳到最上面就行了。看起來有辦法讓我們跳遠的程式就是下面這段
+We already know the flag is hidden at the very top, and the reader doesn’t start from there. 
+So we just need a way to jump back to the beginning. The following snippet looks promising:
 ```
 elif re.match(r"RETURN [0-9]+", line):
         lip = int(line.split()[1])
 ```
-他是一個正則表達式。只要寫對格式，想跳到哪就跳去哪。我們的目的地就是讓它從頭開始印，那就讓它跳到0吧！
+
+This regular expression lets us jump to any line number if the format matches.  
+Our goal is to make it start printing from the top — so let’s make it jump to 0!
 
 ![Here is the flag](/images/reverse/flag-hunter/flag.webp)

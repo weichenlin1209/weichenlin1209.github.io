@@ -2,7 +2,7 @@
 title = '週記 | 25/10/26'
 date = 2025-10-26T16:06:53+08:00
 draft = false
-url = "/post/diary-3/"
+url = "/zh/post/diary-3/"
 tags = ["Diary"]
 categories = ["Life"]
 layout = "post"
