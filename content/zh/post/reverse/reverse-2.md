@@ -9,11 +9,10 @@ layout = "post"
 
 image = "/images/reverse/cover.webp"
 +++
-*"A Reverse a day keeps the zero-days away."*
+> ***A Reverse a day keeps the zero-days away***
 <!--more-->
----  
 
-## Question
+## 題目
 [題目連結](https://play.picoctf.org/practice/challenge/104?category=3&page=1)  
 
 首先它給了一個檔案，裡面長這樣。
@@ -24,7 +23,7 @@ image = "/images/reverse/cover.webp"
 ```
 很明顯它編碼錯了，所以才會出現這種奇怪的亂碼，只要還原會去就沒事了。底下的那個是附在題目敘述上的編碼程式。它先把整個flag切成兩兩一組，把兩個都變成ASCII，把第一個乘上256再加上第二個。最後再 ```chr()``` 變成我們現在看到的。
 
-## Solution
+## 解答
 寫一隻程式逆著回來就好了，題目用python我就用python吧。
 ```
 q = "灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸彥㜰㍢㐸㙽"

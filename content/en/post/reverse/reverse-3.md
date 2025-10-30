@@ -9,9 +9,8 @@ layout = "post"
 
 image = "/images/reverse/cover.webp"
 +++
-*"A Reverse a day keeps the zero-days away."*
-<!--more-->
----  
+> ***A Reverse a day keeps the zero-days away***
+<!--more--> 
 
 ## Question
 [Challenge Link](https://play.picoctf.org/practice/challenge/7?category=3&page=1)  

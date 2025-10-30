@@ -9,11 +9,13 @@ layout = "post"
 
 image = "/images/reverse/cover.webp"
 +++
-*"A Reverse a day keeps the zero-days away."*
+> ***A Reverse a day keeps the zero-days away***
 <!--more-->
----
 ## Intro
-Since the Golden Shield contest keeps testing reverse challenges, and I’m also taking Assembly this semester, I’ve decided to start a “One Reverse per Day” movement. ***A Reverse a day keeps the zero-days away.***  
+Since the Golden Shield contest keeps testing reverse challenges, and I’m also taking Assembly this semester, I’ve decided to start a “One Reverse per Day” movement. 
+
+***A Reverse a day keeps the zero-days away.***
+
 For now, my goal is to finish all the picoCTF reverse problems. What will I do after that? I’ll figure it out when I get there.
 
 ## Flag Hunter 

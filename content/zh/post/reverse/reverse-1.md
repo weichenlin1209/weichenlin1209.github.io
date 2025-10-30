@@ -9,13 +9,13 @@ layout = "post"
 
 image = "/images/reverse/cover.webp"
 +++
-*"A Reverse a day keeps the zero-days away."*
+> ***A Reverse a day keeps the zero-days away***
 <!--more-->
----
+
 ## Intro
 因為金盾獎一直考reverse，加上最近修了組語。所以我要發起一天一Reverse運動。***A Reverse a day keeps the zero-days away.*** 現在的目標是把pico先做完，做完要做什麼？等做完再說吧。
 
-## Flag Hunter 
+## 題目 
 [題目連結](https://play.picoctf.org/practice/challenge/472?category=3&page=1)
 
 這題一開始會給一個python檔
@@ -109,7 +109,7 @@ REFRAIN;
 END;
 ```
 
-## Analysis
+## 分析
 從下面的程式碼可以看到，它判斷沒有特殊的詞被加在歌詞裡面，如果有就執行相對的功能，沒有就繼續往下印。
 ```
 # Print lyrics
@@ -142,7 +142,7 @@ while not finished and line_count < MAX_LINES:
 
 這個測試非常成功，因為我打了 ```;REFRAIN``` ，所以導致每次到 ```crowd``` 的時候，它都會跳回去 ```REFRAIN``` 繼續印，其他的可以自己測試看看。知道這件事之後就可以來拿旗子了！  
 
-## Solution  
+## 解答 
 我們已經知道flag躲在最上面，而且reader不是從頭開始讀的。所以我們只要有辦法跳到最上面就行了。看起來有辦法讓我們跳遠的程式就是下面這段
 ```
 elif re.match(r"RETURN [0-9]+", line):

@@ -9,14 +9,13 @@ draft: false
 
 ## About Me
 
-I’m Whisky — that’s my name in every game I play. It came from my elementary school friend mispronouncing my English name *Windson* as *Whiskey*.  
-I’m currently a sophomore majoring in Applied Mathematics, though honestly, I don’t really feel like one — ~~I spend way more time in the world of computer science than doing math.~~
+I’m Whisky — that’s my name in every game I play. It came from my elementary school friend mispronouncing my English name *Windson* as *Whiskey*. I’m currently a sophomore majoring in Applied Mathematics, though honestly, I don’t really feel like one — ~~I spend way more time in the world of computer science than doing math.~~
 
 ### What I’m Currently Up To  
 - Flipper Zero NFC ~~I’m totally not trying to open every door on campus~~  
 - Home Lab  
 - Reverse Engineering  
-- Guitar  
+- Guitar 
 
 ### Contact Me　　
 
@@ -127,9 +126,8 @@ On **2025/10/22**, I switched to the **Stack** theme — because it just looks b
 This is where I share things that interest me, as a replacement for Instagram.  
 If you want to stay updated, subscribe to my [RSS](/index.xml)!
 
-What’s RSS?  
-RSS (*Really Simple Syndication*) is a tool that lets you subscribe to websites.  
-It automatically notifies you when the site updates, so you don’t have to check manually every time.
+- ### What’s RSS?  
+RSS (*Really Simple Syndication*) is a tool that lets you subscribe to websites. It automatically notifies you when the site updates, so you don’t have to check manually every time.
 
 
 

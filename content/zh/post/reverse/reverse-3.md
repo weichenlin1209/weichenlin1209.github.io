@@ -9,11 +9,10 @@ layout = "post"
 
 image = "/images/reverse/cover.webp"
 +++
-*"A Reverse a day keeps the zero-days away."*
+> ***A Reverse a day keeps the zero-days away***
 <!--more-->
----  
 
-## Question
+## 題目
 [題目連結](https://play.picoctf.org/practice/challenge/7?category=3&page=1)  
 
 他說要在原始碼裡找到flag。
@@ -47,7 +46,7 @@ class VaultDoorTraining {
 }
 ```
 
-## Solution
+## 解答
 嗯，看起來最下面那行很可疑，甚至跟你說那是密碼。那就試一下吧。  
 ```
 picoCTF{w4rm1ng_Up_w1tH_jAv4_3808d338b46}

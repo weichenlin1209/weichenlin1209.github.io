@@ -27,7 +27,7 @@ page = "/:slug/"
   [languages.zh]
     languageName = "中文"
     weight = 1
-    title = "Windson 的部落格"
+    title = "威忌"
     contentDir = "content/zh"
     languageCode = "zh-tw"
 
@@ -90,7 +90,7 @@ page = "/:slug/"
   [languages.en]
     languageName = "English"
     weight = 2
-    title = "Windson's Blog"
+    title = "Whisky"
     contentDir = "content/en"
     languageCode = "en"
 
