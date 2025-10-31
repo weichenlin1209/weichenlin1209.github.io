@@ -82,7 +82,7 @@ page = "/:slug/"
     [[languages.zh.menu.social]]
     identifier = "rss"
     name = "RSS"
-    url = "/index.xml"
+    url = "/zh/index.xml"
     weight = 3
     params.Icon = "rss"
 
