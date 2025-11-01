@@ -40,7 +40,8 @@ Then the ready queue piled up, and people started chatting with us while waiting
 
 That was my “Operating Systems brain rot” showing. If you didn’t get it, the footnotes below translate it to normal human language.
 
-Finally, here’s the video link: [link](https://youtu.be/Q7WOF-nkwq0)  
+- ### Lover
+{{< youtube id="Q7WOF-nkwq0">}} 
 
 [^2]: Only two people.  
 [^3]: Distributed Denial-of-Service (DDoS) — a cyberattack that floods a server, service, or network with overwhelming traffic from multiple sources, causing it to crash or become unavailable.  
