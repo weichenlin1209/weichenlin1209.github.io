@@ -1,6 +1,6 @@
 +++
 title = '校慶雞尾酒'
-date = 2025-11-01T16:06:53+08:00
+date = 2025-11-01T23:30:00+08:00
 draft = false
 url = "/zh/post/cocktail/"
 tags = ["NCHU"]

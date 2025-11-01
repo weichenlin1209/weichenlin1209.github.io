@@ -1,13 +1,13 @@
 +++
 title = 'Anniversary Cocktail'
-date = 2025-11-01T16:06:53+08:00
+date = 2025-11-01T23:30:00+08:00
 draft = false
 url = "/en/post/cocktail/"
 tags = ["NCHU"]
 categories = ["Guitar"]
 layout = "post"
 
-image = "/images/2025/11/cocktail/cover.png"
+image = "/images/2025/11/cocktail/cover.webp"
 +++
 
 This performance was hilarious — someone just wouldn’t play the guitar properly. They mixed [“May the World Be Gentle with You”](https://www.youtube.com/watch?v=boETEUNxZJY) with [“My Passionate Kiss”](https://www.youtube.com/shorts/T0M6coupdGc), which made the vocalist burst out laughing. The whole thing was absurd. Anyway, **I** played normally.
