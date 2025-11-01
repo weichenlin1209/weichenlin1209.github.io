@@ -7,7 +7,7 @@ tags = ["NCHU"]
 categories = ["Guitar"]
 layout = "post"
 
-image = "/images/2025/11/cocktail/cover.png"
+image = "/images/2025/11/cocktail/cover.webp"
 +++  
 
 這場表演很好笑，有人不好好彈吉他。把[願溫柔的你被世界溫柔以待](https://www.youtube.com/watch?v=boETEUNxZJY)加上[我熱烈的吻](https://www.youtube.com/shorts/T0M6coupdGc)。讓主唱笑場，一整個很荒謬。反正我是正常彈拉。越來越喜歡吉他社，每次在一起都很好笑。這兩天的表演台下都沒什麼人，根本不會緊張。第一次上台可以這麼chill，希望以後都這樣？下面是這次開的兩首歌。
