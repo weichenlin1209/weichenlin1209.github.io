@@ -90,7 +90,7 @@ page = "/:slug/"
   [languages.en]
     languageName = "English"
     weight = 2
-    title = "Whisky"
+    title = "Windson"
     contentDir = "content/en"
     languageCode = "en"
 
