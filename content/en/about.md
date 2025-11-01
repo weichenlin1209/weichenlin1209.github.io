@@ -55,16 +55,16 @@ I’m the IT manager of my department’s student association. Well, “IT manag
 I’m currently a teaching assistant in the Guitar Club. If I don’t have anything else going on, I attend every class — I still learn new things from them, especially since I never learned guitar through formal lessons.
 
 Upcoming performances:　　
-- **Green River Life Festival**
-  - Date: 2025/10/31 (Fri)　13:00–14:00  
+- **Green River Life Festival (END)**
+  - Date: 2025/10/31　13:00　–　14:00  
   - Location: NCHU Administration Lawn  
 
-- **Alumni Gathering**
-  - Date: 2025/11/01 (Sat)　(can’t remember the time)  
-  - Location: Probably Library 7F, International Conference Hall  
+- **Alumni Gathering (END)**
+  - Date: 2025/11/01　17:30　–　18:00
+  - Location: Library 7F
 
 - **Guitar Club Christmas Party (TBD)**
-  - Date: 2025/12/02　18:30–21:30  
+  - Date: 2025/12/02　18:30　–　21:30  
   - Location: NCHU Small Auditorium　　
 
 ### Tech Stuff
