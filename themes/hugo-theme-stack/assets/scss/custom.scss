@@ -1,1 +1,124 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+::selection {
+    color: #ffff;
+    background: #557697;
+}
+
+.widget.archives .widget-archive--list {
+  transition: transform .3s ease;
+}
+
+.widget.archives .widget-archive--list:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.tagCloud .tagCloud-tags a {
+  border-radius: 10px;
+  font-size: 1.4rem;
+  transition: transform .3s ease;
+}
+
+.tagCloud .tagCloud-tags a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+@media (min-width: 1024px) {
+  .article-list--compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: none;
+    box-shadow: none;
+    gap: 1rem;
+
+    article {
+      background: var(--card-background);
+      border: none;
+      box-shadow: var(--shadow-l2);
+      margin-bottom: 8px;
+      border-radius: 16px;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-l3);
+      }
+    }
+  }
+}
+
+
+//blogroll
+@media (min-width: 1024px) {
+  .blogroll-list {
+    padding: 2rem 0;
+
+    .blogroll-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自動換行、兩欄以上時自適應 */
+      gap: 2rem;
+      justify-items: start; /* 對齊左側 */
+    }
+
+    article {
+      background: var(--card-background);
+      border-radius: 16px;
+      box-shadow: var(--shadow-l2);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 260px; /* 增加高度 */
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+      width: 100%;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-l3);
+      }
+
+      .blogroll-thumb {
+        width: 80px;   /* 放大圖片 */
+        height: 80px;
+        margin-bottom: 1rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+      }
+
+      .blogroll-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          font-size: 1.8rem;  /* 放大標題 */
+          font-weight: 600;
+          margin: 0 0 0.5rem 0;
+        }
+
+        p {
+          font-size: 1.2rem;  /* 放大描述文字 */
+          line-height: 1.6;
+          color: var(--text-muted);
+          margin: 0;
+        }
+      }
+    }
+
+    .blogroll-page-text {
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+
