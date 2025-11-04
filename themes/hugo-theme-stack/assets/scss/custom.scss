@@ -48,34 +48,49 @@
 
 
 //blogroll
-@media (min-width: 1024px) {
+// @media (min-width: 1024px) {
+  .blog-roll-info div
+  {
+    margin-top: -2rem
+  }
+    .blogroll-page-text {
+      
+      font-family: 'PopGothicTC';
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      line-height: 1.6;
+      color: #FFFF;
+      margin-top: -1rem;
+      p {
+        color:#FFFF;
+      }
+    }
   .blogroll-list {
     padding: 2rem 0;
 
     .blogroll-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自動換行、兩欄以上時自適應 */
-      gap: 2rem;
-      justify-items: start; /* 對齊左側 */
-    }
-
-    article {
-      background: var(--card-background);
+      margin:0.5rem ;
+      display:flex ;
+      background: #3e4a4e94;
       border-radius: 16px;
       box-shadow: var(--shadow-l2);
-      padding: 1.5rem;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
-      min-height: 260px; /* 增加高度 */
+      min-height: 20vh; /* 增加高度 */
       transition: box-shadow 0.25s ease, transform 0.25s ease;
-      width: 100%;
-
+      
+      
+      // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自動換行、兩欄以上時自適應 */
+      // gap: 2rem;
+      // justify-items: start; /* 對齊左側 */
       &:hover {
         transform: translateY(-4px);
         box-shadow: var(--shadow-l3);
       }
 
       .blogroll-thumb {
+        justify-content: space-between;
         width: 80px;   /* 放大圖片 */
         height: 80px;
         margin-bottom: 1rem;
@@ -89,18 +104,18 @@
       }
 
       .blogroll-content {
-        flex: 1;
+        justify-content: space-between;
         display: flex;
-        flex-direction: column;
-
+        padding: 2rem;
+        color: #FFFF;
         h2 {
-          font-size: 1.8rem;  /* 放大標題 */
+          font-size: 3rem;  /* 放大標題 */
           font-weight: 600;
-          margin: 0 0 0.5rem 0;
+          margin: 0 0 2rem 0;
         }
 
         p {
-          font-size: 1.2rem;  /* 放大描述文字 */
+          font-size: 1.5rem;  /* 放大描述文字 */
           line-height: 1.6;
           color: var(--text-muted);
           margin: 0;
@@ -108,17 +123,7 @@
       }
     }
 
-    .blogroll-page-text {
-      margin-top: 3rem;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: var(--text-primary);
-
-      p {
-        margin-bottom: 1rem;
-      }
-    }
   }
-}
+// }
 
 

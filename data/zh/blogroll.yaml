@@ -1,0 +1,53 @@
+- name: 奕站
+  url: https://www.iach.cc/
+  desc: 我的直屬學弟，但是在資訊領域我要叫他學長
+  img: https://avatars.githubusercontent.com/u/98824625?v=4 
+
+- name: 軟趴趴的🦥
+  url: https://jennysloth.com/
+  desc: 大學好夥伴
+  # img: https://tux24.xyz/images/avatar.jpg
+
+- name: tux24
+  url: https://tux24.xyz/
+  desc: 很厲害的建中生
+  img: https://tux24.xyz/images/avatar.jpg
+
+- name: Limuran
+  url: https://limuran.top/
+  desc: 我的Blog的美話參考
+  img: https://limuran.top/favicon.ico
+
+- name: Jimmy Cai
+  url: https://cai.im/
+  desc: Stack的作者
+  img: https://r2.cai.im/2025/08/fydzhqkYKQ0BvJzBo_Y_G.VWxHdXRJb2ZOR29mLlRiSHM6b2ZKRGEjV0NXVzlhanVhe1dW.1500x2000.webp
+
+- name: Wiwi Blog
+  url: https://https://wiwi.blog/
+  desc: 擁抱開源軟體的鋼琴師
+  img: https://wiwi.blog/img/logo.svg
+
+- name: Jaron Writes. Blog
+  url: https://www.jaron.tw/
+  desc: 影像創作者，也喜歡彈鋼琴的人
+  img: https://www.jaron.tw/img/logo.png
+
+- name: 毛哥 EM
+  url: https://emtech.cc/
+  desc: 資訊密技集中處
+  img: https://emtech.cc/static/img/EMprofile.png
+
+- name: Ivon
+  url: https://ivonblog.com/
+  desc: GNU/Linux情報、自由開源軟體、電腦手機資訊、人文思辨的所在
+  img: https://ivonblog.com/img/avatar_ivonhuang.png
+
+- name: Alex Hsu 徐小翔
+  url: https://alexhsu.com/
+  desc: 獨立開發者，想成為作家。紀錄持續學習和追求簡單的感悟
+  img: https://alexhsu.com/profile.jpg
+
+
+
+

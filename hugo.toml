@@ -64,6 +64,12 @@ page = "/:slug/"
     weight = 4
     params.icon = "user"
 
+    [[languages.zh.menu.main]]
+    name = "部落滾"
+    url = "/zh/blogroll/"
+    weight = 5
+    params.icon = "blogroll"
+
     # --- 中文社群連結 ---
     [[languages.zh.menu.social]]
     identifier = "github"
@@ -126,6 +132,12 @@ page = "/:slug/"
     identifier = "about"
     weight = 4
     params.icon = "user"
+
+    [[languages.en.menu.main]]
+    name = "Blogroll"
+    url = "/en/blogroll/"
+    weight = 5
+    params.icon = "blogroll"
 
     # --- English social links ---
     [[languages.en.menu.social]]
