@@ -30,7 +30,7 @@ Open Burp Suite and intercept the POST to the university course registration sys
 From our observations, every time it performs a major action (add/drop), it issues a new cookie. So you need to bake a new cookie after each course selection. Also, headers don’t change during registration — even if there’s a `Content-Length` it doesn’t seem to care. ~~From experiments, removing it still lets you grab the course~~.  
 
 The intercepted POST during course selection looks like this:  
-```
+```text
 POST /cofsys/plsql/enro_nomo3_dml HTTP/1.1
 Host: cportal.nchu.edu.tw
 Cookie: DONT STEAL MY COOKIE　　#你要複製的在這，不要偷我的餅乾
@@ -68,7 +68,7 @@ Now that you’ve got the cookie, put it in the [oven](https://curlconverter.com
 
 ## Start the heist!
 We use ChatGPT to code the program to send the post
-```
+```python
 mport requests
 
 from concurrent.futures import ThreadPoolExecutor

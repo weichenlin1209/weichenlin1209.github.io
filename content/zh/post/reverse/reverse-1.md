@@ -19,7 +19,7 @@ image = "/images/reverse/cover.webp"
 [題目連結](https://play.picoctf.org/practice/challenge/472?category=3&page=1)
 
 這題一開始會給一個python檔
-```
+```python
 import re
 import time
 
@@ -36,13 +36,13 @@ The ether’s ours to conquer, '''\
 ```
 
 從這邊就可以知道它把flag放在 ```secret_intro``` 裡面，這次的目標就是要把它印出來，就可以拿旗子了。
-```
+```python
 reader(song_flag_hunters, '[VERSE1]')
 ```  
 但是呢，從最後上面這行可以看到，他是從 ```'[VERSE1]'``` 這個地方開始讀檔的。所以根本不會印出flag。  
 
 看完了之後呢，就連上去看看吧。~~它會唱歌給妳聽~~，其實就是印歌詞。
-```
+```text
 [REFRAIN]
 We’re flag hunters in the ether, lighting up the grid,
 No puzzle too dark, no challenge too hid.
@@ -111,7 +111,7 @@ END;
 
 ## 分析
 從下面的程式碼可以看到，它判斷沒有特殊的詞被加在歌詞裡面，如果有就執行相對的功能，沒有就繼續往下印。
-```
+```python
 # Print lyrics
 line_count = 0
 lip = start
@@ -144,7 +144,7 @@ while not finished and line_count < MAX_LINES:
 
 ## 解答 
 我們已經知道flag躲在最上面，而且reader不是從頭開始讀的。所以我們只要有辦法跳到最上面就行了。看起來有辦法讓我們跳遠的程式就是下面這段
-```
+```python
 elif re.match(r"RETURN [0-9]+", line):
         lip = int(line.split()[1])
 ```

@@ -22,7 +22,7 @@ For now, my goal is to finish all the picoCTF reverse problems. What will I do a
 [Challenge Link](https://play.picoctf.org/practice/challenge/472?category=3&page=1)
 
 The challenge gives you a Python file at the start:
-```
+```python
 import re
 import time
 
@@ -40,14 +40,14 @@ The ether’s ours to conquer, '''\
 From this, it’s clear that the flag is stored inside `secret_intro`.  
 Our goal is to print it out and retrieve the flag.
 
-```
+```python
 reader(song_flag_hunters, '[VERSE1]')
 ```
 
 But as we can see from the line above, it starts reading from `'[VERSE1]'`, so it never actually prints the flag at the top.  
 
 After understanding that, let’s connect and run it. ~~It’ll “sing” for you~~ — basically, it just prints out the lyrics:
-```
+```text
 [REFRAIN]
 We’re flag hunters in the ether, lighting up the grid,
 No puzzle too dark, no challenge too hid.
@@ -116,7 +116,7 @@ END;
 
 ## Analysis
 Looking at the code below, we can see that it checks for special keywords in the lyrics and executes certain actions when found. If not, it simply prints the line and moves on.
-```
+```python
 # Print lyrics
 line_count = 0
 lip = start
@@ -153,7 +153,7 @@ Now that we understand this, we can move on to extracting the flag!
 ## Solution  
 We already know the flag is hidden at the very top, and the reader doesn’t start from there. 
 So we just need a way to jump back to the beginning. The following snippet looks promising:
-```
+```python
 elif re.match(r"RETURN [0-9]+", line):
         lip = int(line.split()[1])
 ```

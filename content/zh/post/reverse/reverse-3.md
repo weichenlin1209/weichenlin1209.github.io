@@ -17,7 +17,7 @@ image = "/images/reverse/cover.webp"
 
 他說要在原始碼裡找到flag。
 
-```
+```java
 import java.util.*;
 
 class VaultDoorTraining {
@@ -48,7 +48,7 @@ class VaultDoorTraining {
 
 ## 解答
 嗯，看起來最下面那行很可疑，甚至跟你說那是密碼。那就試一下吧。  
-```
+```text
 picoCTF{w4rm1ng_Up_w1tH_jAv4_3808d338b46}
 ```
 猜對了... 雖然這題是Easy... 但是也太easy了吧...。

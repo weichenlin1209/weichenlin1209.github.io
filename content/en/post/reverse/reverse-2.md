@@ -16,7 +16,7 @@ image = "/images/reverse/cover.webp"
 [Challenge Link](https://play.picoctf.org/practice/challenge/104?category=3&page=1)  
 
 The challenge provides a file that looks like this:
-```
+```text
 灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸彥㜰㍢㐸㙽
 
 .join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])
@@ -25,7 +25,7 @@ Clearly the encoding went wrong, which is why you see that garbled text. If we r
 
 ## Solution
 Just write a script to reverse the process. The challenge used Python, so here’s a Python solution:
-```
+```python
 q = "灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸彥㜰㍢㐸㙽"
 sum = []
 

@@ -16,7 +16,7 @@ image = "/images/reverse/cover.webp"
 [題目連結](https://play.picoctf.org/practice/challenge/104?category=3&page=1)  
 
 首先它給了一個檔案，裡面長這樣。
-```
+```text
 灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸彥㜰㍢㐸㙽
 
 .join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])
@@ -25,7 +25,7 @@ image = "/images/reverse/cover.webp"
 
 ## 解答
 寫一隻程式逆著回來就好了，題目用python我就用python吧。
-```
+```python
 q = "灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸彥㜰㍢㐸㙽"
 sum = []
 
