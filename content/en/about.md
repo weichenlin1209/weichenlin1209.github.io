@@ -17,22 +17,43 @@ I’m Whisky — that’s my name in every game I play. It came from my elementa
 - Reverse Engineering  
 - Guitar 
 
-### Contact Me　　
+### Contact Me  
+As long as your message doesn’t end up in spam and doesn’t look like a scam, I’ll probably reply.
 
-- [telegram](https://t.me/windsoncc)  
-- [signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)  
-- [email](mailto:info@windson.cc)　　
+- [Telegram](https://t.me/windsoncc)
+- [Signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)
+- [Email](mailto:info@windson.cc)
 
-After connecting with many people in the tech field (mostly through blogs), I realized that most platforms don’t treat users very well. Some use user data to train their models, others force you to accept questionable terms just to use their services. That’s why I don’t like using Instagram, Facebook, or Line.  
+> Why no Line or Instagram?
 
-If you want to understand what these platforms do with your data, you can check their terms of service yourself — if you’re so lazy to do that, visit [ToS;DR](https://tosdr.org/)
+- #### Stop using Line
+    Line is a **closed-source commercial app** with extremely unreasonable [terms of service](https://wiwi.blog/blog/line-privacy-policy/). If you haven’t read them before, check out the link above — Wiwi goes through everything in detail.  
+    Also, it completely fails as a communication tool:
+
+    - **Too many ads and spam messages**  
+      I often have to dig through piles of spam just to find real messages from friends or classmates. 
+      That’s a terrible experience for a messaging app, but since I live in Taiwan, I have no choice but to use it.
+
+    - **Closed data**  
+      All chat data is stored locally, yet files still expire — which makes no sense at all.
+
+    - **Poor support**  
+      Line doesn’t support Linux users, and it’s about to remove its Chrome extension too. That means I won’t be able to use Line on my computer anymore.  
+
+- #### Don’t use Instagram either  
+    Instagram uses your posts, messages, and browsing data to train its models. I just want to see what my friends are up to — but instead, the algorithm feeds me targeted ads nonstop.  
+
+    Also, Instagram content is locked behind accounts. *If I don’t have an account, I can’t see anything.* So ,don’t put your creations there — they become invisible to the web.  
+
+    And then there’s the **reel** (or **short**). The algorithm shows you an endless stream of short videos that perfectly match your interests. Once you get hooked, you enter a “time chamber” — suddenly two or three hours are gone, and you’ve done nothing.  It’s literally draining your time for money.
+
 
 ---
 
 ## Recent
 
 ### Classes
-I have classes from Monday to Wednesday — no early morning classes, and once I make it through Wednesday, I’ve got a four-day weekend. Perfect schedule. But I’m still keeping myself busy with side projects.
+I have classes from Monday to Wednesday — no early morning classes, and once I make it through Wednesday, I’ve got a four-day weekend. Perfect schedule. But I’m still keeping myself busy with side projects. I’ll post a summary about my courses at the end of the semester.
 
 | Period / Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 |---------------|---------|----------|------------|-----------|---------|
@@ -49,7 +70,9 @@ I have classes from Monday to Wednesday — no early morning classes, and once I
 
 
 ### Student Association
-I’m the IT manager of my department’s student association. Well, “IT manager” — but in practice, I mostly act as PR, managing social accounts and announcements. Recently, I got the domain for the association from the head, so I’m planning to set up a website, exam archive system, RSS server, and official email. Hopefully, I’ll finish all that next semester.
+I’m the IT manager of my department’s student association. Well, “IT manager” — but in practice, I mostly act as PR, managing social accounts and announcements. Recently, I got the domain for the association from the head, so I’m planning to set up a website, exam archive system, RSS server, and official email. Hopefully, I’ll finish all that next semester.  
+
+There’s also a department barbecue coming up. Even though the sign-up is closed, if you’re reading this… I might let you sneak in.
 
 ### Guitar Club　　
 I’m currently a teaching assistant in the Guitar Club. If I don’t have anything else going on, I attend every class — I still learn new things from them, especially since I never learned guitar through formal lessons.
@@ -128,6 +151,3 @@ If you want to stay updated, subscribe to my [RSS](/index.xml)!
 
 - ### What’s RSS?  
 RSS (*Really Simple Syndication*) is a tool that lets you subscribe to websites. It automatically notifies you when the site updates, so you don’t have to check manually every time.
-
-
-
