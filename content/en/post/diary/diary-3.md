@@ -14,7 +14,7 @@ image = "/images/diary-cover.webp"
 After dropping the orientation camp, life has been much more relaxed — though there’s still plenty to do. Midterms have just started, and I’ve learned the downside of not taking any general education courses: ***“Every single class has a midterm!”*** For the next three weeks, I’ll have an exam every week. Not asking for much — as long as I pass, that’s good enough.
 
 ## Golden Shield Award
-Last Saturday, I went to compete in the Golden Shield with Each Chen. Turns out our senior’s advice was spot-on — he said it was basically a “psychic guessing contest.” Out of the whole test, we’re only sure about one crypto question; the rest were all like: *“Hmm, maybe it’s this?” “Yeah, looks about right.”*  
+Last Saturday, I went to compete in the Golden Shield with [Each Chen](https://www.iach.cc). Turns out our senior’s advice was spot-on — he said it was basically a “psychic guessing contest.” Out of the whole test, we’re only sure about one crypto question; the rest were all like: *“Hmm, maybe it’s this?” “Yeah, looks about right.”*  
 Even though we were totally guessing, I’m sure we weren’t the only ones. Supposedly, about half of the teams get eliminated this round — hopefully we make it to the finals. ~~Also, finalists get a Golden Shield T-shirt~~.  
 
 Anyway, it wasn’t a total loss; at least I learned that reverse engineering is a big focus. So, I’ll start doing one reverse challenge per day. d(`･∀･)b  
