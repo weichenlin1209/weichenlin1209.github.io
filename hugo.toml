@@ -70,6 +70,12 @@ page = "/:slug/"
     weight = 5
     params.icon = "blogroll"
 
+    [[languages.zh.menu.main]]
+    name = "考古題"
+    url = "https://passexam.iach.cc"
+    weight = 6
+    params.icon = "passexam"
+
     # --- 中文社群連結 ---
     [[languages.zh.menu.social]]
     identifier = "github"
@@ -138,6 +144,12 @@ page = "/:slug/"
     url = "/en/blogroll/"
     weight = 5
     params.icon = "blogroll"
+
+    [[languages.en.menu.main]]
+    name = "pastexam"
+    url = "https://passexam.iach.cc"
+    weight = 6
+    params.icon = "passexam"
 
     # --- English social links ---
     [[languages.en.menu.social]]
