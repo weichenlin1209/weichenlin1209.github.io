@@ -1,7 +1,7 @@
 +++
 title = 'Complain About My Department'
 date = 2025-09-13T01:12:42+08:00
-draft = false
+draft = true
 url = "/post/complainDSA/"
 tags = ["NCHU"]
 categories = ["Life"]
