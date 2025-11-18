@@ -213,10 +213,11 @@ default = "dark"
 math = true
 toc = true
 readingTime = true
+author = "[WINDSON](/)"
 
 [params.article.license]
 enabled = true
-default = "Licensed under CC BY-NC-SA 4.0"
+default = "[Licensed under CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hant)"
 
 # ===========================
 # Widgets (Homepage)
@@ -241,3 +242,12 @@ limit = 10
 # ===========================
 [[params.widgets.page]]
 type = "toc"
+
+# ===========================
+# OpenGraph
+# ===========================
+[params.defaultImage.opengraph]
+enabled = true
+local = false
+src = "/images/og-image.jpg"
+
