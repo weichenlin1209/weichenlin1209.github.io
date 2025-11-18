@@ -31,8 +31,8 @@ page = "/:slug/"
     contentDir = "content/zh"
     languageCode = "zh-tw"
 
-    [languages.zh.params.sidebar]
-      subtitle = "中興大學 | 應數系 | 吉他社"
+    #[languages.zh.params.sidebar]
+    #  subtitle = "威忌的個人網站"
 
     # --- 中文選單 ---
     [languages.zh.menu]
@@ -106,8 +106,8 @@ page = "/:slug/"
     contentDir = "content/en"
     languageCode = "en"
 
-    [languages.en.params.sidebar]
-      subtitle = "NCHU | Applied Math | Guitar"
+    #[languages.en.params.sidebar]
+    # subtitle = "NCHU | Applied Math | Guitar"
 
     # --- English menu ---
     [languages.en.menu]
