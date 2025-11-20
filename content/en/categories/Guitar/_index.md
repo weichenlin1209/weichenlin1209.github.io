@@ -1,4 +1,4 @@
 ---
 title: "Guitar"
-image: /images/diary/guitar.webp
+image: /images/categories/guitar.webp
 ---
