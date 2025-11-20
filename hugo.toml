@@ -32,7 +32,7 @@ page = "/:slug/"
     languageCode = "zh-tw"
 
     #[languages.zh.params.sidebar]
-    #  subtitle = "威忌的個人網站"
+      subtitle = "威忌的個人網站"
 
     # --- 中文選單 ---
     [languages.zh.menu]
