@@ -8,7 +8,7 @@ categories = ["Life"]
 layout = "post"
 
 
-image = "/images/diary-cover.webp"
+image = "/images/diary/diary-cover.webp"
 
 +++
 *Sophomore year has been so fulfilling — if I don’t write it down now... I’ll definitely forget how awesome it was.*  

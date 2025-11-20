@@ -8,7 +8,7 @@ categories = ["Life"]
 layout = "post"
 
 
-image = "/images/diary-cover.webp"
+image = "/images/diary/diary-cover.webp"
 +++
 *By the fourth week of the semester, my mental state already feels like finals week...*
 <!--more-->

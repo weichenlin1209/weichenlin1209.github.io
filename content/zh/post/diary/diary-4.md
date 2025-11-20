@@ -7,7 +7,7 @@ tags = ["Diary"]
 categories = ["Life"]
 layout = "post"
 
-image = "/images/diary-cover.webp"
+image = "/images/diary/diary-cover.webp"
 +++  
 
 ## 前言  

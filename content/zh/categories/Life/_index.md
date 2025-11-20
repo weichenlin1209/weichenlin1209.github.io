@@ -1,4 +1,4 @@
 ---
 title: "Life"
-image: /images/diary-cover.webp
+image: /images/diary/diary-cover.webp
 ---

@@ -7,7 +7,7 @@ tags = ["Diary"]
 categories = ["Life"]
 layout = "post"
 
-image = "/images/diary-cover.webp"
+image = "/images/diary/diary-cover.webp"
 +++  
 *It’s been a while since my last post, just felt like writing something today.*
 <!--more-->
