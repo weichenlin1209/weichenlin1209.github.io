@@ -66,6 +66,16 @@
             .article-details {
                 padding: 20px;
             }
+            & {
+                transition: 
+                    transform 0.25s ease,
+                    box-shadow 0.25s ease;
+            }
+            &:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-l3);
+            }
         }
+        
     }
 }

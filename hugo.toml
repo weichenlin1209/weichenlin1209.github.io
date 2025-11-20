@@ -106,8 +106,8 @@ page = "/:slug/"
     contentDir = "content/en"
     languageCode = "en"
 
-    #[languages.en.params.sidebar]
-    # subtitle = "NCHU | Applied Math | Guitar"
+    [languages.en.params.sidebar]
+     subtitle = "Windson's Personal Blog"
 
     # --- English menu ---
     [languages.en.menu]
