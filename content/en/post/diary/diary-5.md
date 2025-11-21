@@ -2,7 +2,7 @@
 title = 'Weekly Journal | 25/11/21'
 date = 2025-11-21T23:00:00+08:00
 draft = false
-url = "/zh/post/diary-5/"
+url = "/en/post/diary-5/"
 tags = ["Weekly Journal"]
 categories = ["Life"]
 layout = "post"
