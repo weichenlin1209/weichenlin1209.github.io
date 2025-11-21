@@ -1,9 +1,9 @@
 +++
-title = 'Diary | 25/10/26'
+title = 'Weekly Journal | 25/10/26'
 date = 2025-10-26T16:06:53+08:00
 draft = false
 url = "/post/diary-3/"
-tags = ["Diary"]
+tags = ["Weekly Journal"]
 categories = ["Life"]
 layout = "post"
 

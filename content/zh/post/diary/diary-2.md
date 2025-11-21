@@ -3,7 +3,7 @@ title = '週記 | 25/09/29'
 date = 2025-09-29T15:11:53+08:00
 draft = false
 url = "/zh/post/diary-2/"
-tags = ["Diary"]
+tags = ["Weekly Journal"]
 categories = ["Life"]
 layout = "post"
 
