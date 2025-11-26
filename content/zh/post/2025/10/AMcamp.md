@@ -1,7 +1,7 @@
 +++
 title = '宿營的辛酸血淚'
 date = 2025-10-17T10:30:00+08:00
-draft = true
+draft = false
 tags = ["NCHU"]
 categories = ["Life"]
 url = "/zh/post/amcamp/"

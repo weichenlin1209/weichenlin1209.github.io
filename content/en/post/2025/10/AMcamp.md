@@ -1,7 +1,7 @@
 +++
 title = 'The Blood, Sweat, and Tears of Camp Workers'
 date = 2025-10-17T10:30:00+08:00
-draft = true
+draft = false
 tags = ["NCHU"]
 categories = ["Life"]
 url = "/post/amcamp/"
