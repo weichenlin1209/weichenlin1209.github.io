@@ -108,8 +108,9 @@ draft: false
 - 伺服器：RaspberryPi 5 16G
 - 筆電
   - 型號：Acer Aspire A515-55 N18Q13 RAM:12G
-  - OS：Linux Mint
+  - OS：Kubuntu 25.10
   - 滑鼠：Logi M590
+  - 鍵盤：Logi Alto Keys K98M
 - 平板：iPad Air (M2)
 - 手機：Samsung A56 ~~保固過了來刷機~~ 
 - 寵物：Flipper Zero

@@ -127,8 +127,9 @@ SLA 3D Printing, Flipper, Raspberry Pi 5, Home Lab
 - **Server:** Raspberry Pi 5 (16GB)
 - **Laptop**
   - Model: Acer Aspire A515-55 N18Q13  
-  - OS: Linux Mint  
+  - OS: Kubuntu 25.10  
   - Mouse: Logi M590
+  - Keyboard: Logi Alto Keys K98M
 - **Tablet:** iPad Air (M2)
 - **Phone:** Samsung A56 ~~Warranty’s over, time to flash ROMs~~  
 - **Pet:** Flipper Zero
