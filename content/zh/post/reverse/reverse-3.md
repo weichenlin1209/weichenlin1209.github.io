@@ -1,5 +1,5 @@
 +++
-title = 'vault-door-training'
+title = 'picoCTF vault-door-training'
 date = 2025-10-30T10:00:00+08:00
 draft = false
 url = "/zh/post/reverse-3/"

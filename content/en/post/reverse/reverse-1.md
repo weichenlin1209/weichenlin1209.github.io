@@ -1,5 +1,5 @@
 +++
-title = 'Flag Hunter'
+title = 'picoCTF Flag Hunter'
 date = 2025-10-28T22:36:00+08:00
 draft = false
 url = "/post/reverse-1/"
