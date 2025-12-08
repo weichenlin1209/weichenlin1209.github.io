@@ -3,6 +3,7 @@ title = 'picoCTF SansAlpha'
 date = 2025-12-06T16:30:00+08:00
 draft = false
 url = "/zh/post/picoCTF-SansAlpha/"
+tags = ["PicoCTF"]
 categories = ["CTF"]
 layout = "post"
 
