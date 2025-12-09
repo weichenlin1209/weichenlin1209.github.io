@@ -11,6 +11,7 @@ defaultContentLanguageInSubdir = true
 
 [outputs]
 home = ["HTML", "RSS"]
+search = ["HTML", "JSON"]
 
 [pagination]
 pagerSize = 5
@@ -223,6 +224,9 @@ default = "[Licensed under CC BY-NC-SA 4.0](https://creativecommons.org/licenses
 # Widgets (Homepage)
 # ===========================
 [[params.widgets.homepage]]
+type = "search"
+
+[[params.widgets.homepage]]
 type = "archives"
 [params.widgets.homepage.params]
 limit = 5
@@ -236,6 +240,7 @@ limit = 10
 type = "tag-cloud"
 [params.widgets.homepage.params]
 limit = 10
+
 
 # ===========================
 # Widgets (Page)

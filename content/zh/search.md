@@ -1,5 +1,9 @@
 ---
 title: "Search"
-layout: "search"
-draft: "true"
+layout: search
+type: page
+url: "/zh/search/"
+outputs:
+  - html
+  - json
 ---
