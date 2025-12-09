@@ -1,5 +1,9 @@
 ---
 title: "Search"
-layout: "search"
-draft: "true"
+layout: search
+type: page
+url: "/en/search/"
+outputs:
+  - html
+  - json
 ---
