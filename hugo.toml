@@ -4,6 +4,7 @@ title = "Windson's blog"
 theme = "hugo-theme-stack"
 canonifyURLs = true
 copyright = "Windson"
+paginate = 6
 
 # 預設語言與語系
 defaultContentLanguage = "zh"
@@ -225,6 +226,8 @@ default = "[Licensed under CC BY-NC-SA 4.0](https://creativecommons.org/licenses
 # ===========================
 [[params.widgets.homepage]]
 type = "search"
+[params.widgets.homepage.params]
+limit = 6
 
 [[params.widgets.homepage]]
 type = "archives"
