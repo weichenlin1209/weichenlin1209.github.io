@@ -72,8 +72,6 @@ I have classes from Monday to Wednesday — no early morning classes, and once I
 ### Student Association
 I’m the IT manager of my department’s student association. Well, “IT manager” — but in practice, I mostly act as PR, managing social accounts and announcements. Recently, I got the domain for the association from the head, so I’m planning to set up a website, exam archive system, RSS server, and official email. Hopefully, I’ll finish all that next semester.  
 
-There’s also a department barbecue coming up. Even though the sign-up is closed, if you’re reading this… I might let you sneak in.
-
 ### Guitar Club　　
 I’m currently a teaching assistant in the Guitar Club. If I don’t have anything else going on, I attend every class — I still learn new things from them, especially since I never learned guitar through formal lessons.
 
@@ -86,7 +84,7 @@ Upcoming performances:　　
   - Date: 2025/11/01　17:30　–　18:00
   - Location: Library 7F
 
-- **Guitar Club Christmas Party (TBD)**
+- **Guitar Club Christmas Party (END)**
   - Date: 2025/12/02　18:30　–　21:30  
   - Location: NCHU Small Auditorium　　
 
