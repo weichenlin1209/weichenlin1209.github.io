@@ -67,8 +67,8 @@ page = "/:slug/"
     params.icon = "user"
 
     [[languages.zh.menu.main]]
-    name = "部落滾"
-    url = "/zh/blogroll/"
+    name = "筆記"
+    url = "https://study.windson.cc"
     weight = 5
     params.icon = "blogroll"
 
@@ -142,8 +142,8 @@ page = "/:slug/"
     params.icon = "user"
 
     [[languages.en.menu.main]]
-    name = "Blogroll"
-    url = "/en/blogroll/"
+    name = "Note"
+    url = "https://study.windson.cc"
     weight = 5
     params.icon = "blogroll"
 
