@@ -45,8 +45,13 @@
 
 - name: Alex Hsu
   url: https://alexhsu.com/
-  desc: Independent developer aspiring to be a writer. Recording reflections on continuous learning and the pursuit of simplicity.
+  desc: An independent developer who likens life to a game
   img: https://alexhsu.com/profile.jpg
+
+- name: Eddie
+  url: https://blog.gtisland.com/
+  desc: Lighting&Audio Technician, his article is diverse.
+  img: https://blog.gtisland.com/images/apple-touch-icon.png
 
 
 

@@ -20,7 +20,7 @@
 
 - name: Jimmy Cai
   url: https://cai.im/
-  desc: Stack的作者
+  desc: Stack的作者，謝謝他做出好看的主題
   img: https://r2.cai.im/2025/08/fydzhqkYKQ0BvJzBo_Y_G.VWxHdXRJb2ZOR29mLlRiSHM6b2ZKRGEjV0NXVzlhanVhe1dW.1500x2000.webp
 
 - name: Wiwi Blog
@@ -28,7 +28,7 @@
   desc: 擁抱開源軟體的鋼琴師
   img: https://wiwi.blog/img/logo.svg
 
-- name: Jaron Writes. Blog
+- name: Jaron
   url: https://www.jaron.tw/
   desc: 影像創作者，也喜歡彈鋼琴的人
   img: https://www.jaron.tw/img/logo.png
@@ -40,14 +40,16 @@
 
 - name: Ivon
   url: https://ivonblog.com/
-  desc: GNU/Linux情報、自由開源軟體、電腦手機資訊、人文思辨的所在
+  desc: GNU/Linux情報、自由開源軟體、電腦手機資訊
   img: https://ivonblog.com/img/avatar_ivonhuang.png
 
-- name: Alex Hsu 徐小翔
+- name: 徐小翔
   url: https://alexhsu.com/
-  desc: 獨立開發者，想成為作家。紀錄持續學習和追求簡單的感悟
+  desc: 把人生比喻成遊戲的獨立開發者
   img: https://alexhsu.com/profile.jpg
 
-
-
+- name: Eddie
+  url: https://blog.gtisland.com/
+  desc: 燈光音響技師，內容主題多元
+  img: https://blog.gtisland.com/images/apple-touch-icon.png
 

@@ -1,6 +1,7 @@
 ---
-title: "Blog Roll"
-description: "Collection of my recommended blogs"
+title: "Blogroll"
+layout: "blogroll"
+url: "/en/blogroll/"
 ---
 
 Welcome to my Blog Roll!  

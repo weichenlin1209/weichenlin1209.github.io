@@ -53,11 +53,10 @@ page = "/:slug/"
     params.icon = "archives"
 
     [[languages.zh.menu.main]]
-    name = "標籤"
-    url = "/zh/tags/"
-    identifier = "tags"
+    name = "部落滾"
+    url = "/zh/blogroll/"
     weight = 3
-    params.icon = "tag"
+    params.icon = "link"
 
     [[languages.zh.menu.main]]
     name = "關於"
@@ -66,12 +65,14 @@ page = "/:slug/"
     weight = 4
     params.icon = "user"
 
+
     [[languages.zh.menu.main]]
     name = "筆記"
     url = "https://study.windson.cc"
     weight = 5
     params.icon = "blogroll"
 
+    
     [[languages.zh.menu.main]]
     name = "考古題"
     url = "https://passexam.iach.cc"
@@ -128,11 +129,10 @@ page = "/:slug/"
     params.icon = "archives"
 
     [[languages.en.menu.main]]
-    name = "Tags"
-    url = "/en/tags/"
-    identifier = "tags"
+    name = "blogroll"
+    url = "/en/blogroll/"
     weight = 3
-    params.icon = "tag"
+    params.icon = "link"
 
     [[languages.en.menu.main]]
     name = "About"
