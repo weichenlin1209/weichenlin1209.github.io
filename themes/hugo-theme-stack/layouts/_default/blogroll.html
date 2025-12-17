@@ -11,7 +11,8 @@
   </div>
 
 </div>
- <hr style="width:100%;"> 
+
+<hr style="width:100%;"> 
 <section class="article-list--compact blogroll-list">
 
   {{ range $blogroll }}
@@ -19,8 +20,8 @@
   <div class="blogroll-cards">
       
       <div class="blogroll-content">
-        <div>
-            <h2>{{ .name }}</h2>
+        <div class="blogroll-details">
+            <h2 class="blogrol-title">{{ .name }}</h2>
             {{ with .desc }}<p>{{ . }}</p>{{ end }}
             
             

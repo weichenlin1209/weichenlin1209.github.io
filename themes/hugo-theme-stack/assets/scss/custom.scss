@@ -65,20 +65,28 @@
         color:#FFFF;
       }
     }
+
   .blogroll-list {
     padding: 2rem 0;
 
     .blogroll-cards {
-      margin:0.5rem ;
-      display:flex ;
-      background: #3e4a4e94;
-      border-radius: 16px;
+      background: var(--card-background);
+      border: none;
       box-shadow: var(--shadow-l2);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      min-height: 20vh; /* 增加高度 */
+      margin-bottom: 8px;
+      border-radius: 16px;
       transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+      // margin:0.5rem ;
+      // display:flex ;
+      background: #3e4a4e94;
+      // border-radius: 16px;
+      // box-shadow: var(--shadow-l2);
+      // padding: 2rem;
+      // display: flex;
+      // flex-direction: column;
+      // min-height: 20vh; /* 增加高度 */
+      // transition: box-shadow 0.25s ease, transform 0.25s ease;
       
       
       // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自動換行、兩欄以上時自適應 */
@@ -103,22 +111,35 @@
         }
       }
 
+      .blogroll-details {
+            flex-grow: 1;
+            padding: 0;
+            min-height: var(--image-size);
+            gap: 10px;
+            //display: flex;
+      }
+
       .blogroll-content {
         justify-content: space-between;
         display: flex;
         padding: 2rem;
         color: #FFFF;
+        //border-bottom: 1.5px solid var(--card-separator-color);
+
         h2 {
-          font-size: 3rem;  /* 放大標題 */
-          font-weight: 600;
-          margin: 0 0 2rem 0;
+          margin: 1;
+            font-size: 2.5 rem;
+
+            @include respond(md) {
+                font-size: 1.8rem;
+            }
         }
 
         p {
-          font-size: 1.5rem;  /* 放大描述文字 */
-          line-height: 1.6;
-          color: var(--text-muted);
-          margin: 0;
+          font-size: 1.4rem;  /* 放大描述文字 */
+          // line-height: 1.6;
+          // color: var(--text-muted);
+          // margin: 0;
         }
       }
     }
