@@ -7,53 +7,48 @@ date: 2025-08-30T10:00:00+08:00
 draft: false
 ---
 
+
 ## About Me
 
-I’m Whisky — that’s my name in every game I play. It came from my elementary school friend mispronouncing my English name *Windson* as *Whiskey*. I’m currently a sophomore majoring in Applied Mathematics, though honestly, I don’t really feel like one — ~~I spend way more time in the world of computer science than doing math.~~
+My nickname is **Whisky**. I use this name in almost all games. It comes from a nickname given by one of my elementary school classmates, who pronounced my English name *Windson* as *Whisky*.
 
-### What I’m Currently Up To  
-- Flipper Zero NFC ~~I’m totally not trying to open every door on campus~~  
-- Home Lab  
-- Reverse Engineering  
-- Guitar 
+I am currently a second-year student in the Department of Applied Mathematics at National Chung Hsing University. However, I don’t really like doing math, and I’m not even good at calculating. Recently, I’ve been learning CTFs and deploying cloud services.
+ 
+### Contact Me　　
+As long as you don’t send spam and don’t look too much like a scam, I’ll usually reply. If it’s your first message, please introduce who you are, otherwise I’ll assume it’s a scam.
+- [telegram](https://t.me/windsoncc)
 
-### Contact Me  
-As long as your message doesn’t end up in spam and doesn’t look like a scam, I’ll probably reply.
+- [signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)  
 
-- [Telegram](https://t.me/windsoncc)
-- [Signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)
-- [Email](mailto:info@windson.cc)
+- [email](mailto:info@windson.cc)　　
 
-> Why no Line or Instagram?
-
+> Why don’t I use Line or Instagram?
+  
 - #### Stop using Line
-    Line is a **closed-source commercial app** with extremely unreasonable [terms of service](https://wiwi.blog/blog/line-privacy-policy/). If you haven’t read them before, check out the link above — Wiwi goes through everything in detail.  
-    Also, it completely fails as a communication tool:
+    Line has extremely unreasonable [Terms of Service](https://wiwi.blog/blog/line-privacy-policy/). If you haven’t read them before, please click the link I provided—Wiwi walks you through everything step by step. Also, it fails to do what a messaging app is supposed to do:
 
-    - **Too many ads and spam messages**  
-      I often have to dig through piles of spam just to find real messages from friends or classmates. 
-      That’s a terrible experience for a messaging app, but since I live in Taiwan, I have no choice but to use it.
-
+    - **Way too many ads and spam messages**  
+      I often have to dig through piles of spam just to find messages from friends or people trying to contact me. As a messaging app, this experience is terrible. But since I live in Taiwan, I’m almost forced to use it.  
+  
     - **Closed data**  
-      All chat data is stored locally, yet files still expire — which makes no sense at all.
+      All data is stored locally on your device, yet files expire. This design makes no sense.  
 
-    - **Poor support**  
-      Line doesn’t support Linux users, and it’s about to remove its Chrome extension too. That means I won’t be able to use Line on my computer anymore.  
+    - **Poor platform support**  
+      It doesn’t support Linux users, and recently it even plans to remove the Chrome extension. This means that unless I install `wine`, I can’t use Line on my computer at all.  
 
-- #### Don’t use Instagram either  
-    Instagram uses your posts, messages, and browsing data to train its models. I just want to see what my friends are up to — but instead, the algorithm feeds me targeted ads nonstop.  
+- #### Stop using Instagram  
+    Instagram takes your creations, posts, messages, and browsing history, and uses all of them to train models. I just want to see what my friends are doing today, but instead, the algorithm precisely feeds me ads it thinks I might like. That again forces me to look for my friends among piles of ads.
+    
+    Moreover, information on Instagram is extremely closed. If I don’t have an account, I can’t see anything at all. Don’t put information on Instagram—it’s impossible to search or find.  
 
-    Also, Instagram content is locked behind accounts. *If I don’t have an account, I can’t see anything.* So ,don’t put your creations there — they become invisible to the web.  
+    And then there’s something even more insidious called `reels`, or what you might call `shorts`. Through algorithms, it precisely shows you short videos you’re interested in. Once you’re addicted, you enter a kind of mental time capsule—when you snap out of it, two or three hours are gone and nothing has been done. It literally sucks up your time and turns it into money!
 
-    And then there’s the **reel** (or **short**). The algorithm shows you an endless stream of short videos that perfectly match your interests. Once you get hooked, you enter a “time chamber” — suddenly two or three hours are gone, and you’ve done nothing.  It’s literally draining your time for money.
+  
+***
+### Recent Updates
 
-
----
-
-## Recent
-
-### Classes
-I have classes from Monday to Wednesday — no early morning classes, and once I make it through Wednesday, I’ve got a four-day weekend. Perfect schedule. But I’m still keeping myself busy with side projects. I’ll post a summary about my courses at the end of the semester.
+#### Classes
+From Monday to Wednesday, I attend classes properly. No early morning classes, and if I make it through Wednesday, I get a four-day break. The timetable is really well arranged. But I haven’t been idle—I keep opening new side quests for myself. I’ll share a course-related write-up at the end of the semester.
 
 | Period / Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 |---------------|---------|----------|------------|-----------|---------|
@@ -67,86 +62,63 @@ I have classes from Monday to Wednesday — no early morning classes, and once I
 | 15:10–16:00 | Data Science Seminar | System Analysis and Design | Computer Structure |  |  |
 | 16:10–17:00 | Data Science Seminar |  |  |  |  |
 
+#### Guitar Club　　
+I am currently a **teaching staff member** in the guitar club, so you’ll basically see me in every club session. I also learn a lot during these sessions, since I never learned guitar through formal lessons. I’m taking on the role of general coordinator for next semester’s spring showcase. If you have any interesting ideas for the performance title, feel free to email me.
 
-
-### Student Association
-I’m the IT manager of my department’s student association. Well, “IT manager” — but in practice, I mostly act as PR, managing social accounts and announcements. Recently, I got the domain for the association from the head, so I’m planning to set up a website, exam archive system, RSS server, and official email. Hopefully, I’ll finish all that next semester.  
-
-### Guitar Club　　
-I’m currently a teaching assistant in the Guitar Club. If I don’t have anything else going on, I attend every class — I still learn new things from them, especially since I never learned guitar through formal lessons.
-
-Upcoming performances:　　
-- **Green River Life Festival (END)**
-  - Date: 2025/10/31　13:00　–　14:00  
-  - Location: NCHU Administration Lawn  
-
-- **Alumni Gathering (END)**
-  - Date: 2025/11/01　17:30　–　18:00
-  - Location: Library 7F
-
-- **Guitar Club Christmas Party (END)**
-  - Date: 2025/12/02　18:30　–　21:30  
-  - Location: NCHU Small Auditorium　　
-
-### Tech Stuff
-SLA 3D Printing, Flipper, Raspberry Pi 5, Home Lab
-
----
+#### Tech Research
+SLA 3D printing, Flipper, Raspberry Pi 5
 
 ## Games
 ### Switch
-- **Currently Playing**
-  - *The Legend of Zelda: Tears of the Kingdom* — second playthrough (no glider)
-  - *The Legend of Zelda: Skyward Sword*
-  - *Hogwarts Legacy*
-  - *Super Mario Bros. Wonder*
-  - *Overcooked*
-  - *Ori and the Will of the Wisps*
+- Not completed
+  - The Legend of Zelda: Tears of the Kingdom — second playthrough (no paraglider)
+  - Hogwarts Legacy
+  - Super Mario Bros. Wonder
+  - Overcooked
+  - Ori 2
   
-- **Completed**
-  - *The Legend of Zelda: Tears of the Kingdom*
-  - *The Legend of Zelda: Breath of the Wild*
-  - *Super Mario Odyssey*
-  - *Luigi’s Mansion 3*
+- Completed
+  - The Legend of Zelda: Tears of the Kingdom
+  - The Legend of Zelda: Breath of the Wild
+  - Super Mario Odyssey
+  - Luigi’s Mansion 3
 
 ### PC
-- *Minecraft*  
+- Minecraft  
+- Hollow Knight
   
-### Mobile
-- *Genshin Impact* (UID: 880808322)  
-- *Wuthering Waves* (currently inactive)  
-- *Soul Knight*  
-- *Monument Valley*　　
-
----
-
-## Equipament
+### Mobile Games
+- Where Winds Meet
+- Genshin Impact
+- Wuthering Waves
+- Soul Knight
+- Monument Valley　　
+  
+## Gear
 ### Electronics
-- **Server:** Raspberry Pi 5 (16GB)
-- **Laptop**
-  - Model: Acer Aspire A515-55 N18Q13  
-  - OS: Kubuntu 25.10  
+- Server: Raspberry Pi 5 16G
+- Laptop
+  - Model: Acer Aspire A515-55 N18Q13 RAM: 12G
+  - OS: Kubuntu 25.10
   - Mouse: Logi M590
   - Keyboard: Logi Alto Keys K98M
-- **Tablet:** iPad Air (M2)
-- **Phone:** Samsung A56 ~~Warranty’s over, time to flash ROMs~~  
-- **Pet:** Flipper Zero
+- Tablet: iPad Air (M2)
+- Phone: Samsung A56 ~~warranty expired, ready to flash~~ 
+- Pet: Flipper Zero
 
-### Guitars
-- **Pick:** Dunlop Tortex  
-- **Acoustic Guitar:** StarSun J5 Maple Top Solid, 41"  
-- **Pickup:** X2 Double  
-- **Electric Guitar:** Forgot  
-- **Effects Pedal:** NUX MG-300 MK2  
-- **Amp:** NUX MIGHTY8SE
-
----
-
+### Guitar
+- Picks: Turtle (Dunlop Tortex)
+- Acoustic Guitar: StarSun J5 Maple, solid top, 41-inch
+- Pickup: X2 Double
+- Electric Guitar: Forgot the model
+- Multi-effects: NUX MG-300 MK2
+- Amp: NUX MIGHTY8SE
+  
 ## About This Site　　
-This site was created on **2025/08/31**, using **Hugo** & **PaperMod**.  
-On **2025/10/22**, I switched to the **Stack** theme — because it just looks better.  
-This is where I share things that interest me, as a replacement for Instagram.  
-If you want to stay updated, subscribe to my [RSS](/index.xml)!
+- Created on 2025/08/31, built with Hugo & PaperMods.
+- Switched theme to Stack on 2025/10/22.  
 
-- ### What’s RSS?  
-RSS (*Really Simple Syndication*) is a tool that lets you subscribe to websites. It automatically notifies you when the site updates, so you don’t have to check manually every time.
+This site is a platform where I share things, replacing the role that Instagram used to play. Most of the content is about my life, guitar, Linux, CTFs, and more. All the content in English are translated by ChatGPT, I will translate myself if I have time.
+**If you want to stay updated, subscribe to my [RSS](/index.xml)!**
+
+> What is RSS? RSS (Really Simple Syndication) is a tool that lets you subscribe to a website. When the site updates, it notifies you, so you don’t have to constantly check for new content. Want to know how to use it? I recommend this [article](https://wiwi.blog/blog/you-should-use-rss/) by Wiwi.
