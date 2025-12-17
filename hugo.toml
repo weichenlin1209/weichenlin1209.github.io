@@ -197,9 +197,9 @@ alt = "Windson"
 # Favicon
 # ===========================
 [params.assets]
-favicon = "/favicon/favicon.ico"
-favicon16x16 = "/favicon/favicon-16x16.png"
-favicon32x32 = "/favicon/favicon-32x32.png"
+favicon = "https://www.gravatar.com/avatar/0f43e608cf76853d830c6e40a5004956?s=200&d=identicon"
+favicon16x16 = "https://www.gravatar.com/avatar/0f43e608cf76853d830c6e40a5004956?s=200&d=identicon"
+favicon32x32 = "https://www.gravatar.com/avatar/0f43e608cf76853d830c6e40a5004956?s=200&d=identicon"
 
 # ===========================
 # Color Scheme
