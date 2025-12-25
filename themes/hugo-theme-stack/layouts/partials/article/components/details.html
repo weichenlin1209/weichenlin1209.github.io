@@ -39,8 +39,8 @@
 
         {{ if $showReadingTime }}
 
-            {{ $defaultSpeedZh := 300.0 }}
-            {{ $defaultSpeedEn := 200.0 }}
+            {{ $defaultSpeedZh := 400.0 }}
+            {{ $defaultSpeedEn := 225.0 }}
 
             {{ $speedZh := or .Language.Params.reading_speed_zh .Site.Params.reading_speed_zh | default $defaultSpeedZh | float }}
             {{ $speedEn := or .Language.Params.reading_speed_en .Site.Params.reading_speed_en | default $defaultSpeedEn | float }}
