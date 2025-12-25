@@ -24,39 +24,18 @@ draft: false
 
 > 為什麼沒有 Line 跟 Instagram 呢？
   
-- #### 不要再用Line了
-    Line 有著非常不合理的[使用者條款](https://wiwi.blog/blog/line-privacy-policy/)，如果你沒有看過請點開我給的連結，Wiwi 會從頭帶你看一遍。再來它沒有做好通訊軟體該做的事:
+可以參考以下幾篇文章：
+  - [Wiwi 「我同意」](https://wiwi.blog/blog/line-privacy-policy/)  
+  - [Wiwi 「賴，越來越爛？」](https://wiwi.blog/blog/line-escape-plan/)  
+  - [Wiwi 「為什麼我不用社群媒體了？」](https://wiwi.blog/docs/wisdom/why-i-dont-use-social-media)  
+  - [資訊人權貴ㄓ疑 「Line 不僅是高牆花園， 也是國安要害 」](https://ckhung0.blogspot.com/2018/07/line.html)  
+  - [Jaron 「LINE 尊榮版」](https://www.jaron.tw/blog/line-premium/)  
+  - [Each 「給 Line 的一封信」](https://www.iach.cc/dear-line/)  
 
-    - **廣告、垃圾訊息非常多**  
-      我常常需要在垃圾廣告堆裡找朋友或是需要聯絡我的人，身為一個通訊軟體這個體驗非常糟糕，但是因為長在臺灣我非用不可。  
-  
-    - **資料封閉**  
-      它的所有資訊都是存在你的本機裡，但是檔案卻會過期。這個設計很不合理。  
-
-    - **支援度低**  
-      它不支援Linux的用戶，近期還準備將 chrome 插件移除。這表示，除非我裝了`wine`，不然我不可能在電腦上使用Line。  
-
-- #### 不要再用 Instagram 了  
-    Instagram 會拿著你的創作、貼文、訊息、瀏覽紀錄，通通拿去訓練模型。我只是想看看朋友今天做了什麼，它會在其中透過演算法會精準投餵你可能有興趣的廣告，這樣我要在垃圾廣告堆中找到我的朋友。
-    
-    而且 Instagram 上的資訊非常封閉，如果我沒有帳號我是看不到任何資訊的。別把資訊放在 Instagram 上，查都查不到。  
-
-    另外，還有更邪門的東西叫做 `reel` 或是你叫它 `short`。透過演算法精準的給你看你有興趣的短片，只要上癮了就會進入精神時光屋，醒來的時候發現兩三個小時過去了，什麼事情都沒做。他在吸取你的時間換錢阿！
-
-  
 ***
 ### 近況
 
-#### 上課
-禮拜一到三要乖乖上課，沒有早八，撐到禮拜三就是四天連假。課表排的真好。但是也沒有閒著，一直在幫自己開支線。期末會發一個課程分享的。
-
-![課表](/images/about/course.webp)　　
-
-#### 吉他社　　
-現在在吉他社擔任 教學 ，基本上每節社課都會看到我。其實上社課我也會學到東西，畢竟我沒有藉由上課的方式學過吉他。我接了下個學期春季成發的總召，如果對於表演名稱有什麼特別的想法歡迎寄信給我。
-
-#### 科技研究
-光固化3D列印，Flipper，Raspberry Pi 5
+寒假休息中。偶爾打打 Pico 跟準備 CCNA 。
 
 ## 遊戲
 ### Switch
