@@ -1,6 +1,6 @@
 +++
 title = '一場說走就走的旅行'
-date = 2026-01-19T08:00:00+08:00
+date = 2026-01-19T12:00:00+08:00
 draft = false
 url = "/zh/post/A-trip-on-a-whim/"
 tags = []
