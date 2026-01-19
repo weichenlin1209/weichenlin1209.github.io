@@ -4,7 +4,7 @@ date = 2026-01-15T12:00:00+08:00
 draft = false
 url = "/zh/post/Taichung-Green-Museumbrary/"
 tags = []
-categories = ["Life"]
+categories = ["Journey"]
 layout = "post"
 
 image = "/images/2026/01/Taichung-Green-Museumbrary/cover.webp"
