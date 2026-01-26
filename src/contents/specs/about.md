@@ -78,8 +78,9 @@
 - 音響：NUX MIGHTY8SE
   
 ## 關於本站　　
-- 2025/08/31 創建，使用Hugo & PaperMods。
+- 2025/08/31 創建，使用 Hugo & PaperMods。
 - 2025/10/22 換成主題換成 Stack。  
+- 2026/01/26 [Astro](https://astro.build/) & [Yukina](https://github.com/WhitePaper233/yukina/tree/main)
 
 這邊就是一個我分享東西的平台，取代原本 Instagram 的功能。內容大多是我的生活、吉他、Linux、CTF...。  
 **如果想一直收到更新的話，就訂閱我的[RSS](/index.xml)吧！**
