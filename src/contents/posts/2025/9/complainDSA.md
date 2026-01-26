@@ -6,7 +6,7 @@ tags: [NCHU]
 category: Life
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
-slug: "complaindsa"
+slug: "complainDSA"
 draft: false
 ---
 
