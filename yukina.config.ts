@@ -6,9 +6,9 @@ const YukinaConfig: Configuration = {
   subTitle: "Windson's Personal Blog",
   brandTitle: "Windson's Blog",
 
-  description: "Demo Site",
+  description: "Windson's Personal Blog",
 
-  site: "http://localhost:4321/", // Your site URL
+  site: "http://www.windson.cc/", // Your site URL
 
   locale: "zh-tw", // set for website language and date format
 
