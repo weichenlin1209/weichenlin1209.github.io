@@ -1,0 +1,67 @@
+---
+import { getEntry, render } from "astro:content";
+import Main from "../layouts/MainLayout.astro";
+import Markdown from "../components/Markdown.astro";
+import links from "../blogroll.json";
+
+// 取得 Markdown 文字
+const entry = await getEntry("specs", "blogroll");
+const { Content: BlogrollContent } = await render(entry);
+
+// Fisher–Yates 隨機排序
+function shuffleArray<T>(array: T[]): T[] {
+  const arr = [...array]; // 複製一份，避免改到原始陣列
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+const shuffledLinks = shuffleArray(links);
+---
+
+<Main title={entry.data.title}>
+  <!-- Markdown 文字內容 -->
+  <div class="mb-10 rounded-2xl bg-[var(--card-color)] p-10">
+    <Markdown>
+      <BlogrollContent />
+    </Markdown>
+  </div>
+
+  <!-- Blogroll 卡片 Grid -->
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {shuffledLinks.map((item) => (
+      <a
+        class="flex gap-4 rounded-xl bg-[var(--card-color)] p-6 transition hover:shadow-lg"
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {item.img && (
+          <img
+            class="h-14 w-14 rounded-full object-cover"
+            src={item.img}
+            alt={item.title}
+            loading="lazy"
+          />
+        )}
+        <div>
+          <h3 class="text-lg font-semibold dark:text-white">{item.title}</h3>
+          {item.des && <p class="text-sm text-gray-500 dark:text-gray-300">{item.des}</p>}
+        </div>
+      </a>
+    ))}
+  </div>
+</Main>
+
+<style>
+  .grid {
+    @apply gap-6;
+  }
+  a:hover {
+    transform: scale(1.05, 1.05);
+    background-color: var(--primary-color-lighten)
+    @apply shadow-lg;
+  }
+</style>
