@@ -8,7 +8,7 @@ licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 slug: "longred-newcoming"
 draft: false
-cover: "/images/2025/10/longred_new/guitar.webp"
+cover: "https://img.windson.cc/images/2025/10/longred_new/guitar.webp"
 ---
 
 *這是我在吉他社的一個活動，結束了好有成就感*

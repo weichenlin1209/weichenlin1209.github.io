@@ -7,7 +7,7 @@ category: CTF
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/reverse/cover.webp"
+cover: "https://img.windson.cc/images/reverse/cover.webp"
 description: A Reverse a day keeps the zero-days away
 
 ---

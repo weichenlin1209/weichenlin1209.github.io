@@ -7,7 +7,7 @@ category: Life
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/diary/diary-6/cover.webp"
+cover: "https://img.windson.cc/images/diary/diary-6/cover.webp"
 ---
 
 ## 生日
@@ -26,11 +26,11 @@ cover: "/images/diary/diary-6/cover.webp"
 ### 3D 列印  
 這週終於記得要去預約印東西了，預計要印出一把大師劍、卡比、海利亞盾跟神之眼。模型整體看起來長這樣。
 
-![CHITU](/images/diary/diary-6/chitu.webp)  
+![CHITU](https://img.windson.cc/images/diary/diary-6/chitu.webp)  
 
 基本上是印好印滿，畢竟這次修課印東西是免費的。但是高度只能兩個小時半，所以必需要擺好擺滿。拿去印出來的結果是...只剩支撐，剩下的東西都泡在樹脂裡了。
 
-![CHITU](/images/diary/diary-6/result.webp)  
+![CHITU](https://img.windson.cc/images/diary/diary-6/result.webp)  
 
 感覺是支撐太少了，所以沒抓住模型，下次印的時候希望會成功。
 

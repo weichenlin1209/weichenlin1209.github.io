@@ -7,7 +7,7 @@ category: Technology
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/2026/01/minecraft-server/cover.webp"
+cover: "https://img.windson.cc/images/2026/01/minecraft-server/cover.webp"
 ---
 
 ## 前言  
@@ -52,7 +52,7 @@ java -Xmx1024M -Xms1024M -jar server.jar --nogui
 
 ## 模組安裝：亞特蘭提斯  
 
-![Atlantis](/images/2026/01/minecraft-server/atlantis.webp)
+![Atlantis](https://img.windson.cc/images/2026/01/minecraft-server/atlantis.webp)
 
 這是童年時代很喜歡的一個模組，出生點會在一間小玻璃屋，整個世界都在海底下。詳情可以看[舞秋風Minecraft生存 - 亞特蘭提斯-留住最後一口氣](https://youtube.com/playlist?list=PLBtVUsNOhEjtbg0V1kLzS1slOzFV0GuTX&si=GHIkMoWg9i9uu-Te)，這已經是12年前的系列了，在minecraft還在1.5.1的那個年代，現在會玩純粹是完成童年的夢想。
 

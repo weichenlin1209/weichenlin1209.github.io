@@ -7,7 +7,7 @@ licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
 slug: "kubuntu"
-cover: "/images/2025/12/kubuntu/cover.webp"
+cover: "https://img.windson.cc/images/2025/12/kubuntu/cover.webp"
 ---
 
 ## 前言
@@ -27,7 +27,7 @@ cover: "/images/2025/12/kubuntu/cover.webp"
 ## 顯卡問題排除  
 如果這個時候重新開機可以順利的進系統，那恭喜你！如果你進去之後只看到類似下方的畫面，那代表你跟我一樣被顯卡搞了。
 
-![stuck](/images/2025/12/kubuntu/stuck.webp)  
+![stuck](https://img.windson.cc/images/2025/12/kubuntu/stuck.webp)  
 
 這個時候，要先想辦法進去 Grub，這樣才有辦法進入安全模式，才可以進系統。剛開機一看到電腦廠牌 logo 就按一下 del。如果有成功會直接進去 grub 裡面。失敗就 reboot 吧。
 進到 grub 裡面後按 e ，那邊可以改開機時的啟動參數。在倒數第二行的地方會看到 ```quiet splash```，在他的後面加上 ```nomodeset```，按 ```F10``` 就可以進系統了。

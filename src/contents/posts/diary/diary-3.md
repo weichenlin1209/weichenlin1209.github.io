@@ -7,7 +7,7 @@ category: Life
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/diary/diary-cover.webp"
+cover: "https://img.windson.cc/images/diary/diary-cover.webp"
 ---
 
 *很久沒發文，無聊來發一下。*
@@ -17,7 +17,7 @@ cover: "/images/diary/diary-cover.webp"
 ## 金盾獎
 上禮拜六跟 [Each Chen](https://www.iach.cc) 去打金盾。發現學長的建議給的真的不錯。他說這是場通靈大賽。整張考卷下來我們確定有寫對的只有一題crypto，其他都是：*「應該是這個吧」「對，看起來挺合理的」* 雖然寫的過程一整個在通靈，但是這樣的肯定不只我們這組。這次好像是刷掉一半的組別，希望會進決賽，~~進了還有金盾的衣服~~。其實這次不打完比賽不是零收穫，至少知道它很愛考reverse，之後可要來一天一題reverse，我想開始的時候開始d(`･∀･)b，最後附上一張紀念照。  
 
-![ReversIsHard](/images/2025/10/diary-3/ReverseIsHard.webp)  
+![ReversIsHard](https://img.windson.cc/images/2025/10/diary-3/ReverseIsHard.webp)  
 
 ## 吉他社
 ### 社課  

@@ -21,9 +21,12 @@ draft: false
 
 ### **事件二**  
   關於「北、中、南迎新」，他把這屆大一所有人的資料全部傳上系學會大群。沒有做好任何個資保護，在群組的所有人都可以下載檔案，檔案裡有全部大一新生的聯絡地址以及他們留的手機號碼。
-  ![complainDSA-1](/images/2025/9/complainDSA/complainDSA-1.webp)
-  ![complainDSA-2](/images/2025/9/complainDSA/complainDSA-2.webp)
+
+  ![complainDSA-1](https://img.windson.cc/images/2025/9/complainDSA/complainDSA-1.webp)
+
+  ![complainDSA-2](https://img.windson.cc/images/2025/9/complainDSA/complainDSA-2.webp)
   (為保護個資已將資料碼掉，只留下學號以證明是新生)  
+
   明明這種重要的事情，可以請負責人用學校的domain，寄一封信給全系大一的新生。學校的學生信箱很有規律，寫一隻 Python 就可以輕鬆解決。~~程式設計都白修了~~。一個一個打電話過去問，不僅浪費時間、沒有效率，還有很大的機會被當成詐騙，造成負責人的麻煩。如此，負責人也不需要大一新生的資料，他們的個資也不會有危險。
 
 ***

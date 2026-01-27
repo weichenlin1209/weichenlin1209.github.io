@@ -7,7 +7,7 @@ category: Life
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/diary/diary-7/cover.webp"
+cover: "https://img.windson.cc/images/diary/diary-7/cover.webp"
 ---
 
 > 今年事，今年畢。趕緊在2025的最後一天發完今年的文。前幾週都在期末考試中掙扎，這幾天終於出獄了。雖然是沒事了，但其實還有很多事可以做，我覺得明年開始做好像是一個不錯的時間點，最近先休息一下。
@@ -24,7 +24,7 @@ cover: "/images/diary/diary-7/cover.webp"
 ## 光固化
 上次失敗以後，我對模型進行大改造。畢竟看起來就是支撐不足的問題，所以我把模型的支撐加粗、加密。但...結果好像不大成功。  
 
-![](/images/diary/diary-7/sla.webp)
+![](https://img.windson.cc/images/diary/diary-7/sla.webp)
 
 這次印了神之眼、大師之劍、海利亞盾、咚奇剛、卡比。
 - **神之眼**  
@@ -47,14 +47,14 @@ cover: "/images/diary/diary-7/cover.webp"
 ## 燕雲十六聲  
 我真的對大世界遊戲沒什麼抵抗力，所以又開始玩了一個大世界。他的操作難度可以自己調，最難感覺會跟愛爾登法環差不多喔。講了這麼多，我只是想發照片，遊戲裡面的風景真的很漂亮。
 
-![](/images/diary/diary-7/1.jpg)  
-![](/images/diary/diary-7/2.jpg)  
-![](/images/diary/diary-7/3.jpg)  
-![](/images/diary/diary-7/4.jpg)  
-![](/images/diary/diary-7/5.jpg)  
-![](/images/diary/diary-7/6.jpg)  
-![](/images/diary/diary-7/7.jpg)  
-![](/images/diary/diary-7/8.jpg)  
+![](https://img.windson.cc/images/diary/diary-7/1.jpg)  
+![](https://img.windson.cc/images/diary/diary-7/2.jpg)  
+![](https://img.windson.cc/images/diary/diary-7/3.jpg)  
+![](https://img.windson.cc/images/diary/diary-7/4.jpg)  
+![](https://img.windson.cc/images/diary/diary-7/5.jpg)  
+![](https://img.windson.cc/images/diary/diary-7/6.jpg)  
+![](https://img.windson.cc/images/diary/diary-7/7.jpg)  
+![](https://img.windson.cc/images/diary/diary-7/8.jpg)  
 
 ## 感性時間
 今年暑假開始去補習班，看著那群高中生，發現自己真的上了大學了。大一的時候可能沒什麼實感，大家的課還是會重複。但這個學期，我上修、跑去外系修，除了必修課之外，幾乎不會遇到朋友。突然很想念高中的時候，那個時候去福利社、吃飯、去廁所，都是大機一起走的。這學期開始，一個人上課、一個人吃飯，再加上禮拜四五沒課，一個人的時間變得很多，雖然可以做很多自己想做的事，但還是會不習慣自己一個人過完一天。明年的課題可能是要[練習一個人生活](https://www.youtube.com/watch?v=1T4nt8JfNzU)了吧。希望新的一年可以習慣這件事，新年快樂！

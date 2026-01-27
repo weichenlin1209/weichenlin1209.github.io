@@ -7,7 +7,7 @@ category: CTF
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/reverse/cover.webp"
+cover: "https://img.windson.cc/images/reverse/cover.webp"
 description: A Reverse a day keeps the zero-days away
 ---
 
@@ -140,7 +140,7 @@ while not finished and line_count < MAX_LINES:
 ```
 我們可以藉由改變 ```crowd``` 的值， 來測試一下這個猜想。比如說，我在輸入時打入```;REFRAIN```。分號是為了讓前面的前面的文字結束，否則整個文字都會被當成一般字串。
 
-![example](/images/reverse/flag-hunter/example-1.webp)
+![example](https://img.windson.cc/images/reverse/flag-hunter/example-1.webp)
 
 這個測試非常成功，因為我打了 ```;REFRAIN``` ，所以導致每次到 ```crowd``` 的時候，它都會跳回去 ```REFRAIN``` 繼續印，其他的可以自己測試看看。知道這件事之後就可以來拿旗子了！  
 
@@ -152,4 +152,4 @@ elif re.match(r"RETURN [0-9]+", line):
 ```
 他是一個正則表達式。只要寫對格式，想跳到哪就跳去哪。我們的目的地就是讓它從頭開始印，那就讓它跳到0吧！
 
-![Here is the flag](/images/reverse/flag-hunter/flag.webp)
+![Here is the flag](https://img.windson.cc/images/reverse/flag-hunter/flag.webp)

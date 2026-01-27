@@ -7,7 +7,7 @@ category: Life
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/diary/diary-cover.webp"
+cover: "https://img.windson.cc/images/diary/diary-cover.webp"
 ---
 
 ## 前言  
@@ -69,7 +69,7 @@ cover: "/images/diary/diary-cover.webp"
 ## 鍵盤  
 最近我的 L 鍵越來越不靈敏了。對我影響滿大。自從把 Affine 架好後，我幾乎所有筆記都在上面。沒有筆電就幾乎沒辦法唸書。也因此，打字速度又快了一點，不過還沒有時間去 typing club 實測。  回歸正題，我的 L 鍵真的壞了。只要按太輕就不會出字，正常力道成功率大概七成。打算外接一個機械鍵盤，手感好一點。前陣子在敦煌看到一個喜歡的——Logi Pop Keys。  
 
-![](/images/diary/diary-4/pop-keys.webp)  
+![](https://img.windson.cc/images/diary/diary-4/pop-keys.webp)  
 
 其實開學的時候我就注意到它了。結果現在真的需要了。於是我跑去 Nova，打算好好找一圈，說不定能順便看到別的喜歡的。結果沒有，繞了一整圈看了幾間還是沒看到想要的，不然就是太貴。最後還是跑回學校的圖書館問。結果就是
 
@@ -90,11 +90,11 @@ cover: "/images/diary/diary-cover.webp"
 蛤？什麼？居然有颱風？！我整個像斷網一樣。雖然十一月不太該有颱風，但來了我竟然完全不知道。因為現在我收訊息的方式都是靠 RSS。理所當然地，我去找了一下~~中央欺騙署[^3]~~ 有沒有 RSS。結果還真的有：  
 [在這裡](https://www.cwa.gov.tw/V8/C/S/eservice/rss.html)。  
 
-![地區](/images/diary/diary-4/weather.webp)  
+![地區](https://img.windson.cc/images/diary/diary-4/weather.webp)  
 
 每個地區都有自己的 RSS，警報、特報，包含颱風、地震、豪（大）雨、低溫、濃霧等發佈或解除。  
 不用再看新聞，它每天都會自動發每週天氣預報、當日天氣、降雨機率。馬上訂閱了台中的，新聞掰掰。
 
-![RSS](/images/diary/diary-4/rss.webp)  
+![RSS](https://img.windson.cc/images/diary/diary-4/rss.webp)  
 
 [^3]: 他是中央氣象署，只是被我改名了。

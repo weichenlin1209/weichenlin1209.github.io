@@ -7,13 +7,9 @@ category: Life
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/diary/diary-cover.webp"
+cover: "https://img.windson.cc/images/diary/diary-cover.webp"
+description: 開學第四週，精神狀態跟期末考一樣...
 ---
-
-image = "/images/diary/diary-cover.webp"
-+++
-*開學第四週，精神狀態跟期末考一樣...*
-<!--more-->
 
 這學期開學之後，要上課的時候八點多出門，晚上十一二點回宿舍，真的參加太多活動了。雖然這麼忙碌，但是還是得隨手記錄一下，不然忙完也不知道自己做了什麼。
 
@@ -29,7 +25,7 @@ image = "/images/diary/diary-cover.webp"
 - ### **工商時間**  
 其實正式的海報不是這張，但我比較喜歡這張。
 
-![guitar](/images/2025/9/diary-25-09-29/guitarpost.webp)  
+![guitar](https://img.windson.cc/images/2025/9/diary-25-09-29/guitarpost.webp)  
 
 ## 3D 列印微通識
 這是我差點忘記去上的一節課，要不是有人提醒我，我100％蹺課。這節只有三個禮拜，結束之後順利的話可以拿到3D列印證，CP值挺高的。目前是還沒有到印東西的階段，但是上課就有免費2.5小時的使用時間，只要模型印不超過2.5小時就可以免費帶走。有了證之後就可以印flipper殼，小pi的家，還是鍵盤滑鼠都行，自己的東西自己印。

@@ -7,7 +7,7 @@ licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
 slug: "cocktail"
-cover: "/images/2025/11/cocktail/cover.webp"
+cover: "https://img.windson.cc/images/2025/11/cocktail/cover.webp"
 ---
 
 ## 報到

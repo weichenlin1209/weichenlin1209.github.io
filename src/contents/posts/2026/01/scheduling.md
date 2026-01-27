@@ -7,7 +7,7 @@ category: Life
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
-cover: "/images/2026/01/scheduling/cover.webp"
+cover: "https://img.windson.cc/images/2026/01/scheduling/cover.webp"
 ---
 
 
@@ -68,7 +68,7 @@ cover: "/images/2026/01/scheduling/cover.webp"
 
 執行順序就會改成這樣，讓當前時間點上剩餘時間最短的先做：
 
-![](/images/2026/01/scheduling/srtf.webp)
+![](https://img.windson.cc/images/2026/01/scheduling/srtf.webp)
 
 - 平均等待時間：$\[(17-8-0)+(5-4-1)+(26-2-9)+(10-3-5)\] / 4 = 6.5$  
 - 平均處理時間：$\[(17-0)+(5-1)+(26-2)+(10-3)\] / 4 = 13$  

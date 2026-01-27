@@ -22,7 +22,7 @@ draft: false
 ## 拿餅乾  
 打開burpsuite，攔截學校選課系統的POST  
 
-![burpsuite圖片](/images/2025/9/coursegangster/coursegangster-1.webp)  
+![burpsuite圖片](https://img.windson.cc/images/2025/9/coursegangster/coursegangster-1.webp)  
 
 經過我們的觀察，它每次執行重大行動（加退選）時，都會發一個新的餅乾。
 所以每次選完課都要重新烤一個新餅乾。另外，在選課的時候header是不會變的，就算裡面有content-length它好像也不太看。~~經實驗發現，直接刪掉它也選得到課~~。
@@ -57,13 +57,13 @@ p_stud_no=your_student_id&v_tick=1057847751891  #前面是你的學號，後面�
 ```
 接下來複製curl，就可以準備送進烤箱啦～
 
-![burpsuite圖片](/images/2025/9/coursegangster/copycurl.webp) 
+![burpsuite圖片](https://img.windson.cc/images/2025/9/coursegangster/copycurl.webp) 
 
 ---
 ## 烤餅乾  
 餅乾已經成功拿出來了，接下來要送進[烤箱](https://curlconverter.com/python/)裡烤。把剛剛複製的貼在curl，寫一隻python把剛剛的東西都送出去就完事了！
 
-![burpsuite圖片](/images/2025/9/coursegangster/curltopython.webp)
+![burpsuite圖片](https://img.windson.cc/images/2025/9/coursegangster/curltopython.webp)
 
 ---
 

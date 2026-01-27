@@ -8,7 +8,7 @@ licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 slug: "raspi-localhost"
 draft: false
-cover: "/images/2025/10/raspi-localhost/raspi.webp"
+cover: "https://img.windson.cc/images/2025/10/raspi-localhost/raspi.webp"
 ---
 
 前幾天Each家的伺服器出了點狀況，讓我突然覺得，自己的東西還是得放自己這。結果一發不可收拾，架了不少東西，~~又挖了個大坑~~
@@ -23,7 +23,7 @@ cover: "/images/2025/10/raspi-localhost/raspi.webp"
 當初買到它的時候，我就在想要不要買個殼，結論就是：*「為什麼不自己裝一個呢？」*   
 所以我就把家裡所有的樂高拆出來，發現最有機會的就是我的第一組樂高----pizza店 
 
-![](/images/2025/10/raspi-localhost/Lego-pizza.webp)  
+![](https://img.windson.cc/images/2025/10/raspi-localhost/Lego-pizza.webp)  
 
 所有材料基本上來自於它，觀察一下就會發現他們的屋頂一模一樣。對pizza店進行大改造之後，就是現在你們看到的樣子了。但是這個殼的缺點就是散熱很差，就算有散熱片執行時的溫度也會到70度。
 
@@ -34,15 +34,15 @@ cover: "/images/2025/10/raspi-localhost/raspi.webp"
 ## 我架了什麼？
 ### AFFiNE
 這是我第一個架的伺服器，他是一個功能很多的筆記軟體，開源而且免費。我會用到的就是markdown、LaTeX、甚至有無邊記，跟iOS的長的差不多。而且在各種平台上都可以用，有APP也有Web的版本，它還可以把資料同步到所有裝置上，拿來讀書非常方便。
-![Affine](/images/2025/10/raspi-localhost/affine.webp)
+![Affine](https://img.windson.cc/images/2025/10/raspi-localhost/affine.webp)
 
 ### Syncthing  
 Syncthing的功能如同其名，就是拿來同步檔案。因為設定跟安裝有點麻煩,自己用是比較好的。主要是有了這個就可以同步檔案到伺服器，不用把東西丟在大平台，還有限制檔案大小。但是如果沒有做好防護措施要暴露到外網是很危險的。他有登入界面，但是我不會用，所以我用內網穿透。
-![Syncthing](/images/2025/10/raspi-localhost/sync.webp)  
+![Syncthing](https://img.windson.cc/images/2025/10/raspi-localhost/sync.webp)  
 
 ### Immich  
 他是一個開源的雲端相簿服務，裡面長得很像Google相簿。自己架設的好處就是我不用把相簿放在Google 或 iCloud，被限制除存空間還要付錢給它，自架的話要多少空間就有多少，取決於硬碟買多大。但是架設的時候，因為電力供應不足，可我用HDD裡面的馬達跑不動，所以硬碟的super block壞掉了，所以不要在under voltage的情況下用硬碟，資料會壞掉，只能救回部份。電力供給至少要20瓦（我目前是用20瓦，還沒出事）
-![immich](/images/2025/10/raspi-localhost/immich.webp)
+![immich](https://img.windson.cc/images/2025/10/raspi-localhost/immich.webp)
 
 *** 
 ## Docker  

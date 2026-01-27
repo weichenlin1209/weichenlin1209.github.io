@@ -5,7 +5,7 @@ descriptions: 因為重灌的關係，所有軟體都要重載，趁這個機會
 category: Technology
 licenseName: "CC BY-NC-SA 4.0"
 slug: "good-app"
-cover: "/images/2025/12/good-app/cover.avif"
+cover: "https://img.windson.cc/images/2025/12/good-app/cover.avif"
 
 author: Windson
 draft: false
