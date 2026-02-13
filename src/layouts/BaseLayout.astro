@@ -1,7 +1,11 @@
 ---
 import YukinaConfig from "../../yukina.config";
 import BaseHead from "../components/BaseHead.astro";
-const { cover = "/default-og-img.webp" } = Astro.props;
+const {
+  // 1. 如果是 Markdown 自動套用 Layout，會在 frontmatter 裡
+  // 2. 如果是 .astro 頁面手動傳入，會在 Astro.props 裡
+  cover = Astro.props.frontmatter?.cover || Astro.props.cover || "/default-og.png"
+} = Astro.props;
 ---
 
 <html lang={YukinaConfig.locale}>
