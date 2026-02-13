@@ -8,7 +8,7 @@ const YukinaConfig: Configuration = {
 
   description: "Windson's Personal Blog",
 
-  site: "http://www.windson.cc/", // Your site URL
+  site: "https://www.windson.cc/", // Your site URL
 
   locale: "zh-tw", // set for website language and date format
 
@@ -32,7 +32,7 @@ const YukinaConfig: Configuration = {
   ],
 
   username: "Windson",
-  sign: "",
+  sign: "打破窗戶，擁抱企鵝",
   avatarUrl: "https://gravatar.com/avatar/932e22160c9aeb41469a8c0ece40b38b0a62bd10598009d35a94e30dcb48b64d?v=1764580811000&size=512&d=initials",//"https://s2.loli.net/2025/01/25/FPpTrQSezM8ivbl.webp",
   socialLinks: [
     {

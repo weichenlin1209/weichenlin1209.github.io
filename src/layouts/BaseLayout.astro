@@ -1,10 +1,11 @@
 ---
 import YukinaConfig from "../../yukina.config";
 import BaseHead from "../components/BaseHead.astro";
+const { cover = "/default-og-img.webp" } = Astro.props;
 ---
 
 <html lang={YukinaConfig.locale}>
-  <BaseHead />
+  <BaseHead cover = {cover} />
   <body class="overflow-y-hidden">
     <slot />
   </body>

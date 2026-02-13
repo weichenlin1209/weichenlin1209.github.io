@@ -70,5 +70,17 @@
     "link": "https://blogblog.club/",
     "img": "https://blogblog.club/img/logo.svg",
     "des": "這是一個由Wiwi創辦，推坑大家寫部落格的網站"
+  },
+  {
+    "title": "OsGa",
+    "link": "https://osga.dev",
+    "img":"https://www.osga.dev/_next/image?url=%2Favatar.png&w=640&q=75",
+    "des":"熱愛資安與程式開發的大神。btw ,he uses vim"
+  },
+  {
+    "title":"4yu",
+    "link":"https://4yu.dev",
+    "img":"https://4yu.dev/img/avatar.webp",
+    "des":"競程和AI的電神，上了一堂課就把我推進AI坑裡"
   }
 ]
