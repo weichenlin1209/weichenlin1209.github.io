@@ -2,7 +2,7 @@
 title: 一場說走就走的旅行
 published: 2026-01-19
 slug: "A-trip-on-a-whim"
-tags: ["Hualien"]
+tags: ["Hualien","BlogBlogClub"]
 category: Journey
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
