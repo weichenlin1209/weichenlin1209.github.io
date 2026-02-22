@@ -2,7 +2,7 @@
 
 我叫**威忌**，我所有遊戲都叫這個名字，源自於我國小同學把我英文名字 *Windson* 叫成 *Whiskey* 。
 
-目前是就讀中興應數二年級。但不愛算數學，也不會算數。最近在學著打CTF、部署雲端服務。
+目前是就讀中興應數二年級。但不愛算數學，也不會算數。最近在學著打CTF、部署雲端服務、玩 AI、彈吉他，是個好忙好忙的大學生。希望會知道自己在忙什麼，讓50年後的自己覺得這段日子有意義。
  
 ## 聯絡我　　
 只要不要寄垃圾郵件，不要太像詐騙，基本上我都會回。第一次請說明你是誰，不然我會當成詐騙。
@@ -25,23 +25,38 @@
 
 ## 近況
 
-寒假休息中。偶爾打打 Pico 跟準備 CCNA ，大部分時間在打遊戲跟追劇。
+開學了，最近會超級忙。要忙黑客松、吉他社春季總召還有25學分的課，而且課表都硬邦邦的。
+| 節次 | 週一           | 週二         | 週三         | 週四       | 週五       |
+|------|----------------|--------------|--------------|------------|------------|
+| 1    |                |              |              |            |            |
+| 2    |                | [x86 組合語言](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2270)     | [數值分析](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2245)     | [機器學習](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3242)   | [網際網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2031)   |
+| 3    | [資訊科技與媒體識讀](https://frdm.cyut.edu.tw/~ckhung/c/ml262g/) | [x86 組合語言](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2270)     | [數值分析](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2245)     | [機器學習](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3242)   | [網際網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2031)   |
+| 4    | [資訊科技與媒體識讀](https://frdm.cyut.edu.tw/~ckhung/c/ml262g/) | [x86 組合語言](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2270)     | [數值分析](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2245)     | [機器學習](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3242)   | [網際網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2031)   |
+| 5    | [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)       |              |              |            |            |
+| 6    | [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)        | [計算機網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2268)   |              |            |            |
+| 7    | [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)       | [計算機網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2268)   | [攝影美學](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=5191)     |            |            |
+| 8    | [科學計算導論](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701)     | [計算機網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2268)   | [攝影美學](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=5191)     |            |            |
+| 9    | [科學計算導論](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701)     |              | [科學計算導論](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701) |            |            |
 
 ### 近期表演
-- 好了就走音樂祭
+
+- 長虹吉他社春季成發 ── 「吉吉赴集集」
+  - 時間：3/25（三）
+  - 地點：中興大學小禮堂
+  
+- [好了就走音樂祭](https://www.instagram.com/readytogo_festival/)
   - 時間：4/12 （日）
   - 地點：勤益科大中正台
 
 ## 遊戲
 ### Switch
-- 未通關
+- **未通關**
   - 薩爾達傳說 王國之淚　二週目（無傘）
   - 霍格華茲的傳承
   - 馬利歐驚奇
-  - 胡鬧廚房
   - Ori 2
   
-- 已通關
+- **已通關**
   - 薩爾達傳說 王國之淚
   - 薩爾達傳說 曠野之息
   - Mario Odyssey
@@ -49,7 +64,8 @@
 
 ### 電腦
 - Minecraft  
-- Hollow Knight
+- Hollow Knight  
+- Elden Ring
   
 ### 手遊
 - 燕雲十六聲
@@ -60,21 +76,21 @@
   
 ## 裝備
 ### 電子設備
-- 伺服器：RaspberryPi 5 16G，性價比很高的小東西，花點小錢享受一下自架開源服務，逃離大平台的掌控。
-- 筆電：Acer Aspire A515-55 N18Q13。這台筆電五年了，自從捨棄 Windows 裝了 Kubuntu ，直接復活。
-- 組裝機：Ryzen 5 7500f + AMD RADEON RX9060 XT + 32G RAM 裝載 Kubuntu ，可以讓我亂搞的遊戲機。
-- 滑鼠：Logi M590
-- 鍵盤：Lohi K98M
-- 平板：iPad Air (M2)
-- 手機：Samsung A56、iPhone 8 Plus
-- 寵物：Flipper Zero
+- **伺服器**：RaspberryPi 5 16G，性價比很高的小東西，花點小錢享受一下自架開源服務，逃離大平台的掌控。
+- **筆電**：Acer Aspire A515-55 N18Q13。這台筆電五年了，自從捨棄 Windows 裝了 Kubuntu ，直接復活。
+- **組裝機**：Ryzen 5 7500f + AMD RADEON RX9060 XT + 32G RAM 裝載 Kubuntu ，可以讓我亂搞的遊戲機。
+- **滑鼠**：Logi M590
+- **鍵盤**：Logi K98M
+- **平板**：iPad Air (M2)
+- **手機**：Samsung A56、iPhone 8 Plus
+- **寵物**：Flipper Zero
 ### 吉他
-- 皮克：小烏龜 (Dunlop Tortex)
-- 木吉他：StarSun J5 楓木 面單板 41吋
-- 拾音器：X2 Double
-- 電吉他：忘了
-- 效果器：NUX MG-300 MK2
-- 音響：NUX MIGHTY8SE
+- **皮克**：小烏龜 (Dunlop Tortex)
+- **木吉他**：StarSun J5 楓木 面單板 41吋
+- **拾音器**：X2 Double
+- **電吉他**：忘了
+- **效果器**：NUX MG-300 MK2
+- **音響**：NUX MIGHTY8SE
   
 ***
   
