@@ -2,8 +2,8 @@
 title: 綠美圖
 published: 2026-01-15
 slug: "Taichung-Green-Museumbrary"
-tags: [Journey]
-category: Life
+tags: [Taichung]
+category: Journey
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false

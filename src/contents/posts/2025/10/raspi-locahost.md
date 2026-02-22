@@ -2,7 +2,7 @@
 title: Raspberry pi 5 自架服務器
 published: 2025-10-15
 description: 自架服務器
-tags: [Raspberry Pi,Self-hosting]
+tags: [Raspberry Pi,Self-Hosting]
 category: Technology
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson

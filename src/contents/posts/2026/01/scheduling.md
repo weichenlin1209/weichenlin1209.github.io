@@ -2,7 +2,7 @@
 title: 排程
 published: 2026-01-13
 slug: "scheduling"
-tags: [Self-Hosting]
+tags: []
 category: Life
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
@@ -70,8 +70,8 @@ cover: "https://img.windson.cc/images/2026/01/scheduling/cover.webp"
 
 ![](https://img.windson.cc/images/2026/01/scheduling/srtf.webp)
 
-- 平均等待時間：$\[(17-8-0)+(5-4-1)+(26-2-9)+(10-3-5)\] / 4 = 6.5$  
-- 平均處理時間：$\[(17-0)+(5-1)+(26-2)+(10-3)\] / 4 = 13$  
+- 平均等待時間：$[(17-8-0)+(5-4-1)+(26-2-9)+(10-3-5)] / 4 = 6.5$  
+- 平均處理時間：$[(17-0)+(5-1)+(26-2)+(10-3)] / 4 = 13$  
 
 ***
 以上的處理方法都會有一些問題。如果一直有時間花費很短的事情插進來，中斷掉花費比較長的工作，那花費時間比較久的工作就會永遠都輪不到他，就會餓死在 Ready queue 裡面，等待時間反而越來越長，到了死線都還沒做完。為了避免有事情作不完的情況，接下來要介紹 Round Robin。
