@@ -47,6 +47,10 @@ const YukinaConfig: Configuration = {
       icon: "line-md:rss",
       link: "/rss.xml",
     },
+    {
+      icon: "line-md:file-document-twotone",
+      link: "https://study.windson.cc"
+    },
   ],
   maxSidebarCategoryChip: 6, // It is recommended to set it to a common multiple of 2 and 3
   maxSidebarTagChip: 12,
