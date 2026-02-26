@@ -3,7 +3,7 @@ title: SCIST X SCAICT 聯合寒訓
 published: 2026-02-13
 slug: "scist-scaict-camp"
 tags: ["hackathon"]
-category: Life
+category: Journey
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
