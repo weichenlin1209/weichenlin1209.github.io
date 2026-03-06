@@ -25,7 +25,7 @@
 
 ## 近況
 
-開學了，最近會超級忙。要忙黑客松、吉他社春季總召還有25學分的課，而且課表都硬邦邦的。
+開學了，最近會超級忙。要忙黑客松、吉他社春季總召還有22學分的課，而且課表都硬邦邦的。
 | 節次 | 週一           | 週二         | 週三         | 週四       | 週五       |
 |------|----------------|--------------|--------------|------------|------------|
 | 1    |                |              |              |            |            |
@@ -33,9 +33,9 @@
 | 3    | [資訊科技與媒體識讀](https://frdm.cyut.edu.tw/~ckhung/c/ml262g/) | [x86 組合語言](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2270)     | [數值分析](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2245)     | [機器學習](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3242)   | [網際網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2031)   |
 | 4    | [資訊科技與媒體識讀](https://frdm.cyut.edu.tw/~ckhung/c/ml262g/) | [x86 組合語言](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2270)     | [數值分析](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2245)     | [機器學習](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3242)   | [網際網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2031)   |
 | 5    | [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)       |              |              |            |            |
-| 6    | [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)        | [計算機網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2268)   |              |            |            |
-| 7    | [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)       | [計算機網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2268)   | [攝影美學](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=5191)     |            |            |
-| 8    | [科學計算導論](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701)     | [計算機網路](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2268)   | [攝影美學](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=5191)     |            |            |
+| 6    | [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)        | |              |            |            |
+| 7    | [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)       |   | [攝影美學](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=5191)     |            |            |
+| 8    | [科學計算導論](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701)     |    | [攝影美學](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=5191)     |            |            |
 | 9    | [科學計算導論](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701)     |              | [科學計算導論](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701) |            |            |
 
 ### 近期表演
