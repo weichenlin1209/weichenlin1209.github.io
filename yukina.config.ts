@@ -48,7 +48,7 @@ const YukinaConfig: Configuration = {
       link: "/rss.xml",
     },
     {
-      icon: "line-md:file-document-twotone",
+      icon: "line-md:text-box-multiple",
       link: "https://study.windson.cc"
     },
   ],
