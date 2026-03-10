@@ -4,28 +4,10 @@
 
 目前是就讀中興應數二年級。但不愛算數學，也不會算數。最近在學著打CTF、部署雲端服務、玩 AI、彈吉他，是個好忙好忙的大學生。希望會知道自己在忙什麼，讓50年後的自己覺得這段日子有意義。
  
-## 聯絡我　　
-只要不要寄垃圾郵件，不要太像詐騙，基本上我都會回。第一次請說明你是誰，不然我會當成詐騙。
-- [telegram](https://t.me/windsoncc)
-
-- [signal](https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf)  
-
-- [email](mailto:info@windson.cc)　　
-
-> 為什麼沒有 Line 跟 Instagram 呢？
-  
-可以參考以下幾篇文章：
-  - [Wiwi 「我同意」](https://wiwi.blog/blog/line-privacy-policy/)  
-  - [Wiwi 「賴，越來越爛？」](https://wiwi.blog/blog/line-escape-plan/)  
-  - [Wiwi 「為什麼我不用社群媒體了？」](https://wiwi.blog/docs/wisdom/why-i-dont-use-social-media)  
-  - [資訊人權貴ㄓ疑 「Line 不僅是高牆花園， 也是國安要害 」](https://ckhung0.blogspot.com/2018/07/line.html)  
-  - [Jaron 「LINE 尊榮版」](https://www.jaron.tw/blog/line-premium/)  
-  - [Each 「給 Line 的一封信」](https://www.iach.cc/dear-line/)  
-
 
 ## 近況
 
-開學了，最近會超級忙。要忙黑客松、吉他社春季總召還有22學分的課，而且課表都硬邦邦的。
+開學了，22 學分，課表都硬邦邦的。
 | 節次 | 週一           | 週二         | 週三         | 週四       | 週五       |
 |------|----------------|--------------|--------------|------------|------------|
 | 1    |                |              |              |            |            |

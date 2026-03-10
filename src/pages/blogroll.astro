@@ -23,10 +23,12 @@ const shuffledLinks = shuffleArray(links);
 
 <Main title={entry.data.title}>
   <!-- Markdown 文字內容 -->
-  <div class="mb-10 rounded-2xl bg-[var(--card-color)] p-10">
-    <Markdown>
-      <BlogrollContent />
-    </Markdown>
+  <div class="article-wrapper">
+    <div class="article">
+      <Markdown>
+        <BlogrollContent />
+      </Markdown>
+    </div>
   </div>
 
   <!-- Blogroll 卡片 Grid -->
@@ -56,12 +58,21 @@ const shuffledLinks = shuffleArray(links);
 </Main>
 
 <style>
+  .article-wrapper {
+    @apply mx-3 rounded-2xl bg-[var(--card-color)] px-5 py-6 lg:mx-0 lg:px-10 lg:py-9;
+  }
+  .article {
+    @apply flex flex-col;
+    font-size: var(--primary-font);
+  }
   .grid {
     @apply gap-6;
   }
+  a {
+    @apply transition-all;
+  }
   a:hover {
     transform: scale(1.05, 1.05);
-    background-color: var(--primary-color-lighten)
-    @apply shadow-lg;
+    background-color: var(--primary-color-lighten);
   }
 </style>

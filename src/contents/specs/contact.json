@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Telegram",
+    "icon": "line-md:telegram",
+    "link": "https://t.me/windsoncc"
+  },
+  {
+    "name": "Signal",
+    "icon": "line-md:chat-round-twotone",
+    "link": "https://signal.me/#eu/D5RNM8hXXllyXDyjR5QZuFFLc3mTv1cvwVKjpfFnwFVMvHI-XXpGAp0JuUO-zsrf"
+  },
+  {
+    "name": "Discord",
+    "icon": "line-md:discord",
+    "link": "https://discord.com/users/windson.cc"
+  }
+]
