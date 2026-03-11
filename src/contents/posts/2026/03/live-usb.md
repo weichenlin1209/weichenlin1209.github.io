@@ -3,7 +3,7 @@ title: 用 USB「借屍還魂」
 published: 2026-03-11
 slug: "live-usb"
 tags: ["Linux"]
-category: Guitar
+category: Technology
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
 draft: false
