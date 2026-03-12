@@ -2,7 +2,7 @@
 import { getEntry, render } from "astro:content";
 import Main from "../layouts/MainLayout.astro";
 import Markdown from "../components/Markdown.astro";
-import links from "../blogroll.json";
+import links from "../contents/specs/blogroll.json";
 
 // 取得 Markdown 文字
 const entry = await getEntry("specs", "blogroll");
