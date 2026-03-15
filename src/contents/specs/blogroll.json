@@ -22,7 +22,7 @@
     "link": "https://frdm.cyut.edu.tw/~ckhung/g/",
     "img": "https://img.iach.cc/blogroll/ckhung.jpg",
     "des": "中興通識課老師，善於打破邪惡組織的謊言"
-},
+  },
   {
     "title": "tux24",
     "link": "https://tux24.xyz/",
@@ -88,5 +88,11 @@
     "link":"https://blog.giveanornot.com/",
     "img":"https://blog.giveanornot.com/img/avatar_hu_8a21430ccd887c92.png",
     "des":"雲端工程師，也是個女裝實踐者"
+  },
+  {
+    "title":"235",
+    "link":"https://235blog.netlify.app/",
+    "img": "https://s2.loli.net/2025/01/25/FPpTrQSezM8ivbl.webp",
+    "des":"高科大大一生，內容以活動心得為主，偶爾會有一些程式相關的文章"
   }
 ]
