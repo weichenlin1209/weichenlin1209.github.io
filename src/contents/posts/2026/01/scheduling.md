@@ -4,7 +4,7 @@ published: 2026-01-13
 slug: "scheduling"
 tags: []
 category: Life
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://img.windson.cc/images/2026/01/scheduling/cover.webp"

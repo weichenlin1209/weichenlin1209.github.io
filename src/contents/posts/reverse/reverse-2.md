@@ -4,7 +4,7 @@ published: 2025-10-29
 slug: "reverse-2"
 tags: [PicoCTF ,Reverse]
 category: CTF
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://img.windson.cc/images/reverse/cover.webp"

@@ -4,7 +4,7 @@ published: 2026-02-23
 slug: "toe-socks"
 tags: ["BlogBlogClub"]
 category: Life
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://s2.loli.net/2025/01/25/PBvHFjr5yDu6t4a.webp"

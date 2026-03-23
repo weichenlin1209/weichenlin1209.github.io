@@ -3,7 +3,7 @@ title: 校慶雞尾酒
 published: 2025-11-01
 tags: [NCHU]
 category: Guitar
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 slug: "cocktail"

@@ -4,7 +4,7 @@ published: 2026-01-19
 slug: "A-trip-on-a-whim"
 tags: ["Hualien","BlogBlogClub"]
 category: Journey
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://img.windson.cc/images/2026/01/A-trip-on-a-whim/cover.webp"

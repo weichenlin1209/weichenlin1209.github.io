@@ -3,7 +3,7 @@ title: 安裝 Kubuntu 的坑
 published: 2025-12-05
 tags: [NCHU]
 category: Technology
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 slug: "kubuntu"

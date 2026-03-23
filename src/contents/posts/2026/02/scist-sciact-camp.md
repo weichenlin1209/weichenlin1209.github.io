@@ -4,7 +4,7 @@ published: 2026-02-13
 slug: "scist-scaict-camp"
 tags: ["hackathon"]
 category: Journey
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://img.windson.cc/images/2026/02/scist-scaict-camp/cover.webp"

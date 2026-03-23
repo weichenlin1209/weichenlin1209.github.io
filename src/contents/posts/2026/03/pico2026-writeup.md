@@ -4,7 +4,7 @@ published: 2026-03-20
 slug: "picoctf-2026-writeup"
 tags: ["PicoCTF"]
 category: CTF
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://img.windson.cc/images/categories/picoctf.svg"

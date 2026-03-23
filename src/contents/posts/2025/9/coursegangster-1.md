@@ -4,7 +4,7 @@ published: 2025-09-04
 description: 最近大家都在選課吧。我就運氣特別不好，通識一節沒有，要加簽的一大堆...
 tags: [NCHU]
 category: Technology
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 slug: coursegangster
 draft: false

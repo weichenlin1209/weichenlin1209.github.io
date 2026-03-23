@@ -3,7 +3,7 @@ title: 修課分享
 published: 2025-12-26
 tags: [NCHU]
 category: Life
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 slug: "nchu-course-share-1"

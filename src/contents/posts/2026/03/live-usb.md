@@ -4,7 +4,7 @@ published: 2026-03-11
 slug: "live-usb"
 tags: ["Linux"]
 category: Technology
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 ---

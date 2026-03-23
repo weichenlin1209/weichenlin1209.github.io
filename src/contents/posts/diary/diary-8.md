@@ -4,7 +4,7 @@ published: 2026-03-15
 slug: "diary-8"
 tags: [Weekly Journal]
 category: Life
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 ---

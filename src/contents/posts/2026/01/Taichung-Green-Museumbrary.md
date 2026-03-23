@@ -4,7 +4,7 @@ published: 2026-01-15
 slug: "Taichung-Green-Museumbrary"
 tags: [Taichung]
 category: Journey
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://img.windson.cc/images/2026/01/Taichung-Green-Museumbrary/cover.webp"

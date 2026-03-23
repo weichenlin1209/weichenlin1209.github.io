@@ -4,7 +4,7 @@ published: 2025-11-21
 slug: "diary-5"
 tags: [Weekly Journal]
 category: Life
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://img.windson.cc/images/diary/diary-5/cover.webp"

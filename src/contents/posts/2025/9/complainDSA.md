@@ -4,7 +4,7 @@ published: 2025-09-13
 description: 就是一些murmur
 tags: [NCHU]
 category: Life
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 slug: "complainDSA"
 draft: false

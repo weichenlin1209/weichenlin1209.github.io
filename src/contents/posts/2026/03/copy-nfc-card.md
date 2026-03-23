@@ -4,7 +4,7 @@ published: 2026-03-19
 slug: "copy-nfc-card"
 tags: ["Flipper", "NFC"]
 category: Technology
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://images.unsplash.com/photo-1637070155805-e6fbee6ec2cf?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

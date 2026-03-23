@@ -4,7 +4,7 @@ published: 2025-10-17
 description: 當了宿營的工人之後，只想告訴你們，真的別被騙近來當工人，要加入請三思。
 tags: [NCHU]
 category: Life
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 slug: "amcamp"
 draft: false

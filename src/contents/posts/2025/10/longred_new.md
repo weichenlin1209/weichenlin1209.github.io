@@ -4,7 +4,7 @@ published: 2025-10-02
 description: 這是我在吉他社的一個活動
 tags: [Guitar ,NCHU]
 category: Guitar
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 slug: "longred-newcoming"
 draft: false

@@ -4,7 +4,7 @@ published: 2026-02-22
 slug: "netbird-vpn"
 tags: ["Self-Hosting"]
 category: Technology
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 cover: "https://img.windson.cc/images/2026/02/netbird-vpn/cover.webp"

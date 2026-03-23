@@ -3,7 +3,7 @@ title: picoCTF SansAlpha
 published: 2025-12-06
 tags: [PicoCTF]
 category: CTF
-licenseName: "CC BY-NC-SA 4.0"
+licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
 slug: "picoCTF-SansAlpha"
