@@ -1,6 +1,6 @@
 ---
-title: 吉他社召組須知
-published: 2026-03-07
+title: 春季社員大會
+published: 2026-04-17
 slug: "longred-spring"
 tags: ["NCHU"]
 category: Guitar
