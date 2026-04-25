@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Each Chen",
+    "link": "https://www.iach.cc/",
+    "img": "https://gravatar.com/avatar/17e00664ef815abebb952dc4f449e1f1582d0fe0b94c6701e368d68349e151e6?&size=256",
+    "des": "My direct junior"
+  },
+  {
+    "title": "Nao",
+    "link": "https://noa.bearblog.dev/",
+    "img": "https://noachen522.github.io/noasblog/pixelart-cactus.png",
+    "des": "High school student daily life, very good read"
+  },
+  {
+    "title": "Jenny Sloth",
+    "link": "https://jennysloth.com/",
+    "img": "https://img.windson.cc/images/blogroll/default.webp",
+    "des": "Great college companion"
+  },
+  {
+    "title":"Ckhung",
+    "link": "https://frdm.cyut.edu.tw/~ckhung/g/",
+    "img": "https://img.iach.cc/blogroll/ckhung.jpg",
+    "des": "CYUT's retired professor, FOSS advocate, and Linux user, also a great teacher"
+  },
+  {
+    "title": "tux24",
+    "link": "https://tux24.xyz/",
+    "img": "https://tux24.xyz/images/avatar.jpg",
+    "des": "Impressive high school student"
+  },
+  {
+    "title": "Wiwi Blog",
+    "link": "https://wiwi.blog/",
+    "img": "https://wiwi.blog/img/logo.svg",
+    "des": "Pianist embracing open-source software"
+  },
+  {
+    "title": "Jaron",
+    "link": "https://www.jaron.tw/",
+    "img": "https://www.jaron.tw/img/logo.png",
+    "des": "Video creator, mostly life sharing, great content!"
+  },
+  {
+    "title": "EM",
+    "link": "https://emtech.cc/",
+    "img": "https://emtech.cc/static/img/EMprofile.png",
+    "des": "Tech tips hub"
+  },
+  {
+    "title": "Ivon",
+    "link": "https://ivonblog.com/",
+    "img": "https://ivonblog.com/img/avatar-ivonhuang.png",
+    "des": "GNU/Linux info, free and open-source software, tech news"
+  },
+  {
+    "title": "Alex Hsu",
+    "link": "https://alexhsu.com/",
+    "img": "https://alexhsu.com/profile.jpg",
+    "des": "Independent developer who compares life to a game"
+  },
+  {
+    "title": "Eddie",
+    "link": "https://blog.gtisland.com/",
+    "img": "https://blog.gtisland.com/images/apple-touch-icon.png",
+    "des": "Lighting and sound technician, diverse content"
+  },
+  {
+    "title": "Blog Blog Club",
+    "link": "https://blogblog.club/",
+    "img": "https://blogblog.club/img/logo.svg",
+    "des": "Founded by Wiwi to encourage everyone to write blogs"
+  },
+  {
+    "title": "OsGa",
+    "link": "https://osga.dev",
+    "img":"https://www.osga.dev/_next/image?url=%2Favatar.png&w=640&q=75",
+    "des":"Security and programming guru. btw, he uses vim"
+  },
+  {
+    "title":"4yu",
+    "link":"https://4yu.dev",
+    "img":"https://4yu.dev/img/avatar.webp",
+    "des":"Competitive programming and AI master, took one class and pushed me into AI"
+  },
+  {
+    "title":"JN",
+    "link":"https://blog.giveanornot.com/",
+    "img":"https://blog.giveanornot.com/img/avatar_hu_8a21430ccd887c92.png",
+    "des":"Cloud engineer, also a crossdressing practitioner"
+  },
+  {
+    "title":"235",
+    "link":"https://235blog.netlify.app/",
+    "img": "https://img.windson.cc/images/blogroll/default.webp",
+    "des":"First-year student at NKUST met at a winter camp, recently started using Linux"
+  },
+  {
+    "title":"玩具烏托邦",
+    "link":"https://newtoypia.blogspot.com",
+    "img":"https://newtoypia.blogspot.com/favicon.ico",
+    "des":"ckhung's platform for sharing FOSS software"
+  },
+  {
+    "title":"資訊人權貴ㄓ疑",
+    "link":"https://ckhung0.blogspot.com",
+    "img":"https://ckhung0.blogspot.com/favicon.ico",
+    "des":"ckhung's platform for sharing information about human rights and technology"
+  }
+]

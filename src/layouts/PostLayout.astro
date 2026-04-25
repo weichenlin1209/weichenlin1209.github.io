@@ -3,7 +3,7 @@ import Main from "../layouts/MainLayout.astro";
 import Markdown from "../components/Markdown.astro";
 import CopyRight from "../components/misc/CopyRight.astro";
 
-interface Props {
+export interface Props {
   title?: string;
   subTitle?: string;
   bannerImage?: string;
@@ -14,6 +14,8 @@ interface Props {
   };
   author?: string;
   sourceLink?: string;
+  lang?: "zh" | "en";
+  baseUrl?: string;
 }
 
 const {
@@ -24,10 +26,12 @@ const {
   license,
   author,
   sourceLink,
+  lang = "zh",
+  baseUrl,
 } = Astro.props;
 ---
 
-<Main title={title} subTitle={subTitle} bannerImage={bannerImage}>
+<Main lang={lang} baseUrl={baseUrl} title={title} subTitle={subTitle} bannerImage={bannerImage}>
   <!-- <Fragment set:html={tocHTMLString} /> -->
   <div class="article-wrapper">
     <div class="article">

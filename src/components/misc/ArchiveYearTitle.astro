@@ -5,9 +5,10 @@ import { i18n } from "../../locales/translation";
 export interface Props {
   year: number;
   count: number;
+  lang?: "zh" | "en";
 }
 
-const { year, count } = Astro.props;
+const { year, count, lang = "zh" } = Astro.props;
 ---
 
 <div class="mb-2 flex w-full flex-row items-center">
@@ -24,7 +25,7 @@ const { year, count } = Astro.props;
   </div>
   <div>
     <p class="count select-none text-[var(--text-color-lighten)]">
-      {i18n(I18nKeys.archive_year_title_count, count.toString())}
+      {i18n(I18nKeys.archive_year_title_count, lang, count.toString())}
     </p>
   </div>
 </div>

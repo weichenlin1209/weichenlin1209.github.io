@@ -1,13 +1,25 @@
 ---
 import YukinaConfig from "../../yukina.config";
 import { i18n } from "../locales/translation";
+import I18nKeys from "../locales/keys";
 
 import { Icon } from "astro-icon/components";
 import SearchBar from "./SearchBar.svelte";
 import MobileSearchBar from "./MobileSearchBar.svelte";
 import "astro-pagefind";
 
+export interface Props {
+  lang?: "zh" | "en";
+  baseUrl?: string;
+}
+
+const { lang = "zh", baseUrl = `/${lang}` } = Astro.props;
+
+const switchLang = lang === "zh" ? "en" : "zh";
 const navCount = YukinaConfig.navigators.length;
+
+const currentPath = Astro.url.pathname;
+const targetPath = currentPath.replace(/^\/(zh|en)/, `/${switchLang}`);
 ---
 
 <nav class="nav" id="nav">
@@ -33,11 +45,11 @@ const navCount = YukinaConfig.navigators.length;
           class="mx-auto hidden"
         />
       </button>
-      <a class="title" href="/">
+      <a class="title" href={baseUrl}>
         {YukinaConfig.brandTitle}
       </a>
     </div>
-    <a class="brand-lg" href="/">
+    <a class="brand-lg" href={baseUrl}>
       <div class="title space-x-2">
         <Icon name="heroicons:home" size={32} />
         <p>{YukinaConfig.brandTitle}</p>
@@ -46,8 +58,8 @@ const navCount = YukinaConfig.navigators.length;
     <div class="menu">
       {
         YukinaConfig.navigators.map((nav) => (
-          <a href={nav.href}>
-            <p>{i18n(nav.nameKey)}</p>
+          <a href={`${baseUrl}${nav.href}`}>
+            <p>{i18n(nav.nameKey, lang)}</p>
           </a>
         ))
       }
@@ -60,20 +72,15 @@ const navCount = YukinaConfig.navigators.length;
         <SearchBar client:only="svelte" />
       </div>
       <div class="theme">
-        <button type="button" id="theme-switcher">
-          <Icon
-            id="theme-icon-light"
-            name="line-md:moon-alt-to-sunny-outline-loop-transition"
-            size={24}
-            class="hidden"
-          />
-          <Icon
-            id="theme-icon-dark"
-            name="line-md:sunny-outline-to-moon-alt-loop-transition"
-            size={24}
-            class="hidden"
-          />
-        </button>
+        <a
+          href={targetPath}
+          class="locale-switcher"
+          title={i18n(I18nKeys.locale_switcher_title, lang)}
+        >
+          <span id="locale-icon" class="text-base font-medium">
+            {switchLang === "zh" ? "中" : "EN"}
+          </span>
+        </a>
       </div>
     </div>
   </div>
@@ -85,10 +92,10 @@ const navCount = YukinaConfig.navigators.length;
       {
         YukinaConfig.navigators.map((nav) => (
           <li class="mt-1">
-            <a href={nav.href} class="mobile-nav-item">
+            <a href={`${baseUrl}${nav.href}`} class="mobile-nav-item">
               <div class="flex flex-row items-center space-x-2">
                 <span class="text-[var(--primary-color)]">·</span>
-                <span>{i18n(nav.nameKey)}</span>
+                <span>{i18n(nav.nameKey, lang)}</span>
               </div>
               <Icon
                 name="cuida:caret-right-outline"
@@ -168,7 +175,7 @@ const navCount = YukinaConfig.navigators.length;
     @apply flex flex-row items-center justify-end space-x-1 lg:mr-2;
   }
 
-  .toolbar button {
+  .toolbar button, .toolbar .locale-switcher {
     @apply flex w-11 justify-center rounded-lg py-2 text-[var(--text-color)] transition-all;
     @apply hover:bg-[var(--primary-color-hover)] hover:text-[var(--primary-color)];
   }
@@ -270,47 +277,16 @@ const navCount = YukinaConfig.navigators.length;
     }
   });
 
-  // Theme switcher
-  // Get elements
-  const themeSwitcher = document.getElementById(
-    "theme-switcher",
-  ) as HTMLButtonElement;
-  let themeIconLight = document.getElementById(
-    "theme-icon-light",
-  ) as any as SVGElement;
-  let themeIconDark = document.getElementById(
-    "theme-icon-dark",
-  ) as any as SVGElement;
-
-  // Record the current theme
-  let currentTheme = localStorage.getItem("theme") || "light";
-
-  // Set theme
-  const setTheme = (theme: string) => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-    currentTheme = theme;
-
-    // Show/hide icons for different themes
-    themeIconDark.style.display = theme === "dark" ? "block" : "none";
-    themeIconLight.style.display = theme === "light" ? "block" : "none";
-
-    // If the theme is dark, update the dark icon; otherwise, update the light icon
-    if (theme === "dark") themeIconDark = reinitializeIcon(themeIconDark);
-    else themeIconLight = reinitializeIcon(themeIconLight);
-
-    // Toggle dark class
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  };
-
-  // Click to switch theme
-  themeSwitcher.addEventListener("click", () => {
-    setTheme(currentTheme === "light" ? "dark" : "light");
+  // force full page reload on locale switch
+  document.querySelectorAll(".locale-switcher").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = (link as HTMLAnchorElement).href;
+    });
   });
 
   // Initialize
   document.addEventListener("DOMContentLoaded", () => {
-    setTheme(currentTheme);
     menuIconClosed.style.display = "block";
   });
 

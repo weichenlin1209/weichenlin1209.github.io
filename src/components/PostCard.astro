@@ -17,11 +17,15 @@ export interface Props {
   description?: string;
   image?: string;
   readingMetadata: { time: number; wordCount: number };
+  lang?: "zh" | "en";
+  baseUrl?: string;
 }
 
 const props = Astro.props;
+const lang = props.lang || "zh";
+const baseUrl = props.baseUrl || `/${lang}`;
 const entryID = IdToSlug(props.id);
-const contentUrl = `/posts/${entryID}`;
+const contentUrl = `${baseUrl}/posts/${entryID}`;
 const { time, wordCount } = props.readingMetadata;
 ---
 
@@ -91,7 +95,7 @@ const { time, wordCount } = props.readingMetadata;
                 <PostCardInfoIcon name="dashicons:category" />
                 <a
                   class="select-none rounded-md px-1.5 py-0.5 text-[var(--text-color-lighten)] transition-all hover:bg-[var(--primary-color-lighten)] hover:text-[var(--primary-color)]"
-                  href={`/categories/${IdToSlug(props.category)}`}
+                  href={`${baseUrl}/categories/${IdToSlug(props.category)}`}
                 >
                   {props.category}
                 </a>
@@ -111,7 +115,7 @@ const { time, wordCount } = props.readingMetadata;
                         {index > 0 && <span class="pr-1">/</span>}
                         <a
                           class="rounded-md px-1.5 py-0.5 transition-all hover:bg-[var(--primary-color-lighten)] hover:text-[var(--primary-color)]"
-                          href={`/tags/${IdToSlug(tag)}`}
+                          href={`${baseUrl}/tags/${IdToSlug(tag)}`}
                         >
                           {tag}
                         </a>
@@ -132,12 +136,12 @@ const { time, wordCount } = props.readingMetadata;
           <div class="reading-time">
             <span>
               {wordCount}
-              {i18n(I18nKeys.post_card_words)}
+              {i18n(I18nKeys.post_card_words, lang)}
             </span>
             <span>|</span>
             <span>
               {time}
-              {i18n(I18nKeys.post_card_minutes)}
+              {i18n(I18nKeys.post_card_minutes, lang)}
             </span>
           </div>
         </div>
@@ -209,6 +213,6 @@ const { time, wordCount } = props.readingMetadata;
   }
 
   .cover-wrapper:hover .right-icon {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 </style>

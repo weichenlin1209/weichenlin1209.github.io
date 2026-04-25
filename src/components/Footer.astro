@@ -5,8 +5,15 @@ import { i18n } from "../locales/translation";
 import I18nKeys from "../locales/keys";
 import { GetCategories, GetTags } from "../utils/content";
 
-const categories = await GetCategories();
-const tags = await GetTags();
+export interface Props {
+  lang?: "zh" | "en";
+  baseUrl?: string;
+}
+
+const { lang = "zh", baseUrl = `/${lang}` } = Astro.props;
+
+const categories = await GetCategories(lang);
+const tags = await GetTags(lang);
 
 const categoryKeys = [...categories.keys()];
 const tagKeys = [...tags.keys()];
@@ -16,7 +23,7 @@ const tagKeys = [...tags.keys()];
   <!-- Owner info card -->
   <div class="rounded-3xl bg-[var(--card-color)] transition-all lg:hidden">
     <div class="flex flex-row md:flex-col md:pt-4">
-      <a href="/about" class="relative h-40 w-40 md:hidden">
+      <a href={`${baseUrl}/about`} class="relative h-40 w-40 md:hidden">
         <img
           class="lozad absolute left-0 top-0 h-40 rounded-l-3xl"
           data-src={YukinaConfig.avatarUrl}
@@ -29,6 +36,7 @@ const tagKeys = [...tags.keys()];
       </a>
       <a
         class="mx-auto hidden h-40 w-40 cursor-pointer rounded-3xl transition-all hover:brightness-75 md:block"
+        href={`${baseUrl}/about`}
       >
         <img
           class="lozad h-40 rounded-3xl"
@@ -39,7 +47,7 @@ const tagKeys = [...tags.keys()];
       <div class="flex grow flex-col justify-center space-y-4 p-4">
         <div class="flex flex-col items-center">
           <a
-            href="/about"
+            href={`${baseUrl}/about`}
             class="line-clamp-1 text-xl font-semibold text-[var(--text-color)]"
           >
             {YukinaConfig.username}
@@ -52,13 +60,21 @@ const tagKeys = [...tags.keys()];
         </div>
         <ul class="flex flex-row items-center justify-center space-x-6">
           {
-            YukinaConfig.socialLinks.map((item) => (
-              <li>
-                <a href={item.link} class="text-[var(--primary-color)]">
-                  <Icon name={item.icon} size={24} />
-                </a>
-              </li>
-            ))
+            YukinaConfig.socialLinks.map((item) => {
+              let link = item.link;
+              let target = "_blank";
+              if (item.icon === "line-md:rss") {
+                link = `${baseUrl}/rss.xml`;
+                target = "_self";
+              }
+              return (
+                <li>
+                  <a href={link} target={target} class="text-[var(--primary-color)]">
+                    <Icon name={item.icon} size={24} />
+                  </a>
+                </li>
+              );
+            })
           }
         </ul>
       </div>
@@ -70,7 +86,7 @@ const tagKeys = [...tags.keys()];
     <div class="mb-2 flex flex-row items-center space-x-2 pl-1.5">
       <span class="h-6 w-1 rounded-full bg-[var(--primary-color)]"></span>
       <span class="text-xl font-semibold text-[var(--text-color)]">
-        {i18n(I18nKeys.side_bar_categories)}
+        {i18n(I18nKeys.side_bar_categories, lang)}
       </span>
     </div>
     <div class="relative grid grid-cols-2 gap-1 md:grid-cols-3">
@@ -79,7 +95,7 @@ const tagKeys = [...tags.keys()];
           .slice(0, YukinaConfig.maxFooterCategoryChip)
           .map((category) => (
             <a
-              href={`/categories/${category}`}
+              href={`${baseUrl}/categories/${category}`}
               class="category flex flex-row items-center justify-between rounded-lg px-2 py-1.5 transition-all hover:bg-[var(--primary-color-lighten)]"
             >
               <p class="line-clamp-1 text-[var(--text-color)] transition-all">
@@ -94,7 +110,7 @@ const tagKeys = [...tags.keys()];
       {
         categoryKeys.length > YukinaConfig.maxFooterCategoryChip && (
           <a
-            href={`/categories/${categoryKeys[YukinaConfig.maxFooterCategoryChip]}`}
+            href={`${baseUrl}/categories/${categoryKeys[YukinaConfig.maxFooterCategoryChip]}`}
             class="category col-span-2 flex flex-row items-center justify-between rounded-lg px-2 py-1.5 transition-all hover:bg-[var(--primary-color-lighten)] md:col-span-3"
           >
             <p class="line-clamp-1 text-[var(--text-color)] transition-all">
@@ -114,10 +130,10 @@ const tagKeys = [...tags.keys()];
           </a>
           <div class="absolute bottom-0 flex h-11 w-full flex-row items-center justify-center bg-gradient-to-t from-[var(--card-color)] from-25% to-transparent backdrop-blur-sm">
             <a
-              href="/categories/"
+              href={`${baseUrl}/categories/`}
               class="flex flex-row items-center space-x-1 text-[var(--primary-color)] transition-colors hover:brightness-75 dark:hover:brightness-125"
             >
-            <span>{i18n(I18nKeys.side_bar_view_more)}</span>
+            <span>{i18n(I18nKeys.side_bar_view_more, lang)}</span>
                 <Icon name="mingcute:arrow-right-line" />
             </a>
           </div>
@@ -131,14 +147,14 @@ const tagKeys = [...tags.keys()];
     <div class="mb-2 flex flex-row items-center space-x-2 pl-1.5">
       <span class="h-6 w-1 rounded-full bg-[var(--primary-color)]"></span>
       <span class="text-xl font-semibold text-[var(--text-color)]">
-        {i18n(I18nKeys.side_bar_tags)}
+        {i18n(I18nKeys.side_bar_tags, lang)}
       </span>
     </div>
     <div class="relative flex flex-row flex-wrap">
       {
         tagKeys.slice(0, YukinaConfig.maxFooterTagChip + 1).map((tag) => (
           <a
-            href={`/tags/${tag}`}
+            href={`${baseUrl}/tags/${tag}`}
             class="tag m-1 rounded-md bg-[var(--primary-color-lighten)] px-2 py-1 transition-all hover:brightness-95"
           >
             <p class="text-sm text-[var(--primary-color)]">
@@ -151,10 +167,10 @@ const tagKeys = [...tags.keys()];
         tagKeys.length >= YukinaConfig.maxFooterCategoryChip + 1 && (
           <div class="absolute bottom-0 flex h-10 w-full flex-row items-center justify-center bg-gradient-to-t from-[var(--card-color)] from-25% to-transparent backdrop-blur-sm">
             <a
-              href="/tags/"
+              href={`${baseUrl}/tags/`}
               class="flex flex-row items-center space-x-1 text-[var(--primary-color)] transition-colors hover:brightness-75 dark:hover:brightness-125"
             >
-              <span>{i18n(I18nKeys.side_bar_view_more)}</span>
+              <span>{i18n(I18nKeys.side_bar_view_more, lang)}</span>
               <Icon name="mingcute:arrow-right-line" />
             </a>
           </div>
@@ -184,11 +200,6 @@ const tagKeys = [...tags.keys()];
           href="https://github.com/WhitePaper233/yukina">Yukina</a
         > & <a class="link" href="https://astro.build/">Astro</a>
       </p>
-      <!-- <p>
-        <a class="link" href={new URL("sitemap-index.xml", YukinaConfig.site)}
-          >SiteMap</a
-        > / <a class="link" href="/rss.xml">RSS</a>
-      </p> -->
     </div>
   </footer>
 </div>

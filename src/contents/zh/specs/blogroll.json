@@ -1,0 +1,110 @@
+[
+  {
+    "title": "奕站",
+    "link": "https://www.iach.cc/",
+    "img": "https://gravatar.com/avatar/17e00664ef815abebb952dc4f449e1f1582d0fe0b94c6701e368d68349e151e6?&size=256",
+    "des": "我的直屬學弟"
+  },
+  {
+    "title": "Nao",
+    "link": "https://noa.bearblog.dev/",
+    "img": "https://noachen522.github.io/noasblog/pixelart-cactus.png",
+    "des": "高中生日常，很好看"
+  },
+  {
+    "title": "軟趴趴的🦥",
+    "link": "https://jennysloth.com/",
+    "img": "https://img.windson.cc/images/blogroll/default.webp",
+    "des": "大學好夥伴"
+  },
+  {
+    "title":"洪朝貴 | ckhung",
+    "link": "https://frdm.cyut.edu.tw/~ckhung/g/",
+    "img": "https://img.iach.cc/blogroll/ckhung.jpg",
+    "des": "中興通識課老師，善於打破邪惡組織的謊言"
+  },
+  {
+    "title": "tux24",
+    "link": "https://tux24.xyz/",
+    "img": "https://tux24.xyz/images/avatar.jpg",
+    "des": "很厲害的建中生"
+  },
+  {
+    "title": "Wiwi Blog",
+    "link": "https://wiwi.blog/",
+    "img": "https://wiwi.blog/img/logo.svg",
+    "des": "擁抱開源軟體的鋼琴師"
+  },
+  {
+    "title": "Jaron",
+    "link": "https://www.jaron.tw/",
+    "img": "https://www.jaron.tw/img/logo.png",
+    "des": "影像創作者，大部分是生活分享，好看!"
+  },
+  {
+    "title": "毛哥 EM",
+    "link": "https://emtech.cc/",
+    "img": "https://emtech.cc/static/img/EMprofile.png",
+    "des": "資訊密技集中處"
+  },
+  {
+    "title": "Ivon",
+    "link": "https://ivonblog.com/",
+    "img": "https://ivonblog.com/img/avatar-ivonhuang.png",
+    "des": "GNU/Linux情報、自由開源軟體、電腦手機資訊"
+  },
+  {
+    "title": "徐小翔",
+    "link": "https://alexhsu.com/",
+    "img": "https://alexhsu.com/profile.jpg",
+    "des": "把人生比喻成遊戲的獨立開發者"
+  },
+  {
+    "title": "Eddie",
+    "link": "https://blog.gtisland.com/",
+    "img": "https://blog.gtisland.com/images/apple-touch-icon.png",
+    "des": "燈光音響技師，內容主題多元"
+  },
+  {
+    "title": "Blog Blog Club",
+    "link": "https://blogblog.club/",
+    "img": "https://blogblog.club/img/logo.svg",
+    "des": "這是一個由Wiwi創辦，推坑大家寫部落格的網站"
+  },
+  {
+    "title": "OsGa",
+    "link": "https://osga.dev",
+    "img":"https://www.osga.dev/_next/image?url=%2Favatar.png&w=640&q=75",
+    "des":"熱愛資安與程式開發的大神。btw ,he uses vim"
+  },
+  {
+    "title":"4yu",
+    "link":"https://4yu.dev",
+    "img":"https://4yu.dev/img/avatar.webp",
+    "des":"競程和AI的電神，上了一堂課就把我推進AI坑裡"
+  },
+  {
+    "title":"資工小廢物 - JN",
+    "link":"https://blog.giveanornot.com/",
+    "img":"https://blog.giveanornot.com/img/avatar_hu_8a21430ccd887c92.png",
+    "des":"雲端工程師，也是個女裝實踐者"
+  },
+  {
+    "title":"235",
+    "link":"https://235blog.netlify.app/",
+    "img": "https://img.windson.cc/images/blogroll/default.webp",
+    "des":"在寒訓認識的高科大大一生，最近開始用Linux"
+  },
+  {
+    "title":"玩具烏托邦",
+    "link":"https://newtoypia.blogspot.com",
+    "img":"https://newtoypia.blogspot.com/favicon.ico",
+    "des":"ckhung 老師的自由軟體分享平台"
+  },
+  {
+    "title":"資訊人權貴ㄓ疑",
+    "link":"https://ckhung0.blogspot.com",
+    "img":"https://ckhung0.blogspot.com/favicon.ico",
+    "des":"ckhung 老師的戰鬥部落格，充滿了對社會所提出來的疑問"
+  }
+]

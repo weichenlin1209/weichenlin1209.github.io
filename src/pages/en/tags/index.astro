@@ -1,0 +1,13 @@
+---
+import ChipLayout from "../../../layouts/ChipLayout.astro";
+import { GetTags } from "../../../utils/content";
+
+const tags = await GetTags("en");
+const chips = Array.from(tags.entries()).map(([key, value]) => ({
+  name: value.name,
+  slug: value.slug,
+  count: value.posts.length,
+}));
+---
+
+<ChipLayout chips={chips} title="Tags" baseUrl="/en" />

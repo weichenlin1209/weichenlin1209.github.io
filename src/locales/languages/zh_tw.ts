@@ -28,4 +28,7 @@ export const zh_TW: Translation = {
 
   [key.pages_tags_title]: "標籤",
   [key.pages_categories_title]: "分類",
+
+  [key.locale_switcher_toggle]: "English",
+  [key.locale_switcher_title]: "語言",
 };

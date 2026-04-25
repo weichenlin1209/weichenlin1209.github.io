@@ -12,29 +12,35 @@ export interface Props {
   subTitle?: string;
   bannerImage?: string;
   slug?: string;
+  lang?: "zh" | "en";
+  baseUrl?: string;
 }
 
-const { archiveMap, title, subTitle, bannerImage, slug } = Astro.props;
+const props = Astro.props;
+const lang = props.lang || "zh";
+const baseUrl = props.baseUrl || `/${lang}`;
 ---
 
-<Main title={title} subTitle={subTitle} bannerImage={bannerImage} slug={slug}>
+<Main lang={lang} baseUrl={baseUrl} title={props.title} subTitle={props.subTitle} bannerImage={props.bannerImage} slug={props.slug}>
   <div class="archives">
     {
-      archiveMap.size !== 0 &&
-        [...archiveMap.keys()].map((year) => (
+      props.archiveMap.size !== 0 &&
+        [...props.archiveMap.keys()].map((year) => (
           <div>
             <ArchiveYearTitle
               year={year}
-              count={archiveMap.get(year)!.length}
+              count={props.archiveMap.get(year)!.length}
+              lang={lang}
             />
             <ul>
-              {archiveMap.get(year)?.map((entry) => (
+              {props.archiveMap.get(year)?.map((entry) => (
                 <li>
                   <ArchivePost
                     id={entry.id}
                     title={entry.title}
                     pubilished={entry.date}
                     tags={entry.tags}
+                    baseUrl={baseUrl}
                   />
                 </li>
               ))}

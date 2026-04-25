@@ -23,6 +23,9 @@ enum I18nKeys {
   pages_archive_archive = "pages_archive_archive",
   pages_tags_archive = "pages_tags_archive",
 
+  locale_switcher_toggle = "locale_switcher_toggle",
+  locale_switcher_title = "locale_switcher_title",
+
   pages_tags_title = "pages_tags_title",
   pages_categories_title = "pages_categories_title",
 }

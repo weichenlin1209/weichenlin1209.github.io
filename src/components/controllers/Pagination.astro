@@ -6,9 +6,13 @@ export interface Props {
   nextURL?: string;
   style?: string;
   class?: string;
+  lang?: "zh" | "en";
+  baseUrl?: string;
 }
 
 const props = Astro.props;
+const lang = props.lang || "zh";
+const baseUrl = props.baseUrl || `/${lang}`;
 
 const maxVisiblePages = 4;
 let pages: (string | number)[] = [];
@@ -53,7 +57,7 @@ if (props.lastPage <= maxVisiblePages) {
           <span class="text-md text-[var(--primary-color)]">...</span>
         ) : (
           <a
-            href={page === 1 ? "/" : `/${page}`}
+            href={page === 1 ? baseUrl : `${baseUrl}/${page}`}
             class:list={[page === props.current ? "button-selected" : "button"]}
           >
             <span>{page}</span>

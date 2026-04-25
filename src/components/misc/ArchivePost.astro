@@ -7,14 +7,15 @@ export interface Props {
   title: string;
   pubilished: Date;
   tags: string[] | undefined;
+  baseUrl?: string;
 }
 
-const { id, title, pubilished } = Astro.props;
+const { id, title, pubilished, baseUrl = "" } = Astro.props;
 ---
 
 <div class="item">
   <a
-    href={id}
+    href={id.startsWith("/") ? id : `${baseUrl}${id}`}
     class="flex w-full select-none flex-row items-center rounded-md py-2 transition-colors hover:bg-[var(--primary-color-lighten)]"
   >
     <div class="flex w-[15%] flex-row justify-end md:w-[10%]">

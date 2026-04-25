@@ -2,14 +2,18 @@
 import YukinaConfig from "../../yukina.config";
 import BaseHead from "../components/BaseHead.astro";
 const {
-  // 1. 如果是 Markdown 自動套用 Layout，會在 frontmatter 裡
-  // 2. 如果是 .astro 頁面手動傳入，會在 Astro.props 裡
-  cover = Astro.props.frontmatter?.cover || Astro.props.cover || "/default-og.png"
+  cover = Astro.props.frontmatter?.cover || Astro.props.cover || "/default-og.png",
+  lang = "zh",
 } = Astro.props;
+
+const langMap: Record<string, string> = {
+  zh: "zh-TW",
+  en: "en",
+};
 ---
 
-<html lang={YukinaConfig.locale}>
-  <BaseHead cover = {cover} />
+<html lang={langMap[lang]} data-theme="dark">
+  <BaseHead cover={cover} lang={lang} />
   <body class="overflow-y-hidden">
     <slot />
   </body>

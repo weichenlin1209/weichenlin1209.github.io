@@ -12,21 +12,25 @@ export interface Props {
   subTitle?: string;
   bannerImage?: string;
   slug?: string;
+  lang?: "zh" | "en";
+  baseUrl?: string;
 }
 
 const props = Astro.props;
+const lang = props.lang || "zh";
+const baseUrl = props.baseUrl || `/${lang}`;
 ---
 
-<Base>
-  <NavBar />
+<Base lang={lang}>
+  <NavBar lang={lang} baseUrl={baseUrl} />
 
   {
     YukinaConfig.bannerStyle == "LOOP" && (
       <Banner
-        title={props.title}
-        subTitle={props.subTitle}
-        bannerImage={props.bannerImage}
-        slug={props.slug}
+        title={Astro.props.title}
+        subTitle={Astro.props.subTitle}
+        bannerImage={Astro.props.bannerImage}
+        slug={Astro.props.slug}
       />
     )
   }
@@ -34,13 +38,13 @@ const props = Astro.props;
   <div class="main-container my-10">
     <div class="flex flex-row items-start xl:space-x-4">
       <div class="side-bar">
-        <SideBar />
+        <SideBar lang={lang} baseUrl={baseUrl} />
       </div>
       <div class="transition-leaving w-full space-y-8">
         <main class="content onload-animation">
           <slot />
         </main>
-        <Footer />
+        <Footer lang={lang} baseUrl={baseUrl} />
       </div>
     </div>
   </div>

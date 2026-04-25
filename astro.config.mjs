@@ -34,7 +34,15 @@ export default defineConfig({
       updateBodyClass: false,
       globalInstance: true,
     }),
-    sitemap(),
+    sitemap({
+      i18n: {
+        defaultLocale: "zh",
+        locales: {
+          zh: "zh-cn",
+          en: "en-us",
+        },
+      },
+    }),
     pagefind(),
   ],
   markdown: {

@@ -1,0 +1,71 @@
+---
+import { getEntry, render } from "astro:content";
+import Main from "../../layouts/MainLayout.astro";
+import Markdown from "../../components/Markdown.astro";
+import games from "../../contents/zh/specs/games.json";
+
+const entry = await getEntry("specs_zh", "about");
+const { Content } = await render(entry!);
+
+const gameEntry = await getEntry("specs_zh", "game");
+const { Content: GameContent } = await render(gameEntry!);
+---
+
+<Main lang="zh" title={entry!.data.title}>
+  <div class="article-wrapper">
+    <div class="article">
+      <Markdown>
+        <Content />
+      </Markdown>
+    </div>
+  </div>
+
+  <div class="game-wrapper">
+    <div class="game-header article">
+      <Markdown>
+        <GameContent />
+      </Markdown>
+      <div class="game-grid mt-8">
+        {games.map((game) => (
+          <a class="game-card" href={game.link} target="_blank" rel="noopener noreferrer">
+            {game.img && <img class="game-cover" src={game.img} alt={game.title} loading="lazy" />}
+          </a>
+        ))}
+      </div>
+      <div class="game-disclaimer">
+        本頁面展示之所有電子遊戲封面、商標與相關圖像，其著作權與、商標權均歸其 <strong>Respective owners</strong> 所有。此處僅作非營利之個人分享與辨識用途。
+      </div>
+    </div>
+  </div>
+</Main>
+
+<style>
+  .article-wrapper {
+    @apply w-full rounded-2xl bg-[var(--card-color)] p-10;
+  }
+  .article {
+    @apply flex flex-col;
+  }
+  .game-wrapper {
+    @apply mt-8 rounded-2xl bg-[var(--card-color)] p-10;
+  }
+  .game-header {
+    @apply mb-6 flex flex-col;
+  }
+  .game-grid {
+    @apply grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5;
+  }
+  .game-card {
+    @apply flex flex-col overflow-hidden rounded-xl bg-[var(--card-color)] transition-all;
+  }
+  .game-card:hover {
+    background-color: var(--primary-color-lighten);
+    transform: scale(1.05);
+  }
+  .game-cover {
+    @apply aspect-[3/4] w-full rounded-xl object-cover;
+  }
+  .game-disclaimer {
+    @apply mt-8 px-4 py-4 text-center text-gray-500 whitespace-normal break-words;
+  }
+</style>

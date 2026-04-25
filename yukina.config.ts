@@ -6,7 +6,7 @@ const YukinaConfig: Configuration = {
   subTitle: "",
   brandTitle: "Windson's Blog",
 
-  description: "Windson's Personal Blog",
+  description: "Here is the Social media of Windson, a somophore in National Chung Hsing University, majoring in Applied Mathematics.",
 
   site: "https://www.windson.cc/", // Your site URL
 
@@ -15,7 +15,7 @@ const YukinaConfig: Configuration = {
   navigators: [
     {
       nameKey: I18nKeys.nav_bar_home,
-      href: "/",
+      href: "",
     },
     {
       nameKey: I18nKeys.nav_bar_archive,
@@ -32,7 +32,7 @@ const YukinaConfig: Configuration = {
   ],
 
   username: "Windson",
-  sign: "打破窗戶，擁抱企鵝",
+  sign: "Hello World!",
   avatarUrl: "https://gravatar.com/avatar/932e22160c9aeb41469a8c0ece40b38b0a62bd10598009d35a94e30dcb48b64d?v=1764580811000&size=512&d=initials",//"https://s2.loli.net/2025/01/25/FPpTrQSezM8ivbl.webp",
   socialLinks: [
     {

@@ -7,21 +7,26 @@ export interface Props {
     name: string;
     slug?: string;
     subChip?: string;
+    count?: number;
   }[];
   title?: string;
   subTitle?: string;
   bannerImage?: string;
   slug?: string;
+  lang?: "zh" | "en";
+  baseUrl?: string;
 }
 
-const { chips, title, subTitle, bannerImage, slug } = Astro.props;
+const props = Astro.props;
+const lang = props.lang || "zh";
+const baseUrl = props.baseUrl || `/${lang}`;
 ---
 
-<Main title={title} subTitle={subTitle} bannerImage={bannerImage} slug={slug}>
+<Main lang={lang} baseUrl={baseUrl} title={props.title} subTitle={props.subTitle} bannerImage={props.bannerImage} slug={props.slug}>
   <div class="flex flex-col rounded-2xl bg-[var(--card-color)] p-6">
     <div class="grid grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-3">
       {
-        chips.map((chip) => (
+        props.chips.map((chip) => (
           <a
             href={chip.slug}
             class="chip flex select-none flex-row items-center justify-between rounded-lg px-4 py-2 transition-all hover:bg-[var(--primary-color-lighten)]"
@@ -29,9 +34,9 @@ const { chips, title, subTitle, bannerImage, slug } = Astro.props;
             <p class="chip-name truncate pl-0 text-lg text-[var(--text-color)] transition-all">
               {chip.name}
             </p>
-            {chip.subChip && (
+            {chip.count !== undefined && (
               <span class="ml-2 rounded-md bg-[var(--primary-color-lighten)] px-3 py-1 text-[var(--primary-color)]">
-                {chip.subChip}
+                {chip.count}
               </span>
             )}
           </a>

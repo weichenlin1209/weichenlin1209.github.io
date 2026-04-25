@@ -32,14 +32,12 @@ export interface Category {
 /**
  * Retrieves and sorts blog posts by their published date.
  *
- * This function fetches all blog posts from the "posts" collection, filters out drafts if in production mode,
- * and sorts them in descending order by their published date. It also adds `nextSlug`, `nextTitle`, `prevSlug`,
- * and `prevTitle` properties to each post for navigation purposes.
- *
+ * @param lang - Language code ("zh" or "en")
  * @returns A promise that resolves to an array of sorted blog posts with navigation properties.
  */
-export async function GetSortedPosts() {
-  const allBlogPosts = await getCollection("posts", ({ data }) => {
+export async function GetSortedPosts(lang: "zh" | "en" = "zh") {
+  const collectionName = lang === "zh" ? "posts_zh" : "posts_en";
+  const allBlogPosts = await getCollection(collectionName, ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
   });
   const sorted = allBlogPosts.sort((a, b) => {
@@ -63,15 +61,12 @@ export async function GetSortedPosts() {
 /**
  * Retrieves and organizes blog post archives.
  *
- * This function fetches all blog posts from the "posts" collection, filters them based on the environment
- * (excluding drafts in production), and organizes them into a map of archives grouped by year.
- * Each archive entry contains the post's title, slug, publication date, and tags.
- * The archives are sorted in descending order by year and by date within each year.
- *
+ * @param lang - Language code ("zh" or "en")
  * @returns A promise that resolves to a map of archives grouped by year.
  */
-export async function GetArchives() {
-  const allBlogPosts = await getCollection("posts", ({ data }) => {
+export async function GetArchives(lang: "zh" | "en" = "zh") {
+  const collectionName = lang === "zh" ? "posts_zh" : "posts_en";
+  const allBlogPosts = await getCollection(collectionName, ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
   });
 
@@ -85,7 +80,7 @@ export async function GetArchives() {
     }
     archives.get(year)!.push({
       title: post.data.title,
-      id: `/posts/${IdToSlug(post.id)}`,
+      id: `/${lang}/posts/${IdToSlug(post.id)}`,
       date: date,
       tags: post.data.tags,
     });
@@ -104,13 +99,12 @@ export async function GetArchives() {
 /**
  * Retrieves all tags from blog posts.
  *
- * This function fetches all blog posts from the "posts" collection and extracts tags from each post.
- * It then organizes the tags into a map where each tag is associated with its metadata and the posts that have that tag.
- *
- * @returns A promise that resolves to a map of tags. Each key is a tag slug, and the value is an object containing the tag's name, slug, and associated posts.
+ * @param lang - Language code ("zh" or "en")
+ * @returns A promise that resolves to a map of tags.
  */
-export async function GetTags() {
-  const allBlogPosts = await getCollection("posts", ({ data }) => {
+export async function GetTags(lang: "zh" | "en" = "zh") {
+  const collectionName = lang === "zh" ? "posts_zh" : "posts_en";
+  const allBlogPosts = await getCollection(collectionName, ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
   });
 
@@ -121,13 +115,13 @@ export async function GetTags() {
       if (!tags.has(tagSlug)) {
         tags.set(tagSlug, {
           name: tag,
-          slug: `/tags/${tagSlug}`,
+          slug: `/${lang}/tags/${tagSlug}`,
           posts: [],
         });
       }
       tags.get(tagSlug)!.posts.push({
         title: post.data.title,
-        id: `/posts/${IdToSlug(post.id)}`,
+        id: `/${lang}/posts/${IdToSlug(post.id)}`,
         date: new Date(post.data.published),
         tags: post.data.tags,
       });
@@ -140,13 +134,12 @@ export async function GetTags() {
 /**
  * Retrieves all blog post categories and their associated posts.
  *
- * This function fetches all blog posts from the "posts" collection and filters them based on the environment.
- * In production, it excludes drafts. It then organizes the posts into categories and returns a map of categories.
- *
- * @returns A promise that resolves to a map of categories, where each category contains its name, slug, and associated posts.
+ * @param lang - Language code ("zh" or "en")
+ * @returns A promise that resolves to a map of categories.
  */
-export async function GetCategories() {
-  const allBlogPosts = await getCollection("posts", ({ data }) => {
+export async function GetCategories(lang: "zh" | "en" = "zh") {
+  const collectionName = lang === "zh" ? "posts_zh" : "posts_en";
+  const allBlogPosts = await getCollection(collectionName, ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
   });
 
@@ -159,13 +152,13 @@ export async function GetCategories() {
     if (!categories.has(categorySlug)) {
       categories.set(categorySlug, {
         name: post.data.category,
-        slug: `/categories/${categorySlug}`,
+        slug: `/${lang}/categories/${categorySlug}`,
         posts: [],
       });
     }
     categories.get(categorySlug)!.posts.push({
       title: post.data.title,
-      id: `/posts/${IdToSlug(post.id)}`,
+      id: `/${lang}/posts/${IdToSlug(post.id)}`,
       date: new Date(post.data.published),
       tags: post.data.tags,
     });

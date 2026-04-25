@@ -28,4 +28,7 @@ export const en: Translation = {
 
   [key.pages_tags_title]: "Tags",
   [key.pages_categories_title]: "Categories",
+
+  [key.locale_switcher_toggle]: "中文",
+  [key.locale_switcher_title]: "Language",
 };
