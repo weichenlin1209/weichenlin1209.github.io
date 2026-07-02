@@ -19,16 +19,11 @@
 - 河合鋼琴檢定 11級
 - 高中就讀國立中興大學附屬高級中學數理資優班
 
-## 這學期修什麼課
-
-- [數值分析](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2245)
-- [機器學習與資料挖掘應用](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3242)
-- [網際網路系統設計](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2031)
-- [資料庫管理系統](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)
-- [科學計算導論](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701)
-- [資訊科技與媒體識讀](https://frdm.cyut.edu.tw/~ckhung/c/ml262g/)
-
-- [攝影美學](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=5191)
+## 現在在幹嘛？
+- 正直暑假期間，在家當個廢物大學生
+- 用 Raspberry pi 的鏡頭模組作影像辨識
+- 可能算個高微、離散。~~算一算去追劇的可能性比較大~~。
+- 剩下的時間都拿來打遊戲
 
 ## 表演
 
