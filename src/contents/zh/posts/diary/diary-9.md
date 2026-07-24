@@ -7,7 +7,7 @@ category: Life
 licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
-# cover: ""
+#cover: ""
 ---
 
 為什麼 3.5+4 呢？因為上次更新正好是 3/15 三月只過了一半，三月下半到四月實在有太多事情可以寫了。這段時間有兩次表演，還去了SITCON（聽說是全部都要大寫），第一次去外面的練團室練團，甚至回去興附電研社上社課。

@@ -7,8 +7,8 @@ category: "Journey"
 licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
-cover: "https://img.windson.cc/images/2026/06/taiwan-tour/cover.jpg"
-description: "一場 0 計畫的環島遊記"
+cover: "https://img.windson.cc/images/2026/06/taiwan-tour/day1-01.jpg"
+description: "一場 0 計畫的環島遊記 苗栗站"
 ---
 
 各位好久不見，這裡是剛剛從期末考堆裡爬出來，一放假就跑去環島，回來之後就躲在家耍廢的威忌。說到環島，能想到的方法就是開車、騎車、腳踏車、火車還有~~用走的~~。開車的話有點太累了，雖然機動性很高，但大部分的時間都只能看著前面，所以不想開車。騎摩托車跟腳踏車的問題就是現在這個天氣實在是太熱了，還沒到苗栗可能都中暑了。所以這次決定，我們搭火車環島，一路上有冷氣有風景，感覺就很棒！
