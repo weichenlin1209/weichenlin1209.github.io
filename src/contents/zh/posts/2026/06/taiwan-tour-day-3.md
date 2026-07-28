@@ -7,7 +7,7 @@ category: "Journey"
 licenseName: "CC-BY-SA 4.0"
 author: Windson
 draft: false
-cover: "https://img.windson.cc/images/2026/06/taiwan-tour/day2-cover.jpg"
+cover: "https://img.windson.cc/images/2026/06/taiwan-tour/day3-01.jpg"
 description: "一場 0 計畫的環島遊記 宜蘭"
 ---
 
