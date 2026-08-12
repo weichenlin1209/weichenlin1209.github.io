@@ -32,7 +32,7 @@ const YukinaConfig: Configuration = {
   ],
 
   username: "Windson",
-  sign: "Hello World!",
+  sign: "= Band x Math x Coding",
   avatarUrl: "https://gravatar.com/avatar/932e22160c9aeb41469a8c0ece40b38b0a62bd10598009d35a94e30dcb48b64d?v=1764580811000&size=512&d=initials",//"https://s2.loli.net/2025/01/25/FPpTrQSezM8ivbl.webp",
   socialLinks: [
     {

@@ -1,8 +1,8 @@
 ---
-title: 綠美圖
+title: 綠美圖（相簿）
 published: 2026-01-15
 slug: "Taichung-Green-Museumbrary"
-tags: [Taichung]
+tags: ["SHCH GSA"]
 category: Journey
 licenseName: "CC-BY-SA 4.0"
 author: Windson
