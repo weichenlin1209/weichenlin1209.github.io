@@ -1,6 +1,6 @@
 ---
 title: 斷橋漏水部落
-published: 2026-08-08
+published: 2026-08-13
 tags: ["SHCH GSA"]
 category: Journey
 licenseName: "CC-BY-SA 4.0"
