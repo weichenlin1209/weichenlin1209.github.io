@@ -2,7 +2,9 @@
 
 我叫**威忌**，我所有遊戲都叫這個名字，源自於我國小同學把我英文名字 _Windson_ 叫成 _Whisky_ 。目前是就讀中興應數三年級，但不會算數。因為會彈吉他所以在吉他社鬼混，是個很菜的主吉，歡迎找我開歌。
 
-我支持自由的開源軟體，不開放的格式都是綁架使用者的手段，因此我不喜歡用 [Line](https://wiwi.blog/blog/line-privacy-policy/)、[Meta](https://alexhsu.com/delete-facebook)、Microsoft、Google等大公司的產品，不是不好用，而是他們都有 [Walled garden](https://zh.wikipedia.org/zh-tw/%E5%B0%81%E9%96%89%E5%B9%B3%E8%87%BA) 的設計。取而代之，可以用[開源的替代方案](https://opensourcealternative.to/)，這種開源軟體才是為了使用者著想的軟體。首先開源不容易藏[後門](https://ckhung0.blogspot.com/2019/12/ios-62078.html)，資料通常是安全的，再者他們通常使用開放格式，不會因為你換了一種編輯器就要付出[下賊船的代價](https://ckhung0.blogspot.com/2014/10/barrier-of-exit.html)。
+我支持自由的開源軟體，不開放的格式都是綁架使用者的手段，因此我不喜歡用 [Line](https://wiwi.blog/blog/line-privacy-policy/)、[Meta](https://alexhsu.com/delete-facebook)、Microsoft、Google等大公司的產品，不是不好用，而是他們都有 [Walled garden](https://zh.wikipedia.org/zh-tw/%E5%B0%81%E9%96%89%E5%B9%B3%E8%87%BA) 的設計。取而代之，可以用[開源的替代方案](https://opensourcealternative.to/)，這種開源軟體才是為了使用者著想的軟體。首先開源不容易藏[後門](https://ckhung0.blogspot.com/2019/12/ios-62078.html)，資料通常是安全的，再者他們通常使用開放格式，不會因為你換了一種編輯器就要付出[下賊船的代價](https://ckhung0.blogspot.com/2014/10/barrier-of-exit.html)。因為這樣，我開始寫部落格了，把原本要發在社群媒體裡的東西都轉來這裡，紀錄在自己手上，更令人安心，~~或許哪天需要訂閱 Instagram premium 才能發貼文也說不定~~。
+
+另外在社群媒體中，或許只需要一小段文字配上一堆照片，就可以成為一篇貼文，但在個人部落格裡，更多的是大家平常沒耐心看完的文字。文字可以裝載生活的細節、情緒，紀錄生活中更多的面貌，不像在社群媒體上，精心排版的照片看起來絢麗，可在別人眼中停留的時卻比煙火還要短暫。部落格可以一直用到很久很久很久以後，直到我沒錢維護這個網域為止，他都還存在我的電腦中。
 
 ## 不正經的經歷
 - 在國立中興大學應用數學系數據科學與計算組（~~沒有資安課程的~~資安組）擔任 廢物大學生

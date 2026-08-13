@@ -74,7 +74,7 @@
   {
     "title": "OsGa",
     "link": "https://osga.dev",
-    "img":"https://img.windson.cc/images/blogroll/default.webp",
+    "img":"https://raw.githubusercontent.com/osga24/osga24/main/public/me.png",
     "des":"熱愛資安與程式開發的大神。btw ,he uses vim"
   },
   {
@@ -92,7 +92,7 @@
   {
     "title":"235",
     "link":"https://235blog.netlify.app/",
-    "img": "https://img.windson.cc/images/blogroll/default.webp",
+    "img": "https://img.windson.cc/images/blogroll/235.jpg",
     "des":"在寒訓認識的高科大大一生，最近開始用Linux"
   },
   {
@@ -106,5 +106,11 @@
     "link":"https://ckhung0.blogspot.com",
     "img":"https://ckhung0.blogspot.com/favicon.ico",
     "des":"ckhung 老師的戰鬥部落格，充滿了對社會所提出來的疑問"
+  },
+  {
+    "title":"小餃落",
+    "link":"https://nian0412.github.io/blog/",
+    "img":"https://img.windson.cc/images/blogroll/dumpling.png",
+    "des":"在中電寒訓認識的萬能小隊輔"
   }
 ]
