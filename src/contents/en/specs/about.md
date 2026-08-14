@@ -1,41 +1,25 @@
 # About Me
 
-My name is **Whisky** (威忌). I use this name for all my games, which comes from my elementary school classmates mispronouncing my English name _Windson_ as _Whiskey_. Currently a second-year student majoring in Applied Mathematics at NCHU. I don't enjoy math and am not good at it either. Recently learning CTF, deploying cloud services, playing with AI, and guitar - a very busy college student.
+My name is **Whisky** (威忌). I use this name for all my games, which comes from my elementary school classmates mispronouncing my English name _Windson_ as _Whisky_. I'm currently a third-year student majoring in Applied Mathematics at NCHU. I play the guitar, so you'll often find me at the guitar club. I usually play electric guitar as the lead — responsible for solos and clowning around — and I'm happy to take song requests.
 
-I support free and open-source software. Proprietary formats are means of locking users in, so I avoid products from big companies like [Line](https://wiwi.blog/blog/line-privacy-policy/), [Meta](https://alexhsu.com/delete-facebook), Microsoft, and Google. Instead, I use [open-source alternatives](https://opensourcealternative.to/) - this kind of software is truly designed for users. First, open-source software is less likely to contain [backdoors](https://ckhung0.blogspot.com/2019/12/ios-62078.html), keeping your data safer. Second, they typically use open formats, so you won't have to pay a [switching cost](https://ckhung0.blogspot.com/2014/10/barrier-of-exit.html) when you change software. It's not too late to switch! **Break the windows and embrace the penguin!**
+I support free and open-source software; non-open formats are just a way to hold users hostage. That's why I avoid products from big companies like [Line](https://wiwi.blog/blog/line-privacy-policy/), [Meta](https://alexhsu.com/delete-facebook), Microsoft, and Google. Not because they're not good, but because they all embrace the [walled garden](https://zh.wikipedia.org/zh-tw/%E5%B0%81%E9%96%89%E5%B9%B3%E8%87%BA) design. Instead, turn to [open-source alternatives](https://opensourcealternative.to/) — this kind of software is the one truly designed with users in mind. First, open source makes it hard to hide [backdoors](https://ckhung0.blogspot.com/2019/12/ios-62078.html), so your data is usually safe. Second, it typically uses open formats, so switching editors won't cost you the [price of abandoning ship](https://ckhung0.blogspot.com/2014/10/barrier-of-exit.html). This is also why I started this blog — everything I would have posted on social media now lives here instead, recorded in my own hands, which feels much more reassuring, ~~maybe one day we'll need an Instagram Premium subscription just to post~~.
+
+On social media, a short line of text paired with a bunch of photos can pass as a post, but on a personal blog, you'll find more of the kind of text people usually can't be bothered to finish reading. Text can carry the details and emotions of life, capturing more of its many facets. Unlike on social media, where carefully curated photos look dazzling but stay in people's eyes for shorter than a firework. A blog can keep going for a very, very long time — even after I can no longer afford to maintain this domain, it will still live on in my computer.
 
 ## Unserious Experience
 
-- A wasting time in the Cybersecurity track (~~without any security courses~~) at the Data Science & Computation group, Department of Applied Mathematics, NCHU
-- Teaching (~~without any guitar experience~~) at the 50th Longred Guitar Club, NCHU
-- Event organizer for the 50th Longred Guitar Club's Spring General Meeting, NCHU
-- Network admin (~~veg out~~) for the 114th Department of Applied Mathematics Student Association, NCHU
+- Slacker college student at the Data Science & Computation group (~~without any security courses~~ cybersecurity track), Department of Applied Mathematics, NCHU
+- 50th instructor at the Longred Guitar Club, NCHU
+- 51st vice president at the Longred Guitar Club, NCHU
+- ~~Lying-flat~~ public relations officer for the 114th Department of Applied Mathematics Student Association, NCHU
+- Attendee at SITCON 2026
 
-## More Serious Experience
-- APCS 3/3
-- 2023 High School Informatics Competition Preliminary - 1st Place
-- 2023 High School Informatics Competition Final - Honorable Mention
-- Kawai Piano Certification Level 11
-- Attended the Mathematical Gifted Class at NCHU Affiliated Senior High School
+## Performances
 
-## Courses I'm Taking This Semester
-
-- [Numerical Analysis](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2245)
-- [Machine Learning and Data Mining Applications](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3242)
-- [Internet Systems Design](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2031)
-- [Database Management Systems](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=3118)
-- [Introduction to Scientific Computing](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=2701)
-- [Information Technology and Media Literacy](https://frdm.cyut.edu.tw/~ckhung/c/ml262g/)
-- [Photography Aesthetics](https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main?v_strm=1142&v_class_nbr=5191)
-
-## Guitar Performances
-
-- Longred Guitar Club Spring Concert - "Ji Ji to Jiji"
-  - Date: 3/25 (Wed)
-  - Location: NCHU Small Auditorium
+- Longred Guitar Club
+- Green River Life Festival
+- NCHU Anniversary Cocktail Party
 - [Ready to Go Music Festival](https://www.instagram.com/readytogo_festival/)
-  - Date: 4/12 (Sun)
-  - Location: CYUT Zhongzheng Stage
 
 ---
 

@@ -6,7 +6,7 @@ const YukinaConfig: Configuration = {
   subTitle: "",
   brandTitle: "Windson's Blog",
 
-  description: "Here is the Social media of Windson, a somophore in National Chung Hsing University, majoring in Applied Mathematics.",
+  description: "Here is Windson's personal blog, a junior in National Chung Hsing University, majoring in Applied Mathematics.",
 
   site: "https://www.windson.cc/", // Your site URL
 

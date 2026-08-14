@@ -9,31 +9,31 @@
     "title": "Nao",
     "link": "https://noa.bearblog.dev/",
     "img": "https://noachen522.github.io/noasblog/pixelart-cactus.png",
-    "des": "High school student daily life, very good read"
+    "des": "High school daily life, a great read"
   },
   {
-    "title": "Jenny Sloth",
+    "title": "Jennysloth",
     "link": "https://jennysloth.com/",
-    "img": "https://img.windson.cc/images/blogroll/default.webp",
+    "img": "https://jennysloth.com/assets/img/about-profile.jpg?v=57cdd50a973382c2370b97efe0e29b72",
     "des": "Great college companion"
   },
   {
-    "title":"Ckhung",
+    "title": "Ckhung",
     "link": "https://frdm.cyut.edu.tw/~ckhung/g/",
     "img": "https://img.iach.cc/blogroll/ckhung.jpg",
-    "des": "CYUT's retired professor, FOSS advocate, and Linux user, also a great teacher"
+    "des": "NCHU general education teacher, great at debunking evil organizations' lies"
   },
   {
     "title": "tux24",
     "link": "https://tux24.xyz/",
     "img": "https://tux24.xyz/images/avatar.jpg",
-    "des": "Impressive high school student"
+    "des": "An impressive Jianguo High School student"
   },
   {
     "title": "Wiwi Blog",
     "link": "https://wiwi.blog/",
     "img": "https://wiwi.blog/img/logo.svg",
-    "des": "Pianist embracing open-source software"
+    "des": "A pianist who embraces open-source software"
   },
   {
     "title": "Jaron",
@@ -44,14 +44,14 @@
   {
     "title": "EM",
     "link": "https://emtech.cc/",
-    "img": "https://emtech.cc/img/logo.svg",  
-    "des": "Tech tips hub"
+    "img": "https://emtech.cc/img/logo.svg",
+    "des": "Hub of tech tips and tricks"
   },
   {
     "title": "Ivon",
     "link": "https://ivonblog.com/",
     "img": "https://ivonblog.com/img/avatar-ivonhuang.png",
-    "des": "GNU/Linux info, free and open-source software, tech news"
+    "des": "GNU/Linux news, free and open-source software, computer and phone tech"
   },
   {
     "title": "Alex Hsu",
@@ -63,48 +63,54 @@
     "title": "Eddie",
     "link": "https://blog.gtisland.com/",
     "img": "https://blog.gtisland.com/images/apple-touch-icon.png",
-    "des": "Lighting and sound technician, diverse content"
+    "des": "Lighting and sound technician, diverse topics"
   },
   {
     "title": "Blog Blog Club",
     "link": "https://blogblog.club/",
     "img": "https://blogblog.club/img/logo.svg",
-    "des": "Founded by Wiwi to encourage everyone to write blogs"
+    "des": "A site founded by Wiwi to get everyone into blogging"
   },
   {
     "title": "OsGa",
     "link": "https://osga.dev",
-    "img":"https://www.osga.dev/_next/image?url=%2Favatar.png&w=640&q=75",
-    "des":"Security and programming guru. btw, he uses vim"
+    "img": "https://raw.githubusercontent.com/osga24/osga24/main/public/me.png",
+    "des": "A master who loves cybersecurity and development. btw, he uses vim"
   },
   {
-    "title":"4yu",
-    "link":"https://4yu.dev",
-    "img":"https://4yu.dev/img/avatar.webp",
-    "des":"Competitive programming and AI master, took one class and pushed me into AI"
+    "title": "4yu",
+    "link": "https://4yu.dev",
+    "img": "https://4yu.dev/img/avatar.webp",
+    "des": "Competitive programming and AI god; one class pushed me into the AI rabbit hole"
   },
   {
-    "title":"JN",
-    "link":"https://blog.giveanornot.com/",
-    "img":"https://blog.giveanornot.com/img/avatar_hu_8a21430ccd887c92.png",
-    "des":"Cloud engineer, also a crossdressing practitioner"
+    "title": "JN",
+    "link": "https://blog.giveanornot.com/",
+    "img": "https://blog.giveanornot.com/img/avatar.png",
+    "des": "Cloud engineer, also a crossdressing practitioner"
   },
   {
-    "title":"235",
-    "link":"https://235blog.netlify.app/",
-    "img": "https://img.windson.cc/images/blogroll/default.webp",
-    "des":"First-year student at NKUST met at a winter camp, recently started using Linux"
+    "title": "235",
+    "link": "https://235blog.netlify.app/",
+    "img": "https://img.windson.cc/images/blogroll/235.jpg",
+    "des": "A NKUST freshman I met at the winter training camp; recently started using Linux"
   },
   {
-    "title":"玩具烏托邦",
-    "link":"https://newtoypia.blogspot.com",
-    "img":"https://newtoypia.blogspot.com/favicon.ico",
-    "des":"ckhung's platform for sharing FOSS software"
+    "title": "玩具烏托邦",
+    "link": "https://newtoypia.blogspot.com",
+    "img": "https://newtoypia.blogspot.com/favicon.ico",
+    "des": "ckhung's platform for sharing free software"
   },
   {
-    "title":"資訊人權貴ㄓ疑",
-    "link":"https://ckhung0.blogspot.com",
-    "img":"https://ckhung0.blogspot.com/favicon.ico",
-    "des":"ckhung's platform for sharing information about human rights and technology"
+    "title": "資訊人權貴ㄓ疑",
+    "link": "https://ckhung0.blogspot.com",
+    "img": "https://ckhung0.blogspot.com/favicon.ico",
+    "des": "ckhung's battle blog, full of questions about society"
+  },
+  {
+    "title": "小餃落",
+    "link": "https://nian0412.github.io/blog/",
+    "img": "https://img.windson.cc/images/blogroll/dumpling.png",
+    "des": "The all-around team mentor I met at the winter training camp"
   }
 ]
