@@ -26,6 +26,10 @@ const YukinaConfig: Configuration = {
       href: "/blogroll",
     },
     {
+      nameKey: I18nKeys.nav_bar_now,
+      href: "/now",
+    },
+    {
       nameKey: I18nKeys.nav_bar_about,
       href: "/about",
     },

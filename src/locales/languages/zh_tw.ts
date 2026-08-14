@@ -10,6 +10,7 @@ export const zh_TW: Translation = {
   [key.nav_bar_archive]: "歸檔",
   [key.nav_bar_about]: "關於",
   [key.nav_bar_blogroll]: "部落滾",
+  [key.nav_bar_now]: "近況",
   [key.nav_bar_github]: "GitHub",
   [key.nav_bar_search_placeholder]: "搜尋",
 

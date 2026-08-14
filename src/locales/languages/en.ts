@@ -10,6 +10,7 @@ export const en: Translation = {
   [key.nav_bar_archive]: "Archive",
   [key.nav_bar_about]: "About",
   [key.nav_bar_blogroll]: "Blogroll",
+  [key.nav_bar_now]: "Now",
   [key.nav_bar_github]: "GitHub",
   [key.nav_bar_search_placeholder]: "Search",
 
