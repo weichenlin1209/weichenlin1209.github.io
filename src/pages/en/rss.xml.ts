@@ -62,7 +62,7 @@ export const GET: APIRoute = async (context) => {
           link: `/en/posts/${IdToSlug(post.id)}`,
 
           description: summary,
-          content: `<img src="${cover}" alt="" />${html}`,
+          content: html,
           enclosure: {
             url: cover,
             length: 0,

@@ -6,6 +6,7 @@ import Banner from "../components/Banner.astro";
 import YukinaConfig from "../../yukina.config";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
+import { GetCoverURLForUnspecifiedEntry } from "../utils/cover";
 
 export interface Props {
   title?: string;
@@ -19,9 +20,12 @@ export interface Props {
 const props = Astro.props;
 const lang = props.lang || "zh";
 const baseUrl = props.baseUrl || `/${lang}`;
+const cover =
+  props.bannerImage ??
+  (props.slug ? GetCoverURLForUnspecifiedEntry(props.slug) : undefined);
 ---
 
-<Base lang={lang}>
+<Base lang={lang} cover={cover}>
   <NavBar lang={lang} baseUrl={baseUrl} />
 
   {

@@ -24,6 +24,7 @@ const { Content } = await render(entry);
       bannerImage={entry.data.cover}
       published={entry.data.published}
       baseUrl="/en"
+      slug={IdToSlug(entry.id)}
     >
       <div
         class="hidden"
@@ -50,6 +51,7 @@ const { Content } = await render(entry);
       author={entry.data.author}
       sourceLink={entry.data.sourceLink}
       baseUrl="/en"
+      slug={IdToSlug(entry.id)}
     >
       <div
         class="hidden"

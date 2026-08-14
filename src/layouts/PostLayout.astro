@@ -16,6 +16,7 @@ export interface Props {
   sourceLink?: string;
   lang?: "zh" | "en";
   baseUrl?: string;
+  slug?: string;
 }
 
 const {
@@ -28,10 +29,11 @@ const {
   sourceLink,
   lang = "zh",
   baseUrl,
+  slug,
 } = Astro.props;
 ---
 
-<Main lang={lang} baseUrl={baseUrl} title={title} subTitle={subTitle} bannerImage={bannerImage}>
+<Main lang={lang} baseUrl={baseUrl} title={title} subTitle={subTitle} bannerImage={bannerImage} slug={slug}>
   <!-- <Fragment set:html={tocHTMLString} /> -->
   <div class="article-wrapper">
     <div class="article">
