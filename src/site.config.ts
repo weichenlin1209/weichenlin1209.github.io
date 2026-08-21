@@ -17,8 +17,8 @@ export const site = {
   // 背景图片：图片放 public/ 后填路径；light/dark 可各设一张，留空则用纯色背景
   // 例：background: { light: '/images/bg-light.jpg', dark: '/images/bg-dark.jpg' },
   background: {
-    light: '/images/bg-light.png',
-    dark: '/images/bg-dark.png',
+    light: '/images/bg-light.webp',
+    dark: '/images/bg-dark.webp',
   },
 
   // 首页右侧图片（public/ 下路径；文件不存在时自动隐藏）
