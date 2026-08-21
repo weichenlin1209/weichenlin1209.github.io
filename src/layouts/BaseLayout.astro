@@ -69,7 +69,7 @@ function navClass(href: string) {
     <link rel="alternate" hreflang={site.locales[otherLang].htmlLang} href={new URL(altPath, siteUrl).href} />
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="alternate" type="application/rss+xml" title={site.name} href={new URL(`/${lang}/rss.xml`, siteUrl).href} />
     <title>{pageTitle}</title>
 

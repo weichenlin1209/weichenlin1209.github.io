@@ -10,14 +10,19 @@
     "img": "https://upload.wikimedia.org/wikipedia/zh/1/1a/The_Legend_of_Zelda_Breath_of_the_Wild.png"
   },
   {
-    "title": "Hollow Knight",
+    "title": "空洞騎士",
     "link": "https://www.hollowknight.com/",
     "img": "https://upload.wikimedia.org/wikipedia/zh/8/86/Hollow_Knight_promo_image.jpg?_=20171101104603"
   },
   {
-    "title": "Hollow Knight Silksong",
+    "title": "空洞騎士 絲之歌",
     "link": "https://en.wikipedia.org/wiki/Hollow_Knight%3A_Silksong",
     "img": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Silksong.jpg/250px-Silksong.jpg"
+  },
+  {
+    "title": "原神",
+    "link": "https://genshin.hoyoverse.com/",
+    "img": "https://upload-os-bbs.hoyolab.com/upload/2022/10/22/241011031/cb1862208cc53c123e2fcbc78819df47_978178757494725729.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_70"
   },
   {
     "title": "燕雲十六聲",
@@ -25,7 +30,7 @@
     "img": "https://upload.wikimedia.org/wikipedia/zh/5/5b/%E7%87%95%E9%9B%B2%E5%8D%81%E5%85%AD%E8%81%B2.jpg?_=20251202043514"
   },
   {
-    "title": "Elden Ring",
+    "title": "艾爾登法環",
     "link": "https://www.bandainamcoent.asia/tw-tc/games/%E8%89%BE%E7%88%BE%E7%99%BB%E6%B3%95%E7%92%B0?id=masthead",
     "img": "https://static0.srcdn.com/wordpress/wp-content/uploads/2022/11/Elden-Ring-Game-Poster.jpg?q=50&fit=contain&w=237&dpr=1.5"
   },
@@ -40,7 +45,7 @@
     "img": "https://upload.wikimedia.org/wikipedia/en/e/e9/Super_Mario_64.png"
   },
   {
-    "title": "The Legend of Zelda: Ocarina of Time",
+    "title": "薩爾達傳說 時之笛",
     "link": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time",
     "img": "https://upload.wikimedia.org/wikipedia/zh/thumb/5/5a/The_Legend_of_Zelda_Ocarina_of_Time_Boxart.jpg/250px-The_Legend_of_Zelda_Ocarina_of_Time_Boxart.jpg"
   }

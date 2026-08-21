@@ -30,12 +30,12 @@ export const site = {
     location: 'My bed',
   },
 
-  // 页脚文字链接
+  // 页脚文字链接（icon: 首页图标按钮用的图标名，见 components/SocialIcon.astro）
   socials: [
-    { label: 'GitHub', href: 'https://github.com/weichenlin1209' },
-    { label: 'Email', href: 'mailto:info@windson.cc' },
-    { label: 'RSS', href: '/zh/rss.xml' },
-    { label: 'Study', href: 'https://study.windson.cc' },
+    { label: 'GitHub', href: 'https://github.com/weichenlin1209', icon: 'github' },
+    { label: 'Email', href: 'mailto:info@windson.cc', icon: 'email' },
+    { label: 'RSS', href: '/zh/rss.xml', icon: 'rss' },
+    { label: 'Study', href: 'https://study.windson.cc', icon: 'study' },
   ],
 
   // 默认语言（根路径重定向目标）
@@ -45,17 +45,17 @@ export const site = {
   locales: {
     zh: {
       htmlLang: 'zh-TW',
-      defaultTitle: 'Windson',
+      defaultTitle: '首頁',
       description:
         "Here is Windson's personal blog, a junior in National Chung Hsing University, majoring in Applied Mathematics.",
       nav: [
         { href: '/zh/posts', label: '文章' },
         { href: '/zh/archive', label: '歸檔' },
         { href: '/zh/blogroll', label: '部落滾' },
-        { href: '/zh/photo', label: '照片' },
+        { href: '/zh/photo', label: '相簿' },
         { href: '/zh/now', label: '近況' },
         { href: '/zh/game', label: '遊戲' },
-        { href: '/zh/about', label: '關於我' },
+        { href: '/zh/about', label: '關於' },
       ],
     },
     en: {

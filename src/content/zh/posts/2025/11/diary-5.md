@@ -23,7 +23,7 @@ licenseName: CC-BY-SA 4.0
 
 很好吃的[豆花店](https://maps.app.goo.gl/281i54Z1H8eqgewF7)，好吃到讓我們連續兩天都跑去吃。雖然他是豆花店，但是我們都是去吃冰的，最近的天氣也不太適合吃冰就是了。
 
-![好吃的豆花](/images/diary/diary-5/eat.webp)
+![好吃的豆花](https://img.windson.cc/images/diary/diary-5/eat.webp)
 
 ## 吉他社
 

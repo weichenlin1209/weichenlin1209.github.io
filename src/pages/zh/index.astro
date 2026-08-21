@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AnimateIn from '../../components/AnimateIn.astro';
+import SocialIcon from '../../components/SocialIcon.astro';
 import { ui, formatLongDate } from '../../i18n';
 import { site } from '../../site.config';
 
@@ -40,12 +41,13 @@ const hasHomeImage = site.homeImage && fs.existsSync('public' + site.homeImage);
                 href={s.href}
                 target={s.href.startsWith('http') ? '_blank' : undefined}
                 rel="noopener noreferrer"
-                class="px-3.5 py-1.5 rounded-full text-sm
-                       border border-fg/10 bg-fg/5 text-fg/70
+                class="p-2 rounded-full border border-fg/10 bg-fg/5 text-fg/70
                        hover:text-accent hover:border-accent/40 hover:bg-accent/10
-                       transition-colors"
+                       transition-colors flex items-center"
+                aria-label={s.label}
+                title={s.label}
               >
-                {s.label}
+                <SocialIcon name={s.icon} />
               </a>
             ))}
           </div>
@@ -75,7 +77,8 @@ const hasHomeImage = site.homeImage && fs.existsSync('public' + site.homeImage);
 
         <div class="flex flex-col divide-y divide-fg/8">
           {recent.map((post) => (
-            <a href={`/${lang}/posts/${post.id}`} class="group flex items-baseline gap-4 py-3">
+            <a href={`/${lang}/posts/${post.id}`} class="group flex items-baseline gap-4 py-3 px-3 -mx-3
+                       rounded-xl hover:bg-fg/5 transition-colors duration-200">
               <time datetime={post.data.pubDate} class="shrink-0 w-36 text-sm text-fg/35 font-mono">
                 {formatLongDate(post.data.pubDate)}
               </time>

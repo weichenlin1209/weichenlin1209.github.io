@@ -48,7 +48,7 @@ export interface UiStrings {
 export const ui: Record<Lang, UiStrings> = {
   zh: {
     welcomeEyebrow: 'WELCOME / 歡迎',
-    homeHello: '哈囉，我是',
+    homeHello: 'Hi, 我是',
     homeIntro:
       '中興大學應用數學系學生。喜歡折騰 Linux、寫程式、彈吉他。這裡記錄我的生活與技術筆記。',
     homeLatest: '最新文章',

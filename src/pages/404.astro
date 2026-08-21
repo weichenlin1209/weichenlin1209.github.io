@@ -1,0 +1,145 @@
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 · Windson's Blog</title>
+    <link rel="preconnect" href="https://font.emtech.cc" crossorigin />
+    <link rel="stylesheet" href="https://font.emtech.cc/css/ElffontFern" />
+    <style is:inline>
+      :root {
+        --bg: #fafafa;
+        --fg: #1a1a1a;
+        --accent: #2563eb;
+        --card-bg: rgba(255, 255, 255, 0.8);
+        --card-border: rgba(26, 26, 26, 0.08);
+      }
+      html[data-theme='dark'] {
+        --bg: #0f0f12;
+        --fg: #e8e8ea;
+        --accent: #60a5fa;
+        --card-bg: rgba(255, 255, 255, 0.1);
+        --card-border: rgba(255, 255, 255, 0.1);
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: 'ElffontFern', system-ui, -apple-system, 'Noto Sans TC', sans-serif;
+        overflow-x: hidden;
+      }
+      /* 背景壁紙：與主站相同，依主題切換 */
+      .bg-layer {
+        position: fixed;
+        inset: 0;
+        z-index: -10;
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+        display: none;
+      }
+      html[data-theme='light'] .bg-layer.light { display: block; background-image: url('/images/bg-light.png'); }
+      html[data-theme='dark'] .bg-layer.dark { display: block; background-image: url('/images/bg-dark.png'); }
+
+      .card {
+        max-width: 26rem;
+        width: 100%;
+        text-align: center;
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        border: 1px solid var(--card-border);
+        background: var(--card-bg);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+      }
+      .code {
+        font-size: 5rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        color: var(--accent);
+      }
+      .msg { margin: 1.25rem 0 2rem; opacity: 0.6; font-size: 0.95rem; line-height: 1.6; }
+      .btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.55rem 1.4rem;
+        border-radius: 9999px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #fff;
+      }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35); }
+      .btn-ghost {
+        border: 1px solid var(--card-border);
+        color: var(--fg);
+        opacity: 0.75;
+      }
+      .btn-ghost:hover { opacity: 1; border-color: var(--accent); color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <div class="bg-layer light"></div>
+    <div class="bg-layer dark"></div>
+
+    <div class="card">
+      <div class="code">ㄙˋㄌㄧㄥˊㄙˋ</div>
+      <p class="msg" id="msg">ㄋㄧˇㄇㄧˊㄌㄨˋㄌㄜ˙ㄇㄚ ㄖㄤˋㄨㄛˇㄉㄞˋㄋㄧˇㄏㄨㄟˊㄑㄩˋ</p>
+      <div class="btns">
+        <a class="btn btn-primary" id="home-btn" href="/zh/">ㄏㄨㄟ˙ㄕㄡˇㄧㄝˋ</a>
+        <a class="btn btn-ghost" href="javascript:void(0)" onclick="history.back()">ㄕㄤˋ一ㄧㄝˋ</a>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function () {
+        // 主題：與主站相同的 localStorage 機制
+        var stored = null;
+        try { stored = localStorage.getItem('theme'); } catch (e) {}
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+
+        var path = location.pathname.replace(/\/index\.html$/, '/');
+        var m = path.match(/^\/(zh|en)(?=\/|$)(.*)$/);
+        var navLang = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+        var lang = m ? m[1] : navLang;
+        var rest = m ? m[2] : path;
+
+        function go(u) { location.replace(u); }
+
+        // 過渡期文章網址：/blog/x → /posts/x
+        var blogMatch = rest.match(/^\/blog\/(.*)$/);
+        if (blogMatch) { go('/' + lang + '/posts/' + blogMatch[1]); return; }
+
+        // 標籤：/tags/x → /archive?tag=x
+        var tagMatch = rest.match(/^\/tags\/(.+)\/?$/);
+        if (tagMatch) { go('/' + lang + '/archive?tag=' + encodeURIComponent(decodeURIComponent(tagMatch[1]))); return; }
+
+        // 分類：/categories/x → /archive
+        if (/^\/categories\//.test(rest)) { go('/' + lang + '/archive'); return; }
+
+        // 其餘未知路徑：顯示 404 畫面（不自動轉址）
+        var i18n = {
+          zh: { msg: 'ㄋㄧˇㄇㄧˊㄌㄨˋㄌㄜ˙ㄇㄚ ㄖㄤˋㄨㄛˇㄉㄞˋㄋㄧˇㄏㄨㄟˊㄑㄩˋ', home: 'ㄏㄨㄟ˙ㄕㄡˇㄧㄝˋ', back: 'ㄕㄤˋ一ㄧㄝˋ', htmlLang: 'zh' },
+          en: { msg: "ㄋㄧˇㄇㄧˊㄌㄨˋㄌㄜ˙ㄇㄚ ㄖㄤˋㄨㄛˇㄉㄞˋㄋㄧˇㄏㄨㄟˊㄑㄩˋ", home: 'ㄏㄨㄟ˙ㄕㄡˇㄧㄝˋ', back: 'ㄕㄤˋ一ㄧㄝˋ', htmlLang: 'en' },
+        };
+        var t = i18n[lang];
+        document.documentElement.lang = t.htmlLang;
+        document.getElementById('msg').textContent = t.msg;
+        document.getElementById('home-btn').textContent = t.home;
+        document.getElementById('home-btn').href = '/' + lang + '/';
+      })();
+    </script>
+  </body>
+</html>

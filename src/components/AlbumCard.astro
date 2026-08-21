@@ -41,7 +41,7 @@ if (fs.existsSync(albumRoot)) {
       const meta = key ? albumModules[key]?.default : undefined;
       if (meta) {
         try {
-          const opt = await getImage({ src: meta, width: 600, format: 'webp' });
+          const opt = await getImage({ src: meta, width: 480, format: 'webp' });
           images.push(opt.src);
         } catch {
           images.push('/favicon.svg');
@@ -58,9 +58,9 @@ if (fs.existsSync(albumRoot)) {
 }
 ---
 
-<div class="grid grid-cols-3 gap-4">
+<div class="grid grid-cols-3 lg:grid-cols-4 gap-4">
   {albums.length === 0 ? (
-    <p class="text-fg/50 col-span-3">还没有相册。</p>
+    <p class="text-fg/50 col-span-3">還沒有相簿。</p>
   ) : (
     albums.map((album, i) => (
       <AnimateIn delay={i * 80}>
@@ -104,11 +104,11 @@ if (fs.existsSync(albumRoot)) {
             </div>
 
             <!-- 相册信息：相册名居中显示在照片框下方 -->
-            <div class="mt-3 text-center px-1">
+            <div class="mt-[26px] text-center px-1">
               <h2 class="text-base font-bold text-fg group-hover:text-accent transition-colors duration-200 truncate">
                 {album.name}
               </h2>
-              <span class="text-xs text-fg/40 font-mono block mt-0.5">{album.images.length} 张</span>
+              <span class="text-xs text-fg/40 font-mono block mt-0.5">{album.images.length} 張</span>
             </div>
           </div>
         </a>

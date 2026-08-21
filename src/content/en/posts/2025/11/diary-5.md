@@ -23,7 +23,7 @@ Recently found a really good tofu pudding place near school. The discoverer wasn
 
 Really good [tofu pudding place](https://maps.app.goo.gl/281i54Z1H8eqgewF7), so good we went two days in a row. Though it's a tofu pudding shop, we all went for the shaved ice. The recent weather isn't really suitable for ice either.
 
-![Delicious tofu pudding](/images/diary/diary-5/eat.webp)
+![Delicious tofu pudding](https://img.windson.cc/images/diary/diary-5/eat.webp)
 
 ## Guitar Club
 
