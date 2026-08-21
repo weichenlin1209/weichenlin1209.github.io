@@ -1,64 +1,36 @@
-import { defineConfig } from "astro/config";
+// @ts-check
+import { defineConfig } from 'astro/config';
 
-import icon from "astro-icon";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import svelte from "@astrojs/svelte";
-import swup from "@swup/astro";
+import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
+import { unified } from '@astrojs/markdown-remark';
+import { site } from './src/site.config';
 
-import rehypeSlug from "rehype-slug";
-import rehypeKatex from "rehype-katex";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import remarkMath from "remark-math";
-import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
-
-import YukinaConfig from "./yukina.config";
-
-import pagefind from "astro-pagefind";
-
-// https://astro.build/config
 export default defineConfig({
-  site: YukinaConfig.site,
+  site: site.url || 'https://example.com',
+  server: {
+    host: true,
+  },
   integrations: [
-    tailwind(),
-    svelte(),
-    icon(),
-    swup({
-      theme: false,
-      containers: ["main", "footer", ".banner-inner"],
-      smoothScrolling: true,
-      progress: true,
-      cache: true,
-      preload: true,
-      updateHead: true,
-      updateBodyClass: false,
-      globalInstance: true,
-    }),
     sitemap({
       i18n: {
-        defaultLocale: "zh",
+        defaultLocale: 'zh',
         locales: {
-          zh: "zh-cn",
-          en: "en-us",
+          zh: 'zh-tw',
+          en: 'en-us',
         },
       },
     }),
-    pagefind(),
   ],
   markdown: {
-    shikiConfig: {
-      theme: "github-dark-default",
-    },
-    remarkPlugins: [remarkReadingTime, remarkMath],
-    rehypePlugins: [
-      rehypeSlug,
-      rehypeKatex,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "prepend",
-        },
-      ],
-    ],
+    processor: unified({
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
+    }),
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });

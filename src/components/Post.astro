@@ -1,0 +1,97 @@
+---
+// 博客文章列表组件：读取文章、按日期排序、渲染卡片列表
+import { getCollection } from 'astro:content';
+import AnimateIn from './AnimateIn.astro';
+import { ui } from '../i18n';
+import type { Lang } from '../site.config';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const collection = lang === 'zh' ? 'blog_zh' : 'blog_en';
+
+const posts = (await getCollection(collection, ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.localeCompare(a.data.pubDate),
+);
+---
+
+<div class="max-w-2xl mx-auto px-6 pt-24 pb-16">
+  <p class="text-xs tracking-[0.3em] uppercase text-fg/30 mb-3">{t.blogEyebrow}</p>
+  <h1 class="text-3xl font-bold mb-8">{t.blogTitle}</h1>
+
+  {posts.length === 0 ? (
+    <p class="text-fg/50">{t.noPosts}</p>
+  ) : (
+    <div class="flex flex-col gap-4">
+      {posts.map((post, i) => {
+        const { title, description, pubDate, category, tags, cover } = post.data;
+        const href = `/${lang}/blog/${post.id}`;
+        return (
+          <AnimateIn delay={i * 80}>
+            <a href={href} class="block group transition-all duration-300
+                                  hover:-translate-y-0.5">
+              <!-- 文章磨砂玻璃卡片：左侧文字 + 右侧小缩图 -->
+              <div class="rounded-2xl border border-fg/8 bg-bg/80 backdrop-blur-xl
+                          shadow-lg shadow-black/5 p-8 md:p-10
+                          flex items-center gap-6">
+                <div class="flex-1 min-w-0">
+                  <!-- 标题 -->
+                  <h2 class="text-lg font-bold text-fg group-hover:text-accent
+                             transition-colors duration-200 leading-snug">
+                    {title}
+                  </h2>
+
+                  <!-- 描述 / 副标题 -->
+                  <p class="mt-2 text-sm text-fg/50 leading-relaxed line-clamp-2">
+                    {description}
+                  </p>
+
+                  <!-- 底部：日期 + 标签 + 分类 -->
+                  <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+                    <!-- 日期 -->
+                    <time datetime={pubDate} class="text-xs text-fg/35 font-mono">
+                      {pubDate}
+                    </time>
+
+                    <!-- 标签 -->
+                    {tags && tags.length > 0 && (
+                    <div class="flex flex-wrap gap-1.5">
+                      {tags.map((tag) => (
+                        <span class="text-xs text-fg/40 hover:text-accent transition-colors">
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                    )}
+
+                    <!-- 分类标签：接在标签后面 -->
+                    {category && (
+                      <span class="text-xs font-medium tracking-wide uppercase
+                                   text-accent bg-accent/10 px-2.5 py-1 rounded-full">
+                        {category}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* 右侧缩图 */}
+                {cover && (
+                  <img
+                    src={cover}
+                    alt={title}
+                    loading="lazy"
+                    class="w-24 h-24 md:w-28 md:h-28 rounded-xl object-cover
+                           ring-1 ring-fg/10 shrink-0"
+                  />
+                )}
+              </div>
+            </a>
+          </AnimateIn>
+        );
+      })}
+    </div>
+  )}
+</div>

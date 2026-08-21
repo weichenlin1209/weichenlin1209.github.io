@@ -1,26 +1,210 @@
 ---
-import YukinaConfig from "../../yukina.config";
-import BaseHead from "../components/BaseHead.astro";
+// 默认布局，所有页面都必须套上这个布局，不然壁纸和导航栏功能不能正常工作
+import '../styles/global.css';
+import { site, type Lang } from '../site.config';
+import { ui } from '../i18n';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import WallpaperPicker from '../components/WallpaperPicker.astro';
+import LangSwitch from '../components/LangSwitch.astro';
+
+interface Props {
+  lang?: Lang;
+  title?: string;
+  ogType?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  jsonLd?: Record<string, unknown>;
+}
+
 const {
-  cover = Astro.props.frontmatter?.cover || Astro.props.cover || "/default-og-img.webp",
-  lang = "zh",
+  lang = site.defaultLang,
+  title,
+  ogType = 'website',
+  ogDescription = site.locales[lang].description,
+  ogImage = site.ogImage,
+  jsonLd,
 } = Astro.props;
 
-const langMap: Record<string, string> = {
-  zh: "zh-TW",
-  en: "en",
-};
+const t = ui[lang];
+const loc = site.locales[lang];
+const pageTitle = title ? `${title} — ${site.name}` : `${loc.defaultTitle} — ${site.name}`;
+// SEO 使用的站点域名（site.url 留空时用占位域名）
+const siteUrl = site.url || 'https://example.com';
+const currentPath = Astro.url.pathname;
+
+// 互换语言后的同位路径（/zh/x ↔ /en/x）
+const otherLang: Lang = lang === 'zh' ? 'en' : 'zh';
+const altPath = currentPath.replace(/^\/(zh|en)(?=\/|$)/, `/${otherLang}`);
+const switchLabel = lang === 'zh' ? 'EN' : '中';
+
+function navClass(href: string) {
+  const isActive = currentPath === href || (href !== `/${lang}/` && currentPath.startsWith(href));
+  return isActive
+    ? 'text-accent bg-accent/10 font-medium'
+    : 'text-fg/60 hover:text-accent hover:bg-fg/5';
+}
 ---
 
-<html lang={langMap[lang]} data-theme="light">
-  <BaseHead cover={cover} lang={lang} />
-  <body class="overflow-y-hidden">
-    <slot />
+<!doctype html>
+<html lang={loc.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content={ogDescription} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={new URL(ogImage, siteUrl).href} />
+    <meta property="og:site_name" content={site.ogSiteName} />
+    <meta property="og:url" content={new URL(currentPath, siteUrl).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={new URL(ogImage, siteUrl).href} />
+    <link rel="canonical" href={new URL(currentPath, siteUrl).href} />
+    <link rel="alternate" hreflang={loc.htmlLang} href={new URL(currentPath, siteUrl).href} />
+    <link rel="alternate" hreflang={site.locales[otherLang].htmlLang} href={new URL(altPath, siteUrl).href} />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title={site.name} href={new URL(`/${lang}/rss.xml`, siteUrl).href} />
+    <title>{pageTitle}</title>
+
+  <script is:inline>
+  // ===== 第一层：首屏防闪（FOUC）=====
+  // 必须在 head 里同步执行，在浏览器画第一帧之前设好主题
+  (function () {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = stored || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+
+  // ===== 第二层：切页防闪 =====
+  function applyTheme() {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = stored || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+  document.addEventListener('astro:after-swap', applyTheme);
+  </script>
+  </head>
+
+  <body class="bg-bg text-fg min-h-screen flex flex-col">
+    <!-- 全宽导航条：logo 在最左，导航+主题/壁纸在最右，中间留空 -->
+    <header class="sticky top-4 z-50">
+      <div class="flex items-center justify-between w-full px-4 md:px-8 xl:px-20 py-4
+                  bg-bg/15 backdrop-blur-2xl
+                  shadow-lg shadow-black/5
+                  text-lg
+                  max-md:gap-3 max-md:px-4 max-md:py-2 max-md:text-sm">
+        <a href={`/${lang}/`} class:list={['px-3 py-1.5 max-md:px-2.5 max-md:py-1 rounded-full transition-all duration-200 whitespace-nowrap', navClass(`/${lang}/`)]}>{site.name}</a>
+
+        <!-- 右侧：桌面导航 + 语言/主题/壁纸（整体靠右） -->
+        <div class="flex items-center gap-1">
+          <!-- 桌面导航（md 及以上横排显示，仅导航链接） -->
+          <nav class="hidden md:flex items-center gap-1">
+            {loc.nav.map((item) => (
+              <a href={item.href} class:list={['px-3 py-1.5 rounded-full transition-all duration-200 whitespace-nowrap', navClass(item.href)]}>{item.label}</a>
+            ))}
+          </nav>
+          <LangSwitch altPath={altPath} label={switchLabel} />
+          <ThemeToggle />
+          <WallpaperPicker />
+          <!-- 汉堡按钮：仅手机显示 -->
+          <button
+            id="menu-btn"
+            class="md:hidden p-1.5 rounded-full hover:bg-fg/10 transition-colors"
+            aria-label={t.openMenu}
+            aria-expanded="false"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 手机端下拉菜单：放在 header 外，避免毛玻璃 backdrop-filter 影响 fixed 定位 -->
+    <div
+      id="mobile-menu"
+      class="md:hidden fixed top-24 right-4 z-[60] w-56
+             bg-bg/85 backdrop-blur-xl
+             rounded-2xl shadow-xl shadow-black/10
+             ring-1 ring-fg/10
+             scale-95 opacity-0 pointer-events-none
+             transition-all duration-200 ease-out
+             flex flex-col p-2"
+    >
+      {loc.nav.map((item) => (
+        <a
+          href={item.href}
+          class:list={['px-3 py-2.5 rounded-xl text-sm transition-colors', navClass(item.href)]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- slot 是"页面内容插入的洞"：layout 提供外壳，页面的内容填进这里 -->
+    <main class="flex-1">
+      <slot />
+    </main>
+    <footer class="px-8 py-6 border-t border-fg/10 text-sm opacity-60 flex flex-wrap items-center gap-x-4 gap-y-1">
+      <span>{site.name} © {new Date().getFullYear()}</span>
+      <span class="ml-auto flex gap-4">
+        {site.socials.map((s) => (
+          <a href={s.href} class="hover:text-accent transition-colors">{s.label}</a>
+        ))}
+      </span>
+    </footer>
+
+  <script>
+    // ===== 手机端汉堡菜单（事件委托 + 动态查询，切页后依然有效） =====
+    let menuOpen = false;
+
+    function getMenu() {
+      return document.getElementById('mobile-menu');
+    }
+
+    function setMenu(open: boolean) {
+      menuOpen = open;
+      const menu = getMenu();
+      if (!menu) return;
+      menu.classList.toggle('opacity-0', !open);
+      menu.classList.toggle('scale-95', !open);
+      menu.classList.toggle('pointer-events-none', !open);
+      menu.classList.toggle('opacity-100', open);
+      menu.classList.toggle('scale-100', open);
+      const btn = document.getElementById('menu-btn');
+      if (btn) btn.setAttribute('aria-expanded', String(open));
+    }
+
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement | null;
+      // 点汉堡按钮：切换开合
+      if (target?.closest('#menu-btn')) {
+        setMenu(!menuOpen);
+        return;
+      }
+      // 点菜单里的链接：关闭
+      if (target?.closest('#mobile-menu a')) {
+        setMenu(false);
+        return;
+      }
+      // 点外部空白：关闭
+      if (menuOpen && !target?.closest('#mobile-menu')) {
+        setMenu(false);
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuOpen) setMenu(false);
+    });
+  </script>
+
   </body>
 </html>
-
-<style>
-  body {
-    @apply bg-[var(--background-color)];
-  }
-</style>

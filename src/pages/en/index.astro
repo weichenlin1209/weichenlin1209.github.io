@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AnimateIn from '../../components/AnimateIn.astro';
+
+const eyebrow = "WELCOME";
+---
+
+<BaseLayout lang="en">
+  <div class="max-w-4xl mx-auto px-6 pt-24 pb-16">
+    <AnimateIn>
+      <p class="text-xs tracking-[0.3em] uppercase text-fg/30 mb-3">{eyebrow}</p>
+    </AnimateIn>
+  </div>
+</BaseLayout>

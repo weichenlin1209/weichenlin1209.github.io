@@ -1,14 +1,11 @@
 ---
-import PostArchiveLayout from "../../layouts/PostArchiveLayout.astro";
-import I18nKeys from "../../locales/keys";
-import { i18n } from "../../locales/translation";
-import { GetArchives } from "../../utils/content";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Archive from '../../components/Archive.astro';
+import { ui } from '../../i18n';
 
-const archiveMap = await GetArchives("zh");
+const t = ui.zh;
 ---
 
-<PostArchiveLayout
-  archiveMap={archiveMap}
-  title={i18n(I18nKeys.pages_archive_archive, "zh")}
-  baseUrl="/zh"
-/>
+<BaseLayout lang="zh" title={t.archiveTitle}>
+  <Archive lang="zh" />
+</BaseLayout>

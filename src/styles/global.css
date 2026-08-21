@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+/* 5. 告诉 v4 去扫 .astro 里的类名（你旧项目验证过，不写它扫不到） */
+@source "../**/*.astro";
+/* 1. 清空默认调色板：产物里不再带 red/blue/green 几百个色，只留你定义的 */
+@theme {
+  --color-*: initial;
+}
+
+/* 2. inline 是关键：让 class 在编译时内联底层变量，明暗切换才会在运行时生效 */
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-fg: var(--c-fg);
+  --color-accent: var(--c-accent);
+}
+
+/* 3. 明模式的值 */
+:root {
+  --c-bg: #fafafa;
+  --c-fg: #1a1a1a;
+  --c-accent: #2563eb;
+}
+
+/* 4. 暗模式的值：同名变量换一套值，引用语义色的 class 自动跟着变 */
+[data-theme="dark"] {
+  --c-bg: #0f0f12;
+  --c-fg: #e8e8ea;
+  --c-accent: #60a5fa;
+}
+
+/* 隐藏横向滚动条（用于移动端可滚动的导航栏），桌面端不受影响 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 桌面端垂直滚动条：变细 + 主题色圆角（明暗模式自动跟随） */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--c-fg) 25%, transparent);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--c-fg) 40%, transparent);
+}
+
+/* Firefox 滚动条变细 */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--c-fg) 25%, transparent) transparent;
+}
+
+/* 手机端防白边：
+   1) html 也上主题背景色——overscroll 回弹 / 超出区域不再露出默认白底
+   2) 禁止横向溢出（clip 不产生滚动容器，position:sticky 不受影响） */
+html {
+  background-color: var(--c-bg);
+}
+html,
+body {
+  overflow-x: clip;
+}
+
+/* 手机端长公式横向滚动，避免撑破版面 */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+

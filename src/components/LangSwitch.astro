@@ -1,0 +1,17 @@
+---
+// 语言切换按钮：链接到互换语言后的同位页面
+interface Props {
+  altPath: string;
+  label: string;
+}
+
+const { altPath, label } = Astro.props;
+---
+
+<a
+  href={altPath}
+  class="p-1.5 rounded-full hover:bg-fg/10 transition-colors text-xs font-semibold tracking-wide uppercase"
+  aria-label={`Switch language / 切換語言`}
+>
+  {label}
+</a>

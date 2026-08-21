@@ -1,0 +1,78 @@
+---
+// 连结卡片页（blogroll / game 共用）：读取 specs 里的 JSON 数据渲染卡片网格
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AnimateIn from './AnimateIn.astro';
+import type { Lang } from '../site.config';
+
+interface CardItem {
+  title: string;
+  link: string;
+  img?: string;
+  des?: string;
+}
+
+interface Props {
+  lang: Lang;
+  jsonId: string;
+  eyebrow: string;
+  title: string;
+  shuffle?: boolean;
+}
+
+const { lang, jsonId, eyebrow, title, shuffle = false } = Astro.props;
+const collection = lang === 'zh' ? 'specs_zh' : 'specs_en';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const entry = await getEntry(collection as any, jsonId);
+let items: CardItem[] = ((entry?.data ?? []) as CardItem[]) || [];
+
+// 每次建置隨機排序（Fisher–Yates）
+if (shuffle) {
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+}
+---
+
+<BaseLayout lang={lang} title={title}>
+  <div class="max-w-4xl mx-auto px-6 pt-24 pb-16">
+    <p class="text-xs tracking-[0.3em] uppercase text-fg/30 mb-3">{eyebrow}</p>
+    <h1 class="text-3xl font-bold mb-8">{title}</h1>
+
+    {items.length === 0 ? (
+      <p class="text-fg/50">—</p>
+    ) : (
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {items.map((item, i) => (
+          <AnimateIn delay={i * 60}>
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-4 rounded-2xl border border-fg/10 bg-bg/50 backdrop-blur-md p-4
+                     hover:bg-bg/70 hover:border-accent/30 hover:-translate-y-0.5 transition-all duration-200 group"
+            >
+              {item.img && (
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                  class="w-14 h-14 rounded-xl object-cover ring-1 ring-fg/10 shrink-0"
+                />
+              )}
+              <div class="min-w-0">
+                <p class="font-bold text-fg group-hover:text-accent transition-colors duration-200 truncate">
+                  {item.title}
+                </p>
+                {item.des && (
+                  <p class="mt-1 text-sm text-fg/50 leading-relaxed line-clamp-2">{item.des}</p>
+                )}
+              </div>
+            </a>
+          </AnimateIn>
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>

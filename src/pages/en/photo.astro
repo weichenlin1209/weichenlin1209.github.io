@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AlbumCard from '../../components/AlbumCard.astro';
+import { ui } from '../../i18n';
+
+const t = ui.en;
+---
+
+<BaseLayout lang="en" title={t.photoTitle}>
+  <div class="max-w-4xl mx-auto px-6 pt-24 pb-16">
+    <p class="text-xs tracking-[0.3em] uppercase text-fg/30 mb-3">{t.photoEyebrow}</p>
+    <h1 class="text-3xl font-bold mb-8">{t.photoTitle}</h1>
+    <AlbumCard lang="en" />
+  </div>
+</BaseLayout>

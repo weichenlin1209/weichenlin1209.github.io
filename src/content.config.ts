@@ -1,58 +1,47 @@
-import { glob } from "astro/loaders";
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
-const posts_zh = defineCollection({
-  loader: glob({
-    pattern: "**/*.md",
-    base: "src/contents/zh/posts",
-  }),
-  schema: z.object({
-    title: z.string(),
-    published: z.date(),
-    draft: z.boolean().optional(),
-    description: z.string().optional(),
-    cover: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    category: z.string().optional(),
-    author: z.string().optional(),
-    sourceLink: z.string().optional(),
-    licenseName: z.string().optional(),
-    licenseUrl: z.string().optional(),
-  }),
+const blogSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  pubDate: z.string(),
+  category: z.string().optional(),
+  tags: z.array(z.string()).optional(),
+  cover: z.string().optional(),
+  draft: z.boolean().optional(),
+  licenseName: z.string().optional(),
+  licenseUrl: z.string().optional(),
 });
 
-const posts_en = defineCollection({
+// 文章檔案依 pubDate 存放在 <年>/<月>/ 子資料夾，
+// 但 ID（=網址 slug）只取檔名，讓 /blog/<slug> 網址維持不變
+const idFromFilename = ({ entry }: { entry: string }) =>
+  entry.split('/').pop()!.replace(/\.(md|mdx)$/, '');
+
+const blog_zh = defineCollection({
   loader: glob({
-    pattern: "**/*.md",
-    base: "src/contents/en/posts",
+    base: './src/content/zh/blog',
+    pattern: '**/*.{md,mdx}',
+    generateId: idFromFilename,
   }),
-  schema: z.object({
-    title: z.string(),
-    published: z.date(),
-    draft: z.boolean().optional(),
-    description: z.string().optional(),
-    cover: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    category: z.string().optional(),
-    author: z.string().optional(),
-    sourceLink: z.string().optional(),
-    licenseName: z.string().optional(),
-    licenseUrl: z.string().optional(),
+  schema: blogSchema,
+});
+
+const blog_en = defineCollection({
+  loader: glob({
+    base: './src/content/en/blog',
+    pattern: '**/*.{md,mdx}',
+    generateId: idFromFilename,
   }),
+  schema: blogSchema,
 });
 
 const specs_zh = defineCollection({
-  loader: glob({
-    pattern: "**/*",
-    base: "src/contents/zh/specs",
-  }),
+  loader: glob({ base: './src/content/zh/specs', pattern: '**/*' }),
 });
 
 const specs_en = defineCollection({
-  loader: glob({
-    pattern: "**/*",
-    base: "src/contents/en/specs",
-  }),
+  loader: glob({ base: './src/content/en/specs', pattern: '**/*' }),
 });
 
-export const collections = { posts_zh, posts_en, specs_zh, specs_en };
+export const collections = { blog_zh, blog_en, specs_zh, specs_en };

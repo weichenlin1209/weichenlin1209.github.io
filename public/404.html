@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 / Redirecting…</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fafafa;
+        color: #1a1a1a;
+        font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #0f0f12; color: #e8e8ea; }
+      }
+      .box { text-align: center; padding: 2rem; }
+      .code { font-size: 4rem; font-weight: 700; opacity: 0.15; }
+      p { opacity: 0.6; }
+      a { color: #2563eb; }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="code">404</div>
+      <p>頁面不存在，正在前往新的位址……</p>
+      <noscript><p>請點擊<a href="/zh/">這裡</a>回首頁。</p></noscript>
+      <p><a id="home-link" href="/zh/">windson.cc</a></p>
+    </div>
+    <script>
+      (function () {
+        var path = location.pathname.replace(/\/index\.html$/, '/');
+        var m = path.match(/^\/(zh|en)(?=\/|$)(.*)$/);
+        var lang = m ? m[1] : 'zh';
+        var rest = m ? m[2] : path;
+
+        // 語言首頁
+        if (!m || rest === '' || rest === '/') {
+          location.replace('/' + lang + '/');
+          return;
+        }
+
+        // 文章：/posts/x → /blog/x
+        var postMatch = rest.match(/^\/posts\/(.*)$/);
+        if (postMatch) {
+          location.replace('/' + lang + '/blog/' + postMatch[1]);
+          return;
+        }
+
+        // 標籤：/tags/x → /archive?tag=x
+        var tagMatch = rest.match(/^\/tags\/(.+)\/?$/);
+        if (tagMatch) {
+          location.replace('/' + lang + '/archive?tag=' + encodeURIComponent(decodeURIComponent(tagMatch[1])));
+          return;
+        }
+
+        // 分類：/categories/x → /archive
+        if (/^\/categories\//.test(rest)) {
+          location.replace('/' + lang + '/archive');
+          return;
+        }
+
+        // 舊分頁：/2、/3… → /blog
+        if (/^\/\d+(\/)?$/.test(rest)) {
+          location.replace('/' + lang + '/blog');
+          return;
+        }
+
+        // 其餘未知路徑 → 該語言首頁
+        location.replace('/' + lang + '/');
+      })();
+    </script>
+  </body>
+</html>

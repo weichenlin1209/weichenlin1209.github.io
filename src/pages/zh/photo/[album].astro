@@ -1,0 +1,18 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import PhotoAlbum from '../../../components/PhotoAlbum.astro';
+
+export async function getStaticPaths() {
+  const albumRoot = path.join(process.cwd(), 'src', 'assets', 'album');
+  if (!fs.existsSync(albumRoot)) return [];
+  const dirs = fs.readdirSync(albumRoot, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name);
+  return dirs.map((name) => ({ params: { album: name } }));
+}
+
+const { album } = Astro.params;
+---
+
+<PhotoAlbum lang="zh" album={album} />

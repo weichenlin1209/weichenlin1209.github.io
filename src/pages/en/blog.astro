@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Post from '../../components/Post.astro';
+import { ui } from '../../i18n';
+
+const t = ui.en;
+---
+
+<BaseLayout lang="en" title={t.blogTitle}>
+  <Post lang="en" />
+</BaseLayout>
