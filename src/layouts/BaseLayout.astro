@@ -26,6 +26,14 @@ const {
 
 const t = ui[lang];
 const loc = site.locales[lang];
+// 壁紙路徑掛成 CSS 變數：桌機由 global.css 畫在 html canvas 背景，
+// 補滿固定圖層蓋不到的邊帶（捲軸外側、視窗邊緣）；手機續用 .bg-layer 圖層
+const wallpaperVars = [
+  site.background?.light && `--wallpaper-light:url('${site.background.light}')`,
+  site.background?.dark && `--wallpaper-dark:url('${site.background.dark}')`,
+]
+  .filter(Boolean)
+  .join('; ');
 const pageTitle = title ? `${title} — ${site.name}` : `${loc.defaultTitle} — ${site.name}`;
 // SEO 使用的站点域名（site.url 留空时用占位域名）
 const siteUrl = site.url || 'https://example.com';
@@ -48,7 +56,7 @@ function navClass(href: string) {
 ---
 
 <!doctype html>
-<html lang={loc.htmlLang}>
+<html lang={loc.htmlLang} style={wallpaperVars || undefined}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+/* 5. 告诉 v4 去扫 .astro 里的类名（你旧项目验证过，不写它扫不到） */
+@source "../**/*.astro";
+/* 1. 清空默认调色板：产物里不再带 red/blue/green 几百个色，只留你定义的 */
+@theme {
+  --color-*: initial;
+}
+
+/* 2. inline 是关键：让 class 在编译时内联底层变量，明暗切换才会在运行时生效 */
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-fg: var(--c-fg);
+  --color-accent: var(--c-accent);
+}
+
+/* 3. 明模式的值 */
+:root {
+  --c-bg: #fafafa;
+  --c-fg: #1a1a1a;
+  --c-accent: #2563eb;
+}
+
+/* 4. 暗模式的值：同名变量换一套值，引用语义色的 class 自动跟着变 */
+[data-theme="dark"] {
+  --c-bg: #0f0f12;
+  --c-fg: #e8e8ea;
+  --c-accent: #60a5fa;
+}
+
+/* 隐藏横向滚动条（用于移动端可滚动的导航栏），桌面端不受影响 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 桌面端垂直滚动条：变细 + 主题色圆角（明暗模式自动跟随） */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--c-fg) 25%, transparent);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--c-fg) 40%, transparent);
+}
+
+/* Firefox 滚动条变细 */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--c-fg) 25%, transparent) transparent;
+}
+
+/* 手机端防白边：
+   1) html 也上主题背景色——overscroll 回弹 / 超出区域不再露出默认白底
+   2) 禁止横向溢出——只设在 html 上（会传播到 viewport），
+      不能放 body：部分手机浏览器会让 body 内的 position:fixed 失效 */
+html {
+  background-color: var(--c-bg);
+  overflow-x: clip;
+}
+
+/* 手机端长公式横向滚动，避免撑破版面 */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* 静态背景图层：按明暗主题显示对应图片（site.config 的 background）
+   定位交给图层上的 Tailwind 工具类（fixed inset-0 -z-10 bg-cover bg-center） */
+.bg-layer {
+  display: none;
+}
+[data-theme='light'] .bg-layer.light {
+  display: block;
+}
+[data-theme='dark'] .bg-layer.dark {
+  display: block;
+}
+
+/* 桌机（精准指标装置）：壁纸同时画在 html 的 canvas 背景——
+   根元素背景按 spec 铺满整个视窗，含固定图层盖不到的边带
+   （滚动条内外侧、视窗边缘、overscroll 区）。
+   attachment: fixed 让滚动时图不动；.bg-layer 图层保留不隐藏，
+   正好遮住 Chromium attachment:fixed 的亚像素发丝线。
+   手机不套用（iOS Safari 不支援 attachment: fixed），只用 .bg-layer 图层 */
+@media (pointer: fine) {
+  html {
+    background-image: var(--wallpaper-light, none);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  html[data-theme='dark'] {
+    background-image: var(--wallpaper-dark, none);
+  }
+}
+
+/* 文章 h2 前的蓝色竖条标记（跟随明暗主题色） */
+.prose h2 {
+  position: relative;
+  padding-left: 0.85rem;
+}
+.prose h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 4px;
+  border-radius: 9999px;
+  background: var(--c-accent);
+}
+
