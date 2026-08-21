@@ -32,11 +32,13 @@ const posts = (await getCollection(collection, ({ data }) => !data.draft)).sort(
         return (
           <AnimateIn delay={i * 80}>
             <a href={href} class="block group transition-all duration-300
-                                  hover:-translate-y-0.5">
+                                  hover:-translate-y-1.5">
               <!-- 文章磨砂玻璃卡片：左侧文字 + 右侧小缩图 -->
               <div class="rounded-2xl border border-fg/8 bg-bg/80 backdrop-blur-xl
                           shadow-lg shadow-black/5 p-8 md:p-10
-                          flex items-center gap-6">
+                          flex items-center gap-6
+                          transition-all duration-300
+                          group-hover:shadow-xl group-hover:shadow-black/10 group-hover:border-fg/15">
                 <div class="flex-1 min-w-0">
                   <!-- 标题 -->
                   <h2 class="text-lg font-bold text-fg group-hover:text-accent

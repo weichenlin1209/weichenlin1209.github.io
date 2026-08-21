@@ -1,14 +1,89 @@
 ---
+import fs from 'node:fs';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AnimateIn from '../../components/AnimateIn.astro';
+import { ui, formatLongDate } from '../../i18n';
+import { site } from '../../site.config';
 
-const eyebrow = "WELCOME";
+const lang = 'en';
+const t = ui[lang];
+
+// Latest 3 posts
+const recent = (await getCollection('blog_en', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.localeCompare(a.data.pubDate))
+  .slice(0, 3);
+
+// Home image (render only if the file exists)
+const hasHomeImage = site.homeImage && fs.existsSync('public' + site.homeImage);
 ---
 
-<BaseLayout lang="en">
-  <div class="max-w-4xl mx-auto px-6 pt-24 pb-16">
+<BaseLayout lang={lang}>
+  <div class="max-w-3xl mx-auto px-6 pt-24 pb-16">
+    {/* ===== Intro ===== */}
     <AnimateIn>
-      <p class="text-xs tracking-[0.3em] uppercase text-fg/30 mb-3">{eyebrow}</p>
+      <section class="flex items-center gap-6 md:gap-8
+                      rounded-2xl border border-fg/8 bg-white/80 dark:bg-white/20 backdrop-blur-xl
+                      shadow-lg shadow-black/5 p-8 md:p-10">
+        <div class="flex-1 min-w-0">
+          <p class="text-xs tracking-[0.3em] uppercase text-fg/30 mb-3">{t.welcomeEyebrow}</p>
+          <h1 class="text-3xl md:text-4xl font-bold leading-tight">
+            {t.homeHello} <span class="text-accent">Windson</span>
+          </h1>
+          <p class="mt-4 text-fg/60 leading-relaxed">{t.homeIntro}</p>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            {site.socials.map((s) => (
+              <a
+                href={s.href}
+                target={s.href.startsWith('http') ? '_blank' : undefined}
+                rel="noopener noreferrer"
+                class="px-3.5 py-1.5 rounded-full text-sm
+                       border border-fg/10 bg-fg/5 text-fg/70
+                       hover:text-accent hover:border-accent/40 hover:bg-accent/10
+                       transition-colors"
+              >
+                {s.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {hasHomeImage && (
+          <img
+            src={site.homeImage}
+            alt="Windson"
+            class="w-28 h-28 md:w-40 md:h-40 rounded-2xl object-cover
+                   ring-1 ring-fg/10 shadow-md shrink-0"
+          />
+        )}
+      </section>
+    </AnimateIn>
+
+    {/* ===== Latest posts (plain list) ===== */}
+    <AnimateIn delay={120}>
+      <section class="mt-12 rounded-2xl border border-fg/8 bg-white/80 dark:bg-white/20 backdrop-blur-xl
+                      shadow-lg shadow-black/5 p-8 md:p-10">
+        <div class="flex items-baseline justify-between mb-2">
+          <h2 class="text-xl font-bold">{t.homeLatest}</h2>
+          <a href={`/${lang}/posts`} class="text-sm text-accent hover:underline underline-offset-4">
+            {t.homeViewAll} →
+          </a>
+        </div>
+
+        <div class="flex flex-col divide-y divide-fg/8">
+          {recent.map((post) => (
+            <a href={`/${lang}/posts/${post.id}`} class="group flex items-baseline gap-4 py-3">
+              <time datetime={post.data.pubDate} class="shrink-0 w-36 text-sm text-fg/35 font-mono">
+                {formatLongDate(post.data.pubDate)}
+              </time>
+              <span class="flex-1 min-w-0 truncate text-fg group-hover:text-accent transition-colors">
+                {post.data.title}
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
     </AnimateIn>
   </div>
 </BaseLayout>

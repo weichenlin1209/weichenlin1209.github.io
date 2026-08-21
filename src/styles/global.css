@@ -87,3 +87,19 @@ body {
   display: block;
 }
 
+/* 文章 h2 前的蓝色竖条标记（跟随明暗主题色） */
+.prose h2 {
+  position: relative;
+  padding-left: 0.85rem;
+}
+.prose h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 4px;
+  border-radius: 9999px;
+  background: var(--c-accent);
+}
+

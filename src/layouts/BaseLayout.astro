@@ -94,7 +94,7 @@ function navClass(href: string) {
   </script>
   </head>
 
-  <body class="bg-bg text-fg min-h-screen flex flex-col">
+  <body class={`${site.background?.light || site.background?.dark ? 'bg-transparent' : 'bg-bg'} text-fg min-h-screen flex flex-col`}>
     <!-- 静态背景图层：依明暗主题显示 site.background 设定的图片 -->
     {site.background?.light && (
       <div

@@ -17,15 +17,17 @@ export const site = {
   // 背景图片：图片放 public/ 后填路径；light/dark 可各设一张，留空则用纯色背景
   // 例：background: { light: '/images/bg-light.jpg', dark: '/images/bg-dark.jpg' },
   background: {
-    light: '',
-    dark: '',
+    light: '/images/bg-light.png',
+    dark: '/images/bg-dark.png',
   },
 
+  // 首页右侧图片（public/ 下路径；文件不存在时自动隐藏）
+  homeImage: '/images/home.jpg',
   author: {
     name: 'Windson',
     github: 'weichenlin1209',
     email: 'info@windson.cc',
-    location: 'Taiwan',
+    location: 'My bed',
   },
 
   // 页脚文字链接

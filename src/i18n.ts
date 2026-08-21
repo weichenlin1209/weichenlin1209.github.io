@@ -1,8 +1,22 @@
 // ── 各语言 UI 字符串 ──
 import type { Lang } from './site.config';
 
+// 长日期格式：August 13, 2026
+const months = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+];
+export function formatLongDate(iso: string) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return `${months[m - 1]} ${d}, ${y}`;
+}
+
 export interface UiStrings {
   welcomeEyebrow: string;
+  homeHello: string;
+  homeIntro: string;
+  homeLatest: string;
+  homeViewAll: string;
   blogEyebrow: string;
   blogTitle: string;
   noPosts: string;
@@ -34,6 +48,12 @@ export interface UiStrings {
 export const ui: Record<Lang, UiStrings> = {
   zh: {
     welcomeEyebrow: 'WELCOME / 歡迎',
+    homeHello: '哈囉，我是',
+    homeIntro:
+      '中興大學應用數學系學生。喜歡折騰 Linux、寫程式、彈吉他。這裡記錄我的生活與技術筆記。',
+    homeLatest: '最新文章',
+    homeViewAll: '查看全部',
+
     blogEyebrow: 'BLOG / 文章',
     blogTitle: '文章列表',
     noPosts: '還沒有文章。',
@@ -63,6 +83,11 @@ export const ui: Record<Lang, UiStrings> = {
   },
   en: {
     welcomeEyebrow: 'WELCOME',
+    homeHello: "Hi, I'm",
+    homeIntro:
+      'Applied Mathematics student at NCHU. I tinker with Linux, code, and playing guitar. This blog is where I keep my notes and stories.',
+    homeLatest: 'Latest Posts',
+    homeViewAll: 'View all',
     blogEyebrow: 'BLOG',
     blogTitle: 'Posts',
     noPosts: 'No posts yet.',
