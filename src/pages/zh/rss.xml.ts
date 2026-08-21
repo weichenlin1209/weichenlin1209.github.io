@@ -22,7 +22,7 @@ export const GET: APIRoute = async (context) => {
         title: post.data.title,
         description: post.data.description,
         pubDate: new Date(post.data.pubDate),
-        link: `/zh/blog/${post.id}/`,
+        link: `/zh/posts/${post.id}/`,
         content: html,
       };
     }),

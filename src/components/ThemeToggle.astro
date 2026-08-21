@@ -40,7 +40,7 @@
     root.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
     updateIcon(next);
-    // 通知其他组件（如 WallpaperPicker）主题已切换
+    // 通知其他组件主题已切换
     document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
   });
 

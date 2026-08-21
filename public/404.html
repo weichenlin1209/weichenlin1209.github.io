@@ -44,10 +44,10 @@
           return;
         }
 
-        // 文章：/posts/x → /blog/x
-        var postMatch = rest.match(/^\/posts\/(.*)$/);
-        if (postMatch) {
-          location.replace('/' + lang + '/blog/' + postMatch[1]);
+        // 過渡期文章網址：/blog/x → /posts/x
+        var blogMatch = rest.match(/^\/blog\/(.*)$/);
+        if (blogMatch) {
+          location.replace('/' + lang + '/posts/' + blogMatch[1]);
           return;
         }
 
@@ -64,9 +64,9 @@
           return;
         }
 
-        // 舊分頁：/2、/3… → /blog
+        // 舊分頁：/2、/3… → /posts
         if (/^\/\d+(\/)?$/.test(rest)) {
-          location.replace('/' + lang + '/blog');
+          location.replace('/' + lang + '/posts');
           return;
         }
 

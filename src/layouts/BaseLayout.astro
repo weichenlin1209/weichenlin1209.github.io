@@ -4,7 +4,6 @@ import '../styles/global.css';
 import { site, type Lang } from '../site.config';
 import { ui } from '../i18n';
 import ThemeToggle from '../components/ThemeToggle.astro';
-import WallpaperPicker from '../components/WallpaperPicker.astro';
 import LangSwitch from '../components/LangSwitch.astro';
 
 interface Props {
@@ -38,7 +37,10 @@ const altPath = currentPath.replace(/^\/(zh|en)(?=\/|$)/, `/${otherLang}`);
 const switchLabel = lang === 'zh' ? 'EN' : '中';
 
 function navClass(href: string) {
-  const isActive = currentPath === href || (href !== `/${lang}/` && currentPath.startsWith(href));
+  // 完整路径段匹配：/zh/blogroll 不应命中 /zh/blog（需以 / 分隔才算子页面）
+  const isActive =
+    currentPath === href ||
+    (href !== `/${lang}/` && currentPath.startsWith(`${href}/`));
   return isActive
     ? 'text-accent bg-accent/10 font-medium'
     : 'text-fg/60 hover:text-accent hover:bg-fg/5';
@@ -93,6 +95,21 @@ function navClass(href: string) {
   </head>
 
   <body class="bg-bg text-fg min-h-screen flex flex-col">
+    <!-- 静态背景图层：依明暗主题显示 site.background 设定的图片 -->
+    {site.background?.light && (
+      <div
+        class="bg-layer light fixed inset-0 -z-10 bg-cover bg-center pointer-events-none"
+        style={`background-image:url('${site.background.light}')`}
+      >
+      </div>
+    )}
+    {site.background?.dark && (
+      <div
+        class="bg-layer dark fixed inset-0 -z-10 bg-cover bg-center pointer-events-none"
+        style={`background-image:url('${site.background.dark}')`}
+      >
+      </div>
+    )}
     <!-- 全宽导航条：logo 在最左，导航+主题/壁纸在最右，中间留空 -->
     <header class="sticky top-4 z-50">
       <div class="flex items-center justify-between w-full px-4 md:px-8 xl:px-20 py-4
@@ -112,7 +129,19 @@ function navClass(href: string) {
           </nav>
           <LangSwitch altPath={altPath} label={switchLabel} />
           <ThemeToggle />
-          <WallpaperPicker />
+          <!-- RSS 订阅按钮 -->
+          <a
+            href={`/${lang}/rss.xml`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-1.5 rounded-full hover:bg-fg/10 transition-colors flex items-center"
+            aria-label="RSS Feed"
+            title="RSS"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.18 15.64a2.18 2.18 0 1 1 0 4.36 2.18 2.18 0 0 1 0-4.36zM4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z" />
+            </svg>
+          </a>
           <!-- 汉堡按钮：仅手机显示 -->
           <button
             id="menu-btn"

@@ -14,6 +14,13 @@ export const site = {
   ogImage: '/default-og-img.webp',
   ogSiteName: "Windson's Blog",
 
+  // 背景图片：图片放 public/ 后填路径；light/dark 可各设一张，留空则用纯色背景
+  // 例：background: { light: '/images/bg-light.jpg', dark: '/images/bg-dark.jpg' },
+  background: {
+    light: '',
+    dark: '',
+  },
+
   author: {
     name: 'Windson',
     github: 'weichenlin1209',
@@ -40,7 +47,7 @@ export const site = {
       description:
         "Here is Windson's personal blog, a junior in National Chung Hsing University, majoring in Applied Mathematics.",
       nav: [
-        { href: '/zh/blog', label: '文章' },
+        { href: '/zh/posts', label: '文章' },
         { href: '/zh/archive', label: '歸檔' },
         { href: '/zh/blogroll', label: '部落滾' },
         { href: '/zh/photo', label: '照片' },
@@ -55,7 +62,7 @@ export const site = {
       description:
         "Here is Windson's personal blog, a junior in National Chung Hsing University, majoring in Applied Mathematics.",
       nav: [
-        { href: '/en/blog', label: 'Blog' },
+        { href: '/en/posts', label: 'Blog' },
         { href: '/en/archive', label: 'Archive' },
         { href: '/en/photo', label: 'Photos' },
         { href: '/en/now', label: 'Now' },

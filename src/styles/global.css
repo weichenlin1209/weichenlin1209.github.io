@@ -76,3 +76,14 @@ body {
   overflow-y: hidden;
 }
 
+/* 静态背景图层：按明暗主题显示对应图片（site.config 的 background） */
+.bg-layer {
+  display: none;
+}
+[data-theme='light'] .bg-layer.light {
+  display: block;
+}
+[data-theme='dark'] .bg-layer.dark {
+  display: block;
+}
+

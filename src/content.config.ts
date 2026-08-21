@@ -14,13 +14,13 @@ const blogSchema = z.object({
 });
 
 // 文章檔案依 pubDate 存放在 <年>/<月>/ 子資料夾，
-// 但 ID（=網址 slug）只取檔名，讓 /blog/<slug> 網址維持不變
+// 但 ID（=網址 slug）只取檔名，讓 /<slug> 網址 slug
 const idFromFilename = ({ entry }: { entry: string }) =>
   entry.split('/').pop()!.replace(/\.(md|mdx)$/, '');
 
 const blog_zh = defineCollection({
   loader: glob({
-    base: './src/content/zh/blog',
+    base: './src/content/zh/posts',
     pattern: '**/*.{md,mdx}',
     generateId: idFromFilename,
   }),
@@ -29,7 +29,7 @@ const blog_zh = defineCollection({
 
 const blog_en = defineCollection({
   loader: glob({
-    base: './src/content/en/blog',
+    base: './src/content/en/posts',
     pattern: '**/*.{md,mdx}',
     generateId: idFromFilename,
   }),

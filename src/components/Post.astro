@@ -28,7 +28,7 @@ const posts = (await getCollection(collection, ({ data }) => !data.draft)).sort(
     <div class="flex flex-col gap-4">
       {posts.map((post, i) => {
         const { title, description, pubDate, category, tags, cover } = post.data;
-        const href = `/${lang}/blog/${post.id}`;
+        const href = `/${lang}/posts/${post.id}`;
         return (
           <AnimateIn delay={i * 80}>
             <a href={href} class="block group transition-all duration-300

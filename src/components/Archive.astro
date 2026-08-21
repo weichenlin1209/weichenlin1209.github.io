@@ -132,7 +132,7 @@ const allTags = [...new Set(
               <div class="ml-[50px] mt-2 mb-8 flex flex-col gap-3">
                 {yearPosts.map((post) => (
                   <a
-                    href={`/${lang}/blog/${post.id}`}
+                    href={`/${lang}/posts/${post.id}`}
                     data-title={post.data.title}
                     data-tags={(post.data.tags ?? []).join(' ')}
                     class="archive-item flex items-baseline gap-4 text-base leading-relaxed
