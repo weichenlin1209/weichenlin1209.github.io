@@ -11,6 +11,11 @@ export function formatLongDate(iso: string) {
   return `${months[m - 1]} ${d}, ${y}`;
 }
 
+export function formatLongDateZh(iso: string) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return `${y}年${m}月${d}日`;
+}
+
 export interface UiStrings {
   welcomeEyebrow: string;
   homeHello: string;

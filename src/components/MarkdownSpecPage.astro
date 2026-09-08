@@ -3,6 +3,7 @@
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AnimateIn from './AnimateIn.astro';
+import { formatLongDate, formatLongDateZh } from '../i18n';
 import type { Lang } from '../site.config';
 
 interface Props {
@@ -10,9 +11,10 @@ interface Props {
   mdId: string;
   eyebrow: string;
   title: string;
+  updated?: string;
 }
 
-const { lang, mdId, eyebrow, title } = Astro.props;
+const { lang, mdId, eyebrow, title, updated } = Astro.props;
 const collection = lang === 'zh' ? 'specs_zh' : 'specs_en';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const entry = await getEntry(collection as any, mdId);
@@ -42,6 +44,13 @@ if (entry) {
                   prose-hr:border-fg/10 prose-hr:my-10
                   prose-strong:text-fg prose-strong:font-semibold
                   prose-table:border-fg/10">
+        {updated && (
+          <div class="not-prose border-b border-fg/10 pb-6 mb-8">
+            <time datetime={updated} class="text-sm text-fg/40 font-mono tracking-widest block">
+              {lang === 'zh' ? `上次更新：${formatLongDateZh(updated)}` : `Last updated: ${formatLongDate(updated)}`}
+            </time>
+          </div>
+        )}
         <Content />
       </div>
     </AnimateIn>

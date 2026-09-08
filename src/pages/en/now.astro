@@ -1,8 +1,11 @@
 ---
 import MarkdownSpecPage from '../../components/MarkdownSpecPage.astro';
+import { getEntry } from 'astro:content';
 import { ui } from '../../i18n';
 
 const t = ui.en;
+const entry = await getEntry('specs_en' as any, 'now');
+const updated = typeof entry?.data?.updated === 'string' ? entry.data.updated : undefined;
 ---
 
-<MarkdownSpecPage lang="en" mdId="now" eyebrow={t.nowEyebrow} title={t.nowTitle} />
+<MarkdownSpecPage lang="en" mdId="now" eyebrow={t.nowEyebrow} title={t.nowTitle} updated={updated} />
