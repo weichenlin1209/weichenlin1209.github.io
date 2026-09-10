@@ -22,12 +22,15 @@
 ---
 
 # 關於本站　　
+這裡是我分享的平台，逃離社群平台的第一站。
+**如果想一直收到更新的話，就訂閱我的 [RSS](/rss.xml) 吧！**
+> RSS是什麼？RSS(Really Simple Syndication)，簡單來說，它是可以去訂閱一個網站的工具，它會在這個網站有更新的時候跟你說，這樣就可以不用時時刻刻上去看有沒有更新。想知道怎麼做嗎？這邊我推薦一篇 Wiwi 的[文章](https://wiwi.blog/blog/you-should-use-rss/)。
 
+此外，本站的英文介面全部都是由 AI agent 翻譯而成，我不想中文打完還要再打一次英文。如果有任何讀起來不順的地方，請告訴我，~~但我不一定會改~~。
+
+## 歷史
 - 2025/08/31 創建，使用 [Hugo](https://gohugo.io/) & [PaperMods](https://github.com/adityatelange/hugo-PaperMod)。
 - 2025/10/22 主題換成 [Stack](https://stack.jimmycai.com/)。
 - 2026/01/26 因為我想當太空人，換成 [Astro](https://astro.build/) & [Yukina](https://github.com/WhitePaper233/yukina/tree/main)
+- 2026/08/21 我又換主題了，因為我想換。
 
-這裡是我分享的平台，逃離社群平台的第一站。
-**如果想一直收到更新的話，就訂閱我的 [RSS](/rss.xml) 吧！**
-
-> RSS是什麼？RSS(Really Simple Syndication)，簡單來說，它是可以去訂閱一個網站的工具，它會在這個網站有更新的時候跟你說，這樣就可以不用時時刻刻上去看有沒有更新。想知道怎麼做嗎？這邊我推薦一篇 Wiwi 的[文章](https://wiwi.blog/blog/you-should-use-rss/)

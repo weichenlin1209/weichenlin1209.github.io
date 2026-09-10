@@ -1,6 +1,6 @@
 ---
 title: 修課分享 2
-description: 修課分享 2
+description: 這是在 114 學年度下學期的修課分享
 pubDate: "2026-09-10"
 slug: nchu-course-share-2
 category: Life
