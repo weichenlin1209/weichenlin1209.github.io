@@ -43,22 +43,25 @@ export const GET: APIRoute = async (context) => {
           const images = files
             .map((file) => albumModules[`/src/assets/album/${entry.name}/${file}`])
             .filter((image): image is ImageMetadata => Boolean(image));
-          const pubTimestamp = files.reduce((latest, file) => {
-            const modified = fs.statSync(path.join(albumPath, file)).mtimeMs;
-            return Math.max(latest, modified);
-          }, 0);
+          const metadata = JSON.parse(
+            fs.readFileSync(path.join(albumPath, 'metadata.json'), 'utf8'),
+          ) as { date?: string };
+          const pubDate = new Date(metadata.date ?? '');
+          if (Number.isNaN(pubDate.getTime())) {
+            throw new Error(`Invalid date in ${entry.name}/metadata.json`);
+          }
 
           return {
             name: entry.name,
             images,
-            pubTimestamp,
+            pubDate,
             coverSize: files.length > 0
               ? fs.statSync(path.join(albumPath, files[0])).size
               : 0,
           };
         })
         .filter((album) => album.images.length > 0)
-        .sort((a, b) => b.pubTimestamp - a.pubTimestamp)
+        .sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime())
     : [];
 
   const items = await Promise.all(albums.map(async (album) => {
@@ -69,7 +72,7 @@ export const GET: APIRoute = async (context) => {
     return {
       title: album.name,
       description: `${album.images.length} 張照片`,
-      pubDate: new Date(album.pubTimestamp),
+      pubDate: album.pubDate,
       link: albumUrl,
       content: `<p>${album.images.length} 張照片</p><p><img src="${coverUrl}" alt="${album.name}" /></p>`,
       enclosure: { url: coverUrl, length: album.coverSize, type: imageMimeType(coverUrl) },
