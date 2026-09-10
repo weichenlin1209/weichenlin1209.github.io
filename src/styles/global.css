@@ -120,3 +120,29 @@ html {
   background: var(--c-accent);
 }
 
+/* 移除 Typography 預設替 blockquote 加上的開頭與結尾引號 */
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:last-of-type::after {
+  content: none;
+}
+
+/* 讓 Markdown 表格內文使用主題前景色，避免白模式下過淡 */
+.prose table th,
+.prose table td {
+  color: var(--c-fg);
+}
+
+/* ||文字|| spoiler：移入或聚焦时显示内容 */
+.spoiler {
+  color: transparent;
+  background: color-mix(in srgb, var(--c-fg) 18%, transparent);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.spoiler:hover,
+.spoiler:focus {
+  color: var(--c-fg);
+  background: color-mix(in srgb, var(--c-fg) 8%, transparent);
+}

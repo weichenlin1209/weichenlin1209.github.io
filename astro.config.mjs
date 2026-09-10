@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
+import remarkSpoiler from './src/remark-spoiler.mjs';
 import { unified } from '@astrojs/markdown-remark';
 import { site } from './src/site.config';
 
@@ -26,7 +27,7 @@ export default defineConfig({
   ],
   markdown: {
     processor: unified({
-      remarkPlugins: [remarkMath],
+      remarkPlugins: [remarkMath, remarkSpoiler],
       rehypePlugins: [rehypeKatex],
     }),
   },
