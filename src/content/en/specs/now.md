@@ -1,7 +1,7 @@
 ---
 title: Now
 date: 2026-09-08
-updated: "2026-09-08"
+updated: "2026-09-09"
 comments: false
 ---
 ## What I'm up to
@@ -11,7 +11,6 @@ School's back. Getting ready for guitar club activities and various classes, mai
 - Introduction to Analysis: a.k.a. Advanced Calculus
 - Operating Systems Project: actually a class on how to use Linux, ~~but I already know it, so I'm just passing the time~~
 - Accounting
-- Mathematical Statistics
 
 No classes on Wednesdays — reach me early if you need to. Once I'm back in the dorm I won't come out again. Currently living on the 4th floor of the old NCHU men's dorm. The catch? No elevator.
 
