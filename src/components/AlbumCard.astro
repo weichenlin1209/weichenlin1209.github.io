@@ -1,6 +1,6 @@
 ---
 // 相册卡片组件：检测 src/assets/album/ 下的相册文件夹，三层叠加封面
-// 排序：按相册内最新一张照片的修改时间，倒序（最新在前）
+// 排序：按 metadata.json 的相簿日期倒序（最新在前）
 // 封面图构建时用 astro:assets 自动优化（600px webp）
 import fs from 'node:fs';
 import path from 'node:path';
@@ -24,7 +24,7 @@ const albumModules = import.meta.glob(
   { eager: true },
 ) as Record<string, { default: ImageMetadata }>;
 
-let albums: { name: string; images: string[]; mtime: number }[] = [];
+let albums: { name: string; images: string[]; date: string }[] = [];
 
 // 如果 src/assets/album 目录不存在，直接返回空数组，保证构建成功
 if (fs.existsSync(albumRoot)) {
@@ -32,9 +32,11 @@ if (fs.existsSync(albumRoot)) {
     .filter((d) => d.isDirectory());
   for (const d of dirs) {
     const dir = path.join(albumRoot, d.name);
+    const metadata = JSON.parse(
+      fs.readFileSync(path.join(dir, 'metadata.json'), 'utf8'),
+    ) as { date?: string };
     const files = fs.readdirSync(dir).filter((f) => imageExt.test(f)).sort();
     const images: string[] = [];
-    let mtime = 0;
     for (const f of files) {
       // 通过路径匹配找到对应的 ImageMetadata
       const key = Object.keys(albumModules).find((k) => k.includes(`/${d.name}/${f}`));
@@ -47,14 +49,12 @@ if (fs.existsSync(albumRoot)) {
           images.push('/favicon.svg');
         }
       }
-      const t = fs.statSync(path.join(dir, f)).mtimeMs;
-      if (t > mtime) mtime = t;
     }
-    albums.push({ name: d.name, images, mtime });
+    albums.push({ name: d.name, images, date: metadata.date ?? '' });
   }
   albums = albums
     .filter((a) => a.images.length > 0)
-    .sort((a, b) => b.mtime - a.mtime);
+    .sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name));
 }
 ---
 
