@@ -4,21 +4,14 @@ date: 2026-09-08
 updated: "2026-09-09"
 comments: false
 ---
-## What I'm up to
-
-School's back. Getting ready for guitar club activities and various classes, mainly:
-
-- Introduction to Analysis: a.k.a. Advanced Calculus
-- Operating Systems Project: actually a class on how to use Linux, ~~but I already know it, so I'm just passing the time~~
-- Accounting
-
-No classes on Wednesdays — reach me early if you need to. Once I'm back in the dorm I won't come out again. Currently living on the 4th floor of the old NCHU men's dorm. The catch? No elevator.
+## What's New
+School has been in session for over a month. Whenever there's a holiday, it seems like I'm out [having fun](/en/posts/diary-26-9). ~~I don't seem to have learned anything at school~~, and my productivity has been low. Writing proofs has left me exhausted.
 
 ## Guitar Club
-Preparing for the freshman orientation; currently practicing [Wang Qian's new song](https://youtu.be/KrR1iCkDMg0?si=gunVofw2Im8kOQbV).
+The freshman orientation performance is over. After finishing the follow-up activities, I'm preparing to hand the performance over to next year's committee and ~~properly settle into life as a laid-back third-year club veteran~~.
 
 ## Camera
-I use a Nikon D90. Taking it everywhere to shoot photos, still figuring out how to use [darktable](https://www.darktable.org/). But there's probably no photography class this semester, so I likely won't use it much.
+Nikon D90. I take it everywhere and am figuring out how to use [darktable](https://www.darktable.org/). Although I don't have a photography class this semester, I still bring it along whenever I go out and take lots of photos!
 
 ![](https://img.windson.cc/images/now/camera.webp)
 
@@ -31,4 +24,6 @@ Recently got my Minecraft server up and running, though I haven't written a webp
 Heard the latest Snezhnaya storyline is really good; probably going to come back to it.
 
 - **The Legend of Zelda: Breath of the Wild**  
-Put the game on my PC with the Cemu emulator, messing around with mods now.
+  I brought the game to my PC with the Cemu emulator and am currently messing around with mods.
+
+All of the above are currently on hold.
