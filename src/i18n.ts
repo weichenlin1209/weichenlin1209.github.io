@@ -55,7 +55,7 @@ export const ui: Record<Lang, UiStrings> = {
     welcomeEyebrow: 'WELCOME / 歡迎',
     homeHello: 'Hi, 我是',
     homeIntro:
-      '中興大學應用數學系學生。喜歡折騰 Linux、寫程式、彈吉他。這裡記錄我的生活與技術筆記。',
+      '中興大學應用數學系學生。喜歡彈吉他、拍照，但沒有算數學。這裡記錄我的生活以及一些技術筆記。',
     homeLatest: '最新文章',
     homeViewAll: '查看全部',
 
@@ -90,7 +90,7 @@ export const ui: Record<Lang, UiStrings> = {
     welcomeEyebrow: 'WELCOME',
     homeHello: "Hi, I'm",
     homeIntro:
-      'Applied Mathematics student at NCHU. I tinker with Linux, code, and playing guitar. This blog is where I keep my notes and stories.',
+      'Applied Mathematics student at NCHU. I like to play guitar and photograph but do mathematics. This blog is where I keep my notes and stories.',
     homeLatest: 'Latest Posts',
     homeViewAll: 'View all',
     blogEyebrow: 'BLOG',
