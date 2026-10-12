@@ -6,7 +6,7 @@ slug: netbird-vpn
 category: Technology
 tags:
   - Self-Hosting
-cover: https://img.windson.cc/images/2026/02/netbird-vpn/cover.webp
+cover: /assets/image/2026/02/netbird-vpn/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 之前我用的VPN是tailscale，Tailscale 對於免費仔的限制就是：一個tailnet裡面只能有三個人。但我的 minecraft 好夥伴的人數已經大於三了啊...所以我就舉家遷移到了 NetBird。

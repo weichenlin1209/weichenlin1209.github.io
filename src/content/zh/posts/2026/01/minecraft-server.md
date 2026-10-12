@@ -6,7 +6,7 @@ slug: minecraft-server
 category: Technology
 tags:
   - Self-Hosting
-cover: https://img.windson.cc/images/2026/01/minecraft-server/cover.webp
+cover: /assets/image/2026/01/minecraft-server/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## 前言  
@@ -51,8 +51,7 @@ java -Xmx1024M -Xms1024M -jar server.jar --nogui
 
 ## 模組安裝：亞特蘭提斯  
 
-![Atlantis](https://img.windson.cc/images/2026/01/minecraft-server/atlantis.webp)
-
+![Atlantis](/assets/image/2026/01/minecraft-server/atlantis.webp)
 這是童年時代很喜歡的一個模組，出生點會在一間小玻璃屋，整個世界都在海底下。詳情可以看[舞秋風Minecraft生存 - 亞特蘭提斯-留住最後一口氣](https://youtube.com/playlist?list=PLBtVUsNOhEjtbg0V1kLzS1slOzFV0GuTX&si=GHIkMoWg9i9uu-Te)，這已經是12年前的系列了，在minecraft還在1.5.1的那個年代，現在會玩純粹是完成童年的夢想。
 
 舞秋風當初玩的是1.5.1版，最近有大佬把他重製，變成了目前1.21+都可以玩的版本。安裝的部分可以到[GitHub](https://github.com/Mzhuangshao/atlantis?tab=readme-ov-file)下載，體驗小時候想玩的水下世界。他的安裝方法非常簡單，把下載下來的zip檔放到`/world/datapacks/`，這樣就完成了。如果你懶得架或是想跟我一起玩可以[email](mailto:info@windson.cc)給我，我盡量想辦法讓你進來。

@@ -7,7 +7,7 @@ category: Technology
 tags:
   - Flipper
   - NFC
-cover: https://images.unsplash.com/photo-1637070155805-e6fbee6ec2cf?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+cover: /assets/image/2026/03/copy-nfc-card/photo-1637070155805-e6fbee6ec2cf.jpg
 licenseName: CC-BY-SA 4.0
 ---
 還記得那個時候大一剛開學沒多久，某天路過籃球場的時候，發現地板上有張學生證。於是我停下了腳步，低頭一看，這個學號是...4113...053，好像是我們系的欸... 10X...。這個號碼、這張臉，**這不是我室友嗎？** 所以我就幫他撿回去了。但如果我沒有發現這張學生證，那他就會變成在開學一個月內就把學生證丟掉的奇葩。~~雖然事實就是這樣沒錯。~~  那現在如果學生證丟掉了怎麼辦呢？歡迎來找 [Each](https://www.iach.cc) 或是我，我們會以學校售價[少五塊賣給你](https://ckhung0.blogspot.com/2014/10/barrier-of-exit.html)。就在今天我們找到了複製 UID 的方法。

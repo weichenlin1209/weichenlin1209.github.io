@@ -7,7 +7,7 @@ category: Journey
 tags:
   - Linux
   - NCHU
-cover: https://img.windson.cc/images/2026/05/ubuntu-release-party/cover.png
+cover: /assets/image/2026/05/ubuntu-release-party/cover.png
 licenseName: CC-BY-SA 4.0
 ---
 # Ubuntu Release Party 2026
@@ -39,6 +39,5 @@ Linux ，也可以是日常使用、創作、遊戲、學習，甚至是部署 A
 
 注意事項：建議攜帶筆電、空的 16 GB 以上隨身碟
 
-![poster](https://img.windson.cc/images/2026/05/ubuntu-release-party/poster.png)
-
+![poster](/assets/image/2026/05/ubuntu-release-party/poster.png)
 

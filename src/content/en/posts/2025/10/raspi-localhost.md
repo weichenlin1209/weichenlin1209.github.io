@@ -7,7 +7,7 @@ category: Technology
 tags:
   - Raspberry Pi
   - Self-Hosting
-cover: https://img.windson.cc/images/2025/10/raspi-localhost/raspi.webp
+cover: /assets/image/2025/10/raspi-localhost/raspi.webp
 licenseName: CC-BY-SA 4.0
 ---
 A few days ago, Each's server had some issues, which made me suddenly feel like my stuff should be on my own. Then I went wild, hosting quite a few things. ~~Another big坑 dug out~~
@@ -22,8 +22,7 @@ The Raspberry Pi requires 5V/5A. The dormitory provides 1A and 2.1A charging por
 When I first got it, I was deciding whether to buy a case, and the conclusion was: *"Why not build my own?"*   
 So I took out all the Legos at home and found the best candidate was my first Lego set—the Pizza Shop 
 
-![](https://img.windson.cc/images/2025/10/raspi-localhost/Lego-pizza.webp)  
-
+![](/assets/image/2025/10/raspi-localhost/Lego-pizza.webp)
 All materials basically came from it. Look closely and you'll notice the roofs are identical. After a major renovation of the Pizza Shop, it's the state you see now. But this case's drawback is poor heat dissipation—even with heatsinks, the temperature reaches 70 degrees during operation.
 
 ### How to Get Started with Raspberry Pi  
@@ -33,16 +32,13 @@ When you first get a Raspberry Pi, you need storage to hold its OS. I used a mic
 ## What Did I Host?
 ### AFFiNE
 This was the first server I set up. It's a feature-rich note-taking software—open source and free. What I use it for includes markdown, LaTeX, even Miro ( whiteboard), which looks similar to iOS's version. Plus it works on all platforms—there's an app and web version. It can sync data across all devices, making it very convenient for reading.
-![Affine](https://img.windson.cc/images/2025/10/raspi-localhost/affine.webp)
-
+![Affine](/assets/image/2025/10/raspi-localhost/affine.webp)
 ### Syncthing  
 Syncthing does exactly what its name suggests—syncs files. Because the setup and installation are a bit tricky, it's better to use it yourself. Mainly, having this means I can sync files to the server without dumping things on big platforms and being limited by file sizes. But without proper security measures, exposing it to the external network is dangerous. It has a login interface, but I don't know how to use it, so I use internal network penetration instead.
-![Syncthing](https://img.windson.cc/images/2025/10/raspi-localhost/sync.webp)  
-
+![Syncthing](/assets/image/2025/10/raspi-localhost/sync.webp)
 ### Immich  
 It's an open-source cloud photo album service, looking very similar to Google Photos. The advantage of self-hosting is not having to put my album on Google or iCloud, being limited by storage and paying them. Self-hosted means unlimited storage, depending on how big a hard drive you buy. But during setup, because of insufficient power supply, the HDD's motor couldn't run, so the hard drive's super block got corrupted. So don't use an HDD under voltage conditions—the data will get corrupted and you can only recover part of it. Power supply needs to be at least 20 watts (I'm currently using 20 watts, hasn't failed yet)
-![immich](https://img.windson.cc/images/2025/10/raspi-localhost/immich.webp)
-
+![immich](/assets/image/2025/10/raspi-localhost/immich.webp)
 *** 
 ## Docker  
 This is a powerful container, but right now I only know how to use it—I haven't learned anything advanced yet, so I can't write much about it. All the services above are running on it.　　

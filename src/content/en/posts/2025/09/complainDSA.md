@@ -21,10 +21,8 @@ When recruiting staff for the camp, they said it would take about six hours per 
 ### **Incident 2**  
 Regarding the "North, Central, South Welcoming Events," they uploaded all the first-year students' information to the department's main group chat. No personal data protection whatsoever was implemented. Everyone in the group could download the file, which contained the mailing addresses and phone numbers of all first-year freshmen.
 
-![complainDSA-1](https://img.windson.cc/images/2025/9/complainDSA/complainDSA-1.webp)
-
-![complainDSA-2](https://img.windson.cc/images/2025/9/complainDSA/complainDSA-2.webp)
-(The data has been blurred to protect personal information, keeping only student IDs to prove they are freshmen)  
+![complainDSA-1](/assets/image/2025/09/complainDSA/complainDSA-1.webp)
+![complainDSA-2](/assets/image/2025/09/complainDSA/complainDSA-2.webp)(The data has been blurred to protect personal information, keeping only student IDs to prove they are freshmen)
 
 明明這種重要的事情，可以請負責人用學校的domain，寄一封信給全系大一的新生。學校的學生信箱很有規律，寫一隻 Python 就可以輕鬆解決。~~程式設計都白修了~~。一個一個打電話過去問，不僅浪費時間、沒有效率，還有很大的機會被當成詐騙，造成負責人的麻煩。如此，負責人也不需要大一新生的資料，他們的個資也不會有危險。
 

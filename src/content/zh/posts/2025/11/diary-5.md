@@ -6,7 +6,7 @@ slug: diary-5
 category: Life
 tags:
   - Journal
-cover: https://img.windson.cc/images/diary/diary-5/cover.webp
+cover: /assets/image/2025/11/diary-5/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## TL;DR
@@ -23,8 +23,7 @@ licenseName: CC-BY-SA 4.0
 
 很好吃的[豆花店](https://maps.app.goo.gl/281i54Z1H8eqgewF7)，好吃到讓我們連續兩天都跑去吃。雖然他是豆花店，但是我們都是去吃冰的，最近的天氣也不太適合吃冰就是了。
 
-![好吃的豆花](https://img.windson.cc/images/diary/diary-5/eat.webp)
-
+![好吃的豆花](/assets/image/2025/11/diary-5/eat.webp)
 ## 吉他社
 
 ### 社課
@@ -53,8 +52,7 @@ licenseName: CC-BY-SA 4.0
 
 [上次](/zh/post/diary-4/#鍵盤)有說我的鍵盤已經壞了，只是我想要的鍵盤已經停產了。但...我發現它真的已經該換了，不只L鍵，句號也快不行了，所以只好又去NOVA一趟。這次去只逛了B1的三井。那個店員一看到就跑過來跟我聊天，他說他是第一天上班，鍵盤的話他自己只會買[這個](https://www.logitech.com/zh-tw/shop/p/alto-keys-k98m)。他有品牌信仰，自己都買ROG，如果這邊都不喜歡可以買ROG。~~但他身上掛著羅技的牌子~~。最後是決定買了他推薦的，除了有點小吵之外都還不錯。
 
-![AltoKeys](https://img.windson.cc/images/diary/diary-5/AltoKeys.webp)
-
+![AltoKeys](/assets/image/2025/11/diary-5/AltoKeys.webp)
 只是[logi的app不支援Linux](https://support.logi.com/hc/en-us/articles/360025297893-Logitech-Options)，差評。如果要用話我要自己裝win，有空再研究。
 
 ### 小麥輸入法

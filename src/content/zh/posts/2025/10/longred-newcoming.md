@@ -7,7 +7,7 @@ category: Guitar
 tags:
   - Guitar
   - NCHU
-cover: https://img.windson.cc/images/2025/10/longred_new/guitar.webp
+cover: /assets/image/2025/10/longred-newcoming/guitar.webp
 licenseName: CC-BY-SA 4.0
 ---
 *這是我在吉他社的一個活動，結束了好有成就感*

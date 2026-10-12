@@ -6,7 +6,7 @@ slug: lagrange-polynomial
 category: Math
 tags:
   - numerical
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Lagrange_crop.jpg/960px-Lagrange_crop.jpg
+cover: /assets/image/2026/05/lagrange-polynomial/960px-Lagrange_crop.jpg
 licenseName: CC-BY-SA 4.0
 ---
 > Tomorrow, I will have a mid-term exam including Lagrange polynomial. So, I summarize down these content. There won't be a Mandarin version, because I am so lazy to translate it. Besides, you may get better reading experience [here](https://hw.windson.cc/lagrange_polynomial).

@@ -6,7 +6,7 @@ slug: mmc_rescue
 category: Technology
 tags:
   - Linux
-cover: https://img.windson.cc/images/2025/12/nchu-course-share-1/cover.webp
+cover: /assets/image/2025/12/nchu-course-share-1/cover.webp
 draft: true
 licenseName: CC-BY-SA 4.0
 ---

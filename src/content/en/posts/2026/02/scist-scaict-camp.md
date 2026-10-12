@@ -6,7 +6,7 @@ slug: scist-scaict-camp
 category: Journey
 tags:
   - hackathon
-cover: https://img.windson.cc/images/2026/02/scist-scaict-camp/cover.webp
+cover: /assets/image/2026/02/scist-scaict-camp/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 > It's been a month since my last post. I was basically lazing around at home throughout January, so there wasn't much to write about. But in early February, I participated in a hackathon organized by high school students. [Event website here](https://scist.camp/)

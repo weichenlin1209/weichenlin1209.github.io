@@ -6,7 +6,7 @@ slug: diary-3
 category: Life
 tags:
   - Journal
-cover: https://img.windson.cc/images/diary/diary-cover.webp
+cover: /assets/image/2025/09/diary-1/diary-cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 _Long time no post, bored so here it is._
@@ -19,8 +19,7 @@ After dropping camp, life is pretty chill — but there's actually still a lot t
 
 Last Saturday went to play the Gold Shield with [Each Chen](https://www.iach.cc). The senior's advice was really good. He said it's basically a divination contest. Looking at the entire exam, the only thing we're sure we got right was one crypto problem. Everything else was: _"This should be it"_ / _"Yeah, seems reasonable."_ The whole thing was pure divination, but we weren't the only ones feeling confident. This time it seems like half the teams got eliminated. Hope we make it to the finals, ~~if we do, there's Gold Shield shirts~~. Actually, not getting zero收获 after the competition — at least I know they're big on reverse. I'm going to start doing one reverse problem a day from now on. Want to start when I can start d(`･∀･)b. Here's a commemorative photo:
 
-![ReversIsHard](https://img.windson.cc/images/2025/10/diary-3/ReverseIsHard.webp)
-
+![ReversIsHard](/assets/image/2025/10/diary-3/ReverseIsHard.webp)
 ## Guitar Club
 
 ### Club Class

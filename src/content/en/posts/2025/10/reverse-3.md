@@ -7,7 +7,7 @@ category: CTF
 tags:
   - PicoCTF
   - Reverse
-cover: https://img.windson.cc/images/reverse/cover.webp
+cover: /assets/image/2025/10/reverse-1/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 > ***A Reverse a day keeps the zero-days away***

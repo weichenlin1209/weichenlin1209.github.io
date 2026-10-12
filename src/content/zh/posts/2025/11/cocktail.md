@@ -6,7 +6,7 @@ slug: cocktail
 category: Guitar
 tags:
   - NCHU
-cover: https://img.windson.cc/images/2025/11/cocktail/cover.webp
+cover: /assets/image/2025/11/cocktail/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## 報到

@@ -6,7 +6,7 @@ slug: diary-4
 category: Life
 tags:
   - Journal
-cover: https://img.windson.cc/images/diary/diary-cover.webp
+cover: /assets/image/2025/09/diary-1/diary-cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## Preface
@@ -80,8 +80,7 @@ This week [Each Chen](https://www.iach.cc) got the [NCHU Applied Math Past Exam 
 
 My L key's getting less responsive lately. Has big impact on me. Ever since I set up Affine, almost all my notes are on it. Without a laptop, basically can't study. Also, my typing speed got faster, but haven't had time to test at typing club. Getting back to the topic — my L key is really broken. If pressed too light, no character appears. With normal force, about 70% success rate. Planning to get an external mechanical keyboard, better feel. Saw one I liked at Dunhuang before — Logi Pop Keys.
 
-![](https://img.windson.cc/images/diary/diary-4/pop-keys.webp)
-
+![](/assets/image/2025/11/diary-4/pop-keys.webp)
 Actually noticed it when school started. Now I actually need it. So I went to Nova, planning to look around carefully, maybe see other things I like. Nope — walked a whole circle, still didn't see what I wanted, or too expensive. Ended up going back to school library. The result is
 
 > # The purple one's discontinued.
@@ -102,11 +101,9 @@ Because I don't have the habit of watching news, completely missed the typhoon n
 What? There's a typhoon?! I was completely like being offline. Though November shouldn't really have typhoons, but one came and I had no idea. Because my way of getting info is all through RSS. Of course, I looked for ~~Central Deception Agency[^3]~~ to see if they have RSS. They actually do:  
 [Here](https://www.cwa.gov.tw/V8/C/S/eservice/rss.html).
 
-![Area](https://img.windson.cc/images/diary/diary-4/weather.webp)
-
+![Area](/assets/image/2025/11/diary-4/weather.webp)
 Each area has its own RSS — alerts, warnings, including typhoons, earthquakes, heavy rain, low temperature, fog, etc., issued or lifted.  
 No more watching news — it automatically sends weekly weather forecast, today's weather, rain probability every day. Immediately subscribed to Taichung's, bye news.
 
-![RSS](https://img.windson.cc/images/diary/diary-4/rss.webp)
-
+![RSS](/assets/image/2025/11/diary-4/rss.webp)
 [^3]: It's Central Weather Administration, I just renamed it.

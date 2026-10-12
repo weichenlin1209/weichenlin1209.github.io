@@ -6,7 +6,7 @@ slug: picoctf-2026-writeup
 category: CTF
 tags:
   - PicoCTF
-cover: https://img.windson.cc/images/categories/picoctf.svg
+cover: /assets/image/2026/03/picoctf-2026-writeup/picoctf.svg
 licenseName: CC-BY-SA 4.0
 ---
 > This was my first CTF.  
@@ -253,12 +253,10 @@ It's just a spirit communication contest, ~~Applied Math department required~~.
 ## Old Session
 [Enter](https://play.picoctf.org/practice/challenge/739?category=1&originalEvent=79&page=1) and there's a login interface. Open `F12`—nothing in the HTML. Register an account and log in.
 
-![](https://img.windson.cc/images/2026/03/picoctf-2026/old_session.webp)
-
+![](/assets/image/2026/03/picoctf-2026-writeup/old_session.webp)
 Someone left a comment saying `/sessions` has something weird? Let's check it out!
 
-![](https://img.windson.cc/images/2026/03/picoctf-2026/old_session-1.webp)
-
+![](/assets/image/2026/03/picoctf-2026-writeup/old_session-1.webp)
 It's an admin session. Change yourself to admin, and you'll see the flag.
 
 ## Hashgate

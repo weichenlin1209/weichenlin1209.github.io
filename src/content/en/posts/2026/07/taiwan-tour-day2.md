@@ -6,14 +6,13 @@ slug: taiwan-tour-day2
 category: Journey
 tags:
   - Taiwan
-cover: https://img.windson.cc/images/2026/06/taiwan-tour/day2-cover.jpg
+cover: /assets/image/2026/07/taiwan-tour-day2/day2-cover.jpg
 licenseName: CC-BY-SA 4.0
 ---
 ## Big City
 Having walked about 10 km the day before, my legs were useless, and the sun was blazing on top of that. In the morning we just grabbed a quick breakfast and lazed around until past 10 before leaving the hotel. Speaking of which, what's fun in Hsinchu? All the friends I know who study there just go to Big City (the mall). I happened not to have brought a small daypack, so I decided our first stop would be Big City! Carrying our big hiking backpacks, ~~only day two~~ and our legs were almost spent, so I looked up the bus to Big City on my phone. The arrival time... that can't be right, walking would probably be faster! And so our walking trip continued.
 
-![](https://img.windson.cc/images/2026/06/taiwan-tour/day2-01.jpg)
-
+![](/assets/image/2026/07/taiwan-tour-day2/day2-01.jpg)
 Along the way we spotted a building that looked like a historic site; getting closer we realized it was the Hsinchu City Government. Not sure if it was an actual heritage site or still in use, so we didn't go in. On the road, the closer we got to Big City, the more people were heading the same direction, and they all looked like students. But logically, students at schools on a 16-week semester had already broken for summer, 18-week students were still battling final exams, and high schoolers were far from any break — so why so many people? A bit strange. Still, the strangest ones in Big City were definitely us two, wandering a department store with full hiking backpacks — it felt way too weird. The lockers only took coins and we happened to have none, so we bought what we needed quickly, left quickly, headed back to the station, and caught a ~12 o'clock train to Taipei.
 
 Turns out we misjudged — we thought it took just an hour to reach Taipei, but our pass only allowed local (Commuter) trains... an hour is the speed of the Tze-Chiang express. In the end it took about two hours to get to Taipei, and by the time we reached the Palace Museum only two hours remained before closing. Way too much time spent on trains.
@@ -24,8 +23,7 @@ We took a bus that dropped us right at the museum's gate and went in to "exchang
 ### Olive-Kernel Boat
 They carved an olive kernel into a boat, complete with passengers' expressions, window patterns, and interior furnishings. Without a magnifying glass it just looks like a very special olive; only under the lens do you see how intricate it is. (~~But since phone cameras zoom in with poor quality, don't open the photo~~.)
 
-![](https://img.windson.cc/images/2026/06/taiwan-tour/day2-02.jpg)
-
+![](/assets/image/2026/07/taiwan-tour-day2/day2-02.jpg)
 ### Auspicious Qilin
 Since ancient China had no giraffes, they described it using parts of many other animals.
 
@@ -35,8 +33,7 @@ Also, I have no idea why all the rare beasts of ancient times had to eat people.
 
 > 利未亞洲有獸，名意夜納。形色皆如大狼，目睛能變各色，夜間學人聲音，喚誘人而啖之。
 
-![](https://img.windson.cc/images/2026/06/taiwan-tour/day2-03.jpg)
-
+![](/assets/image/2026/07/taiwan-tour-day2/day2-03.jpg)
 ### At the Main Gate
 After closing time, we figured since we were already there, we might as well walk out (there's a bus stop at the gate). Halfway there, a group of Koreans intercepted us — they came up and asked<br/>
 : English ok?<br/>
@@ -45,8 +42,7 @@ After closing time, we figured since we were already there, we might as well wal
 
 I was stunned. I thought, what is he saying? Reading it would be fine, but I was caught off guard. After a bit of back-and-forth, I realized he wanted me to take a photo of them.
 
-![](https://img.windson.cc/images/2026/06/taiwan-tour/day2-cover.jpg)
-
+![](/assets/image/2026/07/taiwan-tour-day2/day2-cover.jpg)
 ## E Inn (Internet Café)
 Once in Taipei, accommodation all looked expensive, so we decided to spend the night in an internet café. This one was near Taipei Main Station, tucked in an unremarkable alley between two stalls, with a dim staircase. On the second floor there was a small counter that ran all the way into the computer area, like a computer classroom with cubicles. Next to the counter, a wall was covered with movie posters, with some lounge chairs along it; the clerk asked us to wait there.
 

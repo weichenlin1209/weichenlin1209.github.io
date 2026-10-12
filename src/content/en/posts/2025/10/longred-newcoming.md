@@ -7,7 +7,7 @@ category: Guitar
 tags:
   - Guitar
   - NCHU
-cover: https://img.windson.cc/images/2025/10/longred_new/guitar.webp
+cover: /assets/image/2025/10/longred-newcoming/guitar.webp
 licenseName: CC-BY-SA 4.0
 ---
 *This is an activity from the guitar club. Finished it with such a sense of accomplishment!*

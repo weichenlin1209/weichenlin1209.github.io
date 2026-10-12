@@ -6,7 +6,7 @@ slug: shch-gsa-1
 category: Journey
 tags:
   - SHCH GSA
-cover: https://img.windson.cc/images/2026/08/shch-gsa-1/4.webp
+cover: /assets/image/2026/08/shch-gsa-1/4.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## Prologue
@@ -19,15 +19,13 @@ On departure day, the campsite wasn't open for check-in until 3 PM, but at 9 AM 
 
 [^2]: He's not actually a locust — it's just that the first two characters of his name sound like 蝗蟲 (huángchóng, "locust").
 
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/1.webp)
-
+![](/assets/image/2026/08/shch-gsa-1/1.webp)
 Once the Pacific Department Store opened, we went in to find food, but after one loop we still didn't know what to eat, so we went out and grabbed McDonald's. Finding a corner table, one of us watched the bags while the other ordered. Right after ordering and just as we were about to pay, a McDonald's employee walked up holding up his badge and said, "I work for McDonald's. We have a new product coming out and we're looking for people to do a taste test." We had plenty of time, so we agreed. What we ate can't be written here because we signed an NDA — it was two burgers and a questionnaire, about half an hour in total, and at the end they even threw in a free small fries, just no drink. So we used a "Sweetheart Card" to get a buy-one-get-one drink, and ended up eating lunch for NT$19.
 
 ## A Ten-Dollar Watermelon?!
 After lunch we headed to the PX Mart supermarket — we needed supplies for the BBQ and the booze-and-gossip session at night. On the way we passed a claw-machine arcade, and Huangchong said, "Claw machines first, or PX Mart?" and turned straight into the arcade. Inside we spotted a machine holding a stuffed watermelon — win the plushie and you could trade it at the counter for real fruit. That day the choices were, it seemed, watermelon, cantaloupe, and mango. Seeing it, we texted the group chat: "Anyone want watermelon?" Before they could even react, Huangchong had already clawed it out. Cost: NT$10.
 
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/2.webp)
-
+![](/assets/image/2026/08/shch-gsa-1/2.webp)
 (~~In the end we couldn't finish it and gave it to the campsite owner.~~)
 
 ## Mountain-Road Racing
@@ -35,33 +33,25 @@ After shopping, we met up with the people coming up from Taichung on the train, 
 
 ## Broken-Bridge Leaky Tribe
 
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/14.webp)
-
+![](/assets/image/2026/08/shch-gsa-1/14.webp)
 It happened at night, after everyone had showered, while we were in the middle of drinking and gossiping. It started raining outside, lightly at first — we got ready to fall asleep to the sound of rain. Then suddenly someone yelled, "I got dripped on!" The rain outside grew heavier and heavier, water seeping in through the seams of the tent fabric, dripping across the whole bed and pooling at its edge into a little river. Everyone squeezed into the very center of the tent — the only spot that hadn't been taken over yet. At that moment a thought struck me: we'd never taken down the roof of the cooking canopy outside, **and at this rate it would flood**. A bunch of us went out with umbrellas to drain the water, and sure enough one of the frames had already collapsed, bent at a 90-degree angle.
 
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/6.webp)
-
+![](/assets/image/2026/08/shch-gsa-1/6.webp)
 After urgently contacting the duty staff, they rushed up the mountain to ask whether we wanted to swap the tent or the mattress. But by the time they'd sorted it out I was almost asleep, so I slept in the original tent while the other half moved to a new one. Apparently the campsite's CEO even came up to deal with it in the end — at least that's what they told me, since I'd long since gone to visit Duke Zhou (i.e., fallen asleep).
 
 ## The Rail Bike You Don't Pedal
 The next day we went to ride the [pedal-free rail bike](https://www.oml-railbike.com/_pages/info/index.php). The whole way, the "driver" just turned the handlebar, moving at roughly 20 km/h by the look of it — a gentle breeze, perfect for snapping photos while cruising along. We just went with the flow, stopping at Tunnel No. 6. It's basically a sightseeing mini-train ride. Along the way we even ran into a former classmate of Huangchong's, who joined us for photos.
 
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/7.webp)
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/8.webp)
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/9.webp)
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/10.webp)
-
+![](/assets/image/2026/08/shch-gsa-1/7.webp)![](/assets/image/2026/08/shch-gsa-1/8.webp)![](/assets/image/2026/08/shch-gsa-1/9.webp)![](/assets/image/2026/08/shch-gsa-1/10.webp)
 And the moment we got off — it rained again.
 ## Mountain-Road Racing, Part 2
 Inside the visitor center, every table came with cards for various drivers, and since we wanted to go to Sanyi for shopping, we used one to book a nine-seater van. When I called, the driver said he wasn't in Sanyi at the moment but would arrange a car for us. We waited almost twenty minutes — humid and hot, swarming with mosquitoes, and we were starting to get a bit impatient. Five more minutes later, a van showed up, but... it had a black (private) license plate. Back on board, and the speeding started again — cutting every corner straight. (~~The driver said he was already driving slowly~~.) Later, learning we were going to eat, he directly ~~recommended~~ dropped us off at a [Hakka restaurant](https://maps.app.goo.gl/uonkZjTRSQy9tJpB9). We arrived with only half an hour until closing, and the owner still took us in. We ordered eight dishes and a soup, and she cooked everything alone — we waited a long time, but it was delicious.
 
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/11.webp)
-
+![](/assets/image/2026/08/shch-gsa-1/11.webp)
 ## PX Mart Treasure Hunt
 After eating we headed to PX Mart to shop, but we had plenty of time, so we played a little game inside. Split into two teams, one team picks an item and takes a photo of it (you can zoom in and out, shoot just a detail), and the other team has to find it!
 
-![](https://img.windson.cc/images/2026/08/shch-gsa-1/12.webp)
-
+![](/assets/image/2026/08/shch-gsa-1/12.webp)
 The two of us each spent nearly half an hour on these two items. If you can figure out what these two things in PX Mart are, you win!
 
 ## Afterword

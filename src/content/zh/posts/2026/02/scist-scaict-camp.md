@@ -6,7 +6,7 @@ slug: scist-scaict-camp
 category: Journey
 tags:
   - hackathon
-cover: https://img.windson.cc/images/2026/02/scist-scaict-camp/cover.webp
+cover: /assets/image/2026/02/scist-scaict-camp/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 > 距離上次發文已經是一個月前的事。一月底基本上都在家裡耍廢，所以沒有什麼事情可以寫。但在二月初的時候參加了一場高中生們舉辦的黑客松。[活動網站在這](https://scist.camp/)

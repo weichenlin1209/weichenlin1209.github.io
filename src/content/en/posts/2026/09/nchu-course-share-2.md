@@ -6,7 +6,7 @@ slug: nchu-course-share-2
 category: Life
 tags:
   - NCHU
-cover: https://img.windson.cc/images/2025/12/nchu-course-share-1/cover.webp
+cover: /assets/image/2025/12/nchu-course-share-1/cover.webp
 draft: false
 licenseName: CC-BY-SA 4.0
 ---

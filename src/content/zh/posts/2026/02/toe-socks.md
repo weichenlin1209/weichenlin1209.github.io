@@ -6,7 +6,7 @@ slug: toe-socks
 category: Life
 tags:
   - BlogBlogClub
-cover: https://s2.loli.net/2025/01/25/PBvHFjr5yDu6t4a.webp
+cover: /assets/image/2026/02/toe-socks/PBvHFjr5yDu6t4a.webp
 licenseName: CC-BY-SA 4.0
 ---
 > 這是我的「[BlogBlog 同樂會 - 2026 年 2 月](https://blogblog.club/party#-%E7%AC%AC-2-%E6%9C%9F%E5%8F%AA%E6%9C%89%E6%88%91%E9%80%99%E6%A8%A3%E5%97%8E2026-%E5%B9%B4-2-%E6%9C%88%E5%8D%B3%E5%B0%87%E6%88%AA%E7%A8%BF)」的投稿文章。本月主題是「[只有我這樣嗎？](https://wiwi.blog/blog/blogblog-party-feb-2026/)」，由 [Wiwi](https://wiwi.blog/) 主持。如果你有自己的部落格，歡迎一起來參加！ 

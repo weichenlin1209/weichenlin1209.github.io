@@ -6,7 +6,7 @@ slug: diary-7
 category: Life
 tags:
   - Journal
-cover: https://img.windson.cc/images/diary/diary-7/cover.webp
+cover: /assets/image/2025/12/diary-7/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 > This year's matters, this year's done. Hurrying to post this year's content on the last day of 2025. These past few weeks were struggling in finals, finally out of prison these few days. Though it's fine now, actually there's still a lot that can be done. Think it's a good time to start from next year, resting first recently.
@@ -25,8 +25,7 @@ Everyone科普 — not recommended to swap if reversed, because will have metal 
 
 After last failure, did major revamp on model. Since apparently support issues, thickened and densified model's supports. But... result doesn't seem very successful.
 
-![SLA](https://img.windson.cc/images/diary/diary-7/sla.webp)
-
+![SLA](/assets/image/2025/12/diary-7/sla.webp)
 This time printed Eye of the Truth, Master Sword, Hylia Shield, Donkey Kong, Kirby.
 
 - **Eye of the Truth**  
@@ -35,8 +34,7 @@ This time printed Eye of the Truth, Master Sword, Hylia Shield, Donkey Kong, Kir
 - **Master Sword**  
   Original design was to print two and glue together, but another sunk into resin. One half broken Master Sword, as broken version, reproduced quite well.
 
-      ![Rotten Master Sword](https://cdn.kiranico.net/file/kiranico/zelda/webp/Icon/Weapon_Sword_070_Broken.webp)
-
+      ![Rotten Master Sword](/assets/image/2025/12/diary-7/Weapon_Sword_070_Broken.webp)
 - **Hylia Shield**  
   Only one seems relatively successful, just the side touching the board warped. Reason unknown.
 
@@ -50,15 +48,7 @@ This time printed Eye of the Truth, Master Sword, Hylia Shield, Donkey Kong, Kir
 
 I'm really not resistant to open-world games, so started another open-world. Difficulty can be adjusted, hardest feels similar to Elden Ring. Saying all this, just want to post screenshots — game's scenery is really beautiful.
 
-![1](https://img.windson.cc/images/diary/diary-7/1.jpg)  
-![2](https://img.windson.cc/images/diary/diary-7/2.jpg)  
-![3](https://img.windson.cc/images/diary/diary-7/3.jpg)  
-![4](https://img.windson.cc/images/diary/diary-7/4.jpg)  
-![5](https://img.windson.cc/images/diary/diary-7/5.jpg)  
-![6](https://img.windson.cc/images/diary/diary-7/6.jpg)  
-![7](https://img.windson.cc/images/diary/diary-7/7.jpg)  
-![8](https://img.windson.cc/images/diary/diary-7/8.jpg)
-
+![1](/assets/image/2025/12/diary-7/1.jpg)![2](/assets/image/2025/12/diary-7/2.jpg)![3](/assets/image/2025/12/diary-7/3.jpg)![4](/assets/image/2025/12/diary-7/4.jpg)![5](/assets/image/2025/12/diary-7/5.jpg)![6](/assets/image/2025/12/diary-7/6.jpg)![7](/assets/image/2025/12/diary-7/7.jpg)![8](/assets/image/2025/12/diary-7/8.jpg)
 ## Feeling Time
 
 Started going to tutoring center this summer vacation, looking at those high schoolers, discovered I'm really in college. Freshman year maybe didn't feel much, everyone still has overlapping classes. But this semester, I took advanced courses, took courses in other department — except required courses, rarely meet friends. Suddenly miss high school time — back then, going to convenience store, eating, to bathroom, all walked together. This semester started, going to class alone, eating alone, plus Thursday and Friday no class, alone time becomes a lot. Can do lots of things want, but not used to spending whole day alone. Next year's assignment might be to [practice living alone](https://www.youtube.com/watch?v=1T4nt8JfNzU). Hope can get used to this next year, Happy New Year!

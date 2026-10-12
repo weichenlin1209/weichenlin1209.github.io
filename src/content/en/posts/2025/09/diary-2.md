@@ -6,7 +6,7 @@ slug: diary-2
 category: Life
 tags:
   - Journal
-cover: https://img.windson.cc/images/diary/diary-cover.webp
+cover: /assets/image/2025/09/diary-1/diary-cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 Week four of the semester. My mental state is basically the same as finals week...
@@ -28,8 +28,7 @@ Still love this place, but after the performance in a few days, I need to pick t
 ### *Ad Time*
 Actually, that's not the official poster, but I like this one better.
 
-![guitar](https://img.windson.cc/images/2025/9/diary-25-09-29/guitarpost.webp)
-
+![guitar](/assets/image/2025/09/diary-2/guitarpost.webp)
 ## 3D Printing Micro-General Ed
 
 This is a class I almost forgot to attend. If someone hadn't reminded me, I would've 100% skipped. This course only lasts three weeks, and if things go well, you can get a 3D printing certification afterward �� pretty good value. We haven't gotten to the printing stage yet, but the class gives you 2.5 hours of free machine time. As long as your model prints within 2.5 hours, you can take it home for free. Once you get the certification, you can print Flipper cases, Pi housings, or even keyboards and mice — print your own stuff.

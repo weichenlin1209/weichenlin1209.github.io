@@ -7,7 +7,7 @@ category: Journey
 tags:
   - Linux
   - NCHU
-cover: https://img.windson.cc/images/2026/05/ubuntu-release-party/cover.png
+cover: /assets/image/2026/05/ubuntu-release-party/cover.png
 licenseName: CC-BY-SA 4.0
 ---
 # Ubuntu Release Party 2026
@@ -38,4 +38,4 @@ Let this sharing and discussion become our party!
 
 Notes: please bring a laptop and an empty USB drive of 16 GB or larger
 
-![poster](https://img.windson.cc/images/2026/05/ubuntu-release-party/poster.png)
+![poster](/assets/image/2026/05/ubuntu-release-party/poster.png)

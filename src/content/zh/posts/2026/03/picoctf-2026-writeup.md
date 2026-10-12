@@ -6,7 +6,7 @@ slug: picoctf-2026-writeup
 category: CTF
 tags:
   - PicoCTF
-cover: https://img.windson.cc/images/categories/picoctf.svg
+cover: /assets/image/2026/03/picoctf-2026-writeup/picoctf.svg
 licenseName: CC-BY-SA 4.0
 ---
 > 這是我第一次打 CTF。  
@@ -254,12 +254,10 @@ picoCTF{nested_enc0ding_66b54257}
 ## Old Session
 [題目](https://play.picoctf.org/practice/challenge/739?category=1&originalEvent=79&page=1)進去之後就是一個登入介面。打開 `F12` 發現 html 裡面什麼都沒有，那就註冊一個帳號登入吧。
 
-![](https://img.windson.cc/images/2026/03/picoctf-2026/old_session.webp)
-
+![](/assets/image/2026/03/picoctf-2026-writeup/old_session.webp)
 留言怎麼有人說 `/sessions` 有怪東西？那就來看一下吧！
 
-![](https://img.windson.cc/images/2026/03/picoctf-2026/old_session-1.webp)
-
+![](/assets/image/2026/03/picoctf-2026-writeup/old_session-1.webp)
 是 admin 的 session。那就把自己改成 admin 吧，然後就會看到 flag 了。
 
 

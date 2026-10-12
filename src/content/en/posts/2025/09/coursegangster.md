@@ -22,8 +22,7 @@ So I made a small project with [Each Chen](https://iach.cc). ~~Actually, it's br
 ## Grab the Cookie  
 Open Burpsuite and intercept the POST requests from the school's course registration system.  
 
-![burpsuite screenshot](https://img.windson.cc/images/2025/9/coursegangster/coursegangster-1.webp)  
-
+![burpsuite screenshot](/assets/image/2025/09/coursegangster/coursegangster-1.webp)
 After our observation, every time the system performs a major action (add/drop courses), it issues a new cookie.
 So you need to bake a fresh cookie after each course operation. Also, the header doesn't change during registration. Even if there's a content-length field, it doesn't seem to matter. ~~Experiments show that you can delete it directly and still register successfully~~.
    
@@ -57,14 +56,12 @@ p_stud_no=your_student_id&v_tick=1057847751891  #Your student ID first, then the
 ```
 Next, copy the curl command and we're ready to put it in the oven~
 
-![burpsuite screenshot](https://img.windson.cc/images/2025/9/coursegangster/copycurl.webp) 
-
+![burpsuite screenshot](/assets/image/2025/09/coursegangster/copycurl.webp)
 ---
 ## Bake the Cookie  
 The cookie is out, now put it in the [oven](https://curlconverter.com/python/). Paste what you copied into curl, write a Python script to send everything out, and you're done!
 
-![burpsuite screenshot](https://img.windson.cc/images/2025/9/coursegangster/curltopython.webp)
-
+![burpsuite screenshot](/assets/image/2025/09/coursegangster/curltopython.webp)
 ---
 
 ## Start the Heist!

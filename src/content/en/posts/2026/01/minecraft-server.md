@@ -6,7 +6,7 @@ slug: minecraft-server
 category: Technology
 tags:
   - Self-Hosting
-cover: https://img.windson.cc/images/2026/01/minecraft-server/cover.webp
+cover: /assets/image/2026/01/minecraft-server/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## Preface  
@@ -50,8 +50,7 @@ java -Xmx1024M -Xms1024M -jar server.jar --nogui
 
 ## Mod Installation: Atlantis  
 
-![Atlantis](https://img.windson.cc/images/2026/01/minecraft-server/atlantis.webp)
-
+![Atlantis](/assets/image/2026/01/minecraft-server/atlantis.webp)
 This is a mod I loved from childhood. Your spawn point is in a small glass house, and the whole world is underwater. For details, check [Wu Qiufeng Minecraft Survival - Atlantis - Keep the Last Breath](https://youtube.com/playlist?list=PLBtVUsNOhEjtbg0V1kLzS1slOzFV0GuTX&si=GHIkMoWg9i9uu-Te)—this is a 12-year-old series from when Minecraft was still at 1.5.1. Playing now is purely completing a childhood dream.
 
 Wu Qiufeng played 1.5.1. Recently, someone remade it, making it playable on 1.21+. For installation, go to [GitHub](https://github.com/Mzhuangshao/atlantis?tab=readme-ov-file) to download and experience the underwater world you wanted as a kid. Installation is super easy—just put the downloaded zip file in `/world/datapacks/` and you're done. If you're too lazy to set one up or want to play with me, [email](mailto:info@windson.cc) me and I'll try to get you in.

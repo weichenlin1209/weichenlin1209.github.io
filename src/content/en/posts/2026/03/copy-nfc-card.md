@@ -7,7 +7,7 @@ category: Technology
 tags:
   - Flipper
   - NFC
-cover: https://images.unsplash.com/photo-1637070155805-e6fbee6ec2cf?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+cover: /assets/image/2026/03/copy-nfc-card/photo-1637070155805-e6fbee6ec2cf.jpg
 licenseName: CC-BY-SA 4.0
 ---
 Remember when it was just a bit after the new semester started, I passed by the basketball court one day and found a student ID on the ground. So I stopped, looked down—student number 4113...053, seemed like someone from our department... 10X... Wait, this number, this face, **this is my roommate!** So I picked it up and brought it back to him. But if I hadn't found it, he would've been the weird case who lost their student ID within a month of starting school. ~~Though that's basically what happened anyway.~~ So what do you do if you lose your student ID? Feel free to find [Each](https://www.iach.cc) or me—we'll sell you one [five yuan cheaper than the school price](https://ckhung0.blogspot.com/2014/10/barrier-of-exit.html). Just today we found a way to copy the UID.

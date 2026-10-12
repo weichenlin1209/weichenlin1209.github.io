@@ -5,7 +5,7 @@ pubDate: "2026-01-13"
 slug: scheduling
 category: Life
 tags: []
-cover: https://img.windson.cc/images/2026/01/scheduling/cover.webp
+cover: /assets/image/2026/01/scheduling/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 Before winter break started, in the midst of finals hell, I thought: winter break is two months long, I must do something. So I listed a bunch of things:
@@ -65,8 +65,7 @@ The discussion above is missing one variable. During finals, today you need to d
 
 The execution order changes like this—let the task with shortest remaining time at the current moment go first:
 
-![](https://img.windson.cc/images/2026/01/scheduling/srtf.webp)
-
+![](/assets/image/2026/01/scheduling/srtf.webp)
 - Average wait time: $[(17-8-0)+(5-4-1)+(26-2-9)+(10-3-5)] / 4 = 6.5$  
 - Average turnaround time: $[(17-0)+(5-1)+(26-2)+(10-3)] / 4 = 13$  
 

@@ -6,7 +6,7 @@ slug: kubuntu
 category: Technology
 tags:
   - NCHU
-cover: https://img.windson.cc/images/2025/12/kubuntu/cover.webp
+cover: /assets/image/2025/12/kubuntu/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## Preface
@@ -26,8 +26,7 @@ Plug the bootable USB in, turn on your computer, and open BIOS. Every brand open
 ## Graphics Card Troubleshooting  
 If you can reboot and smoothly enter the system, congratulations! If you only see something like the image below, then you, like me, got got by the graphics card.
 
-![stuck](https://img.windson.cc/images/2025/12/kubuntu/stuck.webp)  
-
+![stuck](/assets/image/2025/12/kubuntu/stuck.webp)
 At this point, you need to find a way into Grub first, so you can enter safe mode, then into the system. The moment you see the computer manufacturer's logo during startup, press del once. If successful, you'll go straight into Grub. If not, reboot.
 Once in Grub, press e. There you can modify the boot parameters. On the second-to-last line, you'll see ```quiet splash```—add ```nomodeset``` after it, press ```F10```, and you can enter the system.
 

@@ -6,7 +6,7 @@ slug: diary-6
 category: Life
 tags:
   - Journal
-cover: https://img.windson.cc/images/diary/diary-6/cover.webp
+cover: /assets/image/2025/12/diary-6/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## Birthday
@@ -31,8 +31,7 @@ This week finally remembered to book a print slot. Planning to print a Master Sw
 
 ![CHITU]( Basically printing everything — since printing is free this semester for course credit. But can only print 2.5 hours, so need to arrange everything to fill the time. The result... only the supports came out, the rest soaked in resin.
 
-![CHITU](https://img.windson.cc/images/diary/diary-6/result.webp)
-
+![CHITU](/assets/image/2025/12/diary-6/result.webp)
 Probably too few supports, so didn't hold the model. Hope next print succeeds.
 
 ### Rebuilding Computer

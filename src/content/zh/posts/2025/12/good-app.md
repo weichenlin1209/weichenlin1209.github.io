@@ -4,7 +4,7 @@ description: 好用軟體
 pubDate: "2025-12-05"
 slug: good-app
 category: Technology
-cover: https://img.windson.cc/images/2025/12/good-app/cover.avif
+cover: /assets/image/2025/12/good-app/cover.avif
 licenseName: CC-BY-SA 4.0
 ---
 ## 小麥注音

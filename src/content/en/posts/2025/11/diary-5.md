@@ -6,7 +6,7 @@ slug: diary-5
 category: Life
 tags:
   - Journal
-cover: https://img.windson.cc/images/diary/diary-5/cover.webp
+cover: /assets/image/2025/11/diary-5/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 ## TL;DR
@@ -23,8 +23,7 @@ Recently found a really good tofu pudding place near school. The discoverer wasn
 
 Really good [tofu pudding place](https://maps.app.goo.gl/281i54Z1H8eqgewF7), so good we went two days in a row. Though it's a tofu pudding shop, we all went for the shaved ice. The recent weather isn't really suitable for ice either.
 
-![Delicious tofu pudding](https://img.windson.cc/images/diary/diary-5/eat.webp)
-
+![Delicious tofu pudding](/assets/image/2025/11/diary-5/eat.webp)
 ## Guitar Club
 
 ### Club Class
@@ -53,8 +52,7 @@ Though this time's song selection really had a lot of problems, feel getting clo
 
 [Last time](/zh/post/diary-4/#鍵盤) mentioned my keyboard was broken, just the one I wanted is discontinued. But... discovered it really should be replaced — not only the L key, period key is also almost done. So had to go to NOVA again. This time only visited B1's Mitsui. That clerk ran over to chat as soon as he saw me, said it's his first day, for keyboards he only knows [this](https://www.logitech.com/zh-tw/shop/p/alto-keys-k98m). He has brand faith, buys ROG himself, if nothing here liked, can buy ROG. ~~But he's wearing a Logitech name tag~~. Ended up buying what he recommended, except a bit noisy, everything else's fine.
 
-![AltoKeys](https://img.windson.cc/images/diary/diary-5/AltoKeys.webp)
-
+![AltoKeys](/assets/image/2025/11/diary-5/AltoKeys.webp)
 Just [Logi's app doesn't support Linux](https://support.logi.com/hc/en-us/articles/360025297893-Logitech-Options), bad review. If want to use, have to install Windows myself, research when have time.
 
 ### McBopomofo Input

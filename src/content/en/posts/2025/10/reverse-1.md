@@ -7,7 +7,7 @@ category: CTF
 tags:
   - PicoCTF
   - Reverse
-cover: https://img.windson.cc/images/reverse/cover.webp
+cover: /assets/image/2025/10/reverse-1/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 > ***A Reverse a day keeps the zero-days away***
@@ -141,8 +141,7 @@ while not finished and line_count < MAX_LINES:
 
 Can use changing the `crowd` value to test this guess. For example, I type `;REFRAIN` when inputting. Semicolon to end previous text, otherwise whole text treated as normal string.
 
-![example](https://img.windson.cc/images/reverse/flag-hunter/example-1.webp)
-
+![example](/assets/image/2025/10/reverse-1/example-1.webp)
 This test very successful — because typed `;REFRAIN`, so every time reaching `crowd`, it jumps back to `REFRAIN` to print rest. Can test other ones yourself. Knowing this, can get flag!
 
 ## Solution
@@ -153,4 +152,4 @@ elif re.match(r"RETURN [0-9]+", line):
 ```
 It's a regex expression. When format matched, can jump wherever we want. Our goal is to make it start printing from top — so jump to 0!
 
-![Here is the flag](https://img.windson.cc/images/reverse/flag-hunter/flag.webp)
+![Here is the flag](/assets/image/2025/10/reverse-1/flag.webp)

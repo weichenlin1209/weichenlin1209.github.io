@@ -6,7 +6,7 @@ slug: netbird-vpn
 category: Technology
 tags:
   - Self-Hosting
-cover: https://img.windson.cc/images/2026/02/netbird-vpn/cover.webp
+cover: /assets/image/2026/02/netbird-vpn/cover.webp
 licenseName: CC-BY-SA 4.0
 ---
 The VPN I used before was Tailscale. Tailscale's limitation for free users: only three people in one tailnet. But my Minecraft buddies number more than three... So I migrated the whole family to NetBird.
