@@ -36,7 +36,13 @@ licenseName: CC-BY-SA 4.0
 ## 三角南山
 這座山號稱是最難的[小百岳](https://hikingtw.com/xiaobaiyue-guide/#%E5%8F%B0%E7%81%A3%E5%B0%8F%E7%99%BE%E5%B2%B3%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F100-%E5%BA%A7%E5%AE%8C%E6%95%B4%E5%88%97%E8%A1%A8)之一，出發前一天原本要去附近的曾文水庫露營，結果水庫滿水位以上，到了一個爆滿的程度，把旁邊的湖濱公園淹沒了，變成了好幾年難得一件的景色。
 
+![](/assets/image/2026/09/diary-26-9/1.webp)
+![](/assets/image/2026/09/diary-26-9/2.webp)
+
 晚上我們住在登山口附近的跳跳農場，隔天早上八點多起登，基本上路程分兩段，前段是產業道路，一整路都是緩上坡，沿路看起來都是之前車子道路的痕跡，越往上道路越荒廢，一直走一直走直到有一個彎，旁邊有防止車開出去的水泥牆，上面放著一堆前人的手套，代表接下開始拉繩子了，這種要拉繩子的陡坡要一路拉到山頂為止。
+
+![](/assets/image/2026/09/diary-26-9/4.webp)
+![](/assets/image/2026/09/diary-26-9/3.webp)
 
 ## 咖啡廳
 ## [Celaffee Cafe](https://maps.app.goo.gl/Nn3MDsj7rAy2ner48)
