@@ -1,7 +1,7 @@
 ---
-title: Weekly Diary | 25/12/09
-description: Weekly Diary | 25/12/09
-pubDate: "2025-12-09"
+title: Weekly Diary | 25/12/13
+description: Weekly Diary | 25/12/13
+pubDate: "2025-12-13"
 slug: diary-6
 category: Life
 tags:
