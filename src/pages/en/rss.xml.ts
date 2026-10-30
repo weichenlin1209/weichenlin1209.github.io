@@ -24,7 +24,7 @@ function CoverMimeType(url: string): string {
 
 export const GET: APIRoute = async (context) => {
   const container = await AstroContainer.create();
-  const posts = (await getCollection('blog_en', ({ data }) => !data.draft))
+  const posts = (await getCollection('blog_en', ({ data }) => !import.meta.env.PROD || !data.draft))
     .filter((post) => !Number.isNaN(new Date(post.data.pubDate).getTime()))
     .sort((a, b) => b.data.pubDate.localeCompare(a.data.pubDate));
 

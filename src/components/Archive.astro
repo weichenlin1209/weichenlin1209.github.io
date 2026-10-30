@@ -14,7 +14,7 @@ const { lang } = Astro.props;
 const t = ui[lang];
 const collection = lang === 'zh' ? 'blog_zh' : 'blog_en';
 
-const posts = (await getCollection(collection, ({ data }) => !data.draft)).sort(
+const posts = (await getCollection(collection, ({ data }) => !import.meta.env.PROD || !data.draft)).sort(
   (a, b) => b.data.pubDate.localeCompare(a.data.pubDate),
 );
 

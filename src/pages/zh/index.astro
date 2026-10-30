@@ -11,7 +11,7 @@ const lang = 'zh';
 const t = ui[lang];
 
 // 最新 3 篇文章
-const recent = (await getCollection('blog_zh', ({ data }) => !data.draft))
+const recent = (await getCollection('blog_zh', ({ data }) => !import.meta.env.PROD || !data.draft))
   .sort((a, b) => b.data.pubDate.localeCompare(a.data.pubDate))
   .slice(0, 3);
 

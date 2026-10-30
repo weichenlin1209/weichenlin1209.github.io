@@ -11,7 +11,7 @@ const lang = 'en';
 const t = ui[lang];
 
 // Latest 3 posts
-const recent = (await getCollection('blog_en', ({ data }) => !data.draft))
+const recent = (await getCollection('blog_en', ({ data }) => !import.meta.env.PROD || !data.draft))
   .sort((a, b) => b.data.pubDate.localeCompare(a.data.pubDate))
   .slice(0, 3);
 
