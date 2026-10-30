@@ -8,5 +8,6 @@ cover: /assets/image/2026/10/diary-26-10/cover.webp
 tags:
   - Journal
 licenseName: CC-BY-SA 4.0
+draft: true
 ---
 
