@@ -19,9 +19,20 @@ export function formatLongDateZh(iso: string) {
 export interface UiStrings {
   welcomeEyebrow: string;
   homeHello: string;
+  homeTitle: string;
+  homeName: string;
+  homeNameAlt: string;
   homeIntro: string;
+  homeIntroLine1: string;
+  homeIntroLine2: string;
+  homeIntroLine3: string;
   homeLatest: string;
   homeViewAll: string;
+  homeOverview: string;
+  homePinned: string;
+  homeActivity: string;
+  homeRepositories: string;
+  homeReadme: string;
   blogEyebrow: string;
   blogTitle: string;
   noPosts: string;
@@ -54,20 +65,31 @@ export const ui: Record<Lang, UiStrings> = {
   zh: {
     welcomeEyebrow: 'WELCOME / 歡迎',
     homeHello: 'Hi, 我是',
+    homeTitle: 'Hi, this is 威忌',
+    homeName: '威忌',
+    homeNameAlt: 'Windson',
     homeIntro:
-      '中興大學應用數學系學生。喜歡彈吉他、拍照，但沒有算數學。這裡記錄我的生活以及一些技術筆記。',
+      '應用數學系學生',
+    homeIntroLine1: '中興大學應用數學系學生，喜歡彈吉他和拍照。',
+    homeIntroLine2: '這裡記錄我的生活以及一些技術筆記。',
+    homeIntroLine3: '偶爾也會分享我正在研究的東西。',
     homeLatest: '最新文章',
     homeViewAll: '查看全部',
+    homeOverview: '總覽',
+    homePinned: '置頂文章',
+    homeActivity: '文章活動',
+    homeRepositories: '篇文章',
+    homeReadme: '關於我',
 
     blogEyebrow: 'BLOG / 文章',
     blogTitle: '文章列表',
     noPosts: '還沒有文章。',
-    archiveEyebrow: 'TIMELINE / 時光軸',
+    archiveEyebrow: 'TIMELINE / 時間軸',
     archiveTitle: '歸檔',
     searchPlaceholder: '🔍 搜尋文章標題或標籤…',
     noResults: '沒有找到相關文章。',
-    photoEyebrow: 'PHOTO / 相簿',
-    photoTitle: 'Photos',
+    photoEyebrow: 'ALBUM / 相簿',
+    photoTitle: '相簿',
     backToPhoto: '← 返回照片',
     photosCount: (n) => `${n} 張照片`,
     viewPhoto: (n) => `查看第 ${n} 張照片`,
@@ -89,10 +111,21 @@ export const ui: Record<Lang, UiStrings> = {
   en: {
     welcomeEyebrow: 'WELCOME',
     homeHello: "Hi, I'm",
+    homeTitle: 'Hi, this is Windson',
+    homeName: 'Windson',
+    homeNameAlt: 'Weiji',
     homeIntro:
-      'Applied Mathematics student at NCHU. I like to play guitar and photograph but do mathematics. This blog is where I keep my notes and stories.',
+      'Applied Mathematics student at NCHU.', 
+    homeIntroLine1: 'I am an Applied Mathematics student at NCHU who enjoys playing guitar and taking photos.',
+    homeIntroLine2: 'This blog is where I keep my notes and stories.',
+    homeIntroLine3: 'I also write about things I am currently exploring.',
     homeLatest: 'Latest Posts',
     homeViewAll: 'View all',
+    homeOverview: 'Overview',
+    homePinned: 'Pinned posts',
+    homeActivity: 'Post activity',
+    homeRepositories: 'posts',
+    homeReadme: 'About me',
     blogEyebrow: 'BLOG',
     blogTitle: 'Posts',
     noPosts: 'No posts yet.',
@@ -100,8 +133,8 @@ export const ui: Record<Lang, UiStrings> = {
     archiveTitle: 'Archive',
     searchPlaceholder: '🔍 Search titles or tags…',
     noResults: 'Nothing found.',
-    photoEyebrow: 'PHOTO',
-    photoTitle: 'Photos',
+    photoEyebrow: 'ALBUMS',
+    photoTitle: 'Albums',
     backToPhoto: '← Back to photos',
     photosCount: (n) => `${n} photos`,
     viewPhoto: (n) => `View photo ${n}`,

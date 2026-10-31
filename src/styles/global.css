@@ -1,3 +1,4 @@
+@import url("https://font.emtech.cc/css/ChironGoRoundTC");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 /* 5. 告诉 v4 去扫 .astro 里的类名（你旧项目验证过，不写它扫不到） */
@@ -19,6 +20,40 @@
   --c-bg: #fafafa;
   --c-fg: #1a1a1a;
   --c-accent: #2563eb;
+}
+
+body {
+  font-family: "ChironGoRoundTC", "Noto Sans TC", sans-serif;
+}
+
+/* GitHub-style contribution grid used by the home page. */
+.contribution-grid {
+  display: grid;
+  width: 100%;
+  max-width: 28rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+  grid-auto-flow: column;
+  gap: 0.15rem;
+}
+
+.contribution-cell {
+  aspect-ratio: 1;
+  min-width: 0;
+  border-radius: 0.15rem;
+  background: color-mix(in srgb, var(--c-fg) 10%, transparent);
+}
+
+.contribution-cell[data-level="1"] {
+  background: color-mix(in srgb, var(--c-accent) 30%, transparent);
+}
+
+.contribution-cell[data-level="2"] {
+  background: color-mix(in srgb, var(--c-accent) 55%, transparent);
+}
+
+.contribution-cell[data-level="3"] {
+  background: var(--c-accent);
 }
 
 /* 4. 暗模式的值：同名变量换一套值，引用语义色的 class 自动跟着变 */
