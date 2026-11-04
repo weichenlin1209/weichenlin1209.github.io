@@ -1,0 +1,755 @@
+\documentclass[12pt, a4paper]{article}
+
+% ==========================================
+%  Packages Setup
+% ==========================================
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+
+% ==========================================
+%  Theorem Environments
+% ==========================================
+\newtheoremstyle{break}
+  {\topsep}
+  {\topsep}
+  {\normalfont}
+  {}
+  {\bfseries}
+  {.}
+  {\newline}
+  {}
+
+\theoremstyle{break}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[\hskip\labelsep\bfseries #1\@addpunct{.}]\mbox{}\newline\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% ==========================================
+%  Title Page
+% ==========================================
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm}
+        {\LARGE \bfseries Lecture note on Ordinary Differential Equation \par}
+        \vspace{3cm}
+        \begin{tabular}{rl}
+            \textbf{Author:} & Windson \\
+            \textbf{Course:} & Ordinary Differential Equation \\
+        \end{tabular}
+        \vspace{1.5cm}
+
+        {\large Department of Applied Mathematics \par}
+        {\large National Chung Hsing University \par}
+        \vspace{0.3cm}
+        145 Xingda Road, South District, Taichung City 40227, Taiwan (R.O.C.) \par
+        e-mail: info AT windson.cc
+
+        \vfill
+        {\large \textbf{License} \par}
+        {\small This document is licensed under the Creative Commons Attribution 4.0 International License (CC BY-SA 4.0).\par}
+        \vspace{1cm}
+        {\large February 26, 2026 \par}
+    \end{center}
+\end{titlepage}
+
+% ==========================================
+%  Table of Contents
+% ==========================================
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ==========================================
+%  Main Content
+% ==========================================
+\section{\texorpdfstring{Integrating Factor \(\mu (x)\)}{2-1 Integrating Factor \textbackslash mu (x)}}\label{integrating-factor-mu-x}
+
+In general \textbf{first-order linear differential equation }in standard form:
+
+\[
+  \frac{dy}{dt} + p(t) y = g(t)
+\]
+
+In convenient ,we also write the equation in this form:
+
+\[
+P(t)\frac{dy}{dt} + Q(t) y = G(t)
+\]
+
+then ,to solve this ODE, we tend to find a integrating factor \(\mu (x)\) s.t. \((\mu (t) y)' = k(t)\)
+
+\subsection{\texorpdfstring{How to find the \emph{Integrating Factor }}{How to find the Integrating Factor }}\label{how-to-find-the-integrating-factor}
+
+\[
+P(t) \frac{dy}{dt} + Q(t)y = G(t)
+\]
+
+\[
+\mu (x) P(t) \frac{dy}{dt} + \mu (x) Q(t)y = \mu (t)G(t)
+\]
+
+\[
+\mu (t) \frac{dy}{dt} + \mu (t) \frac {Q(t)}{P(t)}y = \frac {\mu (t) G(t)}{P(t)}
+\]
+
+\[
+[\mu (t) y]' = \frac{\mu (t) G(t)}{P(t)}
+\]
+
+we can imply that \(\mu '(t) = \frac{Q(t)}{P(t)} \mu (t)\) ,then
+
+\[
+\mu (t) = e^{\int_{}^{} \frac{Q(t)}{P(t)} dt}
+\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Separable Differential Equation}\label{separable-differential-equation}
+
+The first general first-order differential equation is
+
+\[
+\frac{dy}{dt} = f(x ,y)
+\]
+
+To identify this class of equation , we write in this form
+
+\[
+M(x, y) + N(x ,y)\frac{dy}{dx} = 0
+\]
+
+When \(M\) is a function of \(x\) only and \(N\) is a function of \(y\), the equation becomes
+
+\[
+M(x)dx+ N(y)dy = 0 
+\]
+
+and we can \(\int M(x)dx + N(y)dy = \int 0 dx\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Differences Between Linear and Nonlinear DEs}\label{differences-between-linear-and-nonlinear-des}
+
+\subsection{THM-1 (Existence and Unique for First-Order Linear ODE)}\label{thm-1-existence-and-unique-for-first-order-linear-ode}
+
+\subsubsection{Statement}\label{statement}
+
+If \(p(t)\) is continuous on an open interval \(I\), then \(\exists!\ y=\phi(t)\) satisfying \(y' + p(t)y = q(t)\) for all \(t \in I\), with \(y(t_0)=y_0\).
+
+\subsubsection{Proof}\label{proof}
+
+Since P(t) is continuous on I ,we set \(\mu(t) = e^{\int_{t_0}^{t}p(t)dt} \neq0 \ ,t \in I\)(\(\mu '(t) = \mu(t) p(t)\))
+
+We have \(\mu(t) \in  C'\)(\(\mu \ is \ diff.)\)
+
+Multiplying (1) by \(\mu(t)\), then we obtain \([\mu(t)y]' = \mu(t)q(t)\)
+
+Since q(t) is continuous on I ,,thus
+
+\[
+\mu(t) y(t) = \int _{t_0}^{t} \mu(t)q(t) dt +C
+\]
+
+\[
+y(t) - \mu^{-1}(t) \int_{t_0}^{t} \mu(s)q(s)ds + C
+\]
+
+\(y = \phi(t)\) exists , is differential and satisfy (1). Also , from the mitial condition (2), we determine uniquely \(c = y_0\). Hence ,there is only one solution of (1)-(2).
+
+\subsection{THM-2 (First-Order Nonlinear ODE)}\label{thm-2-first-order-nonlinear-ode}
+
+\subsubsection{Statement}\label{statement-1}
+
+Let \(f (t ,y)\)and \(\frac{\delta f}{\delta y}\)be continuous in some rectangle R ,\(\alpha < t <\beta\) ,\(\gamma < y < \delta\)
+
+\(R = \{ (t, y)\  | \ \alpha < t < \beta  ,\ \gamma < y < \delta \}\)
+
+containing \((t_0 ,y_0)\). Then , in some interval \((t_0 -h , t_0 + h) \subset (\alpha ,\beta)\)for some \(h > 0\) ,
+
+\(\exists!\ y = \phi(t)\) such that \(y'(t) = f(t,y)\) and \(y(t_0) = y_0\).
+
+\subsection{Remark}\label{remark}
+
+\begin{itemize}
+\item
+  \textbf{Thm-2 can imply Thm-1 (linear case)}
+
+  In the case of Thm-1 , \(f(t ,y) = q(t) = p(t)y \in C\) and \(\frac{\delta f}{\delta y}(t ,y) = -p(t) \in C\)
+
+  there is only one solution in some interval \((t_0 +h ,t_0 - h) \subset I\)
+\item
+  \textbf{Uniqueness}
+
+  We can make sure that the graph of two solution cannot have any intersection.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Autonomous DEs ,Population Dynamics}\label{autonomous-des-population-dynamics}
+
+\subsection{Autonmous}\label{autonmous}
+
+\subsubsection{Ex1 (Exponential Growth)}\label{ex1-exponential-growth}
+
+\(\phi (t)\)is the popuation of the given species at time \(t\)
+
+\[
+\frac{dy}{dt} = f(y)
+\]
+
+consider \(\frac{dy}{dt} = ry\)
+
+\begin{itemize}
+\tightlist
+\item
+  r \textgreater{} 0 : increase
+\item
+  r \textless{} 0 : decline
+\end{itemize}
+
+Assume r \textgreater{} 0 ,and \(y(0) = y_0\) ,\(\phi(t) = y_0 e^{rt}\)
+
+\subsubsection{Ex2 (Logistic DEs)}\label{ex2-logistic-des}
+
+\[
+r = h(y)
+\]
+
+Condiser h(y) s.t. h(y) \(\cong\)r \textgreater{} 0,when y is small
+
+\begin{itemize}
+\tightlist
+\item
+  h(y) decrease as y grows larger
+\item
+  h(y) \textless{} 0 when y is suff large
+\end{itemize}
+
+Assume that \(h(y) = r-ay ,\quad a > 0\)
+
+Consider logistic equation:
+
+\[
+\frac{dy}{dt} = (r-ay)y
+\]
+
+\[
+\frac{dy}{dt} = r(1- \frac{y}{k})y , \ where \ k =\frac{r}{a} 
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Find constant solution:
+\end{itemize}
+
+\[
+\frac{dy}{dy} = 0 \Longleftrightarrow r(1-\frac{y}{k})y = 0
+\]
+
+\[
+the\ constant \ solutions \ are \quad y = \phi_1(t) \equiv0 ,\ y = \phi_2 \equiv k
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Study for
+\end{itemize}
+
+\[
+f( y) = r(1-\frac{y}{k})y = -\frac{r}{k}(y - \frac{k}{2})^2 + \frac{rk}{4}
+\]
+
+\[
+\frac{dy}{dt} = \begin{cases} > 0 \quad if \ 0 < y < k \\ \quad \\ <0 \quad if \ y > k \\ \end{cases}
+\]
+
+By \textbf{Exsistence and Uniqueness Theorem} ,no solution can intersect the equilibrium solution \(y = k\)
+
+\begin{itemize}
+\tightlist
+\item
+  Find \(\frac{d^2y}{dt^2}\).
+\end{itemize}
+
+\[
+\boxed{\frac{d^2y}{dt^2}}  = \frac{d}{dt}(\frac{dy}{dt}) =\frac{d}{dt}f(y) = f'(y)\frac{dy}{dt} = \boxed{f'(y)f(y)}
+\]
+
+\[
+\frac{d^2y}{dt^2} = \begin{cases} > 0 \quad if \ 0 < y < \frac{k}{2}\ or \ y > k \\ \quad \\ <0 \quad if \ \frac{k}{2}<y < k \\ \end{cases}
+\]
+
+\textbf{Note }: \(y = \frac{k}{2}\)is an inflation points
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Exact Differential Equations}\label{exact-differential-equations}
+
+\subsection{THM}\label{thm}
+
+Let M ,N ,\(M_y ,N_x\)are continuous in \(R = \{ (x ,y) |\  \alpha < x< \beta ,\ \gamma <y <\delta\)
+
+Then the \(equ(*)\) is exact in \(R\) \(\Longleftrightarrow \ M_y(x ,y) = N_x(x ,y)\)at each point in \(R\)
+
+\subsubsection{proof}\label{proof-1}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\Longrightarrow\)
+\end{itemize}
+
+Suppose (*) is an exact differential equation, so there exists \(\psi\) such that \(\frac{\partial \psi}{\partial x} = M(x,y)\) and \(\frac{\partial \psi}{\partial y} = N(x,y)\).
+
+then ,\(M_y(x ,y) = \frac{\partial \psi}{\partial x\partial y} = \frac{\partial \psi}{\partial x \partial y}\), \(M_y\)and \(N_x\)are continuous ,\(\psi_{xy} \ ,\  \psi_{yx}\)are continuous.
+
+Hence ,\(\frac{\partial^2 \psi}{\partial y \partial x} = \frac{\partial^2 \psi}{\partial x \partial y}\) ,\(M_y = N_x\)
+
+\begin{itemize}
+\tightlist
+\item
+  \(\Longleftarrow\)
+\end{itemize}
+
+Good Find a \(\psi(x) \ s.t. \ \psi_x = M\ ,\ \psi_y = N\), Integrating \(\psi_x = M \ w.r.t \ x\)
+
+\(\psi(x ,y) = \int_{x_0}^{x}M(s ,y)\ ds + h(y) = Q(x ,y) + h(y)\) ,where \(Q(x ,y) = \int_{x_0}^{x} M(s ,y)\ ds\)and \(x_0\)is some specified constant with \(\alpha < x < \beta\)
+
+Differentiating \(Q(x ,y) + h(y) \quad w.r.t \quad y\)
+
+\(\psi_y(x ,y) = \frac{\partial Q}{\partial y}(x ,y) + h'(y) = N(x ,y)\), Then \(h'(y) = N(x ,y) - \frac{\partial Q}{\partial y}(x ,y)\)
+
+To show \(N(x ,y) - \frac{\partial Q}{\partial y}(x ,y)\)only depends on y
+
+\[
+\frac{\partial}{\partial x}(N(x ,y) - \frac{\partial Q}{\partial y}(x ,y)) = N_x - \frac{\partial^2Q}{\partial y \partial x} = N_x - M_y = 0
+\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{First-Order Difference Equations}\label{first-order-difference-equations}
+
+\subsection{Definition}\label{definition}
+
+\[
+y_{n+1} = f(n ,y_n) ,\quad n = 0 ,1 ,2...
+\]
+
+It is called first-order difference equation. if f is a function of \(y_n\), the difference equation is linear, otherwise, it is nonlinear. The solutions of difference equation is a sequence of numbers \(y_0 ,y_1 ,y_2\) that satisfy the equation for each n.
+
+\subsection{General case}\label{general-case}
+
+\[
+y_{n+1} = f(y_n), \quad n = 0 ,1, 2...
+\]
+
+then\(y_1 = f(y_0) ,\quad y_2 = f(y_1) = f(f(y_0) = f^2(y_0)\)
+
+In general , the \(n^{th}\) iterate\(y_n\)is \(y_n = f^n(y_0)\)
+
+\begin{itemize}
+\item
+  \textbf{Equilibrium solutions}
+
+  Solutions for which \(y_n\)has the same value for all n
+\end{itemize}
+
+\subsection{Linear Equations}\label{linear-equations}
+
+\subsubsection{Case-1}\label{case-1}
+
+\[
+y_{n+1} = \rho_ny_n,\quad n= 0 ,1 ,2...
+\]
+
+In general ,\(y_n = \rho_{n-1}...\rho_0y_0 ,\quad n = 1 ,2 ,...\)
+
+if \(\rho_n = \rho \ \ \forall n \text{ ,the equations becomes } y_n = \rho^n y_0\)
+
+\[
+\lim_{n \to \infty}{y_n} = \begin{cases} 0, \quad if \ |\rho| < 1; \\ \quad \\ y_0, \quad if \ \rho = 1; \\ \\ \text{doesn't exist ,  otherwise.} \end{cases}
+\]
+
+\subsubsection{Case-2}\label{case-2}
+
+\[
+y_{n+1} = \rho y_n + b_n,\quad n = 0,1,2 ...
+\]
+
+\[
+y_1 = \rho y_0 + b_0
+\]
+
+\[
+y_2 = \rho(\rho y_0 + b_0) + b_1 = \rho^2 y_0 + \rho b_0 + b_1
+\]
+
+\[
+y_n = \rho^n y_0 + \sum_{j = 0}^{n-1} \rho^{n-1-j} b_j
+\]
+
+In the special case where \(b_n=b\neq 0\) for all \(n\), the difference equation is:
+
+\[
+y_{n+1} = \rho y_n + b
+\]
+
+\(\text{If }\rho \neq 1, \text{we can write the solution in the more compact form}\)
+
+\[
+y_n = \rho^n (y_0 - \frac{b}{1-\rho})+\frac{b}{1 - \rho}
+\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Homogeneous DEs with constant coefficients}\label{homogeneous-des-with-constant-coefficients}
+
+\subsection{Definition}\label{definition-1}
+
+Many second-order ordinary differential equations have the form
+
+\[
+\frac{d^2y}{dt^2} = f(t ,y ,\frac{dy}{dt})
+\]
+
+It is linear if the function has the form
+
+\[
+\frac{d^2 y}{dt^2} = g(t)- p(t)\frac{dy}{dt} - q(t) y
+\]
+
+In general,
+
+\[
+y'' + p(t)y' + q(t)y = g(t)
+\]
+
+\[
+P(t)y'' + Q(t)y' + R(t)y = 0
+\]
+
+if \(g(t) = 0 \Longrightarrow \text{homogeneous}\)
+
+\subsection{Initial Value Problem(IVP)}\label{initial-value-problemivp}
+
+we consider that
+
+\[
+\begin{cases}  ay'' + by' +cy = 0\\ \quad \\ y(0) = y_0 ,\quad y'(0) = y_0'\\ \end{cases}
+\]
+
+ We start by seeking exponential solutions of the form\(y = e^{rt}\),where r is a parameter to be determined. Then it follows that \(y' = re^{rt}\),\(y' = r^2 e^{rt}\)Substituting these expressions.
+
+\[
+(a r^2 + b r + c) e^{rt} = 0
+\]
+
+Since \(e^{rt} \neq 0\)
+
+\[
+a r^2 + b r  + c = 0
+\]
+
+This equation is called the \textbf{characteristic equation }for the differential equation
+
+Assuming that the roots of the characteristic equation are real and different, let them be denoted by \(r_1\) and \(r_2\), where \(r_1 \neq r_2\). Then \(y_1(t) = e^{r_1 t} \ and \ y_2(t) = e ^{r_2 t}\)
+
+Then there exist \(c_1,c_2\in\mathbb{R}\) such that
+\[
+y = c_1 e^{r_1t} + c_2 e^{r_2t}.
+\]
+
+\[
+y' = c_1 r_1 e^{r_1 t} + c_2 r_2 e^{r_2 t}
+\]
+
+\[
+y'' = c_1 r_1^2 e^{r_1 t} + c_2 r_2^2 e^{r_2 t}
+\]
+
+Substituting these expression,
+
+\[
+ay'' + by' + c = c_1 (ar_1^2 + b r_1 + c)e^{r_1 t} + c_2 (ar_2^2 + b r_2 + c)e^{r_2 t} = 0
+\]
+
+Consider the initial value \(y(t_0) = y_0 ,\ y'(t_0) = y_0'\)
+
+\[
+\begin{cases}c_1 e^{r_1t_0} + c_2 e ^{r_2t_0}  = y_0\\ \\ c_1 r_1 e^{r_1 t_0} + c_2 r_2 e^{r_2 t_0} = y_0'\\ \end{cases}
+\]
+
+\[
+c_1 = \frac{y_0'-y_0 r_2}{r_1 - r_2}e^{-r_1t_0},\ c_2 = \frac{y_0r_1 - y_0'}{r_2 - r_1} e^{-r_2 t_0}
+\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Solution of Linear Homogeneous Equations; the Wronskian}\label{solution-of-linear-homogeneous-equations-the-wronskian}
+
+\subsection{Differential Operator}\label{differential-operator}
+
+Let p and q be continuous functions on an open interval I , for \(\alpha < t < \beta\). The cases for \(\alpha  = -\infty\)or \(\beta = \infty\)or both , are included.Then for any function \(\phi\) that is twice differential on I , we define the differential operator L by the equation \[
+  L[\phi] = \phi'' + p \phi' + q \phi 
+  \]
+
+for example ,if \(p(t) = t^2 ,\ q(t) = 1+t,\ \phi(t) = sin3t\)
+
+\[
+L[\phi](t) = (sin3t)'' + t^2(sin3t)' + (1+t)sin3t
+\]
+
+we usually write this equation in the form
+
+\[
+L[y] = y''+p(t)y'+q(t)y = 0
+\]
+
+with the initial value \(y(t_0) = y_0,\quad y'(t_0) = y_0'\)
+
+\subsection{Theorem 3.2.1 Existence and uniqueness Theorem}\label{theorem-3.2.1-existence-and-uniqueness-theorem}
+
+Consider the initial value problem
+
+\[
+y'' + p(t) y' + q(t) y = g(t),\quad y(t_0) = y_0, \quad y'(t_0) = y_0' 
+\]
+
+where p, q ,and g are continuous on an open interval I that contains the point \(t_0\). This problem has exactly one solution \(y = \phi (t)\),and the solution exists throughout the interval I.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Note :} the initial problem has an unique solution on an interval I
+\end{itemize}
+
+\subsection{Theorem 3.2.2 Principle of Superposition}\label{theorem-3.2.2-principle-of-superposition}
+
+if \(y_1,\ y_2\)are two solutions of the differential equation
+
+\[
+L[y] = y'' + p(t) y' + q(t)y = 0
+\]
+
+then the linear combination \(c_1y_1 + c_2 y_2\)is also a solution for any value of the constants \(c_1 ,\ c_2\)
+
+\subsubsection{proof}\label{proof-2}
+
+\[
+\begin{aligned}
+L[c_1y_1 + c_2 y_2] &= [c_1y_1 + c_2 y_2]'' + p[c_1y_1 + c_2 y_2]' + q[c_1y_1 + c_2 y_2] \\\\
+&= c_1y_1'' + c_2y_2'' + c_1py_1' + c_2py_2' + c_1qy_1 + c_2q y_2 \\\\
+&= c_1[y_1'' + py_1' + q y_1] + c_2[y_2'' + py_2' + q y_2] \\\\
+&= c_1L[y_1] + c_2L[y_2]
+\end{aligned}
+\]
+
+\subsection{Note}\label{note}
+
+\begin{itemize}
+\tightlist
+\item
+  \(W[y_1,y_2](x)\) is not everywhere zero iff \(c_1 y_1 + c_2 y_2\) contains all solutions of the equation.
+\item
+  Therefore, \(y = c_1 y_1(t) + c_2 y_2(t)\)is called \textbf{general solution }
+\item
+  \(y_1\)and \(y_2\) are said to \textbf{form a fundamental set of solutions }iff \(Wy_1 ,y_2 \neq 0\)
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Solution of Linear Homogeneous Equations; the Wronskian}\label{solution-of-linear-homogeneous-equations-the-wronskian-1}
+
+\subsection{Solution of Repeated Roots}\label{solution-of-repeated-roots}
+
+In this section, we are going to solve what if \(r_1 = r_2\)
+
+\[
+ay'' + by' +cy = 0 \quad --(a)
+\]
+
+if \(r_1 = r_2\), then
+
+\[
+y_1(t) = c_1 e^{\frac{-b}{2a}t}
+\]
+
+To find second solution, we assume that
+
+\[
+y = v(t)y_1(t) = v(t)e^{\frac{-b}{2a}t}
+\]
+
+\[
+y' = v'(t)e^{\frac{-b}{2a}t} - \frac{b}{2a}v(t)e^{\frac{-b}{2a}t}
+\]
+
+\[
+y'' = v''(t)e^{\frac{-b}{2a}t} - \frac{b}{a}v'(t)e^{\frac{-b}{2a}t} + \frac{b^2}{4a^2}v(t)e^{\frac{-b}{2a}t}
+\]
+
+By substitude equation (a) ,cancelling the factor \(e^{\frac{-b}{2a}t}\), rearranging the items, we find that
+
+\[
+v'' = 0
+\]
+
+\[
+v = c_1 + c_2 t
+\]
+
+then we have
+
+\[
+y = c_1 e^{\frac{-b}{2a}t} + c_2 t e^{\frac{-b}{2a}t}
+\]
+
+Thus \(y\) is a linear combination of the two solutions
+
+\[
+y_1(t) = e^{\frac{-b}{2a}t}, \quad y_2(t) = t e^{\frac{-b}{2a}t}
+\]
+
+\[
+W[y_1 ,y_2](t) = e^{\frac{-b}{2a}}
+\]
+
+Since ,\(W[y_1 ,y_2](t)\) never zero, \(y_1\)and \(y_2\)form a fundamental set of solutions.
+
+\subsection{Reduction of Order}\label{reduction-of-order}
+
+Suppose that we know one solution \(y_1(t)\) , not everywhere zero, of
+
+\[
+y'' + p(t)y' + q(t)y = 0 \quad --(b)
+\]
+
+To find the second solution, let
+
+\[
+y = v(t) y_1(t)
+\]
+
+\[
+y' = v'(t)y_1(t) + v(t)y_1'(t)
+\]
+
+\[
+y'' = v''(t)y_1(t) + v'(t)y_1'(t) + v'(t)y_1'(t) + v(t)y_1''(t)
+\]
+
+Substitude \(y\), \(y'\)and \(y''\)to the equation (b)
+
+\[
+y_1 v'' + (2y_1' + py_1)v' + (y_1'' + p(t)y_1' + q(t)y_1)v = 0
+\]
+
+Since \(y_1\)is a solution of equation (b).
+
+\[
+y_1 v'' + (2y_1' + py_1)v' = 0
+\]
+
+Here becomes a first-order differential equation for the function \(v'\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Variation of Parameters}\label{variation-of-parameters}
+
+In this section, we will intoduce the gerneral method in principle at least, it can be applied
+
+to any equation, and it requires no detailed assumptions about the form of the solution.
+
+\subsection{Method of Variation of Parameters}\label{method-of-variation-of-parameters}
+
+In gerneral, we consider
+
+\[
+y'' + p(t)y' + q(t)y = g(t)
+\]
+
+where \(p\) , \(q\) and \(g\) are continuous functions. We assume that we know
+
+\[
+y_h = c_1y_1(t) + c_2 y_2(t)
+\]
+
+In this idea, we replace the constant \(c_1\),\(c_2\) by \(u_1(t)\),\(u_2(t)\) \(\text{resp.}\)
+
+\[
+y = u_1(t) y_1(t) + u_2(t) y_2(t) \quad --(a)
+\]
+
+\[
+y' = u_1'(t) y_1(t) + u_1(t)y_1'(t) + u'_2(t) y_2(t) + u_2(t)y_2'(t)
+\]
+
+Assume that \(u_1'(t) y_1(t) + u'_2(t) y_2(t) = 0\), we have
+
+\[
+y' =  u_1(t)y_1'(t) + u_2(t)y_2'(t)
+\]
+
+\[
+y'' = u_1'(t)y_1'(t) + u_1(t) y_1''(t) + u_2'(t)y_2'(t) + u_2(t)y''_2(t)
+\]
+
+Now, we substitute\(y\),\(y'\)and \(y''\)to the orginal equation. We find that
+
+\[
+\begin{aligned}
+&u_1(t) \left( y_1''(t) + p(t)y_1'(t) + q(t)y_1(t) \right) \\\\
++&u_2(t) \left( y_2''(t) + p(t)y_2'(t) + q(t)y_2(t) \right) \\\\
++&u_1'(t)y_1'(t) + u_2'(t)y_2'(t) = g(t)
+\end{aligned}
+\]
+
+where \(y_1\)and \(y_2\)are the homogeneous solutions ,hence the equation above can be reduced to
+
+\[
+u_1'(t)y_1'(t) +u_2'(t)y_2'(t)
+= g(t) \quad --(b)
+\]
+
+Since (a) and (b) forms a system of two linear algebraic equations for derivatives \(u_1'(t)\) and \(u_2'(t)\)of the unknown function. By Carmer's rule, we have:
+
+\[
+u_1'(t) = -\frac{y_2(t)g(t)}{W[y_1 ,y_2](t)} ,\quad u_2'(t) = -\frac{y_1(t)g(t)}{W[y_1 ,y_2](t)}
+\]
+
+Integrate both of them, and substitude into (a) ,you can get the answer.
+
+
+\end{document}

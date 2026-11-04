@@ -35,7 +35,6 @@ export const site = {
     { label: 'GitHub', href: 'https://github.com/weichenlin1209', icon: 'github' },
     { label: 'Email', href: 'mailto:info@windson.cc', icon: 'email' },
     { label: 'RSS', href: '/zh/rss.xml', icon: 'rss' },
-    { label: 'Study', href: 'https://study.windson.cc', icon: 'study' },
   ],
 
   // 默认语言（根路径重定向目标）
@@ -54,6 +53,7 @@ export const site = {
         { href: '/zh/blogroll', label: '部落滾' },
         { href: '/zh/photo', label: '相簿' },
         { href: '/zh/now', label: '近況' },
+        { href: '/zh/note', label: '筆記' },
         { href: '/zh/game', label: '遊戲' },
         { href: '/zh/about', label: '關於' },
       ],
@@ -68,6 +68,7 @@ export const site = {
         { href: '/en/archive', label: 'Archive' },
         { href: '/en/photo', label: 'Gallery' },
         { href: '/en/now', label: 'Now' },
+        { href: '/en/note', label: 'Note' },
         { href: '/en/blogroll', label: 'Blogroll' },
         { href: '/en/game', label: 'Games' },
         { href: '/en/about', label: 'About' },
