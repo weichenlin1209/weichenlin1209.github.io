@@ -44,4 +44,22 @@ const specs_en = defineCollection({
   loader: glob({ base: './src/content/en/specs', pattern: '**/*' }),
 });
 
-export const collections = { blog_zh, blog_en, specs_zh, specs_en };
+const idFromContentPath = ({ entry }: { entry: string }) => entry.replace(/\.md$/, '');
+
+const markdown_zh = defineCollection({
+  loader: glob({
+    base: './src/content/zh',
+    pattern: '**/*.md',
+    generateId: idFromContentPath,
+  }),
+});
+
+const markdown_en = defineCollection({
+  loader: glob({
+    base: './src/content/en',
+    pattern: '**/*.md',
+    generateId: idFromContentPath,
+  }),
+});
+
+export const collections = { blog_zh, blog_en, specs_zh, specs_en, markdown_zh, markdown_en };

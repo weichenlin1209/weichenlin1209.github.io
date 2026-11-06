@@ -40,6 +40,12 @@ export const site = {
   // 默认语言（根路径重定向目标）
   defaultLang: 'zh' as Lang,
 
+  // now 頁面顯示的 Markdown 路徑（相對於 src/content/{zh,en}/）
+  nowContentPath: {
+    zh: 'posts/2026/10/diary-26-10.md',
+    en: 'posts/2026/10/diary-26-10.md'
+  },
+
   // 各语言的站点文案与导航
   locales: {
     zh: {

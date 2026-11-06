@@ -9,13 +9,13 @@ import type { Lang } from '../site.config';
 interface Props {
   lang: Lang;
   mdId: string;
+  collection?: 'specs_zh' | 'specs_en' | 'markdown_zh' | 'markdown_en';
   eyebrow: string;
   title: string;
   updated?: string;
 }
 
-const { lang, mdId, eyebrow, title, updated } = Astro.props;
-const collection = lang === 'zh' ? 'specs_zh' : 'specs_en';
+const { lang, mdId, collection = lang === 'zh' ? 'specs_zh' : 'specs_en', eyebrow, title, updated } = Astro.props;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const entry = await getEntry(collection as any, mdId);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

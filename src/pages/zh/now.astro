@@ -2,10 +2,12 @@
 import MarkdownSpecPage from '../../components/MarkdownSpecPage.astro';
 import { getEntry } from 'astro:content';
 import { ui } from '../../i18n';
+import { site } from '../../site.config';
 
 const t = ui.zh;
-const entry = await getEntry('specs_zh' as any, 'now');
+const mdId = site.nowContentPath.zh.replace(/\.md$/, '');
+const entry = await getEntry('markdown_zh', mdId);
 const updated = typeof entry?.data?.updated === 'string' ? entry.data.updated : undefined;
 ---
 
-<MarkdownSpecPage lang="zh" mdId="now" eyebrow={t.nowEyebrow} title={t.nowTitle} updated={updated} />
+<MarkdownSpecPage lang="zh" collection="markdown_zh" mdId={mdId} eyebrow={t.nowEyebrow} title={t.nowTitle} updated={updated} />
