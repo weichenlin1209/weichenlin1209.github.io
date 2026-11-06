@@ -1,0 +1,725 @@
+\documentclass[12pt, a4paper]{article}
+
+% ==========================================
+%  Packages Setup
+% ==========================================
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+
+% ==========================================
+%  Theorem Environments
+% ==========================================
+\newtheoremstyle{break}
+  {\topsep}
+  {\topsep}
+  {\normalfont}
+  {}
+  {\bfseries}
+  {.}
+  {\newline}
+  {}
+
+\theoremstyle{break}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{exerciseitem}{Exercise}[section]
+\newenvironment{exercise}
+  {\begin{exerciseitem}\addcontentsline{toc}{subsection}{Exercise~\theexerciseitem}}
+  {\end{exerciseitem}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[\hskip\labelsep\bfseries #1\@addpunct{.}]\mbox{}\newline\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% ==========================================
+%  Title Page
+% ==========================================
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm}
+        {\LARGE \bfseries The Answer to the Exercise on Mathematical Analysis \par}
+        \vspace{3cm}
+        \begin{tabular}{rl}
+            \textbf{Author:} & Windson, Hikae Lin\\
+            \textbf{Course:} & Mathematical Analysis (I)\\
+        \end{tabular}
+        \vspace{1.5cm}
+
+        {\large Department of Applied Mathematics \par}
+        {\large National Chung Hsing University \par}
+        \vspace{0.3cm}
+        145 Xingda Road, South District, Taichung City 40227, Taiwan (R.O.C.) \par
+        e-mail: info AT windson.cc
+
+        \vfill
+        {\large \textbf{License} \par}
+        {\small This document is licensed under the Creative Commons Attribution 4.0 International License (CC BY-SA 4.0).\par}
+        \vspace{1cm}
+        {\large \today \par}
+    \end{center}
+\end{titlepage}
+
+% ==========================================
+%  Table of Contents
+% ==========================================
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ==========================================
+%  Main Content
+% ==========================================
+\section{Set theory}\label{set-theory}
+
+\begin{exercise}\label{e1.1}
+Show that \(\varnothing\) is a subset of any set.
+\end{exercise}
+
+\begin{solution}
+For any set \(A\), \(\varnothing\) is a subset of \(A\) if \(a \in \varnothing \Rightarrow a \in A\). Since \(\varnothing\) has no elements, this condition holds vacuously. Therefore, \(\varnothing \subseteq A\).
+\end{solution}
+
+\begin{exercise}\label{e1.2}
+If \(A, B, C\) are three sets, prove that
+\[
+(A \cup B) \cap C = (A \cap C) \cup (B \cap C)
+\]
+and
+\[
+(A \cap B) \cup C = (A \cup C) \cap (B \cup C).
+\]
+\end{exercise}
+
+\begin{solution}
+\begin{align*}
+(A \cup B) \cap C &= \{x \mid (x \in A \lor x \in B) \land x \in C\} \\
+&= \{x \mid (x \in A \land x \in C) \lor (x \in B \land x \in C)\} \\
+&= \{x \mid (x \in A \cap C) \lor (x \in B \cap C)\} \\
+&= (A \cap C) \cup (B \cap C)
+\end{align*}
+
+\begin{align*}
+(A \cap B) \cup C &= \{x \mid (x \in A \land x \in B) \lor x \in C\} \\
+&= \{x \mid (x \in A \lor x \in C) \land (x \in B \lor x \in C)\} \\
+  &= \{x \mid (x \in A \cup C) \land (x \in B \cup C)\} \\
+&= (A \cup C) \cap (B \cup C)
+\end{align*}
+\end{solution}
+
+\begin{exercise}\label{e1.3}
+If \(A\) and \(B\) are sets, prove that
+\[
+A \subseteq B \iff A \cap B = A \iff A \cup B = B.
+\]
+\end{exercise}
+
+\begin{solution}
+\begin{itemize}
+    \item[(1)] \(A \subset B \implies A \cap B = A\)
+    
+    \(\forall x \in A \cap B\), \(x \in A \land x \in B \implies A \cap B \subset A\)
+    
+    \(\because A \subset B \therefore \forall a \in A\), \(a \in B \implies a \in A \cap B \implies A \subset A \cap B\)
+    
+    By Axiom of Extension, \(A \cap B = A\)
+
+    \item[(2)] \(A \cap B = A \implies A \cup B = B\)
+    
+    \(\forall x \in A \cup B\), \(x \in A \lor x \in B \implies x \in A \cap B \lor x \in B\)
+    
+    \(\implies (x \in A \land x \in B) \lor x \in B \implies x \in B \implies A \cup B \subset B\)
+    
+    \(\forall b \in B\), \(b \in A \cup B = \{x \mid x \in A \lor x \in B\}\)
+    
+    By Axiom of Extension, \(A \cup B = B\)
+
+    \item[(3)] \(A \cup B = B \implies A \subset B\)
+    
+    \(\forall a \in A\), \(a \in A \cup B \implies a \in B\)
+    
+    Hence, \(A \subset B\)
+\end{itemize}
+\end{solution}
+
+\begin{exercise}\label{e1.4}
+Let \(X\) be a set. For a subset \(A\) of \(X\), we define \(A' \equiv A^c := X \setminus A\). If \(A\) and \(B\) are two subsets of \(X\), prove De Morgan's laws:
+\[
+(A \cup B)^c = A^c \cap B^c \quad \text{and} \quad (A \cap B)^c = A^c \cup B^c.
+\]
+\end{exercise}
+
+\begin{solution}
+We prove both identity relations via equivalent logical statements for element membership.
+
+\textbf{Part 1:} Prove \((A \cup B)^c = A^c \cap B^c\).
+For any \(x \in X\), we have:
+\begin{align*}
+x \in (A \cup B)^c &\iff x \in X \setminus (A \cup B) \\
+&\iff x \in X \text{ and } x \notin (A \cup B) \\
+&\iff x \in X \text{ and } \neg(x \in A \lor x \in B) \\
+&\iff x \in X \text{ and } (x \notin A \land x \notin B) \\
+&\iff (x \in X \text{ and } x \notin A) \land (x \in X \text{ and } x \notin B) \\
+&\iff x \in A^c \land x \in B^c \\
+&\iff x \in A^c \cap B^c.
+\end{align*}
+Hence, \((A \cup B)^c = A^c \cap B^c\).
+
+\textbf{Part 2:} Prove \((A \cap B)^c = A^c \cup B^c\).
+For any \(x \in X\), we have:
+\begin{align*}
+x \in (A \cap B)^c &\iff x \in X \setminus (A \cap B) \\
+&\iff x \in X \text{ and } x \notin (A \cap B) \\
+&\iff x \in X \text{ and } \neg(x \in A \land x \in B) \\
+&\iff x \in X \text{ and } (x \notin A \lor x \notin B) \\
+&\iff (x \in X \text{ and } x \notin A) \lor (x \in X \text{ and } x \notin B) \\
+&\iff x \in A^c \lor x \in B^c \\
+&\iff x \in A^c \cup B^c.
+\end{align*}
+Hence, \((A \cap B)^c = A^c \cup B^c\).
+\end{solution}
+
+\begin{exercise}\label{e1.5}
+Find \(\mathcal{P}(\{a,b\})\).
+\end{exercise}
+
+\begin{solution}
+By definition of the \textbf{power set}, \(\mathcal{P}(S)\) is the collection of all subsets of \(S\). The subsets of the set \(\{a,b\}\) are \(\varnothing\), \(\{a\}\), \(\{b\}\), and \(\{a,b\}\). 
+
+Therefore,
+\[
+\mathcal{P}(\{a,b\}) = \{\varnothing, \{a\}, \{b\}, \{a,b\}\}.
+\]
+\end{solution}
+
+\begin{exercise}\label{e1.6}
+Show that every ordered pair is a set. (Hint: \((a, b) \subseteq \mathcal{P}(\{a,b\})\).)
+\end{exercise}
+
+\begin{solution}
+By the definition of ordered pair, an ordered pair is defined as \((a,b) = \{\{a\}, \{a,b\}\}\).
+
+For any sets \(a\) and \(b\), the set \(\{a,b\}\) exists by the \textbf{Axiom of Pairing}. The subsets \(\{a\}\) and \(\{a,b\}\) are elements of the power set \(\mathcal{P}(\{a,b\})\). That is,
+\[
+\{a\} \in \mathcal{P}(\{a,b\}) \quad \text{and} \quad \{a,b\} \in \mathcal{P}(\{a,b\}).
+\]
+Consequently, all elements of \((a,b)\) belong to \(\mathcal{P}(\{a,b\})\), which means:
+\[
+(a,b) = \{\{a\}, \{a,b\}\} \subseteq \mathcal{P}(\{a,b\}).
+\]
+
+By the \textbf{Axiom of Specification}, any subset of a set defined by a logical predicate is itself a set. Thus, \((a,b)\) is a set.
+\end{solution}
+
+\begin{exercise}\label{e1.7}
+If \((a,b) = (c,d)\), show that \(a = c\) and \(b = d\).
+\end{exercise}
+
+\begin{solution}
+By definition, \((a,b) = \{\{a\}, \{a,b\}\}\) and \((c,d) = \{\{c\}, \{c,d\}\}\). The equality \((a,b) = (c,d)\) implies:
+\[
+\{\{a\}, \{a,b\}\} = \{\{c\}, \{c,d\}\}.
+\]
+
+We consider two exhaustive cases:
+
+\textbf{Case 1:} \(a = b\).
+In this case, \((a,b) = \{\{a\}, \{a,a\}\} = \{\{a\}\}\). Thus,
+\[
+\{\{c\}, \{c,d\}\} = \{\{a\}\}.
+\]
+This forces \(\{c\} = \{a\}\) and \(\{c,d\} = \{a\}\), which yields \(c = a\) and \(d = a = b\). Hence, \(a = c\) and \(b = d\).
+
+\textbf{Case 2:} \(a \neq b\).
+Since \(\{a\} \in \{\{a\}, \{a,b\}\}\), we must have \(\{a\} \in \{\{c\}, \{c,d\}\}\), so either \(\{a\} = \{c\}\) or \(\{a\} = \{c,d\}\).
+\begin{itemize}
+    \item If \(\{a\} = \{c,d\}\), then \(c = d = a\), which implies \((c,d) = \{\{a\}\}\). This contradicts the fact that \((a,b)\) contains two distinct elements \(\{a\}\) and \(\{a,b\}\).
+    \item Therefore, \(\{a\} = \{c\}\), which implies \(a = c\).
+\end{itemize}
+Substituting \(a = c\) into the original equality gives \(\{\{a\}, \{a,b\}\} = \{\{a\}, \{a,d\}\}\). Since \(\{a,b\} \in \{\{a\}, \{a,d\}\}\) and \(\{a,b\} \neq \{a\}\) (because \(a \neq b\)), it follows that:
+\[
+\{a,b\} = \{a,d\}.
+\]
+Since \(b \in \{a,b\}\) and \(b \neq a\), we must have \(b \in \{a,d\}\) with \(b \neq a\), which forces \(b = d\).
+
+In both cases, we conclude that \(a = c\) and \(b = d\).
+\end{solution}
+
+\begin{exercise}\label{e1.8}
+If \(A\) and \(B\) are sets, prove that \(A \times B\) is a set.
+\end{exercise}
+
+\begin{solution}
+The Cartesian product of two sets \(A\) and \(B\) is defined as
+\[
+A \times B = \{(a, b) \mid a \in A \land b \in B\}.
+\]
+For any \(a \in A\) and \(b \in B\), both elements belong to the union: \(a, b \in A \cup B\).
+This implies \(\{a\} \subseteq A \cup B\) and \(\{a, b\} \subseteq A \cup B\), so by the definition of the power set,
+\[
+\{a\} \in \mathcal{P}(A \cup B) \quad \text{and} \quad \{a, b\} \in \mathcal{P}(A \cup B).
+\]
+Consequently, the set \((a, b) = \{\{a\}, \{a, b\}\}\) is a subset of \(\mathcal{P}(A \cup B)\), which means
+\[
+(a, b) \in \mathcal{P}(\mathcal{P}(A \cup B)).
+\]
+By the Axiom of Union and the Axiom of Power Set, the set \(\mathcal{P}(\mathcal{P}(A \cup B))\) exists. Therefore, by the Axiom of Specification,
+\[
+A \times B = \{ z \in \mathcal{P}(\mathcal{P}(A \cup B)) \mid \exists a \in A, \exists b \in B \text{ such that } z = (a, b) \}
+\]
+is a well-defined set.
+\end{solution}
+
+\begin{exercise}\label{e1.9}
+If \(A, B\) and \(X\) are sets, prove that
+\begin{enumerate}[label=(\roman*)]
+    \item \((A \cup B) \times X = (A \times X) \cup (B \times X)\),
+    \item \((A \cap B) \times X = (A \times X) \cap (B \times X)\),
+    \item \((A - B) \times X = (A \times X) - (B \times X)\).
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+We prove each identity by logical equivalence of element membership.
+
+\textbf{Part (i):} Prove \((A \cup B) \times X = (A \times X) \cup (B \times X)\).
+\begin{align*}
+    (A \cup B) \times X &= \{(a, b) \mid a \in A \cup B, b \in X\} \\
+    &= \{(a, b) \mid (a \in A \lor a \in B) \land b \in X\} \\
+    &= \{(a, b) \mid (a \in A \land b \in X) \lor (a \in B \land b \in X)\} \\
+    &= \{(a, b) \mid a \in A, b \in X\} \cup \{(a, b) \mid a \in B, b \in X\} \\
+    &= (A \times X) \cup (B \times X)
+\end{align*}
+
+
+\textbf{Part (ii):} Prove \((A \cap B) \times X = (A \times X) \cap (B \times X)\).
+\begin{align*}
+    (A \cap B) \times X &= \{(a, b) \mid a \in A \cap B, b \in X\} \\
+    &= \{(a, b) \mid (a \in A \land a \in B) \land b \in X\} \\
+    &= \{(a, b) \mid (a \in A \land b \in X) \land (a \in B \land b \in X)\} \\
+    &= \{(a, b) \mid a \in A, b \in X\} \cap \{(a, b) \mid a \in B, b \in X\} \\
+    &= (A \times X) \cap (B \times X)
+\end{align*}
+
+
+\textbf{Part (iii):} Prove \((A - B) \times X = (A \times X) - (B \times X)\).
+\begin{align*}
+    (A - B) \times X &= \{(a, b) \mid a \in A - B, b \in X\} \\
+    &= \{(a, b) \mid a \in A \land \neg(a \in B) \land b \in X\} \\
+    &= \{(a, b) \mid a \in A \land b \in X \land [\neg(a \in B) \lor \neg(b \in X)]\} \\
+    &= \{(a, b) \mid a \in A \land b \in X \land \neg(a \in B \land b \in X)\} \\
+    &= (A \times X) - (B \times X)
+\end{align*}
+\end{solution}
+
+\begin{exercise}\label{e1.10}
+If \(A\) and \(B\) are sets, prove that \(A \times B = \varnothing \iff A = \varnothing \text{ or } B = \varnothing\).
+\end{exercise}
+
+\begin{solution}
+We prove both directions of the equivalence.
+
+\textbf{(\(\Leftarrow\))} Assume \(A = \varnothing\) or \(B = \varnothing\).
+If \(A = \varnothing\), then there exists no element \(x \in A\). Consequently, no ordered pair \((x, y)\) with \(x \in A\) and \(y \in B\) can be formed. Thus, \(A \times B = \varnothing\).
+Similarly, if \(B = \varnothing\), no element \(y \in B\) exists, yielding \(A \times B = \varnothing\).
+
+\textbf{(\(\Rightarrow\))} We prove the contrapositive: if \(A \neq \varnothing\) and \(B \neq \varnothing\), then \(A \times B \neq \varnothing\).
+Since \(A \neq \varnothing\), there exists at least one element \(x \in A\).
+Since \(B \neq \varnothing\), there exists at least one element \(y \in B\).
+Thus, the ordered pair \((x, y)\) satisfies \(x \in A\) and \(y \in B\), which implies \((x, y) \in A \times B\).
+Hence, \(A \times B \neq \varnothing\).
+
+Therefore, \(A \times B = \varnothing \iff A = \varnothing \text{ or } B = \varnothing\).
+\end{solution}
+
+\begin{exercise}\label{e1.11}
+Show that \(\varnothing\) is a relation.
+\end{exercise}
+
+\begin{solution}
+By definition, a binary relation \(R\) from a set \(X\) to a set \(Y\) is any subset of the Cartesian product \(X \times Y\).
+
+Since the empty set \(\varnothing\) is a subset of every set, we have:
+\[
+\varnothing \subseteq X \times Y
+\]
+for any choice of sets \(X\) and \(Y\). Therefore, \(\varnothing\) satisfies the formal definition of a relation.
+\end{solution}
+
+\begin{exercise}\label{e1.12}
+If \(A\) and \(B\) are sets, prove that \(A \times B\) is a relation.
+\end{exercise}
+
+\begin{solution}
+By definition, a binary relation from a set \(A\) to a set \(B\) is any subset of the Cartesian product \(A \times B\). 
+
+Since \(A \times B \subseteq A \times B\) holds trivially for any set \(A \times B\), it follows that \(A \times B\) is a relation from \(A\) to \(B\).
+\end{solution}
+
+\begin{exercise}\label{e1.13}
+If \(R\) is a relation, \(A := \operatorname{domain}(R)\), and \(B := \operatorname{range}(R)\), prove that \(R \subseteq A \times B\).
+\end{exercise}
+
+\begin{solution}
+By definition, the domain and range of a relation \(R\) are given by
+\[
+\operatorname{domain}(R) = \{ x \mid \exists y \text{ such that } (x, y) \in R \} = A,
+\]
+\[
+\operatorname{range}(R) = \{ y \mid \exists x \text{ such that } (x, y) \in R \} = B.
+\]
+Let \(z \in R\). Since \(R\) is a relation, \(z\) is an ordered pair, so \(z = (x, y)\) for some \(x\) and \(y\). 
+By definition of domain, \(x \in \operatorname{domain}(R) = A\). 
+By definition of range, \(y \in \operatorname{range}(R) = B\). 
+
+Thus, \((x, y) \in A \times B\), which shows that \(R \subseteq A \times B\).
+\end{solution}
+
+\begin{exercise}\label{e1.14}
+Let \(X\) be a set. Prove that \(R := \{(A, B) \mid A, B \subseteq X\}\) is an equivalence relation on \(\mathcal{P}(X)\).
+\end{exercise}
+
+\begin{solution}
+To prove that \(R\) is an equivalence relation on the power set \(\mathcal{P}(X)\), we must verify three properties:
+
+\begin{enumerate}
+    \item \textbf{Reflexivity:} For any \(A \in \mathcal{P}(X)\), we have \(A \subseteq X\). Thus, \((A, A) \in R\).
+    \item \textbf{Symmetry:} Let \((A, B) \in R\). By definition of \(R\), both \(A \subseteq X\) and \(B \subseteq X\). This implies \((B, A) \in R\).
+    \item \textbf{Transitivity:} Let \((A, B) \in R\) and \((B, C) \in R\). Then \(A \subseteq X\), \(B \subseteq X\), and \(C \subseteq X\). In particular, \(A \subseteq X\) and \(C \subseteq X\), so \((A, C) \in R\).
+\end{enumerate}
+Since \(R\) is reflexive, symmetric, and transitive on \(\mathcal{P}(X)\), \(R\) is an equivalence relation.
+\end{solution}
+
+\begin{exercise}\label{e1.15}
+Prove that \(\varnothing\) is a function.
+\end{exercise}
+
+\begin{solution}
+A set \(f\) is defined to be a function if \(f\) is a relation (i.e., a set of ordered pairs) satisfying the single-valued condition:
+\[
+\forall x, y_1, y_2, \quad ((x, y_1) \in f \land (x, y_2) \in f) \implies y_1 = y_2.
+\]
+1. The empty set \(\varnothing\) is a relation because \(\varnothing \subseteq \varnothing \times \varnothing\).
+2. The conditional requirement holds vacuously because there exist no elements \((x, y_1) \in \varnothing\).
+
+Therefore, \(\varnothing\) is a function.
+\end{solution}
+
+\begin{exercise}\label{e1.16}
+Prove that \(\varnothing\) is a 1-1 function.
+\end{exercise}
+
+\begin{solution}
+A function \(f\) is defined to be 1-1 (injective) if it satisfies:
+\[
+\forall x_1, x_2, y, \quad ((x_1, y) \in f \land (x_2, y) \in f) \implies x_1 = x_2.
+\]
+Since \(\varnothing\) contains no elements, the premise \((x_1, y) \in \varnothing\) is false for all \(x_1, y\). Thus, the implication holds vacuously.
+
+Hence, \(\varnothing\) is a 1-1 function.
+\end{solution}
+
+\begin{exercise}\label{e1.17}
+Prove that a function \(F\) is 1-1 if and only if \(F^{-1}\) is also a function.
+\end{exercise}
+
+\begin{solution}
+Let \(F\) be a function. The inverse relation is defined by
+\[
+F^{-1} = \{(y, x) \mid (x, y) \in F\}.
+\]
+We prove both directions of the equivalence:
+
+\textbf{(\(\Rightarrow\))} Assume \(F\) is 1-1. We must show that \(F^{-1}\) is a function. 
+Suppose \((y, x_1) \in F^{-1}\) and \((y, x_2) \in F^{-1}\). 
+By definition of \(F^{-1}\), this means \((x_1, y) \in F\) and \((x_2, y) \in F\). 
+Since \(F\) is 1-1, \((x_1, y) \in F \land (x_2, y) \in F \implies x_1 = x_2\). 
+Hence, \(F^{-1}\) satisfies the single-valued property and is a function.
+
+\textbf{(\(\Leftarrow\))} Assume \(F^{-1}\) is a function. We must show that \(F\) is 1-1. 
+Suppose \((x_1, y) \in F\) and \((x_2, y) \in F\). 
+By definition of \(F^{-1}\), we have \((y, x_1) \in F^{-1}\) and \((y, x_2) \in F^{-1}\). 
+Since \(F^{-1}\) is a function, it must map \(y\) to a unique value, so \(x_1 = x_2\). 
+Hence, \(F\) is 1-1.
+
+Therefore, \(F\) is 1-1 if and only if \(F^{-1}\) is a function.
+\end{solution}
+
+\begin{exercise}\label{e1.18}
+Suppose \(f : X \to Y\) is a function. Show that the following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+    \item \(f\) is 1-1,
+    \item \(f(A \setminus B) = f(A) \setminus f(B)\) for all subsets \(A\) and \(B\) of \(X\),
+    \item \(f(A \cap B) = f(A) \cap f(B)\) for all subsets \(A\) and \(B\) of \(X\).
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+We establish equivalence by proving \((i) \implies (ii) \implies (iii) \implies (i)\).
+
+\textbf{Step 1: \((i) \implies (ii)\).} \\
+Assume \(f\) is 1-1. Let \(A, B \subseteq X\).
+\begin{itemize}
+    \item (\(\subseteq\)) Let \(y \in f(A \setminus B)\). Then \(y = f(x)\) for some \(x \in A \setminus B\), meaning \(x \in A\) and \(x \notin B\). 
+    Since \(x \in A\), \(y = f(x) \in f(A)\). 
+    Suppose for contradiction that \(y \in f(B)\). Then \(y = f(x')\) for some \(x' \in B\). Since \(f\) is 1-1, \(f(x) = f(x') \implies x = x' \in B\), which contradicts \(x \notin B\). Thus \(y \notin f(B)\), so \(y \in f(A) \setminus f(B)\).
+    \item (\(\supseteq\)) Let \(y \in f(A) \setminus f(B)\). Then \(y \in f(A)\) and \(y \notin f(B)\). 
+    Since \(y \in f(A)\), \(y = f(x)\) for some \(x \in A\). If \(x \in B\), then \(y = f(x) \in f(B)\), a contradiction. Hence \(x \notin B\), so \(x \in A \setminus B\). Therefore \(y = f(x) \in f(A \setminus B)\).
+\end{itemize}
+Thus \(f(A \setminus B) = f(A) \setminus f(B)\).
+
+\textbf{Step 2: \((ii) \implies (iii)\).} \\
+Assume (ii) holds. For any subsets \(A, B \subseteq X\), notice that \(A \cap B = A \setminus (A \setminus B)\).
+Using property (ii) twice:
+\[
+f(A \cap B) = f(A \setminus (A \setminus B)) = f(A) \setminus f(A \setminus B) = f(A) \setminus (f(A) \setminus f(B)) = f(A) \cap f(B).
+\]
+Thus \(f(A \cap B) = f(A) \cap f(B)\).
+
+\textbf{Step 3: \((iii) \implies (i)\).} \\
+Assume (iii) holds. Let \(x_1, x_2 \in X\) with \(f(x_1) = f(x_2)\). 
+Consider singletons \(A = \{x_1\}\) and \(B = \{x_2\}\). 
+Then \(f(A) = \{f(x_1)\}\) and \(f(B) = \{f(x_2)\} = \{f(x_1)\}\). 
+By property (iii),
+\[
+f(\{x_1\} \cap \{x_2\}) = f(\{x_1\}) \cap f(\{x_2\}) = \{f(x_1)\} \neq \varnothing.
+\]
+This implies \(\{x_1\} \cap \{x_2\} \neq \varnothing\), which means \(x_1 = x_2\). 
+Hence, \(f\) is 1-1.
+
+Since \((i) \implies (ii) \implies (iii) \implies (i)\), the statements are equivalent.
+\end{solution}
+
+\begin{exercise}\label{e1.19}
+Suppose \(F : X \to Y\) is a function. Let \(\{A_i\}_{i \in I}\) be a family of subsets of \(Y\), and let \(\{B_j\}_{j \in J}\) be a family of subsets of \(X\). Prove that
+\begin{enumerate}[label=(\alph*)]
+    \item \(F\left(\bigcup_{j \in J} B_j\right) = \bigcup_{j \in J} F(B_j)\),
+    \item \(F^{-1}\left(\bigcup_{i \in I} A_i\right) = \bigcup_{i \in I} F^{-1}(A_i)\),
+    \item \(F^{-1}\left(\bigcap_{i \in I} A_i\right) = \bigcap_{i \in I} F^{-1}(A_i)\),
+    \item \(F^{-1}(A^c) = [F^{-1}(A)]^c\), where \(A \subseteq Y\).
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+We prove each equality via logical equivalence of element membership.
+
+\textbf{Part (a):} For any \(y \in Y\),
+\begin{align*}
+y \in F\left(\bigcup_{j \in J} B_j\right) &\iff \exists x \in \bigcup_{j \in J} B_j \text{ such that } F(x) = y \\
+&\iff \exists x \in X, \, \exists j_0 \in J \text{ s.t. } (x \in B_{j_0} \land F(x) = y) \\
+&\iff \exists j_0 \in J, \, y \in F(B_{j_0}) \\
+&\iff y \in \bigcup_{j \in J} F(B_j).
+\end{align*}
+Thus, \(F\left(\bigcup_{j \in J} B_j\right) = \bigcup_{j \in J} F(B_j)\).
+
+\textbf{Part (b):} For any \(x \in X\),
+\begin{align*}
+x \in F^{-1}\left(\bigcup_{i \in I} A_i\right) &\iff F(x) \in \bigcup_{i \in I} A_i \\
+&\iff \exists i_0 \in I \text{ such that } F(x) \in A_{i_0} \\
+&\iff \exists i_0 \in I \text{ such that } x \in F^{-1}(A_{i_0}) \\
+&\iff x \in \bigcup_{i \in I} F^{-1}(A_i).
+\end{align*}
+Thus, \(F^{-1}\left(\bigcup_{i \in I} A_i\right) = \bigcup_{i \in I} F^{-1}(A_i)\).
+
+\textbf{Part (c):} For any \(x \in X\),
+\begin{align*}
+x \in F^{-1}\left(\bigcap_{i \in I} A_i\right) &\iff F(x) \in \bigcap_{i \in I} A_i \\
+&\iff \forall i \in I, \, F(x) \in A_i \\
+&\iff \forall i \in I, \, x \in F^{-1}(A_i) \\
+&\iff x \in \bigcap_{i \in I} F^{-1}(A_i).
+\end{align*}
+Thus, \(F^{-1}\left(\bigcap_{i \in I} A_i\right) = \bigcap_{i \in I} F^{-1}(A_i)\).
+
+\textbf{Part (d):} For any \(x \in X\) and subset \(A \subseteq Y\),
+\begin{align*}
+x \in F^{-1}(A^c) &\iff F(x) \in A^c \\
+&\iff F(x) \in Y \setminus A \\
+&\iff F(x) \notin A \\
+&\iff \neg(x \in F^{-1}(A)) \\
+&\iff x \in [F^{-1}(A)]^c.
+\end{align*}
+Thus, \(F^{-1}(A^c) = [F^{-1}(A)]^c\).
+\end{solution}
+
+\begin{exercise}\label{e1.20}
+Prove that the symbol ``\(\sim\)'' in Definition 1.15 satisfies three conditions in the definition of equivalence relation.
+\end{exercise}
+
+\begin{solution}
+The symbol \(\sim\) denotes \textbf{equipotence} (or equal cardinality) between two sets, meaning \(A \sim B\) if and only if there exists a \textbf{bijection} \(f: A \to B\). We verify the three properties of an equivalence relation:
+
+\begin{enumerate}
+    \item \textbf{Reflexivity:} For any set \(A\), the identity function \(I_A : A \to A\) defined by \(I_A(x) = x\) is a bijection. Therefore, \(A \sim A\).
+    \item \textbf{Symmetry:} Suppose \(A \sim B\). Then there exists a bijection \(f: A \to B\). Since \(f\) is bijective, its inverse function \(f^{-1}: B \to A\) is also a bijection. Therefore, \(B \sim A\).
+    \item \textbf{Transitivity:} Suppose \(A \sim B\) and \(B \sim C\). There exist bijections \(f: A \to B\) and \(g: B \to C\). The composition of two bijections, \(g \circ f : A \to C\), is also a bijection. Therefore, \(A \sim C\).
+\end{enumerate}
+Hence, \(\sim\) is an equivalence relation on any set of sets.
+\end{solution}
+
+\begin{exercise}\label{e1.21}
+If \(A\) is a set, show that the cardinality exists.
+\end{exercise}
+
+\begin{solution}
+By the \textbf{Well-Ordering Theorem} (which is logically equivalent to the \textbf{Axiom of Choice}), every set \(A\) can be well-ordered. 
+
+Every well-ordered set is order-isomorphic to a unique \textbf{ordinal number}. Let \(\Omega\) be the class of all ordinals that are equipotent to \(A\). Since \(A\) can be well-ordered, \(\Omega\) is non-empty. 
+
+The class of ordinal numbers is itself well-ordered by set membership (\(\in\)). Therefore, the non-empty class \(\Omega\) contains a least element. This least ordinal, often called the \textbf{initial ordinal} equipotent to \(A\), is defined as the cardinality of \(A\), denoted as \(\text{card}(A)\) or \(|A|\). Thus, the cardinality of any set \(A\) exists.
+\end{solution}
+
+\begin{exercise}\label{e1.22}
+If there exists a 1-1 function \(f : A \to B\), show that \(\text{card} A \le \text{card} B\).
+\end{exercise}
+
+\begin{solution}
+By definition, the inequality of cardinal numbers \(\text{card} A \le \text{card} B\) is strictly defined by the existence of an \textbf{injective} (1-1) function from \(A\) to \(B\). 
+
+Since we are given a 1-1 function \(f : A \to B\), the condition for cardinality inequality is directly satisfied. The set \(A\) is equipotent to \(f(A)\), which is a subset of \(B\). Hence, \(\text{card} A \le \text{card} B\).
+\end{solution}
+
+\begin{exercise}\label{e1.23}
+Show that \(\text{card} A < \text{card} 2^A\) for any set \(A\).
+\end{exercise}
+
+\begin{solution}
+This is a proof of \textbf{Cantor's Theorem}.
+
+First, we show \(\text{card} A \le \text{card} 2^A\). Define a function \(f : A \to 2^A\) by \(f(x) = \{x\}\). For any \(x, y \in A\), if \(f(x) = f(y)\), then \(\{x\} = \{y\}\), implying \(x = y\). Thus, \(f\) is 1-1, which establishes \(\text{card} A \le \text{card} 2^A\).
+
+Second, we prove \(\text{card} A \neq \text{card} 2^A\) by contradiction. Suppose there exists a \textbf{surjection} \(g : A \to 2^A\). 
+Construct the subset \(S \subseteq A\) defined by:
+\[
+S = \{x \in A \mid x \notin g(x)\}
+\]
+Since \(S \in 2^A\) and \(g\) is surjective, there must exist some \(y \in A\) such that \(g(y) = S\). 
+Consider whether \(y \in S\):
+\begin{itemize}
+    \item If \(y \in S\), then by definition of \(S\), \(y \notin g(y)\). Since \(g(y) = S\), this implies \(y \notin S\), a contradiction.
+    \item If \(y \notin S\), then \(y \notin g(y)\). By definition of \(S\), this implies \(y \in S\), a contradiction.
+\end{itemize}
+Since both cases yield logical contradictions, no such surjection \(g\) can exist. Consequently, no bijection can exist between \(A\) and \(2^A\). 
+
+Therefore, \(\text{card} A < \text{card} 2^A\).
+\end{solution}
+
+\begin{exercise}\label{e1.24}
+Prove that \(\mathbb{Z} := \{\dots, -2, -1, 0, 1, 2, 3, \dots\}\) is countable.
+\end{exercise}
+
+\begin{solution}
+A set is \textbf{countable} if it is equipotent to the set of natural numbers \(\mathbb{N}\). Let \(\mathbb{N} = \{0, 1, 2, 3, \dots\}\). We construct a function \(f: \mathbb{Z} \to \mathbb{N}\) as follows:
+\[
+f(n) = \begin{cases} 
+2n, & \text{if } n \ge 0 \\
+-2n - 1, & \text{if } n < 0 
+\end{cases}
+\]
+To show \(f\) is a bijection:
+\begin{itemize}
+    \item \textbf{Injectivity:} If \(f(a) = f(b)\), they must have the same parity. If both are even, \(2a = 2b \implies a = b\). If both are odd, \(-2a - 1 = -2b - 1 \implies a = b\). Thus \(f\) is 1-1.
+    \item \textbf{Surjectivity:} Let \(m \in \mathbb{N}\). If \(m\) is even, let \(n = m/2 \ge 0\); then \(f(n) = m\). If \(m\) is odd, let \(n = -(m+1)/2 < 0\); then \(f(n) = m\). Thus \(f\) is onto.
+\end{itemize}
+Since \(f\) is a bijection, \(\mathbb{Z} \sim \mathbb{N}\). Therefore, \(\mathbb{Z}\) is countable.
+\end{solution}
+
+\begin{exercise}\label{e1.25}
+Let \(A\) be a nonempty set and let \(a \in A\). If \(A \sim A \setminus \{a\}\), show \(A\) is infinite.
+\end{exercise}
+
+\begin{solution}
+By definition, a set is \textbf{Dedekind-infinite} if it is equipotent to a proper subset of itself. 
+
+Since \(a \in A\), the set \(A \setminus \{a\}\) is a proper subset of \(A\) (as \(a \notin A \setminus \{a\}\)). We are given that \(A \sim A \setminus \{a\}\), meaning there exists a bijection between \(A\) and a proper subset of \(A\).
+
+Any set that is Dedekind-infinite is an infinite set (it cannot be in bijection with any finite ordinal). Therefore, \(A\) is infinite.
+\end{solution}
+
+\begin{exercise}\label{e1.26}
+Let \(\alpha\) be an ordinal number with \(\alpha > 0\) and let \(S\) be a nonempty subset of \(\alpha\). Show that \(S\) contains the minimum.
+\end{exercise}
+
+\begin{solution}
+Let \(\beta = \{x \in \alpha \mid x < y \text{ for all } y \in S\}\). 
+The set \(\beta\) consists of all strict lower bounds of \(S\) within \(\alpha\). Since \(\alpha\) is an ordinal, it is a \textbf{transitive set} well-ordered by \(\in\). The condition defines \(\beta\) as an initial segment of \(\alpha\), meaning \(\beta\) is itself an ordinal.
+
+Because \(S \subseteq \alpha\), we have \(\beta \subseteq \alpha\). Since \(S\) is nonempty, \(\beta \neq \alpha\) (otherwise \(\alpha\) would be strictly less than elements in \(S\subseteq\alpha\), leading to \(y<y\)). Since \(\beta\) is an ordinal properly contained in \(\alpha\), we have \(\beta \in \alpha\).
+
+We claim \(\beta = \min(S)\). 
+Assume \(\beta \notin S\). By definition, \(\beta\) is the set of all \(x \in \alpha\) strictly less than every \(y \in S\). Since \(\beta \notin S\), and \(\alpha\) is totally ordered, \(\beta\) must be strictly less than every \(y \in S\). But this satisfies the defining condition of \(\beta\), implying \(\beta \in \beta\). This violates the \textbf{Axiom of Foundation} (no set is an element of itself).
+
+Hence, our assumption is false, and \(\beta \in S\). Since \(\beta \in S\) and \(\beta\) is defined such that it is less than or equal to every \(y \in S\), \(\beta\) is the minimum element of \(S\).
+\end{solution}
+
+\begin{exercise}\label{e1.27}
+Let \(\alpha\) be an ordinal number with \(\alpha > 0\) and let \(S\) be a subset of \(\alpha\). Suppose that
+(i) \(0 \in S\).
+(ii) If \(y \in \alpha\) is such that \(y \subset S\), then \(y \in S\).
+Show that \(S = \alpha\).
+\end{exercise}
+
+\begin{solution}
+We proceed by \textbf{Transfinite Induction}. 
+Assume for contradiction that \(S \neq \alpha\). Since \(S\) is a subset of \(\alpha\), the relative complement \(\alpha \setminus S\) is a nonempty subset of \(\alpha\). 
+
+By the well-ordering of ordinals (established in the previous exercise), the nonempty set \(\alpha \setminus S\) must contain a minimum element. Let \(\gamma = \min(\alpha \setminus S)\).
+
+Since \(\gamma\) is the minimum of \(\alpha \setminus S\), any ordinal \(x < \gamma\) must satisfy \(x \notin \alpha \setminus S\). Because \(x \in \alpha\), this implies \(x \in S\). 
+Recall that for ordinals, \(x < \gamma \iff x \in \gamma\). Thus, for all \(x \in \gamma\), we have \(x \in S\). This is equivalently written as \(\gamma \subseteq S\). 
+
+If \(\gamma = 0\), then \(\gamma \in S\) by property (i), contradicting \(\gamma \in \alpha \setminus S\).
+If \(\gamma > 0\), since \(\gamma \in \alpha\) and \(\gamma \subseteq S\), we note that for ordinals, subsets that are initial segments are elements. More precisely, property (ii) states that if \(y \in \alpha\) and \(y \subset S\) (where \(\subset\) is interpreted as subset inclusion), then \(y \in S\). Since \(\gamma \subseteq S\), applying property (ii) yields \(\gamma \in S\).
+
+This directly contradicts the initial assumption that \(\gamma \in \alpha \setminus S\). 
+Hence, \(\alpha \setminus S\) must be empty, meaning \(S = \alpha\).
+\end{solution}
+
+\begin{exercise}\label{e1.28}
+Let \(A_i\) be sets for each \(i \in I\), where \(I\) is a set. Show that the family \(\{A_i \}_{i\in I}\) is also a set.
+\end{exercise}
+
+\begin{solution}
+By the \textbf{Axiom Schema of Replacement}, if the domain \(I\) is a set, and there exists a functional relation \(f(i) = A_i\) mapping each element of \(I\) to a unique set \(A_i\), then the range of this mapping is also a set. Thus, the collection \(\mathcal{A} = \{A_i \mid i \in I\}\) is a valid set.
+
+Following the provided hint (Axiom of Unions and Axiom of Specification), we can formally define the indexed family as a function (a set of ordered pairs). Let \(U = \bigcup_{i \in I} A_i\) (which requires the \textbf{Axiom of Unions} operating on the range set \(\mathcal{A}\)). The Cartesian product \(I \times \mathcal{A}\) exists. 
+
+By the \textbf{Axiom of Specification}, we can construct the set:
+\[
+F = \{(i, X) \in I \times \mathcal{A} \mid X = A_i\}
+\]
+This set \(F\) represents the formal family \(\{A_i\}_{i \in I}\) as a function with domain \(I\). Because it is separated from a valid bounding set \(I \times \mathcal{A}\), it is rigorously proven to be a set.
+\end{solution}
+
+
+\section{Real and Complex Number Systems}\label{real-and-complex-system}
+
+\end{document}
