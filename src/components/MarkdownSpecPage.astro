@@ -12,10 +12,10 @@ interface Props {
   collection?: 'specs_zh' | 'specs_en' | 'markdown_zh' | 'markdown_en';
   eyebrow: string;
   title: string;
-  updated?: string;
+  publishedDate?: string;
 }
 
-const { lang, mdId, collection = lang === 'zh' ? 'specs_zh' : 'specs_en', eyebrow, title, updated } = Astro.props;
+const { lang, mdId, collection = lang === 'zh' ? 'specs_zh' : 'specs_en', eyebrow, title, publishedDate } = Astro.props;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const entry = await getEntry(collection as any, mdId);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -44,10 +44,10 @@ if (entry) {
                   prose-hr:border-fg/10 prose-hr:my-10
                   prose-strong:text-fg prose-strong:font-semibold
                   prose-table:border-fg/10">
-        {updated && (
+        {publishedDate && (
           <div class="not-prose border-b border-fg/10 pb-6 mb-8">
-            <time datetime={updated} class="text-sm text-fg/40 font-mono tracking-widest block">
-              {lang === 'zh' ? `上次更新：${formatLongDateZh(updated)}` : `Last updated: ${formatLongDate(updated)}`}
+            <time datetime={publishedDate} class="text-sm text-fg/40 font-mono tracking-widest block">
+              {lang === 'zh' ? `最近更新：${formatLongDateZh(publishedDate)}` : `Recently updated: ${formatLongDate(publishedDate)}`}
             </time>
           </div>
         )}

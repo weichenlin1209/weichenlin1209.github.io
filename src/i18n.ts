@@ -113,7 +113,7 @@ export const ui: Record<Lang, UiStrings> = {
     homeHello: "Hi, I'm",
     homeTitle: 'Hi, this is Windson',
     homeName: 'Windson',
-    homeNameAlt: 'Weiji',
+    homeNameAlt: 'Whisky',
     homeIntro:
       'Applied Mathematics student at NCHU.', 
     homeIntroLine1: 'I am an Applied Mathematics student at NCHU who enjoys playing guitar and taking photos.',
