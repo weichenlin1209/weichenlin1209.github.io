@@ -1,7 +1,7 @@
 ---
 title: Earth Online | 26 - 10
 description: Earth Online | 26 - 10
-pubDate: "2026-11-06"
+pubDate: "2026-11-08"
 slug: diary-26-10
 category: Life
 cover: /assets/image/2026/10/diary-26-10/cover.webp
