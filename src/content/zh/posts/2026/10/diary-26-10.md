@@ -8,7 +8,6 @@ cover: /assets/image/2026/10/diary-26-10/cover.webp
 tags:
   - Journal
 licenseName: CC-BY-SA 4.0
-draft: true
 ---
 
 這個月的上半月，一樣在到處跑到處玩，但是下半月開始期中考了，每天不是在圖書館就是在咖啡廳。讀書讀累的時候就開始翻新網站，因此現在多了不少新東西，一直再用 RSS 看文章的朋友們，歡迎來看看改了什麼。

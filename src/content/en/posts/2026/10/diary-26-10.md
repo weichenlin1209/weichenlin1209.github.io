@@ -8,7 +8,6 @@ cover: /assets/image/2026/10/diary-26-10/cover.webp
 tags:
   - Journal
 licenseName: CC-BY-SA 4.0
-draft: true
 ---
 
 The first half of the month was much like usual: out and about, having fun. But midterms started in the second half, so I spent every day either at the library or at a cafe. Whenever I got tired of studying, I started browsing the new website instead. There are quite a few new things now, so if you've been following my posts through RSS, come take a look!
